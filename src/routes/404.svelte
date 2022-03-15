@@ -6,4 +6,4 @@
 	export let title = "Not found";
 </script>
 
-<h1>Not found</h1>
+<h1>Page not found!</h1>

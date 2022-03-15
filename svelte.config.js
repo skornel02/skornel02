@@ -20,6 +20,7 @@ const config = {
 			fallback: null,
 			precompress: false
 		}),
+		appDir: "internal",
 
 		// Override http methods in the Todo forms
 		methodOverride: {
