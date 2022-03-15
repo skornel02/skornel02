@@ -1,0 +1,9 @@
+/* Variables and mixins declared here will be available in all other SCSS files */
+@import 'bootstrap/scss/functions'; /* Override Bootstrap's variables here */
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+$sidebar-base-width: 17rem;
+$primary-color: #2E74B5;
+$secondary-color: #1F3864;
+$text-color: #3B3838;
