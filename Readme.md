@@ -5,7 +5,7 @@
 
 - 👨‍🎓 I'm currently studying for **University entrances**
 
-- 🌐 Check out my website [skornel02.hu](skornel02.hu)
+- 🌐 Check out my website [skornel02.hu](https://skornel02.hu)
 
 - 📫 How to reach me **stefankornel02@gmail.com**
 
