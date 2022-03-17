@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/web-manifest-combined.json",
 	"name": "SK website",
 	"short_name": "SK",
-    "description": "This is personal website of SK",
+    "description": "This is the personal website of SK",
     "start_url": ".",
 	"icons": [
 		{ "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
@@ -10,6 +10,6 @@
 	],
 	"theme_color": "#2E74B5",
 	"background_color": "#ffffff",
-	"display": "standalone",
+	"display": "browser",
     "lang": "en"
 }
