@@ -237,7 +237,7 @@
 				/>
 			</ul>
 			<img
-				class="d-block mx-auto"
+				class="d-block mx-auto img-fluid"
 				src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact"
 				alt="skornel02"
 			/>
@@ -296,10 +296,35 @@
 	</section>
 </div>
 
-<style>
+<style lang="scss">
 	.icon {
 		display: inline-block;
 		width: 32px;
 		height: 32px;
+	}
+
+	section.resume-section {
+		border-bottom: 1px solid;
+		border-color: $secondary-color;
+		padding-top: 5rem !important;
+		padding-bottom: 5rem !important;
+	}
+	section.resume-section .resume-item .resume-date {
+		min-width: none;
+	}
+	@media (min-width: 768px) {
+		section.resume-section {
+			min-height: 100vh;
+		}
+		section.resume-section .resume-item .resume-date {
+			min-width: 18rem;
+		}
+	}
+
+	@media (min-width: 992px) {
+		section.resume-section {
+			padding-top: 3rem !important;
+			padding-bottom: 3rem !important;
+		}
 	}
 </style>

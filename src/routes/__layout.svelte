@@ -1,16 +1,18 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
 	import '../app.scss';
+
+	const year = new Date().getFullYear();
 </script>
 
-<Header></Header>
+<Header />
 
 <main>
-	<slot></slot>
+	<slot />
 </main>
 
 <footer>
-	<p>2022™</p>
+	<p>{year}™</p>
 </footer>
 
 <style>
