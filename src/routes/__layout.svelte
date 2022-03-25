@@ -12,7 +12,7 @@
 </main>
 
 <footer>
-	<p>{year}™</p>
+	<p> Have a nice day! • {year} • © </p>
 </footer>
 
 <style>

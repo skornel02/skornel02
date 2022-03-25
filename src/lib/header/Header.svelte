@@ -1,4 +1,4 @@
-<script lang="ts">
+x<script lang="ts">
 	import { page } from '$app/stores';
 	import { Collapse, Navbar, NavbarToggler, NavbarBrand } from 'sveltestrap';
 
