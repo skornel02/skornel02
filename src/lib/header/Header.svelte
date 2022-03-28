@@ -1,4 +1,4 @@
-x<script lang="ts">
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { Collapse, Navbar, NavbarToggler, NavbarBrand } from 'sveltestrap';
 
@@ -20,7 +20,7 @@ x<script lang="ts">
 			<span class="d-none d-lg-block">
 				<img
 					class="img-fluid img-profile rounded-circle mx-auto mb-2"
-					src="assets/face.png"
+					src="assets/face.jpg"
 					alt=""
 				/>
 			</span>
@@ -63,6 +63,7 @@ x<script lang="ts">
 		</Collapse>
 	</Navbar>
 </header>
+<div id="page-top"/>
 
 <style lang="scss">
 	:global(#sideNav) {
@@ -141,7 +142,11 @@ x<script lang="ts">
 		:global(#sideNav) :global(.navbar-collapse) :global(.navbar-nav) :global(.nav-item) {
 			display: block;
 		}
-		:global(#sideNav) :global(.navbar-collapse) :global(.navbar-nav) :global(.nav-item) :global(.nav-link) {
+		:global(#sideNav)
+			:global(.navbar-collapse)
+			:global(.navbar-nav)
+			:global(.nav-item)
+			:global(.nav-link) {
 			display: block;
 		}
 	}
