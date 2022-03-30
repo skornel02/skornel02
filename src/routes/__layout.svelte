@@ -1,18 +1,34 @@
+<script context="module">
+	export const load = ({ url }) => {
+		const route = url.pathname;
+
+		return {
+			props: {
+				route
+			}
+		};
+	};
+</script>
+
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
+	import { fade } from 'svelte/transition';
 	import '../app.scss';
+	export let route: string;
 
 	const year = new Date().getFullYear();
 </script>
 
 <Header />
 
-<main>
-	<slot />
-</main>
+{#key route}
+	<main in:fade={{ duration: 150, delay: 100 }} out:fade={{ duration: 100 }}>
+		<slot />
+	</main>
+{/key}
 
 <footer>
-	<p> Have a nice day! • {year} • © </p>
+	<p>Have a nice day! • {year} • ©</p>
 </footer>
 
 <style>

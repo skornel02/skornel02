@@ -20,7 +20,7 @@
 			<span class="d-none d-lg-block">
 				<img
 					class="img-fluid img-profile rounded-circle mx-auto mb-2"
-					src="assets/face.jpg"
+					src="/assets/face.jpg"
 					alt=""
 				/>
 			</span>
@@ -45,19 +45,12 @@
 					>
 				</li>
 				<li class="nav-item">
-					<a sveltekit:prefetch class="nav-link disabled" href="#A">A</a>
+					<a sveltekit:prefetch class="nav-link disabled" class:active={$page.url.pathname.startsWith('/projects')} href="/"
+						>Projects</a
+					>
 				</li>
 				<li class="nav-item">
-					<a sveltekit:prefetch class="nav-link disabled" href="#B">B</a>
-				</li>
-				<li class="nav-item">
-					<a sveltekit:prefetch class="nav-link disabled" href="#C">C</a>
-				</li>
-				<li class="nav-item">
-					<a sveltekit:prefetch class="nav-link disabled" href="#D">D</a>
-				</li>
-				<li class="nav-item">
-					<a sveltekit:prefetch class="nav-link disabled" href="#E">E</a>
+					<a sveltekit:prefetch class="nav-link" class:active={$page.url.pathname.startsWith('/posts')} href="/posts">Blog</a>
 				</li>
 			</ul>
 		</Collapse>
