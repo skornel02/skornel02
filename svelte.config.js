@@ -1,5 +1,10 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+import { mdsvex } from 'mdsvex'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import remarkSubSuper from 'remark-sub-super';
+import remarkEmoji from 'remark-emoji';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,8 +15,24 @@ const config = {
 			scss: {
 				prependData: '@use "src/variables.scss" as *;'
 			}
+		}),
+		mdsvex({
+			extensions: ['.md'],
+			layout: {
+				post: "src/routes/posts/_post.svelte"
+			},
+			remarkPlugins: [
+				remarkSubSuper,
+				remarkEmoji
+			],
+			rehypePlugins: [
+				rehypeSlug,
+				rehypeAutolinkHeadings
+			]
 		})
 	],
+
+	extensions: ['.svelte', '.md'],
 
 	kit: {
 		adapter: adapter({
@@ -21,11 +42,6 @@ const config = {
 			precompress: false
 		}),
 		appDir: "internal",
-
-		// Override http methods in the Todo forms
-		methodOverride: {
-			allowed: ['PATCH', 'DELETE']
-		},
 
 		prerender: {
 			default: true

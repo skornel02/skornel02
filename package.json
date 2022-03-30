@@ -24,6 +24,7 @@
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
+		"mdsvex": "^0.10.5",
 		"postcss": "^8.4.5",
 		"postcss-load-config": "^3.1.1",
 		"prettier": "^2.5.1",
@@ -40,6 +41,10 @@
 		"@fontsource/fira-mono": "^4.5.0",
 		"@lukeed/uuid": "^2.0.0",
 		"cookie": "^0.4.1",
+		"rehype-autolink-headings": "^6.1.1",
+		"rehype-slug": "^5.0.1",
+		"remark-emoji": "^3.0.2",
+		"remark-sub-super": "^1.0.20",
 		"svelte-icons": "^2.1.0",
 		"sveltestrap": "^5.9.0"
 	}

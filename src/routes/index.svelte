@@ -351,10 +351,7 @@
 		<div class="my-auto">
 			<h2 class="mb-5">Awards &amp; Certifications</h2>
 			<ul class="list-group">
-
-
 				<!--2022-->
-
 
 				<Award>
 					<FaMedal slot="icon" />
@@ -372,9 +369,7 @@
 					</svelte:fragment>
 				</Award>
 
-
 				<!--2021-->
-
 
 				<Award>
 					<FaTrophy slot="icon" />
@@ -490,9 +485,7 @@
 					</svelte:fragment>
 				</Award>
 
-				
 				<!--2020-->
-
 
 				<Award>
 					<FaTrophy slot="icon" />
@@ -604,9 +597,7 @@
 					</svelte:fragment>
 				</Award>
 
-
 				<!--2019-->
-
 
 				<Award>
 					<FaTrophy slot="icon" />
@@ -673,7 +664,7 @@
 							Website
 						</a>
 					</svelte:fragment>
-				</Award>				
+				</Award>
 				<Award>
 					<FaMedal slot="icon" />
 					<svelte:fragment slot="badge">41. place</svelte:fragment>
@@ -705,17 +696,13 @@
 					</svelte:fragment>
 				</Award>
 
-
 				<!--2018-->
 
-				
 				<Award>
 					<FaTrophy slot="icon" />
 					<svelte:fragment slot="badge">I. place</svelte:fragment>
 					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Secondary School Programming contest - 2018
-						</div>
+						<div class="fw-bold">Secondary School Programming contest - 2018</div>
 						<a href="assets/Iskola programozás verseny 2018.jpeg" target="_blank" rel="noopener">
 							<div class="file">
 								<FaFile />
@@ -725,16 +712,30 @@
 					</svelte:fragment>
 				</Award>
 
-
 				<!--2017-->
-
-
 			</ul>
 		</div>
 	</section>
 </div>
 
 <style lang="scss">
+	h1 {
+		font-size: 6rem;
+		line-height: 5.5rem;
+	}
+	h2 {
+		font-size: 3.5rem;
+	}
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 3rem;
+			line-height: 3rem;
+		}
+		h2 {
+			font-size: 2rem;
+		}
+	}
+
 	.icon {
 		display: inline-block;
 		width: 32px;
