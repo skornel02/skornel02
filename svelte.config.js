@@ -5,6 +5,7 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import remarkSubSuper from 'remark-sub-super';
 import remarkEmoji from 'remark-emoji';
+import remarkFootnotes from 'remark-footnotes';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -23,7 +24,8 @@ const config = {
 			},
 			remarkPlugins: [
 				remarkSubSuper,
-				remarkEmoji
+				remarkEmoji,
+				remarkFootnotes
 			],
 			rehypePlugins: [
 				rehypeSlug,
@@ -44,7 +46,8 @@ const config = {
 		appDir: "internal",
 
 		prerender: {
-			default: true
+			default: true,
+			entries: ["*", "/sitemap.xml"]
 		},
 
 		vite: {

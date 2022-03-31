@@ -21,6 +21,8 @@
 				<img
 					class="img-fluid img-profile rounded-circle mx-auto mb-2"
 					src="/assets/face.jpg"
+					height="160"
+					width="160"
 					alt=""
 				/>
 			</span>
@@ -59,6 +61,12 @@
 <div id="page-top"/>
 
 <style lang="scss">
+	@media print {
+		:global(#sideNav) {
+			display: none;
+		}
+	}
+
 	:global(#sideNav) {
 		.navbar-nav .nav-item .nav-link {
 			font-weight: 600;
