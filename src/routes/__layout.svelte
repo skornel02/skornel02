@@ -12,6 +12,7 @@
 
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
+	import FaRssSquare from 'svelte-icons/fa/FaRssSquare.svelte';
 	import { fade } from 'svelte/transition';
 	import '../app.scss';
 	export let route: string;
@@ -28,7 +29,12 @@
 {/key}
 
 <footer>
-	<p>Have a nice day! • {year} • ©</p>
+	<p>
+		Have a nice day! • {year} © •
+		<a href="/rss.xml">
+			<FaRssSquare />
+		</a>
+	</p>
 </footer>
 
 <style>
@@ -49,6 +55,17 @@
 		justify-content: center;
 		align-items: center;
 		padding: 40px;
+	}
+
+	footer :global(svg) {
+		color: orange;
+		height: 16px;
+		width: 16px;
+		transition: 0.1s color;
+	}
+
+	footer :global(svg:hover) {
+		color: darkred;
 	}
 
 	@media (min-width: 480px) {

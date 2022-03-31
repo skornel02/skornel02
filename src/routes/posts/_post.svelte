@@ -2,11 +2,13 @@
 <script>
 	import './prism-vsc-dark-plus.css';
     import './markers.scss';
+	import './modest.scss';
 
 	export let title;
 	export let description;
 	export let date;
 	export let time;
+	export let hidden;
 	if (time === undefined) time = '12:00:00';
 </script>
 
@@ -15,9 +17,12 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={title} />
 	<meta property="og:published_time" content={`${date}T${time}Z`} />
+	{#if hidden}
+	<meta name="robots" content="noindex" />
+	{/if}
 </svelte:head>
 
-<div class="container">
+<article class="container">
 	<h1>{title}</h1>
 
 	<div class="col">
@@ -36,4 +41,12 @@
 	<hr />
 
 	<slot />
-</div>
+</article>
+
+<style>
+	@media print {
+		article a{
+			display: none;
+		}
+	}
+</style>

@@ -22,7 +22,7 @@ Until then I hope you enjoy this void of mine.
 
 ## Disclaimer
 
-This post also functions as a test markdown file for most of the **formatting**. [^1]
+This post also functions as a test markdown file for most of the **formatting**[^guarantee]. 
 Here is the *Open Graph* image of the site:
 
 ![Cover](/assets/og-banner.jpg)
@@ -50,6 +50,4 @@ X^2^
 
 H~2~O :dog:
 
----
-
-[^1]: No guarantees.
+[^guarantee]: No guarantees.
