@@ -13,13 +13,8 @@
 	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
 	import FaFacebook from 'svelte-icons/fa/FaFacebook.svelte';
 	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
-	import FaTrophy from 'svelte-icons/fa/FaTrophy.svelte';
-	import FaMedal from 'svelte-icons/fa/FaMedal.svelte';
-	import FaCertificate from 'svelte-icons/fa/FaCertificate.svelte';
-	import FaFile from 'svelte-icons/fa/FaFile.svelte';
-	import FaGlobe from 'svelte-icons/fa/FaGlobe.svelte';
 	import { onMount } from 'svelte';
-	import Award from '$lib/Award.svelte';
+	import Awards from '$lib/awards/Awards.svelte';
 	const heights: HeightData = {};
 
 	let height;
@@ -37,19 +32,6 @@
 			title = heights[Object.keys(heights)[maxI]].title;
 		}
 	}
-
-	const typeToIcon = (type: string): typeof FaGithub => {
-		switch (type) {
-			case 'trophy':
-				return FaTrophy;
-			case 'medal':
-				return FaMedal;
-			case 'certificate':
-				return FaCertificate; 
-			default:
-				return FaFile;
-		}
-	};
 
 	onMount(() => {
 		document.querySelectorAll('.resume-section').forEach((el) => {
@@ -122,16 +104,16 @@
 					<h3 class="mb-0">Full stack developer</h3>
 					<div class="subheading mb-3">ParkMyst Project</div>
 					<p>
-						What started out as a fun project for our trip, turned into a very serious project. 
-						The main goal of this project is to provide a platform for game creators where 
-						they can create games from building blocks (low-code/no code) and also a client
-						for players to play these games.
+						What started out as a fun project for our trip, turned into a very serious project. The
+						main goal of this project is to provide a platform for game creators where they can
+						create games from building blocks (low code/no code) and a client for players to play
+						these games.
 					</p>
 					<p>
-						My role in this project was mostly backend focused, but I also took responsibility
-						in creating the frontend aspect of the software too.
-						I am very proud of this software, and the team I work with. Furthermore, 
-						we are very proud of the recognition we got in the form of 
+						My role in this project was mostly backend focused, but I also took responsibility in
+						creating the frontend aspect of the software too. I am very proud of this software, and
+						the team I work with. Furthermore, we are very proud of the recognition we got in the
+						form of
 						<a href="#parkmyst">competition first place</a>.
 					</p>
 				</div>
@@ -144,13 +126,9 @@
 					<h3 class="mb-0">Full stack developer</h3>
 					<div class="subheading mb-3">THR Logisztika</div>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dapibus eros. Donec
-						faucibus augue vel arcu fermentum, ut consequat nulla ullamcorper. Mauris molestie vitae
-						odio at faucibus. Integer posuere diam velit, vel sodales mi placerat ac. Nunc eu
-						feugiat mauris. Mauris ligula metus, consequat id imperdiet ut, accumsan et justo.
-						Curabitur molestie erat lectus, ut tristique urna mollis sed. Mauris vestibulum enim ac
-						magna molestie, fermentum egestas massa euismod. Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit. Fusce in augue a est congue congue eget vitae felis.
+						At this company there was a need for a custom built shift scheduling system, and I got
+						the chance to work on it. With no previous infrastructure it was my role to negotiate
+						how the system should work, what kind of interface it should have and then delivering it.
 					</p>
 				</div>
 				<div class="resume-date text-md-right">
@@ -162,13 +140,15 @@
 					<h3 class="mb-0">Backend developer</h3>
 					<div class="subheading mb-3">Házizz Project</div>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dapibus eros. Donec
-						faucibus augue vel arcu fermentum, ut consequat nulla ullamcorper. Mauris molestie vitae
-						odio at faucibus. Integer posuere diam velit, vel sodales mi placerat ac. Nunc eu
-						feugiat mauris. Mauris ligula metus, consequat id imperdiet ut, accumsan et justo.
-						Curabitur molestie erat lectus, ut tristique urna mollis sed. Mauris vestibulum enim ac
-						magna molestie, fermentum egestas massa euismod. Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit. Fusce in augue a est congue congue eget vitae felis.
+						Everyone knows the hardships of a student. You must always be on point with homework and
+						assignments. To ease this burden, we created a social platform where you can share this
+						information with your classmates.
+					</p>
+					<p>
+						This was my, and my project partners’, first large-scale project. For me this was an
+						invaluable experience in leadership and software architecture. My role was primarily
+						working on the backend of the project and negotiating how it will communicate with
+						multiple clients.
 					</p>
 				</div>
 				<div class="resume-date text-md-right">
@@ -362,36 +342,24 @@
 			<img
 				class="d-block mx-auto img-fluid"
 				src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact"
-				alt="skornel02"
+				alt="skornel02's stats on github"
+				width="350"
 			/>
 		</div>
 	</section>
 
 	<section
-		class="resume-section p-3 p-lg-5 d-flex flex-column"
+		class="resume-section p-3 p-lg-5 d-flex flex-column visually-hidden"
 		id="interests"
 		x-description="SK - Interests"
 	>
 		<div class="my-auto">
 			<h2 class="mb-5">Interests</h2>
 			<p>
-				Cras posuere ante ac diam vehicula porta. Suspendisse bibendum erat sed mauris feugiat, quis
-				auctor justo convallis. Ut tristique odio non eros euismod bibendum. Aliquam iaculis, quam
-				et malesuada feugiat, nulla nulla dapibus diam, et laoreet massa dolor sit amet tellus.
-				Morbi tempus elit eu elit porttitor, ac ultrices risus accumsan. Ut maximus eros sit amet
-				diam aliquam, eu porta purus consectetur. Pellentesque vel arcu vel libero luctus tincidunt.
-				Praesent vitae turpis eget metus consectetur placerat. Vivamus ac turpis lacus. Donec tellus
-				ante, molestie quis sapien non, pretium ornare felis. Aliquam nisi enim, imperdiet eget
-				aliquam sit amet, porttitor sed metus. Nam ultricies ligula eu magna auctor posuere.
+				
 			</p>
 			<p class="mb-0">
-				Suspendisse potenti. Nam porttitor sed lacus et dapibus. Aliquam quam mi, feugiat ut
-				sagittis non, tempor et est. Praesent facilisis at massa sed iaculis. Curabitur aliquam
-				lacinia sapien ac fermentum. Quisque condimentum diam at dui consequat, sed commodo orci
-				ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-				cubilia curae; Quisque sed enim tempor, commodo erat eu, sodales est. Sed lobortis
-				sollicitudin turpis, ac tincidunt odio dapibus nec. Suspendisse id enim tincidunt, hendrerit
-				lorem sit amet, rhoncus ligula. Morbi porta ac lectus et mollis.
+
 			</p>
 		</div>
 	</section>
@@ -403,370 +371,7 @@
 	>
 		<div class="my-auto">
 			<h2 class="mb-5">Awards &amp; Certifications</h2>
-			<ul class="list-group">
-				<!--2022-->
-
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">Finalist</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Ifjútudosok tudományos vetélkedő - 2022 - Traditional category
-						</div>
-						<a href="assets/Ifjú tudósok 2022.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-
-				<!--2021-->
-
-				<Award>
-					<FaTrophy slot="icon" />
-					<svelte:fragment slot="badge">I. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Dusza Árpád Országos Programozói Emlékverseny - 2021 - Mobile category
-						</div>
-						<a href="assets/Dusza mobil 2021.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaTrophy slot="icon" />
-					<svelte:fragment slot="badge">I. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">Bakonyi Bitfaragó Bajnokság - 2021</div>
-						<a href="assets/Bakonyi Bitfaragó Bajnokság 2021.jpg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">Finalist</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">30. Ifjúsági Tudományos és Innovációs Tehetségkutató Verseny</div>
-						<a href="assets/Innovációs tehetségkutató 2021.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaCertificate slot="icon" />
-					<svelte:fragment slot="badge">Certificate</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">CCNA Routing and Switching: Introduction to Networking</div>
-						<a href="assets/CCNA-1-certificate.pdf" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">Finalist</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">Kódolj Határok Nélkül! - 2021</div>
-						<a href="assets/Kódolj Határok Nélkül 2021.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">Finalist</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">II. Merklik László problémamegoldó verseny</div>
-						<a href="assets/Merklik 2021.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaTrophy slot="icon" />
-					<svelte:fragment slot="badge">I. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">Bakonyi Bitfaragó Bajnokság - 2020</div>
-						<a href="assets/Bakonyi Bitfaragó Bajnokság 2020.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">II. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">Neumann János Egyetem Programming contest - 2020</div>
-						<a href="assets/GAMF programozó verseny 2020.pdf" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">II. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">WebGraf - 2020</div>
-					</svelte:fragment>
-				</Award>
-
-				<!--2020-->
-
-				<Award>
-					<FaTrophy slot="icon" />
-					<svelte:fragment slot="badge">I. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Dusza Árpád Országos Programozói Emlékverseny - 2020 - Mobile category
-						</div>
-						<a href="assets/Dusza mobil 2020.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award id="parkmyst">
-					<FaTrophy slot="icon" />
-					<svelte:fragment slot="badge">I. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Szegedi Innovatív Informatika Verseny - 2020 - Software category
-						</div>
-						<a href="assets/SZIIV 2020.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-						<a
-							href="https://www.inf.u-szeged.hu/sziiv2020/eredmenyek#:~:text=hazizz%20velunk%3A%20parkmyst"
-							target="_blank"
-							rel="noopener"
-						>
-							<div class="file">
-								<FaGlobe />
-							</div>
-							Website
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">Finalist</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">Kódolj Határok Nélkül! - 2020</div>
-						<a href="assets/Kódolj Határok Nélkül 2020.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">Finalist</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">Accenture Java competition - 2020</div>
-						<a href="assets/Accenture Java 2020.pdf" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">Finalist</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">29. Ifjúsági Tudományos és Innovációs Tehetségkutató Verseny</div>
-						<a href="assets/Innovációs tehetségkutató 2020.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">39. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Nemes Tihamér Nemzetközi Informatikai Tanulmányi Verseny - 2020 - Programming category
-						</div>
-						<a href="assets/Nemes Tihamér 2020.pdf" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">II. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Dusza Árpád Országos Programozói Emlékverseny - 2020 - Traditional category
-						</div>
-						<a href="assets/Dusza 2020.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-
-				<!--2019-->
-
-				<Award>
-					<FaTrophy slot="icon" />
-					<svelte:fragment slot="badge">I. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Dusza Árpád Országos Programozói Emlékverseny - 2019 - Mobile category
-						</div>
-						<a href="assets/Dusza Mobil 2019.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">Finalist</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">Bakonyi Bitfaragó Bajnokság - 2019</div>
-						<a href="assets/Bakonyi Bitfaragó Bajnokság 2019.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaTrophy slot="icon" />
-					<svelte:fragment slot="badge">I. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">Http Alapítvány - Cisco Webex Hacathlon - 2019</div>
-						<a href="assets/Webex Teams Hackathlon 2019 photo.jpg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award id="hazizz">
-					<FaTrophy slot="icon" />
-					<svelte:fragment slot="badge">I. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Szegedi Innovatív Informatika Verseny - 2019 - Software category
-						</div>
-						<a href="assets/SZIIV 2019.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-						<a
-							href="https://www.inf.u-szeged.hu/sziiv2019/eredmenyek#:~:text=hazizz%20velunk"
-							target="_blank"
-							rel="noopener"
-						>
-							<div class="file">
-								<FaGlobe />
-							</div>
-							Website
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaMedal slot="icon" />
-					<svelte:fragment slot="badge">41. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Nemes Tihamér Nemzetközi Informatikai Tanulmányi Verseny - 2019 - Programming category
-						</div>
-						<a href="assets/Nemes Tihamér 2019.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-				<Award>
-					<FaTrophy slot="icon" />
-					<svelte:fragment slot="badge">I. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">
-							Dusza Árpád Országos Programozói Emlékverseny - 2019 - Traditional category
-						</div>
-						<a href="assets/Dusza 2019.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-
-				<!--2018-->
-
-				<Award>
-					<FaTrophy slot="icon" />
-					<svelte:fragment slot="badge">I. place</svelte:fragment>
-					<svelte:fragment slot="content">
-						<div class="fw-bold">Secondary School Programming contest - 2018</div>
-						<a href="assets/Iskola programozás verseny 2018.jpeg" target="_blank" rel="noopener">
-							<div class="file">
-								<FaFile />
-							</div>
-							Reference
-						</a>
-					</svelte:fragment>
-				</Award>
-
-				<!--2017-->
-			</ul>
+			<Awards />
 		</div>
 	</section>
 </div>
@@ -789,16 +394,10 @@
 		}
 	}
 
-	.icon {
+	:global(.icon) {
 		display: inline-block;
 		width: 32px;
 		height: 32px;
-	}
-
-	.file {
-		display: inline-block;
-		width: 16px;
-		height: 16px;
 	}
 
 	section.resume-section {

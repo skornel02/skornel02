@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { Collapse, Navbar, NavbarToggler, NavbarBrand } from 'sveltestrap';
+	import face from '$static/assets/face.jpg?width=160&srcset';
+	import faceWebP from '$static/assets/face.jpg?width=160&format=webp&srcset';
 
 	let width = 0;
 	let isOpen = true;
@@ -18,13 +20,17 @@
 		<NavbarBrand href="#page-top" class="w-lg-100">
 			<span class="d-block d-lg-none">Stefán Kornél</span>
 			<span class="d-none d-lg-block">
-				<img
-					class="img-fluid img-profile rounded-circle mx-auto mb-2"
-					src="/assets/face.jpg"
-					height="160"
-					width="160"
-					alt=""
-				/>
+				<picture>
+					<source srcset={faceWebP} type="image/webp" width="160" height="160" />
+					<source srcset={face} type="image/jpeg" width="160" height="160" />
+					<img
+						class="img-fluid img-profile rounded-circle mx-auto mb-2"
+						src="/assets/face.jpg"
+						height="160"
+						width="160"
+						alt="SK"
+					/>
+				</picture>
 			</span>
 		</NavbarBrand>
 		<NavbarToggler
@@ -47,18 +53,26 @@
 					>
 				</li>
 				<li class="nav-item">
-					<a sveltekit:prefetch class="nav-link disabled" class:active={$page.url.pathname.startsWith('/projects')} href="/"
-						>Projects</a
+					<a
+						sveltekit:prefetch
+						class="nav-link disabled"
+						class:active={$page.url.pathname.startsWith('/projects')}
+						href="/">Projects</a
 					>
 				</li>
 				<li class="nav-item">
-					<a sveltekit:prefetch class="nav-link" class:active={$page.url.pathname.startsWith('/posts')} href="/posts">Blog</a>
+					<a
+						sveltekit:prefetch
+						class="nav-link"
+						class:active={$page.url.pathname.startsWith('/posts')}
+						href="/posts">Blog</a
+					>
 				</li>
 			</ul>
 		</Collapse>
 	</Navbar>
 </header>
-<div id="page-top"/>
+<div id="page-top" />
 
 <style lang="scss">
 	@media print {

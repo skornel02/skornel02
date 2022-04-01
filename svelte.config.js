@@ -1,5 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+import path from 'path';
+import{ imagetools }from'vite-imagetools';
 import { mdsvex } from 'mdsvex'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -44,6 +46,9 @@ const config = {
 			precompress: false
 		}),
 		appDir: "internal",
+		files: {
+			assets: "static"
+		},
 
 		prerender: {
 			default: true,
@@ -51,13 +56,21 @@ const config = {
 		},
 
 		vite: {
+			resolve: {
+				alias: {
+				  $static: path.resolve('static')
+				}
+			  },
 			css: {
 				preprocessorOptions: {
 					scss: {
 						additionalData: '@use "src/variables.scss" as *;'
 					}
 				}
-			}
+			},
+			plugins: [
+				imagetools()
+			]
 		}
 	}
 };
