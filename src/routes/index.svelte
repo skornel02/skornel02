@@ -38,6 +38,19 @@
 		}
 	}
 
+	const typeToIcon = (type: string): typeof FaGithub => {
+		switch (type) {
+			case 'trophy':
+				return FaTrophy;
+			case 'medal':
+				return FaMedal;
+			case 'certificate':
+				return FaCertificate; 
+			default:
+				return FaFile;
+		}
+	};
+
 	onMount(() => {
 		document.querySelectorAll('.resume-section').forEach((el) => {
 			heights[el.id] = {
@@ -106,8 +119,30 @@
 
 			<div class="resume-item d-flex flex-column flex-md-row mb-5">
 				<div class="resume-content mr-auto">
-					<h3 class="mb-0">Title</h3>
-					<div class="subheading mb-3">At</div>
+					<h3 class="mb-0">Full stack developer</h3>
+					<div class="subheading mb-3">ParkMyst Project</div>
+					<p>
+						What started out as a fun project for our trip, turned into a very serious project. 
+						The main goal of this project is to provide a platform for game creators where 
+						they can create games from building blocks (low-code/no code) and also a client
+						for players to play these games.
+					</p>
+					<p>
+						My role in this project was mostly backend focused, but I also took responsibility
+						in creating the frontend aspect of the software too.
+						I am very proud of this software, and the team I work with. Furthermore, 
+						we are very proud of the recognition we got in the form of 
+						<a href="#parkmyst">competition first place</a>.
+					</p>
+				</div>
+				<div class="resume-date text-md-right">
+					<span class="text-primary">2019 - Present</span>
+				</div>
+			</div>
+			<div class="resume-item d-flex flex-column flex-md-row mb-5">
+				<div class="resume-content mr-auto">
+					<h3 class="mb-0">Full stack developer</h3>
+					<div class="subheading mb-3">THR Logisztika</div>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dapibus eros. Donec
 						faucibus augue vel arcu fermentum, ut consequat nulla ullamcorper. Mauris molestie vitae
@@ -119,7 +154,25 @@
 					</p>
 				</div>
 				<div class="resume-date text-md-right">
-					<span class="text-primary">From - Present</span>
+					<span class="text-primary">2019</span>
+				</div>
+			</div>
+			<div class="resume-item d-flex flex-column flex-md-row mb-5">
+				<div class="resume-content mr-auto">
+					<h3 class="mb-0">Backend developer</h3>
+					<div class="subheading mb-3">Házizz Project</div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dapibus eros. Donec
+						faucibus augue vel arcu fermentum, ut consequat nulla ullamcorper. Mauris molestie vitae
+						odio at faucibus. Integer posuere diam velit, vel sodales mi placerat ac. Nunc eu
+						feugiat mauris. Mauris ligula metus, consequat id imperdiet ut, accumsan et justo.
+						Curabitur molestie erat lectus, ut tristique urna mollis sed. Mauris vestibulum enim ac
+						magna molestie, fermentum egestas massa euismod. Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Fusce in augue a est congue congue eget vitae felis.
+					</p>
+				</div>
+				<div class="resume-date text-md-right">
+					<span class="text-primary">2018 - 2020</span>
 				</div>
 			</div>
 		</div>
@@ -502,7 +555,7 @@
 						</a>
 					</svelte:fragment>
 				</Award>
-				<Award>
+				<Award id="parkmyst">
 					<FaTrophy slot="icon" />
 					<svelte:fragment slot="badge">I. place</svelte:fragment>
 					<svelte:fragment slot="content">
@@ -640,7 +693,7 @@
 						</a>
 					</svelte:fragment>
 				</Award>
-				<Award>
+				<Award id="hazizz">
 					<FaTrophy slot="icon" />
 					<svelte:fragment slot="badge">I. place</svelte:fragment>
 					<svelte:fragment slot="content">
@@ -755,14 +808,14 @@
 		padding-bottom: 5rem !important;
 	}
 	section.resume-section .resume-item .resume-date {
-		min-width: none;
+		min-width: max-content;
 	}
 	@media (min-width: 768px) {
 		section.resume-section {
 			min-height: 100vh;
 		}
 		section.resume-section .resume-item .resume-date {
-			min-width: 18rem;
+			min-width: 12rem;
 		}
 	}
 
