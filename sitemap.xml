@@ -2,7 +2,7 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://skornel02.hu</loc>
-    <lastmod>2022-03-31</lastmod>
+    <lastmod>2022-04-01</lastmod>
   </url>
   <url>
     <loc>https://skornel02.hu/posts</loc>
@@ -10,12 +10,12 @@
   </url>
       
   <url>
-    <loc>https://skornel02.hu//posts/hidden-post</loc>
+    <loc>https://skornel02.hu/posts/hidden-post</loc>
     <lastmod>2022-03-31</lastmod>
   </url>
   
   <url>
-    <loc>https://skornel02.hu//posts/welcome</loc>
+    <loc>https://skornel02.hu/posts/welcome</loc>
     <lastmod>2022-03-30</lastmod>
   </url>
 </urlset>
