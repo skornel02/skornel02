@@ -1,8 +1,10 @@
 <script lang="ts">
 	import FaFile from 'svelte-icons/fa/FaFile.svelte';
+
+	export let id: string | undefined = undefined;
 </script>
 
-<li class="list-group-item d-flex justify-content-between align-items-center">
+<li id={id} class="list-group-item d-flex justify-content-between align-items-center">
 	<div class="icon text-warning mx-1">
 		<slot name="icon">
 			<FaFile />

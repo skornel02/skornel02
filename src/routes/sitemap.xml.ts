@@ -23,7 +23,7 @@ export async function get() {
     ${posts.map(post => {
       return (`  
   <url>
-    <loc>https://skornel02.hu/${post.path}</loc>
+    <loc>https://skornel02.hu${post.path}</loc>
     <lastmod>${post.metadata.date}</lastmod>
   </url>`
     )}).join('\n')}
