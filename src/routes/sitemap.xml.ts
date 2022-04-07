@@ -20,7 +20,8 @@ export async function get() {
     <loc>https://skornel02.hu/posts</loc>
     <lastmod>${posts[0].metadata.date}</lastmod>
   </url>
-    ${posts.map(post => {
+    ${posts.filter(post => !post.metadata.hidden)
+      .map(post => {
       return (`  
   <url>
     <loc>https://skornel02.hu${post.path}</loc>

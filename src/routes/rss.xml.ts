@@ -17,18 +17,16 @@ export async function get() {
     <title>SK</title>
     <link>https://skornel02.hu</link>
     <description>SK's blog's feed's cat</description>
-    ${posts.flatMap(post => {
-      if (post.metadata.hidden) return [];
-
-        return [`  
+    ${posts.filter(post => !post.metadata.hidden)
+      .map(post => {
+        return (`  
     <item>
       <guid>https://skornel02.hu${post.path}</guid>
       <title>${post.metadata.title}</title>
       <link>https://skornel02.hu${post.path}</link>
       <description>${post.metadata.description ?? "No description"}</description>
       <pubDate>${new Date(post.metadata.date).toUTCString()}</pubDate>
-    </item>`
-    ]
+    </item>`)
       }).join('\n')}
   </channel>
 </rss>`,

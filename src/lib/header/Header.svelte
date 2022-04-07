@@ -4,7 +4,7 @@
 	import face from '$static/assets/face.jpg?width=160&srcset';
 	import faceWebP from '$static/assets/face.jpg?width=160&format=webp&srcset';
 
-	let width = 0;
+	let width = 1000;
 	let isOpen = true;
 	$: isOpen = width >= 992;
 

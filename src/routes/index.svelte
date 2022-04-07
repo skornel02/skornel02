@@ -349,7 +349,7 @@
 	</section>
 
 	<section
-		class="resume-section p-3 p-lg-5 d-flex flex-column visually-hidden"
+		class="resume-section p-3 p-lg-5 d-flex flex-column d-none"
 		id="interests"
 		x-description="SK - Interests"
 	>

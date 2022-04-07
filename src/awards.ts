@@ -17,6 +17,8 @@ import srcsetSZIIV2019 from '$static/assets/competitions/SZIIV-2019.jpeg?format=
 import srcsetNemes19 from '$static/assets/competitions/Nemes-Tihamer-2019.jpeg?format=webp;jpg&srcset&quality=80&width=500';
 import srcsetDusza2019 from '$static/assets/competitions/Dusza-2019.jpeg?format=webp;jpg&srcset&quality=80&width=500';
 import srcsetSuli2018 from '$static/assets/competitions/Iskola-programozas-verseny-2018.jpeg?format=webp;jpg&srcset&quality=80&width=500';
+import srcsetSkillsJuniorWeb2022 from '$static/assets/competitions/Skills-Junior-Web-2022.jpeg?format=webp;jpg&srcset&quality=80&width=500';
+
 
 interface AwardType {
     id?: string;
@@ -34,6 +36,20 @@ interface AwardType {
 }
 
 export const awards: AwardType[] = [
+    {
+        title: "Skills Junior 2022 - Web category",
+        placement: "I. place",
+        icon: "trophy",
+        date: "2022-04-02",
+        links: [
+            {
+                text: "Reference",
+                icon: "file",
+                url: "/assets/competitions/Skills-Junior-Web-2022.jpeg",
+                srcset: srcsetSkillsJuniorWeb2022
+            }
+        ]
+    },
     {
         title: 'Ifjútudosok tudományos vetélkedő - 2022 - Traditional category',
         placement: 'Finalist',
