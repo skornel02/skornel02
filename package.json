@@ -48,6 +48,7 @@
 		"remark-emoji": "^3.0.2",
 		"remark-sub-super": "^1.0.20",
 		"svelte-icons": "^2.1.0",
+		"svelte-scrollto-element": "^0.7.0",
 		"sveltestrap": "^5.9.0"
 	}
 }

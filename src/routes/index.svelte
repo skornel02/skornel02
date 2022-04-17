@@ -1,11 +1,14 @@
 <script context="module" lang="ts">
 	export const prerender = true;
 
-	interface HeightData {
-		[key: string]: {
-			top: number;
-			title: string;
-		};
+	interface SectionData {
+		[key: string]: Section;
+	}
+
+	interface Section {
+		index: number;
+		top: number;
+		title: string;
 	}
 </script>
 
@@ -15,43 +18,89 @@
 	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
 	import { onMount } from 'svelte';
 	import Awards from '$lib/awards/Awards.svelte';
-	const heights: HeightData = {};
+	import { animateScroll } from 'svelte-scrollto-element';
+	import {backOut, circInOut} from 'svelte/easing';
 
+	const sections: SectionData = {};
 	let height;
-	let title = 'Home';
+	let currentSection = {
+		index: -1,
+		top: 0,
+		title: ''
+	};
+
 	$: {
-		if (Object.keys(heights).length > 0) {
+		if (Object.keys(sections).length > 0) {
 			let maxI = 0;
-			for (let i = 1; i < Object.keys(heights).length; i++) {
-				const key = Object.keys(heights)[i];
-				const value = heights[key];
+			for (let i = 1; i < Object.keys(sections).length; i++) {
+				const key = Object.keys(sections)[i];
+				const value = sections[key];
 				if (height > value.top) {
 					maxI = i;
 				}
 			}
-			title = heights[Object.keys(heights)[maxI]].title;
+			currentSection = sections[Object.keys(sections)[maxI]];
 		}
 	}
 
 	onMount(() => {
+		let index = 0;
 		document.querySelectorAll('.resume-section').forEach((el) => {
-			heights[el.id] = {
+			if (el.classList.contains('d-none')) return;
+			sections[el.id] = {
+				index: index++,
 				top: document.getElementById(el.id).offsetTop,
 				title: document.getElementById(el.id).getAttribute('x-description')
 			};
 		});
-		const top = heights['about'].top ?? 0;
+		const top = sections['about'].top ?? 0;
 
-		Object.keys(heights).forEach((key) => {
-			heights[key].top = heights[key].top - top;
+		Object.keys(sections).forEach((key) => {
+			sections[key].top = sections[key].top - top;
 		});
 	});
+
+	const handleKeyboard = (e: KeyboardEvent) => {
+		if (e.key === 'ArrowLeft') {
+			if (currentSection.index > 0) {
+				animateScroll.scrollTo({
+					element: document.getElementById(Object.keys(sections)[currentSection.index - 1]),
+					duration: 250,		
+					easing: circInOut			
+				})
+			}
+		} else if (e.key === 'ArrowRight') {
+			if (currentSection.index < Object.keys(sections).length - 1) {
+				animateScroll.scrollTo({
+					element: document.getElementById(Object.keys(sections)[currentSection.index + 1]),	
+					duration: 250,	
+					easing: circInOut			
+				})
+			}
+		} else if (e.key === "PageUp") {
+			if (currentSection.index > 0) {
+				animateScroll.scrollTo({
+					element: document.getElementById(Object.keys(sections)[currentSection.index - 1]),	
+					duration: 0,
+					easing: backOut
+				})
+			}
+		} else if (e.key === "PageDown") {
+			if (currentSection.index < Object.keys(sections).length - 1) {
+				animateScroll.scrollTo({
+					element: document.getElementById(Object.keys(sections)[currentSection.index + 1]),	
+					duration: 0,
+					easing: backOut
+				})
+			}
+		}
+	};
 </script>
 
-<svelte:window bind:scrollY={height} />
+<svelte:window bind:scrollY={height} on:keydown={handleKeyboard} />
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{currentSection.title}</title>
 </svelte:head>
 
 <div class="container-fluid p-0">
@@ -128,7 +177,8 @@
 					<p>
 						At this company there was a need for a custom built shift scheduling system, and I got
 						the chance to work on it. With no previous infrastructure it was my role to negotiate
-						how the system should work, what kind of interface it should have and then delivering it.
+						how the system should work, what kind of interface it should have and then delivering
+						it.
 					</p>
 				</div>
 				<div class="resume-date text-md-right">
@@ -355,12 +405,8 @@
 	>
 		<div class="my-auto">
 			<h2 class="mb-5">Interests</h2>
-			<p>
-				
-			</p>
-			<p class="mb-0">
-
-			</p>
+			<p />
+			<p class="mb-0" />
 		</div>
 	</section>
 
