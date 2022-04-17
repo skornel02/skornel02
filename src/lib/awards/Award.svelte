@@ -5,7 +5,7 @@
 </script>
 
 <li id={id} class="list-group-item d-flex justify-content-between align-items-center">
-	<div class="icon text-warning mx-1">
+	<div class:highlight={id !== undefined} class="icon text-warning mx-1">
 		<slot name="icon">
 			<FaFile />
 		</slot>
@@ -34,4 +34,30 @@
 		min-width: 80px;
 	}
 
+	.icon.highlight {
+		animation-name: highlight;
+		animation-iteration-count: infinite;
+		animation-duration: 2s;
+	}
+
+	@keyframes highlight {
+		0% {
+			transform: none;
+		}
+		50% {
+			transform: scale(1.1);
+		}
+		100% {
+			transform: none;
+		}
+	}
+
+	li {
+		transition: 0.1s;
+	}
+
+	li:hover {
+		transform: scale(1.01);
+		z-index: 10;
+	}
 </style>

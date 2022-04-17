@@ -18,7 +18,7 @@ import srcsetNemes19 from '$static/assets/competitions/Nemes-Tihamer-2019.jpeg?f
 import srcsetDusza2019 from '$static/assets/competitions/Dusza-2019.jpeg?format=webp;jpg&srcset&quality=80&width=500';
 import srcsetSuli2018 from '$static/assets/competitions/Iskola-programozas-verseny-2018.jpeg?format=webp;jpg&srcset&quality=80&width=500';
 import srcsetSkillsJuniorWeb2022 from '$static/assets/competitions/Skills-Junior-Web-2022.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-
+import srcsetAszev from '$static/assets/competitions/ASZEV2022.jpeg?format=webp;jpg&srcset&quality=80&width=500';
 
 interface AwardType {
     id?: string;
@@ -36,6 +36,21 @@ interface AwardType {
 }
 
 export const awards: AwardType[] = [
+    {
+        id: 'aszev',
+        title: "Ágazati és ágazaton belüli specializáció szakmai érettségi vizsgatárgyak versenye - 2022",
+        placement: "I. place",
+        icon: "trophy",
+        date: "2022-04-13",
+        links: [
+            {
+                text: "Reference",
+                icon: "file",
+                url: "/assets/competitions/ASZEV2022.jpeg",
+                srcset: srcsetAszev,
+            }
+        ]
+    },
     {
         title: "Skills Junior 2022 - Web category",
         placement: "I. place",

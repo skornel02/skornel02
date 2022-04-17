@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { Collapse, Navbar, NavbarToggler, NavbarBrand } from 'sveltestrap';
-	import face from '$static/assets/face.jpg?width=160&srcset';
-	import faceWebP from '$static/assets/face.jpg?width=160&format=webp&srcset';
+	import { Collapse, Navbar, NavbarToggler } from 'sveltestrap';
+	import { scrolltotop } from 'svelte-scrollto-element';
+	import Face from './Face.svelte';
 
 	let width = 1000;
 	let isOpen = true;
@@ -17,22 +17,12 @@
 
 <header>
 	<Navbar dark color="primary" fixed="top" expand="lg" id="sideNav">
-		<NavbarBrand href="#page-top" class="w-lg-100">
+		<div use:scrolltotop={{}} class="navbar-brand w-lg-100">
 			<span class="d-block d-lg-none">Stefán Kornél</span>
 			<span class="d-none d-lg-block">
-				<picture>
-					<source srcset={faceWebP} type="image/webp" width="160" height="160" />
-					<source srcset={face} type="image/jpeg" width="160" height="160" />
-					<img
-						class="img-fluid img-profile rounded-circle mx-auto mb-2"
-						src="/assets/face.jpg"
-						height="160"
-						width="160"
-						alt="SK"
-					/>
-				</picture>
+				<Face />
 			</span>
-		</NavbarBrand>
+		</div>
 		<NavbarToggler
 			on:click={() => (isOpen = !isOpen)}
 			type="button"
