@@ -21,6 +21,8 @@
 	import { animateScroll } from 'svelte-scrollto-element';
 	import {backOut, circInOut} from 'svelte/easing';
 
+	let darkTheme = false;
+
 	const sections: SectionData = {};
 	let height;
 	let currentSection = {
@@ -44,6 +46,8 @@
 	}
 
 	onMount(() => {
+		darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 		let index = 0;
 		document.querySelectorAll('.resume-section').forEach((el) => {
 			if (el.classList.contains('d-none')) return;
@@ -393,7 +397,7 @@
 			</ul>
 			<img
 				class="d-block mx-auto img-fluid"
-				src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact"
+				src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact&theme={darkTheme ? 'dark' : 'light'}"
 				alt="skornel02's stats on github"
 				width="350"
 			/>
@@ -450,7 +454,7 @@
 
 	section.resume-section {
 		border-bottom: 1px solid;
-		border-color: $secondary-color;
+		border-color: var(--color-secondary);
 		padding-top: 5rem !important;
 		padding-bottom: 5rem !important;
 	}
