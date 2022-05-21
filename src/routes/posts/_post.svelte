@@ -1,8 +1,8 @@
 <!-- _post.svelte -->
 <script>
+	import 'github-markdown-css/github-markdown.css';
 	import './prism-vsc-dark-plus.css';
     import './markers.scss';
-	import './modest.scss';
 
 	export let title;
 	export let description;
@@ -22,9 +22,7 @@
 	{/if}
 </svelte:head>
 
-<article class="container">
-	<h1>{title}</h1>
-
+<article class="container markdown-body">
 	<div class="col">
 		<div class="row">
 			<div class="col-9 d-flex">
@@ -35,11 +33,7 @@
 			</div>
 		</div>
 	</div>
-	<p class="lead">
-		{description}
-	</p>
 	<hr />
-
 	<slot />
 </article>
 

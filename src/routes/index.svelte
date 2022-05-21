@@ -93,6 +93,8 @@
 					easing: backOut
 				})
 			}
+		} else if (e.key === "h") {
+			window.location.href = "https://home.skornel02.hu";
 		}
 	};
 </script>
