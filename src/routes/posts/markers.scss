@@ -5,9 +5,9 @@
         &::before {
             content: '#';
             position: absolute;
-            left: -1ch;
+            left: 0;
             top: 0;
-            line-height: 1;
+            line-height: auto;
             opacity: 0;
             text-decoration: underline;
         }
