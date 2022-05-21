@@ -4,6 +4,7 @@ description: Minimális történelem, közepesen érdekes információk és a Wi
 date: "2022-05-21"
 time: "19:00:00"
 layout: post
+proofreader: "Horváth Gergely"
 ---
 
 # Emojik és a Windows
