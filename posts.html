@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script>
+	if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		document.documentElement.setAttribute('data-theme', 'dark');
+	} else {
+		document.documentElement.setAttribute('data-theme', 'light');
+	}
+</script>
+
 <head>
 	<meta charset="utf-8" />
 	<meta name="description" content="Personal site of SK" />
@@ -19,9 +27,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="manifest" href="/manifest.json">
 	<meta http-equiv="content-security-policy" content=""><title>SK - Blog</title>
-	<link rel="stylesheet" href="/internal/assets/pages/__layout.svelte-fa388e5c.css">
+	<link rel="stylesheet" href="/internal/assets/pages/__layout.svelte-4203c5b2.css">
 	<link rel="stylesheet" href="/internal/assets/IconBase-b1158a4e.css">
-	<link rel="modulepreload" href="/internal/start-900e227f.js">
+	<link rel="modulepreload" href="/internal/start-d66212b2.js">
 	<link rel="modulepreload" href="/internal/chunks/index-c39fd906.js">
 	<link rel="modulepreload" href="/internal/chunks/preload-helper-4b04d29c.js">
 	<link rel="modulepreload" href="/internal/pages/__layout.svelte-506315d1.js">
@@ -71,7 +79,7 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1tr9sfr">
-		import { start } from "/internal/start-900e227f.js";
+		import { start } from "/internal/start-d66212b2.js";
 		start({
 			target: document.querySelector('[data-sveltekit-hydrate="1tr9sfr"]').parentNode,
 			paths: {"base":"","assets":""},
