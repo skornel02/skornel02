@@ -7,6 +7,14 @@
     <description>SK's blog's feed's cat</description>
       
     <item>
+      <guid>https://skornel02.hu/posts/emojik-es-a-windows</guid>
+      <title>Emojik és a Windows</title>
+      <link>https://skornel02.hu/posts/emojik-es-a-windows</link>
+      <description>Minimális történelem, közepesen érdekes információk és a Windows emoji verziójának frissítése</description>
+      <pubDate>Sat, 21 May 2022 00:00:00 GMT</pubDate>
+    </item>
+  
+    <item>
       <guid>https://skornel02.hu/posts/welcome</guid>
       <title>Welcome</title>
       <link>https://skornel02.hu/posts/welcome</link>
