@@ -68,10 +68,32 @@
 
 /* Stuff */
 
+html[data-theme="light"] {
+	--color-background: #ffffff;
+	--color-primary: #{$primary-color};
+	--color-secondary: #{$secondary-color};
+	--color-title: #{$title-color};
+	--color-text: #{$text-color};
+}
+
+html[data-theme="dark"] {
+	--color-background: #000000;
+	--color-primary: #{$dark-primary-color};
+	--color-secondary: #{$dark-secondary-color};
+	--color-title: #{$dark-title-color};
+	--color-text: #{$dark-text-color};
+
+	.btn-outline-dark {
+		color: var(--color-title);
+		border-color: var(--color-text);
+	}
+}
+
 body {
 	font-family: 'Open Sans', serif;
 	padding-top: 54px;
-	color: #868e96;
+	color: var(--color-text);
+	background-color: var(--color-background);
 }
 @media (min-width: 992px) {
 	body {
@@ -88,7 +110,7 @@ h6 {
 	font-family: 'Saira Extra Condensed', serif;
 	font-weight: 700;
 	text-transform: uppercase;
-	color: $text-color;
+	color: var(--color-title);
 }
 .subheading {
 	text-transform: uppercase;
@@ -97,10 +119,10 @@ h6 {
 	font-size: 1.35rem;
 }
 .list-social-icons a {
-	color: $text-color;
+	color: var(--color-title);
 }
 .list-social-icons a:hover {
-	color: $primary-color;
+	color: var(--color-primary);
 }
 .list-social-icons a .fa-lg {
 	font-size: 1.75rem;
@@ -109,25 +131,48 @@ h6 {
 	font-size: 3rem;
 }
 .list-icons .list-inline-item i:hover {
-	color: $primary-color;
+	color: var(--color-primary);
 }
 .bg-primary {
-	background-color: $primary-color !important;
+	background-color: var(--color-primary) !important;
 }
 .text-primary {
-	color: $primary-color !important;
+	color: var(--color-primary) !important;
 }
+.btn-outline-primary {
+	color: var(--color-primary);
+	border-color: var(--color-primary);
+}
+
 .bg-secondary {
-	background-color: $secondary-color !important;
+	background-color: var(--color-secondary) !important;
 }
 .text-secondary {
-	color: $secondary-color !important;
+	color: var(--color-secondary) !important;
 }
+.btn-outline-secondary {
+	color: var(--color-secondary);
+	border-color: var(--color-secondary);
+}
+
 a {
-	color: $primary-color;
+	color: var(--color-primary);
 }
 a:active,
 a:focus,
 a:hover {
-	color: $secondary-color;
+	color: var(--color-secondary);
+}
+
+/* Boostrap darkmode fix */
+
+.card {
+	background-color: var(--color-background);
+	border-color: var(--color-title);
+}
+
+.list-group-item {
+	background-color: var(--color-background);
+	border-color: var(--color-text);
+	color: var(--color-title);
 }
