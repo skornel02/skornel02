@@ -35,7 +35,7 @@ Mint ahogy minden sztenderdnél számítanánk rá, így itt is vannak cégek, p
 
 Ennek az írásakor a Windows 10 operációs rendszer utoljára 2019 májusi frissítésében kapott új Emoji verziót (amely név szerint az Emoji 12.0) és így már 3 év hátrányban van, és ez csak nő. Ezzel szemben a Windows 11 bevezetett új "Fluent emoji" készlete már az Emoji 14.0 verziót is támogatja. A kérdés az az, hogy a Microsoftnak ez az új frissítés egy valós technikai változtatást igényelt, vagy csak nem veszik a fáradtságot, hogy egy "elavult" operációs rendszerben frissítsék az Emojikat?
 
-[![image-1653148385384.png](/assets/posts/yt1f9UbfqqHlknfx-image-1653148385384.png)](/assets/posts/yt1f9UbfqqHlknfx-image-1653148385384.png)
+[![Egy kép amin látszik, hogy Windows 10en lehet új emojikat használni](/assets/posts/yt1f9UbfqqHlknfx-image-1653148385384.png)](/assets/posts/yt1f9UbfqqHlknfx-image-1653148385384.png)
 
 Nem meglepő módon a válasz a kérdésre az, hogy megoldható, hogy az új Emoji készlet a "régi" Windowson is működjön. Persze ehhez egy szintű technikai varázslásra van szükség, viszont ez messze nem a legveszélyesebb dolog, amit egy felhasználó tehet a számítógépével (épp rád nézek, idegenhelyről letöltött futtatható fájl, ami indulásod után 10 milliszekundummal adminisztrátori engedélyt kérsz!).
 

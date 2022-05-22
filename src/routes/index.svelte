@@ -19,7 +19,7 @@
 	import { onMount } from 'svelte';
 	import Awards from '$lib/awards/Awards.svelte';
 	import { animateScroll } from 'svelte-scrollto-element';
-	import {backOut, circInOut} from 'svelte/easing';
+	import { backOut, circInOut } from 'svelte/easing';
 
 	let darkTheme = false;
 
@@ -69,36 +69,36 @@
 			if (currentSection.index > 0) {
 				animateScroll.scrollTo({
 					element: document.getElementById(Object.keys(sections)[currentSection.index - 1]),
-					duration: 250,		
-					easing: circInOut			
-				})
+					duration: 250,
+					easing: circInOut
+				});
 			}
 		} else if (e.key === 'ArrowRight') {
 			if (currentSection.index < Object.keys(sections).length - 1) {
 				animateScroll.scrollTo({
-					element: document.getElementById(Object.keys(sections)[currentSection.index + 1]),	
-					duration: 250,	
-					easing: circInOut			
-				})
+					element: document.getElementById(Object.keys(sections)[currentSection.index + 1]),
+					duration: 250,
+					easing: circInOut
+				});
 			}
-		} else if (e.key === "PageUp") {
+		} else if (e.key === 'PageUp') {
 			if (currentSection.index > 0) {
 				animateScroll.scrollTo({
-					element: document.getElementById(Object.keys(sections)[currentSection.index - 1]),	
+					element: document.getElementById(Object.keys(sections)[currentSection.index - 1]),
 					duration: 0,
 					easing: backOut
-				})
+				});
 			}
-		} else if (e.key === "PageDown") {
+		} else if (e.key === 'PageDown') {
 			if (currentSection.index < Object.keys(sections).length - 1) {
 				animateScroll.scrollTo({
-					element: document.getElementById(Object.keys(sections)[currentSection.index + 1]),	
+					element: document.getElementById(Object.keys(sections)[currentSection.index + 1]),
 					duration: 0,
 					easing: backOut
-				})
+				});
 			}
-		} else if (e.key === "h") {
-			window.location.href = "https://home.skornel02.hu";
+		} else if (e.key === 'h') {
+			window.location.href = 'https://home.skornel02.hu';
 		}
 	};
 </script>
@@ -122,20 +122,20 @@
 			</p>
 			<ul class="list-inline list-social-icons mb-0">
 				<li class="list-inline-item">
-					<a href="https://github.com/skornel02">
+					<a id="social-gh" href="https://github.com/skornel02">
 						<div class="icon">
 							<FaGithub />
 						</div>
 					</a>
 				</li>
-				<li class="list-inline-item">
+				<li id="social-fb" class="list-inline-item">
 					<a href="https://www.facebook.com/stefankornel02">
 						<div class="icon">
 							<FaFacebook />
 						</div>
 					</a>
 				</li>
-				<li class="list-inline-item">
+				<li id="social-email" class="list-inline-item">
 					<a href="mailto:stefankornel02@gmail.com">
 						<div class="icon">
 							<FaEnvelope />
@@ -388,16 +388,20 @@
 						height="40"
 					/>
 				</li>
-				<img
-					src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-					alt="typescript"
-					width="40"
-					height="40"
-				/>
+				<li class="list-inline-item">
+					<img
+						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+						alt="typescript"
+						width="40"
+						height="40"
+					/>
+				</li>
 			</ul>
 			<img
 				class="d-block mx-auto img-fluid"
-				src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact&theme={darkTheme ? 'dark' : 'light'}"
+				src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact&theme={darkTheme
+					? 'dark'
+					: 'light'}"
 				alt="skornel02's stats on github"
 				width="350"
 			/>

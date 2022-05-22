@@ -4,7 +4,7 @@
 	import { browser } from '$app/env';
 	import { onDestroy, onMount } from 'svelte';
 	import 'github-markdown-css/github-markdown.css';
-	import './prism-vsc-dark-plus.css';
+	import './prism.css';
 	import './markers.scss';
 
 	export let title;
@@ -55,7 +55,7 @@
 				<p class="my-auto">Published: {date}</p>
 			</div>
 			<div class="col-3">
-				<a href="/posts" class="btn btn-outline-dark"> Back </a>
+				<a href="/posts" class="d-block m-auto btn btn-outline-dark"> Back </a>
 			</div>
 		</div>
 	</header>
