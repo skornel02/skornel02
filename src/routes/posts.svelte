@@ -24,7 +24,7 @@
 	<meta property="og:description" content="Personal blog of SK" />
 	<meta property="og:type" content="website" />
 	<title>SK - Blog</title>
-	<meta name="description" content="ersonal blog of SK" />
+	<meta name="description" content="Personal blog of SK" />
 </svelte:head>
 
 <div class="container">

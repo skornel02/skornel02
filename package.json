@@ -41,6 +41,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
+		"@giscus/svelte": "^2.0.5",
 		"@lukeed/uuid": "^2.0.0",
 		"cookie": "^0.4.1",
 		"github-markdown-css": "^5.1.0",

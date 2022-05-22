@@ -1,5 +1,6 @@
 <!-- _post.svelte -->
 <script>
+	import Giscus from '@giscus/svelte'
 	import 'github-markdown-css/github-markdown.css';
 	import './prism.css';
 	import './markers.scss';
@@ -9,7 +10,7 @@
 	export let time;
 	export let hidden;
 	export let description;
-	if (time === undefined) time = '12:00:00';	
+	if (time === undefined) time = '12:00:00';
 </script>
 
 <svelte:head>
@@ -39,16 +40,20 @@
 		<slot />
 	</article>
 	<hr />
-	<footer>
-		<script
-			src="https://utteranc.es/client.js"
+	<footer id="comments">
+		<Giscus 
 			repo="skornel02/skornel02"
-			issue-term="title"
-			label="comment section"
-			theme="preferred-color-scheme"
-			crossorigin="anonymous"
-			async>
-		</script>
+			repoId="R_kgDOG9KgxQ"
+			category="Comment section"
+			categoryId="DIC_kwDOG9Kgxc4CPOyt"
+			mapping="title"
+			reactionsEnabled="1"			
+			emitMetadata="0"
+			inputPosition="top"
+			theme="preferred_color_scheme"
+			loading="lazy"
+			lang="en"			
+		/>
 	</footer>
 </main>
 
