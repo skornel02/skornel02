@@ -20,6 +20,10 @@
 	const year = new Date().getFullYear();
 </script>
 
+<svelte:head>	
+	<meta property="og:url" content={`https://skornel02.hu${route}`} />
+</svelte:head>
+
 <Header />
 
 {#key route}
