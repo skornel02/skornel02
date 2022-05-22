@@ -106,7 +106,11 @@
 <svelte:window bind:scrollY={height} on:keydown={handleKeyboard} />
 
 <svelte:head>
+	<meta property="og:title" content="SK" />
+	<meta property="og:description" content="Personal site of SK" />
+	<meta property="og:type" content="profile" />
 	<title>{currentSection.title}</title>
+	<meta name="description" content="Personal site of SK" />
 </svelte:head>
 
 <div class="container-fluid p-0">

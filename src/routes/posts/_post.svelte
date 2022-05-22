@@ -1,8 +1,5 @@
 <!-- _post.svelte -->
 <script>
-	import { page } from '$app/stores';
-	import { browser } from '$app/env';
-	import { onDestroy, onMount } from 'svelte';
 	import 'github-markdown-css/github-markdown.css';
 	import './prism.css';
 	import './markers.scss';
@@ -11,38 +8,16 @@
 	export let date;
 	export let time;
 	export let hidden;
-	if (time === undefined) time = '12:00:00';
-
-	onMount(() => {
-		if (document !== undefined) {
-			document
-				.querySelector("meta[property='og:title']")
-				.setAttribute('property', 'disabled:og:title');
-			document
-				.querySelector("meta[property='og:type']")
-				.setAttribute('property', 'disabled:og:type');
-			document.querySelector("meta[property='og:url']").setAttribute('property', 'disabled:og:url');
-		}
-	});
-	onDestroy(() => {
-		if (browser) {
-			document
-				.querySelector("meta[property='disabled:og:title']")
-				.setAttribute('property', 'og:title');
-			document
-				.querySelector("meta[property='disabled:og:type']")
-				.setAttribute('property', 'og:type');
-			document.querySelector("meta[property='disabled:og:url']").setAttribute('property', 'og:url');
-		}
-	});
+	export let description;
+	if (time === undefined) time = '12:00:00';	
 </script>
 
 <svelte:head>
-	<title>SK - {title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={title} />
-	<meta property="og:url" content={`https://skornel02.hu${$page.url.pathname}`} />
 	<meta property="og:published_time" content={`${date}T${time}Z`} />
+	<title>{title} - SK blog</title>
+	<meta name="description" content={description} />
 	{#if hidden}
 		<meta name="robots" content="noindex" />
 	{/if}
@@ -68,7 +43,7 @@
 		<script
 			src="https://utteranc.es/client.js"
 			repo="skornel02/skornel02"
-			issue-term="pathname"
+			issue-term="title"
 			label="comment section"
 			theme="preferred-color-scheme"
 			crossorigin="anonymous"
