@@ -17,7 +17,7 @@
 	import FaFacebook from 'svelte-icons/fa/FaFacebook.svelte';
 	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
 	import { onMount } from 'svelte';
-	import Awards from '$lib/awards/Awards.svelte';
+	import Showcase from '$lib/showcase/Showcase.svelte';
 	import { animateScroll } from 'svelte-scrollto-element';
 	import { backOut, circInOut } from 'svelte/easing';
 
@@ -431,7 +431,7 @@
 	>
 		<div class="my-auto">
 			<h2 class="mb-5">Awards &amp; Certifications</h2>
-			<Awards />
+			<Showcase />
 		</div>
 	</section>
 </div>
