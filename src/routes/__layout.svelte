@@ -1,10 +1,19 @@
 <script context="module">
-	export const load = ({ url }) => {
+	import { browser } from '$app/env';
+
+	export const load = async ({ url, fetch }) => {
 		const route = url.pathname;
+		const localUrl = encodeURIComponent(`https://skornel02.hu${route}`);
+		const shlinkUrl = await (
+			await fetch(`/shlinks/${localUrl}.txt`, {
+				credentials: 'same-origin'
+			})
+		).text();
 
 		return {
 			props: {
-				route
+				route,
+				shlinkUrl
 			}
 		};
 	};
@@ -12,15 +21,18 @@
 
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
+	import ShlinkTracker from '$lib/ShlinkTracker.svelte';
 	import FaRssSquare from 'svelte-icons/fa/FaRssSquare.svelte';
 	import { fade } from 'svelte/transition';
 	import '../app.scss';
+
 	export let route: string;
+	export let shlinkUrl: string | undefined;
 
 	const year = new Date().getFullYear();
 </script>
 
-<svelte:head>	
+<svelte:head>
 	<meta property="og:url" content={`https://skornel02.hu${route}`} />
 </svelte:head>
 
@@ -38,6 +50,7 @@
 		<a href="/rss.xml">
 			<FaRssSquare />
 		</a>
+		<ShlinkTracker {shlinkUrl} />
 	</p>
 </footer>
 

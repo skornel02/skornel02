@@ -130,10 +130,15 @@ h6 {
 	background-color: $primary-color !important;
 	background-color: var(--color-primary) !important;
 }
+.btn-primary {
+	background-color: $primary-color !important;
+	background-color: var(--color-primary) !important;
+}
 .text-primary {
 	color: $primary-color !important;
 	color: var(--color-primary) !important;
 }
+
 .btn-outline-primary {
 	color: $primary-color;
 	color: var(--color-primary);
@@ -142,6 +147,10 @@ h6 {
 }
 
 .bg-secondary {
+	background-color: $secondary-color !important;
+	background-color: var(--color-secondary) !important;
+}
+.btn-secondary {
 	background-color: $secondary-color !important;
 	background-color: var(--color-secondary) !important;
 }
