@@ -46,7 +46,7 @@ interface ShowcaseEntry {
     date: string;
 }
 
-interface SeparatorEntry extends ShowcaseEntry {
+export interface SeparatorEntry extends ShowcaseEntry {
     type: 'separator';
     text: string;
 }
@@ -253,7 +253,7 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
         icon: 'medal',
         date: '2021-01-05',
         links: []
-    }, 
+    },
     {
         type: 'separator',
         text: '2020',
