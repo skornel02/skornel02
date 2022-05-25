@@ -1,9 +1,7 @@
 <script context="module">
-	import { browser } from '$app/env';
-
 	export const load = async ({ url, fetch }) => {
 		const route = url.pathname;
-		const localUrl = encodeURIComponent(`https://skornel02.hu${route}`);
+		const localUrl = encodeURIComponent(`${route}`);
 		const shlinkUrl = await (
 			await fetch(`/shlinks/${localUrl}.txt`, {
 				credentials: 'same-origin'
