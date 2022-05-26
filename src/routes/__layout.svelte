@@ -1,7 +1,8 @@
-<script context="module">
+<script context="module" lang="ts">
 	export const load = async ({ url, fetch }) => {
-		const route = url.pathname;
-		const localUrl = encodeURIComponent(`${route}`);
+		const route: string = url.pathname;
+		const niceRoute = route.replaceAll('/', '---');
+		const localUrl = encodeURI(`${niceRoute}`);
 		const shlinkUrl = await (
 			await fetch(`/shlinks/${localUrl}.txt`, {
 				credentials: 'same-origin'
