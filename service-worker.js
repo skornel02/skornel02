@@ -1,7 +1,7 @@
 const build = [
-  "/internal/immutable/start-4dd8eabc.js",
-  "/internal/immutable/pages/__layout.svelte-a96bf97a.js",
-  "/internal/immutable/assets/pages/__layout.svelte-39aa2249.css",
+  "/internal/immutable/start-5d306d56.js",
+  "/internal/immutable/pages/__layout.svelte-e00bfba8.js",
+  "/internal/immutable/assets/pages/__layout.svelte-86bfd406.css",
   "/internal/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
   "/internal/immutable/assets/fira-mono-all-400-normal-1e3b098c.woff",
   "/internal/immutable/assets/fira-mono-cyrillic-400-normal-c7d433fd.woff2",
@@ -9,22 +9,23 @@ const build = [
   "/internal/immutable/assets/fira-mono-greek-400-normal-a8be01ce.woff2",
   "/internal/immutable/assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
   "/internal/immutable/assets/fira-mono-latin-400-normal-e43b3538.woff2",
-  "/internal/immutable/error.svelte-74bf5628.js",
-  "/internal/immutable/pages/404.svelte-75ab05f8.js",
+  "/internal/immutable/error.svelte-3b9d8097.js",
+  "/internal/immutable/pages/404.svelte-1b51105c.js",
   "/internal/immutable/assets/pages/404.svelte-390392b8.css",
-  "/internal/immutable/pages/index.svelte-9c645215.js",
+  "/internal/immutable/pages/index.svelte-962d6ea7.js",
   "/internal/immutable/assets/pages/index.svelte-60d82a87.css",
-  "/internal/immutable/pages/posts/_post_.svelte-55151bb6.js",
-  "/internal/immutable/pages/posts.svelte-2bd51405.js",
-  "/internal/immutable/chunks/index-8aa0046d.js",
+  "/internal/immutable/pages/posts/_post_.svelte-8be3559c.js",
+  "/internal/immutable/pages/posts.svelte-d9c317d6.js",
+  "/internal/immutable/assets/pages/posts.svelte-eba483ce.css",
+  "/internal/immutable/chunks/index-9dfae9f7.js",
   "/internal/immutable/chunks/preload-helper-e51e4937.js",
-  "/internal/immutable/chunks/IconBase-c0de69dc.js",
+  "/internal/immutable/chunks/IconBase-f192dd01.js",
   "/internal/immutable/assets/IconBase-b1158a4e.css",
-  "/internal/immutable/chunks/emojik-es-a-windows-1f3ec425.js",
-  "/internal/immutable/chunks/_post-f4de0720.js",
+  "/internal/immutable/chunks/emojik-es-a-windows-f199a5b5.js",
+  "/internal/immutable/chunks/_post-aeb5d3c8.js",
   "/internal/immutable/assets/_post-b312ce0f.css",
-  "/internal/immutable/chunks/hidden-post-89879725.js",
-  "/internal/immutable/chunks/welcome-b3120d43.js",
+  "/internal/immutable/chunks/hidden-post-891445fe.js",
+  "/internal/immutable/chunks/welcome-4c2562d4.js",
   "/internal/immutable/chunks/giscus.es-d0a804e6.js"
 ];
 const files = [
@@ -82,7 +83,7 @@ const prerendered = [
   "/posts/welcome",
   "/shlinks/---posts---welcome.txt"
 ];
-const version = "1653549837936";
+const version = "1653582358148";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
