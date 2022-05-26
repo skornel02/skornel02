@@ -20,4 +20,23 @@
 	<div>%sveltekit.body%</div>
 </body>
 
+<script>
+	(function () {
+    let updated = false;
+
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+        console.log({ state: "updated" });
+        updated = true;
+        checkUpdate();
+    });
+
+    function checkUpdate() {
+        if (updated) {
+            console.log("Application was updated refreshing the page...");
+            window.location.reload();
+        }
+    }
+})();
+</script>
+
 </html>
