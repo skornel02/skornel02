@@ -1,6 +1,6 @@
 const build = [
-  "/internal/immutable/start-94434cef.js",
-  "/internal/immutable/pages/__layout.svelte-261699a4.js",
+  "/internal/immutable/start-4dd8eabc.js",
+  "/internal/immutable/pages/__layout.svelte-a96bf97a.js",
   "/internal/immutable/assets/pages/__layout.svelte-39aa2249.css",
   "/internal/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
   "/internal/immutable/assets/fira-mono-all-400-normal-1e3b098c.woff",
@@ -68,21 +68,21 @@ const files = [
 ];
 const prerendered = [
   "/",
-  "/shlinks/%2F.txt",
+  "/shlinks/---.txt",
   "/404",
-  "/shlinks/%2F404.txt",
+  "/shlinks/---404.txt",
   "/posts",
-  "/shlinks/%2Fposts.txt",
+  "/shlinks/---posts.txt",
   "/sitemap.xml",
   "/rss.xml",
   "/posts/emojik-es-a-windows",
-  "/shlinks/%2Fposts%2Femojik-es-a-windows.txt",
+  "/shlinks/---posts---emojik-es-a-windows.txt",
   "/posts/hidden-post",
-  "/shlinks/%2Fposts%2Fhidden-post.txt",
+  "/shlinks/---posts---hidden-post.txt",
   "/posts/welcome",
-  "/shlinks/%2Fposts%2Fwelcome.txt"
+  "/shlinks/---posts---welcome.txt"
 ];
-const version = "1653548997087";
+const version = "1653549837936";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
