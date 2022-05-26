@@ -6,18 +6,18 @@ export const get: RequestHandler = async ({ params }) => {
     const shlinkKey = process.env.SHLINK_KEY;
     if (shlinkKey !== undefined && shlinkKey.length !== 0) {
         try {
-            // const res = await fetch(`https://link.skornel02.hu/shorten.php?api-key=${shlinkKey}&service=skornel02&url=${params.route}`)
+            const param = decodeURI(params.route).replaceAll("---", '/');
             const headers = {
                 "X-Api-Key": shlinkKey,
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             }
             const data = {
-                longUrl: `https://skornel02.hu${params.route}`,
+                longUrl: `https://skornel02.hu${param}`,
                 tags: ["skornel02"],
                 findIfExists: true,
                 validateUrl: true,
-                title: "skornel02.hu - " + params.route
+                title: "skornel02.hu - " + param
             }
             const res = await fetch("https://link.skornel02.hu/rest/v2/short-urls", {
                 method: "POST",
