@@ -8,6 +8,17 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import remarkSubSuper from 'remark-sub-super';
 import remarkEmoji from 'remark-emoji';
 import remarkFootnotes from 'remark-footnotes';
+import { readdirSync } from 'fs';
+
+const posts = [];
+try {
+	posts.push(...(
+		readdirSync('src/posts/').map(post => `/posts/${post}`.replace('.md', ''))
+	));
+	console.log("Loaded posts: ", posts);
+} catch (e) {
+	console.log("Post loading failed!", e);
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -52,7 +63,7 @@ const config = {
 
 		prerender: {
 			default: true,
-			entries: ["*", "/sitemap.xml", "/rss.xml"]
+			entries: ["*", "/sitemap.xml", "/rss.xml", ...posts]
 		},
 
 		vite: {
