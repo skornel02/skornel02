@@ -43,7 +43,7 @@
 	</main>
 {/key}
 
-<footer>
+<footer id="footer">
 	<p>
 		Have a nice day! • {year} © •
 		<a href="/rss.xml">

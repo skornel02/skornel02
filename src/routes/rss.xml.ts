@@ -1,7 +1,7 @@
 import { loadPostsOrdered } from "$lib/posts";
 
 export async function get() {
-  const posts = await loadPostsOrdered();
+  const posts = await loadPostsOrdered(false);
 
   const headers = {
     'Cache-Control': 'max-age=0, s-maxage=3600',

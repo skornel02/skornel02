@@ -31,12 +31,15 @@ export const loadPosts = async (): Promise<Post[]> => {
     return allPosts;
 }
 
-export const loadPostsOrdered = async (): Promise<Post[]> => {
-    const allPosts = await loadPosts();
+export const loadPostsOrdered = async (hidden = true): Promise<Post[]> => {
+    let posts = await loadPosts();
+    if (!hidden) {
+        posts = posts.filter(post => post.metadata.hidden !== true);
+    }
 
-    const sortedPosts = allPosts.sort((a, b) => {
+    posts = posts.sort((a, b) => {
         return +new Date(b.metadata.date) - +new Date(a.metadata.date);
     });
 
-    return sortedPosts;
+    return posts;
 }

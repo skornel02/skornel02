@@ -17,6 +17,7 @@ specifiers:
   eslint: ^7.32.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^3.2.1
+  fuse.js: ^6.6.2
   github-markdown-css: ^5.1.0
   mdsvex: ^0.10.5
   postcss: ^8.4.5
@@ -32,6 +33,7 @@ specifiers:
   svelte: ^3.48.0
   svelte-check: ^2.7.1
   svelte-icons: ^2.1.0
+  svelte-intersection-observer: ^0.10.0
   svelte-preprocess: ^4.10.6
   svelte-scrollto-element: ^0.7.0
   sveltestrap: github:laxadev/sveltestrap
@@ -47,12 +49,14 @@ dependencies:
   '@lukeed/uuid': 2.0.0
   cookie: 0.4.2
   env-cmd: 10.1.0
+  fuse.js: 6.6.2
   github-markdown-css: 5.1.0
   rehype-autolink-headings: 6.1.1
   rehype-slug: 5.0.1
   remark-emoji: 3.0.2
   remark-sub-super: 1.0.20
   svelte-icons: 2.1.0
+  svelte-intersection-observer: 0.10.0
   svelte-scrollto-element: 0.7.0_svelte@3.48.0
   sveltestrap: github.com/laxadev/sveltestrap/d01fce867e16efddbfafe0b89575c7f2ad03ef6c_svelte@3.48.0
 
@@ -457,7 +461,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.5
+      semver: 7.3.7
       tsutils: 3.21.0_typescript@4.6.2
       typescript: 4.6.2
     transitivePeerDependencies:
@@ -774,7 +778,7 @@ packages:
     dev: true
 
   /code-point-at/1.1.0:
-    resolution: {integrity: sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=}
+    resolution: {integrity: sha512-RpAVKQA5T63xEj6/giIbUEtZwJ4UFIc3ZtvEkiaUERylqe8xb5IvqcgOurZLahv93CLKfxcw5YI+DZcUBRyLXA==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -1469,6 +1473,11 @@ packages:
   /functional-red-black-tree/1.0.1:
     resolution: {integrity: sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=}
     dev: true
+
+  /fuse.js/6.6.2:
+    resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==}
+    engines: {node: '>=10'}
+    dev: false
 
   /gauge/2.7.4:
     resolution: {integrity: sha1-LANAXHU4w51+s3sxcCLjJfsBi/c=}
@@ -2725,6 +2734,10 @@ packages:
 
   /svelte-icons/2.1.0:
     resolution: {integrity: sha512-rHPQjweEc9fGSnvM0/4gA3pDHwyZyYsC5KhttCZRhSMJfLttJST5Uq0B16Czhw+HQ+HbSOk8kLigMlPs7gZtfg==}
+    dev: false
+
+  /svelte-intersection-observer/0.10.0:
+    resolution: {integrity: sha512-GdOTMSrRpoBciMe+NbocsHOBvqKJ5OiL5H8Jz4mBoDGHba9VOI4oGeXAmMOmh8mi5gq95+0b0DVI+6alcQ7TCA==}
     dev: false
 
   /svelte-preprocess/4.10.6_6i6usygkpfkof6fx2u4hsuu6we:

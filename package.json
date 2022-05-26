@@ -47,12 +47,14 @@
 		"@lukeed/uuid": "^2.0.0",
 		"cookie": "^0.4.1",
 		"env-cmd": "^10.1.0",
+		"fuse.js": "^6.6.2",
 		"github-markdown-css": "^5.1.0",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.0.1",
 		"remark-emoji": "^3.0.2",
 		"remark-sub-super": "^1.0.20",
 		"svelte-icons": "^2.1.0",
+		"svelte-intersection-observer": "^0.10.0",
 		"svelte-scrollto-element": "^0.7.0",
 		"sveltestrap": "github:laxadev/sveltestrap"
 	}
