@@ -3,6 +3,7 @@
 	import ShowcaseFrame from './ShowcaseFrame.svelte';
 	import { typeToIcon } from './showcaseHelper';
 	import ShowcaseLink from './ShowcaseLink.svelte';
+	import TeamMember from './TeamMember.svelte';
 
 	export let award: AwardEntry;
 </script>
@@ -22,6 +23,16 @@
 					<ShowcaseLink {link} />
 				{/each}
 			</div>
+			{#if award.team !== undefined}
+				<div class="d-flex teams">
+					<p class="fw-light">
+						Team: 
+					</p>
+					{#each award.team as member}
+						<TeamMember {member} />
+					{/each}
+				</div>
+			{/if}
 		</div>
 	</div>
 </ShowcaseFrame>
@@ -41,5 +52,10 @@
 		animation-name: highlight;
 		animation-iteration-count: infinite;
 		animation-duration: 2s;
+	}
+
+	.teams>p {
+		line-height: 40px;
+		margin: 0;
 	}
 </style>
