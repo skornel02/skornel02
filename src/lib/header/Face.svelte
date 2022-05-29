@@ -1,16 +1,6 @@
 <script>
-	import face from '$static/assets/face.jpg?width=160&srcset';
-	import faceWebP from '$static/assets/face.jpg?width=160&format=webp&srcset';
+	import Image from '$lib/Image.svelte';
+	import face from '$static/assets/people/sk.jpeg?metadata&format=jpg;webp&width=160';
 </script>
 
-<picture>
-	<source srcset={faceWebP} type="image/webp" width="160" height="160" />
-	<source srcset={face} type="image/jpeg" width="160" height="160" />
-	<img
-		class="img-fluid img-profile rounded-circle mx-auto mb-2"
-		src="/assets/face.jpg"
-		height="160"
-		width="160"
-		alt="SK"
-	/>
-</picture>
+<Image class="img-fluid img-profile rounded-circle mx-auto mb-2" meta={face} alt="SK" />

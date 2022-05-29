@@ -1,43 +1,26 @@
-import srcsetIfju2022 from '$static/assets/competitions/Ifju-Tudosok-2022.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetDuszaMobil2021 from '$static/assets/competitions/Dusza-mobil-2021.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetDuszaMobil2020 from '$static/assets/competitions/Dusza-mobil-2020.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetDuszaMobil2019 from '$static/assets/competitions/Dusza-mobil-2019.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetBBB2021 from '$static/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.jpg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetInno2021 from '$static/assets/competitions/Innovacios-tehetsegkutato-2021.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetKHN2021 from '$static/assets/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetMerklik2021 from '$static/assets/competitions/Merklik-2021.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetBBB2020 from '$static/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetSZIIV2020 from '$static/assets/competitions/SZIIV-2020.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetKHN2020 from '$static/assets/competitions/Kodolj-Hatarok-Nelkul-2020.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetInno2020 from '$static/assets/competitions/Innovacios-tehetsegkutato-2020.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetDusza2020 from '$static/assets/competitions/Dusza-2020.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetBBB2019 from '$static/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetWebex from '$static/assets/competitions/Webex-Teams-Hackathlon-2019-photo.jpg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetSZIIV2019 from '$static/assets/competitions/SZIIV-2019.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetNemes19 from '$static/assets/competitions/Nemes-Tihamer-2019.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetDusza2019 from '$static/assets/competitions/Dusza-2019.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetSuli2018 from '$static/assets/competitions/Iskola-programozas-verseny-2018.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetSkillsJuniorWeb2022 from '$static/assets/competitions/Skills-Junior-Web-2022.jpeg?format=webp;jpg&srcset&quality=80&width=500';
-import srcsetAszev from '$static/assets/competitions/ASZEV2022.jpeg?format=webp;jpg&srcset&quality=80&width=500';
+import { getImageData } from '$lib/images';
+import type { ImageData } from '$lib/images-helper';
+import { FMate, HGergely, IErik, RGergely, SKornel, VAvar, VTibor, type Person } from '$lib/people';
 
 interface Link {
     type: 'simple' | 'pdf' | 'img';
     text: string;
     icon: string;
-    url: string;
 }
 
 export interface SimpleLink extends Link {
     type: 'simple';
+    url: string;
 }
 
 export interface PdfLink extends Link {
     type: 'pdf';
+    url: string;
 }
 
 export interface ImgLink extends Link {
     type: 'img';
-    srcset: string;
+    data: ImageData;
 }
 
 interface ShowcaseEntry {
@@ -60,6 +43,7 @@ interface ShowcaseItem extends ShowcaseEntry {
 export interface AwardEntry extends ShowcaseItem {
     type: 'award';
     placement: string;
+    team?: Person[];
 }
 
 export interface CertificateEntry extends ShowcaseItem {
@@ -79,8 +63,7 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: "Reference",
                 icon: "file",
-                url: "/assets/competitions/ASZEV2022.jpeg",
-                srcset: srcsetAszev,
+                data: getImageData("/assets/competitions/ASZEV2022.jpeg"),
             },
         ]
     },
@@ -95,8 +78,7 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: "Reference",
                 icon: "file",
-                url: "/assets/competitions/Skills-Junior-Web-2022.jpeg",
-                srcset: srcsetSkillsJuniorWeb2022
+                data: getImageData("/assets/competitions/Skills-Junior-Web-2022.jpeg"),
             },
         ]
     },
@@ -111,8 +93,7 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Ifju-Tudosok-2022.jpeg',
-                srcset: srcsetIfju2022
+                data: getImageData('/assets/competitions/Ifju-Tudosok-2022.jpeg'),
             },
         ]
     },
@@ -132,10 +113,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Dusza-mobil-2021.jpeg',
-                srcset: srcsetDuszaMobil2021
+                data: getImageData('/assets/competitions/Dusza-mobil-2021.jpeg'),
             },
-        ]
+        ],
+        team: [IErik, HGergely, SKornel],
     },
     {
         type: 'award',
@@ -148,10 +129,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.jpg',
-                srcset: srcsetBBB2021
+                data: getImageData('/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.jpeg'),
             },
-        ]
+        ],
+        team: [HGergely, SKornel, VAvar],
     },
     {
         type: 'award',
@@ -164,10 +145,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Innovacios-tehetsegkutato-2021.jpeg',
-                srcset: srcsetInno2021
+                data: getImageData('/assets/competitions/Innovacios-tehetsegkutato-2021.jpeg'),
             },
-        ]
+        ],
+        team: [SKornel, VAvar],
     },
     {
         type: 'certificate',
@@ -194,10 +175,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg',
-                srcset: srcsetKHN2021
+                data: getImageData('/assets/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg'),
             },
-        ]
+        ],
+        team: [RGergely, SKornel, VAvar],
     },
     {
         type: 'award',
@@ -210,10 +191,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg',
-                srcset: srcsetMerklik2021
+                data: getImageData('/assets/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg'),
             },
-        ]
+        ],
+        team: [HGergely, SKornel, VAvar],
     },
     {
         type: 'award',
@@ -226,10 +207,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.jpeg',
-                srcset: srcsetBBB2020
+                data: getImageData('/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.jpeg'),
             },
-        ]
+        ],
+        team: [HGergely, SKornel, VAvar],
     },
     {
         type: 'award',
@@ -244,7 +225,8 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 icon: 'file',
                 url: '/assets/competitions/GAMF programozó verseny 2020.pdf',
             }
-        ]
+        ],
+        team: [HGergely, IErik, SKornel],
     },
     {
         type: 'award',
@@ -252,7 +234,8 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
         placement: 'II. place',
         icon: 'medal',
         date: '2021-01-05',
-        links: []
+        links: [],
+        team: [HGergely, SKornel, VAvar],
     },
     {
         type: 'separator',
@@ -270,10 +253,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Dusza-mobil-2020.jpeg',
-                srcset: srcsetDuszaMobil2020
+                data: getImageData('/assets/competitions/Dusza-mobil-2020.jpeg'),
             },
-        ]
+        ],
+        team: [IErik, HGergely, SKornel],
     },
     {
         type: 'award',
@@ -287,8 +270,7 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/SZIIV-2020.jpeg',
-                srcset: srcsetSZIIV2020
+                data: getImageData('/assets/competitions/SZIIV-2020.jpeg'),
             },
             {
                 type: 'simple',
@@ -296,7 +278,8 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 icon: 'globe',
                 url: 'https://www.inf.u-szeged.hu/sziiv2020/eredmenyek#:~:text=hazizz%20velunk%3A%20parkmyst'
             }
-        ]
+        ],
+        team: [HGergely, SKornel, VAvar],
     },
     {
         type: 'award',
@@ -309,10 +292,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Kodolj-Hatarok-Nelkul-2020.jpeg',
-                srcset: srcsetKHN2020
+                data: getImageData('/assets/competitions/Kodolj-Hatarok-Nelkul-2020.jpeg'),
             },
-        ]
+        ],
+        team: [RGergely, SKornel, VAvar],
     },
     {
         type: 'award',
@@ -327,7 +310,8 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 icon: 'file',
                 url: '/assets/competitions/Accenture Java 2020.pdf',
             }
-        ]
+        ],
+        team: [FMate, SKornel, VTibor],
     },
     {
         type: 'award',
@@ -340,10 +324,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Innovacios-tehetsegkutato-2020.jpeg',
-                srcset: srcsetInno2020
+                data: getImageData('/assets/competitions/Innovacios-tehetsegkutato-2020.jpeg'),
             },
-        ]
+        ],
+        team: [SKornel, VAvar],
     },
     {
         type: 'award',
@@ -371,10 +355,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Dusza-2020.jpeg',
-                srcset: srcsetDusza2020
+                data: getImageData('/assets/competitions/Dusza-2020.jpeg'),
             },
-        ]
+        ],
+        team: [IErik, HGergely, SKornel],
     },
     {
         type: 'separator',
@@ -392,10 +376,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Dusza-mobil-2019.jpeg',
-                srcset: srcsetDuszaMobil2019
+                data: getImageData('/assets/competitions/Dusza-mobil-2019.jpeg'),
             },
-        ]
+        ],
+        team: [IErik, HGergely, SKornel],
     },
     {
         type: 'award',
@@ -408,10 +392,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.jpeg',
-                srcset: srcsetBBB2019
+                data: getImageData('/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.jpeg'),
             },
-        ]
+        ],
+        team: [RGergely, SKornel, VAvar],
     },
     {
         type: 'award',
@@ -424,10 +408,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Webex-Teams-Hackathlon-2019-photo.jpg',
-                srcset: srcsetWebex
+                data: getImageData('/assets/competitions/Webex-Teams-Hackathlon-2019-photo.jpeg'),
             },
-        ]
+        ],
+        team: [IErik, HGergely, SKornel],
     },
     {
         type: 'award',
@@ -441,8 +425,7 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/SZIIV-2019.jpeg',
-                srcset: srcsetSZIIV2019
+                data: getImageData('/assets/competitions/SZIIV-2019.jpeg'),
             },
             {
                 type: 'simple',
@@ -450,7 +433,8 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 icon: 'globe',
                 url: 'https://www.inf.u-szeged.hu/sziiv2019/eredmenyek#:~:text=hazizz%20velunk'
             }
-        ]
+        ],
+        team: [IErik, SKornel, VAvar],
     },
     {
         type: 'award',
@@ -463,8 +447,7 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Nemes-Tihamer-2019.jpeg',
-                srcset: srcsetNemes19
+                data: getImageData('/assets/competitions/Nemes-Tihamer-2019.jpeg'),
             },
         ]
     },
@@ -479,10 +462,10 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Dusza-2019.jpeg',
-                srcset: srcsetDusza2019
+                data: getImageData('/assets/competitions/Dusza-2019.jpeg'),
             },
-        ]
+        ],
+        team: [IErik, HGergely, SKornel],
     },
     {
         type: 'award',
@@ -495,8 +478,7 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
                 type: 'img',
                 text: 'Reference',
                 icon: 'file',
-                url: '/assets/competitions/Iskola-programozas-verseny-2018.jpeg',
-                srcset: srcsetSuli2018
+                data: getImageData('/assets/competitions/Iskola-programozas-verseny-2018.jpeg'),
             },
         ]
     },

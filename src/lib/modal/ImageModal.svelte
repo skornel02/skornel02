@@ -1,11 +1,13 @@
 <script lang="ts">
+	import Image from '$lib/Image.svelte';
+	import type { ImageMetadata } from '$lib/images-helper';
 	import { Modal } from 'sveltestrap';
 
 	let clazz: string = 'btn btn-primary';
 	export { clazz as class };
 	export let title: string;
 	export let location: string;
-	export let srcset: string;
+	export let metadata: ImageMetadata[];
 
 	let loading = true;
 	let open = false;
@@ -33,17 +35,24 @@
 	<slot />
 </a>
 <Modal body header="Image preview" isOpen={open} {toggle}>
-	<img {srcset} alt="preview" class:loading-image={loading} on:load={imageLoad} />
+	{#if loading}
+		<div style="--loader-height: {metadata[0].height}px;">
+			<div class="loading-image" />
+		</div>
+	{/if}
+	<Image meta={metadata} alt="" on:load={imageLoad} />
+	<!-- <img {srcset} alt="preview" class:loading-image={loading} on:load={imageLoad} /> -->
 	<a href={location} class="btn btn-primary modal-button" target="_blank" rel="noopener">Open</a>
 </Modal>
 
 <style>
-	img {
+	:global(img) {
 		max-width: 100%;
 		max-height: 100%;
 	}
 	.loading-image {
 		height: 500px !important;
+		height: var(--loader-height) !important;
 	}
 
 	a.modal-button {

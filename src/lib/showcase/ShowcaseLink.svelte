@@ -9,7 +9,7 @@
 
 <div class="showcase-link">
 	{#if link.type === 'img'}
-		<ImageModal location={link.url} srcset={link.srcset} title={link.text}>
+		<ImageModal location={link.data.path} title={link.text} metadata={link.data.meta}>
 			<div class="file">
 				<svelte:component this={typeToIcon(link.icon)} />
 			</div>
