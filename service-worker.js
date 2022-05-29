@@ -1,5 +1,5 @@
 const build = [
-  "/internal/immutable/start-d120342c.js",
+  "/internal/immutable/start-4cc14471.js",
   "/internal/immutable/pages/__layout.svelte-02c50d8b.js",
   "/internal/immutable/assets/pages/__layout.svelte-86bfd406.css",
   "/internal/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
@@ -12,7 +12,7 @@ const build = [
   "/internal/immutable/error.svelte-171bdd71.js",
   "/internal/immutable/pages/404.svelte-87f78a92.js",
   "/internal/immutable/assets/pages/404.svelte-390392b8.css",
-  "/internal/immutable/pages/index.svelte-6ee215ce.js",
+  "/internal/immutable/pages/index.svelte-cd539d40.js",
   "/internal/immutable/assets/pages/index.svelte-ebef69cb.css",
   "/internal/immutable/pages/posts/_post_.svelte-1c195e38.js",
   "/internal/immutable/pages/posts.svelte-06f7eb04.js",
@@ -84,7 +84,7 @@ const prerendered = [
   "/posts/welcome",
   "/shlinks/---posts---welcome.txt"
 ];
-const version = "1653835742579";
+const version = "1653841931886";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
