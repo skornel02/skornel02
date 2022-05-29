@@ -1,6 +1,6 @@
 const build = [
-  "/internal/immutable/start-5d306d56.js",
-  "/internal/immutable/pages/__layout.svelte-e00bfba8.js",
+  "/internal/immutable/start-d120342c.js",
+  "/internal/immutable/pages/__layout.svelte-02c50d8b.js",
   "/internal/immutable/assets/pages/__layout.svelte-86bfd406.css",
   "/internal/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
   "/internal/immutable/assets/fira-mono-all-400-normal-1e3b098c.woff",
@@ -9,23 +9,23 @@ const build = [
   "/internal/immutable/assets/fira-mono-greek-400-normal-a8be01ce.woff2",
   "/internal/immutable/assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
   "/internal/immutable/assets/fira-mono-latin-400-normal-e43b3538.woff2",
-  "/internal/immutable/error.svelte-3b9d8097.js",
-  "/internal/immutable/pages/404.svelte-1b51105c.js",
+  "/internal/immutable/error.svelte-171bdd71.js",
+  "/internal/immutable/pages/404.svelte-87f78a92.js",
   "/internal/immutable/assets/pages/404.svelte-390392b8.css",
-  "/internal/immutable/pages/index.svelte-962d6ea7.js",
-  "/internal/immutable/assets/pages/index.svelte-60d82a87.css",
-  "/internal/immutable/pages/posts/_post_.svelte-8be3559c.js",
-  "/internal/immutable/pages/posts.svelte-d9c317d6.js",
+  "/internal/immutable/pages/index.svelte-6ee215ce.js",
+  "/internal/immutable/assets/pages/index.svelte-ebef69cb.css",
+  "/internal/immutable/pages/posts/_post_.svelte-1c195e38.js",
+  "/internal/immutable/pages/posts.svelte-06f7eb04.js",
   "/internal/immutable/assets/pages/posts.svelte-eba483ce.css",
-  "/internal/immutable/chunks/index-9dfae9f7.js",
+  "/internal/immutable/chunks/index-1dd851d7.js",
   "/internal/immutable/chunks/preload-helper-e51e4937.js",
-  "/internal/immutable/chunks/IconBase-f192dd01.js",
+  "/internal/immutable/chunks/IconBase-e377e718.js",
   "/internal/immutable/assets/IconBase-b1158a4e.css",
-  "/internal/immutable/chunks/emojik-es-a-windows-f199a5b5.js",
-  "/internal/immutable/chunks/_post-aeb5d3c8.js",
+  "/internal/immutable/chunks/emojik-es-a-windows-b0290b1b.js",
+  "/internal/immutable/chunks/_post-514a53ba.js",
   "/internal/immutable/assets/_post-b312ce0f.css",
-  "/internal/immutable/chunks/hidden-post-891445fe.js",
-  "/internal/immutable/chunks/welcome-4c2562d4.js",
+  "/internal/immutable/chunks/hidden-post-a19a20ba.js",
+  "/internal/immutable/chunks/welcome-4372c441.js",
   "/internal/immutable/chunks/giscus.es-d0a804e6.js"
 ];
 const files = [
@@ -38,7 +38,7 @@ const files = [
   "/assets/competitions/Accenture Java 2020.pdf",
   "/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.jpeg",
   "/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.jpeg",
-  "/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.jpg",
+  "/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.jpeg",
   "/assets/competitions/Dusza-2019.jpeg",
   "/assets/competitions/Dusza-2020.jpeg",
   "/assets/competitions/Dusza-mobil-2019.jpeg",
@@ -57,9 +57,10 @@ const files = [
   "/assets/competitions/SZIIV-2019.jpeg",
   "/assets/competitions/SZIIV-2020.jpeg",
   "/assets/competitions/Skills-Junior-Web-2022.jpeg",
-  "/assets/competitions/Webex-Teams-Hackathlon-2019-photo.jpg",
-  "/assets/face.jpg",
+  "/assets/competitions/Webex-Teams-Hackathlon-2019-photo.jpeg",
   "/assets/og-banner.jpg",
+  "/assets/people/sk.jpeg",
+  "/assets/people/unknownhe.jpeg",
   "/assets/posts/yt1f9UbfqqHlknfx-image-1653148385384.png",
   "/favicon-16x16.png",
   "/favicon-32x32.png",
@@ -83,7 +84,7 @@ const prerendered = [
   "/posts/welcome",
   "/shlinks/---posts---welcome.txt"
 ];
-const version = "1653582358148";
+const version = "1653835742579";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
