@@ -12,7 +12,7 @@
 </div>
 
 <svelte:head>
-	<meta http-equiv="refresh" content="{totalCounter}; url=/">
+	<meta http-equiv="refresh" content="{totalCounter}; url=/" />
 </svelte:head>
 
 <style>

@@ -1,30 +1,30 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import { Collapse, Navbar, NavbarToggler } from 'sveltestrap';
-	import { scrolltotop } from 'svelte-scrollto-element';
+	import {page} from '$app/stores';
+	import {Collapse, Navbar, NavbarToggler} from 'sveltestrap';
+	import {scrolltotop} from 'svelte-scrollto-element';
 	import Face from './Face.svelte';
 
 	let width = 1000;
 	let isOpen = true;
 	$: isOpen = width >= 992;
 
-	function handleUpdate(event) {
-		isOpen = event.detail.isOpen;
-	}
+	const handleUpdate = (e: any) => {
+		isOpen = e.detail.isOpen;
+	};
 </script>
 
-<svelte:window bind:innerWidth={width} />
+<svelte:window bind:innerWidth="{width}" />
 
 <header>
 	<Navbar dark color="primary" fixed="top" expand="lg" id="sideNav">
-		<div use:scrolltotop={{}} class="navbar-brand w-lg-100">
+		<div use:scrolltotop="{{}}" class="navbar-brand w-lg-100">
 			<span class="d-block d-lg-none">Stefán Kornél</span>
 			<span class="d-none d-lg-block">
 				<Face />
 			</span>
 		</div>
 		<NavbarToggler
-			on:click={() => (isOpen = !isOpen)}
+			on:click="{() => (isOpen = !isOpen)}"
 			type="button"
 			data-toggle="collapse"
 			data-target="#navbarSupportedContent"
@@ -32,21 +32,24 @@
 			aria-expanded="false"
 			aria-label="Toggle navigation"
 		>
-			<span class="navbar-toggler-icon" />
+			<span class="navbar-toggler-icon"></span>
 		</NavbarToggler>
 
-		<Collapse {isOpen} navbar id="navbarSupportedContent" on:update={handleUpdate}>
+		<Collapse isOpen="{isOpen}" navbar id="navbarSupportedContent" on:update="{handleUpdate}">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a sveltekit:prefetch class="nav-link" class:active={$page.url.pathname === '/'} href="/"
-						>Home</a
+					<a
+						sveltekit:prefetch
+						class="nav-link"
+						class:active="{$page.url.pathname === '/'}"
+						href="/">Home</a
 					>
 				</li>
 				<li class="nav-item">
 					<a
 						sveltekit:prefetch
 						class="nav-link disabled"
-						class:active={$page.url.pathname.startsWith('/projects')}
+						class:active="{$page.url.pathname.startsWith('/projects')}"
 						href="/">Projects</a
 					>
 				</li>
@@ -54,7 +57,7 @@
 					<a
 						sveltekit:prefetch
 						class="nav-link"
-						class:active={$page.url.pathname.startsWith('/posts')}
+						class:active="{$page.url.pathname.startsWith('/posts')}"
 						href="/posts">Blog</a
 					>
 				</li>
@@ -62,7 +65,7 @@
 		</Collapse>
 	</Navbar>
 </header>
-<div id="page-top" />
+<div id="page-top"></div>
 
 <style lang="scss">
 	@media print {

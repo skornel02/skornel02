@@ -1,10 +1,10 @@
 ---
 title: Emojik és a Windows
 description: Minimális történelem, közepesen érdekes információk és a Windows emoji verziójának frissítése
-date: "2022-05-21"
-time: "19:00:00"
+date: '2022-05-21'
+time: '19:00:00'
 layout: post
-proofreader: "Horváth Gergely"
+proofreader: 'Horváth Gergely'
 ---
 
 # Emojik és a Windows
@@ -15,11 +15,11 @@ Minden környezetnek megvan a saját kultúrája. Amíg e-mailekben kevésbé je
 
 ## Történelem
 
-Az emojik témája lassan történelem órán tanított téma lesz a mémóliógia mellett, viszont a mi témánk ma az Unicode emojik. Az Unicodért felelős szervezet már a 2000es évek elején boldogan élt és virult, tette dolgát, és foglalkozott azzal, hogy hogyan lehetnek a dolgok olyan egységesek, mint amilyenek azok ma. Az első emojik nem meglepően a Japán behatásra be is folytak már az unicode 4.0 sztenderdbe *(2003)*, viszont egészen a 6.0-ig *(2010)* úgy itélték, hogy nem tartoznak az emojik az unicode szabvány hatáskörébe, így addig nem foglalkoztak a direktes művelésével és fejlesztésével.
+Az emojik témája lassan történelem órán tanított téma lesz a mémóliógia mellett, viszont a mi témánk ma az Unicode emojik. Az Unicodért felelős szervezet már a 2000es évek elején boldogan élt és virult, tette dolgát, és foglalkozott azzal, hogy hogyan lehetnek a dolgok olyan egységesek, mint amilyenek azok ma. Az első emojik nem meglepően a Japán behatásra be is folytak már az unicode 4.0 sztenderdbe _(2003)_, viszont egészen a 6.0-ig _(2010)_ úgy itélték, hogy nem tartoznak az emojik az unicode szabvány hatáskörébe, így addig nem foglalkoztak a direktes művelésével és fejlesztésével.
 
 Ebben a köztes időszakban az európai és amerikai piac is foglalkozott azzal, hogy hogyan kellene bevezetni ezeket az imádni való arcukat mutogató élőlényeket és egyéb szimbólumokat. A meglepő együttműködése az Apple és a Googlenek, az együttes nyomása érte azt el, hogy az unicodért felelős szervezet (Unicode Techincal Committee) foglalkozzon az emojikkal. Végülis 722 emoji került be az unicode 6.0 sztenderdbe.
 
-Ezután nagyobb változást jelentett 2015 elején, amikor elkezdték szorgalmazni az úgy nevezett ***z**ero **w**idth* **j**oiner, avagy összekötő karakter használatát. Ennek a szerepe az, hogy jelöli, hogy egy emoji sorozat valójában egy karakterként jelenítendő meg. Na most ez valahol egy zseniálisan jó ötlet, mert így nem kell minden variációra új karakterkódot meghatározni. Például egy (tradicionális keresztény) család emojit nem úgy hozunk létre, hogy önálló karakter kódja van, hanem fogunk egy férfi emojit `👨`, egy összekötő karaktert, egy nőt `👩`, még egy összekötő karaktert és egy fiút vagy lányt `👦` és majd a szöveget megjelenítő szoftver ezt egy emojinak fogja mutatni: `👨‍👩‍👦`
+Ezután nagyobb változást jelentett 2015 elején, amikor elkezdték szorgalmazni az úgy nevezett **\*z**ero **w**idth\* **j**oiner, avagy összekötő karakter használatát. Ennek a szerepe az, hogy jelöli, hogy egy emoji sorozat valójában egy karakterként jelenítendő meg. Na most ez valahol egy zseniálisan jó ötlet, mert így nem kell minden variációra új karakterkódot meghatározni. Például egy (tradicionális keresztény) család emojit nem úgy hozunk létre, hogy önálló karakter kódja van, hanem fogunk egy férfi emojit `👨`, egy összekötő karaktert, egy nőt `👩`, még egy összekötő karaktert és egy fiút vagy lányt `👦` és majd a szöveget megjelenítő szoftver ezt egy emojinak fogja mutatni: `👨‍👩‍👦`
 
 ```
 👨 + \u200B-\u200D\uFEFF + 👩 + \u200B-\u200D\uFEFF +👦 = 👨‍👩‍👦
@@ -45,6 +45,6 @@ A Windows az emojikat a [Segoe UI Emoji](https://docs.microsoft.com/en-us/typogr
 
 Persze az, hogy valami nem elérhető hivatalos forrásból, az még sosem zavart senkit, és még ennél is kevésbé meglepő, hogy egy kedves Reddit felhasználó össze is állított egy lépésről lépésre végig vezető leírást hogyan kell a verziót frissíteni. Az eredeti leírás [ITT ](https://www.reddit.com/r/Windows11/comments/q85c70/how_to_get_the_new_windows_11_emojis_in_stable/hgqnra2/)olvasható el. Viszont mielőtt bárki belekezdene fontos megjegyeznem, hogy egyrészről **csináljon biztonsági mentést** az eredeti betűtípusáról, és **ne hullasson sok könnyet** azután, hogy rájön, hogy elfogja veszteni a ninja macskát, a dínó macskát és az összes többi macskafajtát.
 
-A biztonsági mentés létrehozásához be kell navigálnunk a rendszer betűtípus tárhelyére (tipikusan: `C:\Windows\Fonts`) és innen a `seguiemj.ttf` fájlt kell biztonságos helyre **másolnunk**. Ezután az általunk letöltött újabb verziónak vélt `seguiemj.ttf` fájlt telepítjük az összes felhasználónak. *(Én ezt sikeresen kipróbáltam és működött - én egy önmagát 1.35-ös verziónak állító betűtípust használtam, viszont a beépített Emoji válogatóban nem jelentek meg az új karakterek.)*
+A biztonsági mentés létrehozásához be kell navigálnunk a rendszer betűtípus tárhelyére (tipikusan: `C:\Windows\Fonts`) és innen a `seguiemj.ttf` fájlt kell biztonságos helyre **másolnunk**. Ezután az általunk letöltött újabb verziónak vélt `seguiemj.ttf` fájlt telepítjük az összes felhasználónak. _(Én ezt sikeresen kipróbáltam és működött - én egy önmagát 1.35-ös verziónak állító betűtípust használtam, viszont a beépített Emoji válogatóban nem jelentek meg az új karakterek.)_
 
 Miután ezt megtettük örömmel láthatjuk az új Emojikat és érhetjük el őket a `Windows + .` gyorsmenüből, vagy csodálhatjuk meg őket akár az én kedvenc oldalamon, az [emojipedia.org](https://emojipedia.org/)-on.

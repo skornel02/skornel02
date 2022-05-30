@@ -1,8 +1,8 @@
 ---
 title: Welcome
 description: Welcome to my personal site!
-date: "2022-03-30"
-time: "17:40:00"
+date: '2022-03-30'
+time: '17:40:00'
 layout: post
 ---
 
@@ -14,16 +14,16 @@ Until then I hope you enjoy this void of mine.
 
 ## Goals
 
-* To make this website awesome
-* ~~Use cool tech~~ (Svelte got that covered)
-* Make content
+- To make this website awesome
+- ~~Use cool tech~~ (Svelte got that covered)
+- Make content
 
 > "A stílus mögött egy ember van, az ember mögött egy élet van." - Kosztolányi Dezső
 
 ## Disclaimer
 
-This post also functions as a test markdown file for most of the **formatting**[^guarantee]. 
-Here is the *Open Graph* image of the site:
+This post also functions as a test markdown file for most of the **formatting**[^guarantee].
+Here is the _Open Graph_ image of the site:
 
 ![Cover](/assets/og-banner.jpg)
 
@@ -31,11 +31,10 @@ Here is the *Open Graph* image of the site:
 
 [Home page](/)
 
-
 ```js
-    let message = "Hello";
-    const prnt = (toPrint) => console.log(toPrint);
-    prnt(message);
+let message = 'Hello';
+const prnt = (toPrint) => console.log(toPrint);
+prnt(message);
 ```
 
 ---
@@ -44,7 +43,6 @@ Here is the *Open Graph* image of the site:
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
-
 
 X^2^
 

@@ -1,19 +1,21 @@
 <script context="module" lang="ts">
-	export const load = async ({ url, fetch }) => {
+	import type {LoadEvent, LoadOutput} from '@sveltejs/kit';
+
+	export const load = async ({url, fetch}: LoadEvent): Promise<LoadOutput> => {
 		const route: string = url.pathname;
 		const niceRoute = route.replaceAll('/', '---');
 		const localUrl = encodeURI(`${niceRoute}`);
 		const shlinkUrl = await (
 			await fetch(`/shlinks/${localUrl}.txt`, {
-				credentials: 'same-origin'
+				credentials: 'same-origin',
 			})
 		).text();
 
 		return {
 			props: {
 				route,
-				shlinkUrl
-			}
+				shlinkUrl,
+			},
 		};
 	};
 </script>
@@ -22,7 +24,7 @@
 	import Header from '$lib/header/Header.svelte';
 	import ShlinkTracker from '$lib/ShlinkTracker.svelte';
 	import FaRssSquare from 'svelte-icons/fa/FaRssSquare.svelte';
-	import { fade } from 'svelte/transition';
+	import {fade} from 'svelte/transition';
 	import '../app.scss';
 
 	export let route: string;
@@ -32,13 +34,13 @@
 </script>
 
 <svelte:head>
-	<meta property="og:url" content={`https://skornel02.hu${route}`} />
+	<meta property="og:url" content="{`https://skornel02.hu${route}`}" />
 </svelte:head>
 
 <Header />
 
 {#key route}
-	<main in:fade={{ duration: 150, delay: 100 }} out:fade={{ duration: 100 }}>
+	<main in:fade="{{duration: 150, delay: 100}}" out:fade="{{duration: 100}}">
 		<slot />
 	</main>
 {/key}
@@ -49,7 +51,7 @@
 		<a href="/rss.xml">
 			<FaRssSquare />
 		</a>
-		<ShlinkTracker {shlinkUrl} />
+		<ShlinkTracker shlinkUrl="{shlinkUrl}" />
 	</p>
 </footer>
 

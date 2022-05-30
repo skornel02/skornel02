@@ -16,19 +16,19 @@
 	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
 	import FaFacebook from 'svelte-icons/fa/FaFacebook.svelte';
 	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
-	import { onMount } from 'svelte';
+	import {onMount} from 'svelte';
 	import Showcase from '$lib/showcase/Showcase.svelte';
-	import { animateScroll } from 'svelte-scrollto-element';
-	import { backOut, circInOut } from 'svelte/easing';
+	import {animateScroll} from 'svelte-scrollto-element';
+	import {backOut, circInOut} from 'svelte/easing';
 
 	let darkTheme = false;
 
 	const sections: SectionData = {};
-	let height;
+	let height: number;
 	let currentSection = {
 		index: -1,
 		top: 0,
-		title: ''
+		title: '',
 	};
 
 	$: {
@@ -54,7 +54,7 @@
 			sections[el.id] = {
 				index: index++,
 				top: document.getElementById(el.id).offsetTop,
-				title: document.getElementById(el.id).getAttribute('x-description')
+				title: document.getElementById(el.id).getAttribute('x-description'),
 			};
 		});
 		const top = sections['about'].top ?? 0;
@@ -70,7 +70,7 @@
 				animateScroll.scrollTo({
 					element: document.getElementById(Object.keys(sections)[currentSection.index - 1]),
 					duration: 250,
-					easing: circInOut
+					easing: circInOut,
 				});
 			}
 		} else if (e.key === 'ArrowRight') {
@@ -78,7 +78,7 @@
 				animateScroll.scrollTo({
 					element: document.getElementById(Object.keys(sections)[currentSection.index + 1]),
 					duration: 250,
-					easing: circInOut
+					easing: circInOut,
 				});
 			}
 		} else if (e.key === 'PageUp') {
@@ -86,7 +86,7 @@
 				animateScroll.scrollTo({
 					element: document.getElementById(Object.keys(sections)[currentSection.index - 1]),
 					duration: 0,
-					easing: backOut
+					easing: backOut,
 				});
 			}
 		} else if (e.key === 'PageDown') {
@@ -94,7 +94,7 @@
 				animateScroll.scrollTo({
 					element: document.getElementById(Object.keys(sections)[currentSection.index + 1]),
 					duration: 0,
-					easing: backOut
+					easing: backOut,
 				});
 			}
 		} else if (e.key === 'h') {
@@ -103,7 +103,7 @@
 	};
 </script>
 
-<svelte:window bind:scrollY={height} on:keydown={handleKeyboard} />
+<svelte:window bind:scrollY="{height}" on:keydown="{handleKeyboard}" />
 
 <svelte:head>
 	<meta property="og:title" content="SK" />
@@ -419,8 +419,8 @@
 	>
 		<div class="my-auto">
 			<h2 class="mb-5">Interests</h2>
-			<p />
-			<p class="mb-0" />
+			<p></p>
+			<p class="mb-0"></p>
 		</div>
 	</section>
 

@@ -5,10 +5,10 @@ name: Node.js CI
 
 env:
   NODE_VERSION: '16.15.0'
-  
+
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build-and-deploy:

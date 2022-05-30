@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { showcase } from '../../showcase';
+	import {showcase} from '../../showcase';
 	import ShowcaseItem from './ShowcaseItem.svelte';
 
 	const orderedItems = showcase.sort((a, b) => {
@@ -11,7 +11,7 @@
 
 <ul class="list-group">
 	{#each orderedItems as item}
-		<ShowcaseItem {item} />
+		<ShowcaseItem item="{item}" />
 	{/each}
 </ul>
 

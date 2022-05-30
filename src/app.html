@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta property="og:profile:first_name" content="Kornél" />
+		<meta property="og:profile:last_name" content="Stefán" />
+		<meta property="og:profile:username" content="skornel02" />
+		<meta property="og:image" content="https://skornel02.hu/assets/og-banner.jpg" />
+		<meta property="og:image:type" content="image/jpeg" />
+		<meta property="og:image:width" content="600" />
+		<meta property="og:image:height" content="300" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="manifest" href="/manifest.json" />
+		%sveltekit.head%
+	</head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta property="og:profile:first_name" content="Kornél" />
-	<meta property="og:profile:last_name" content="Stefán" />
-	<meta property="og:profile:username" content="skornel02" />
-	<meta property="og:image" content="https://skornel02.hu/assets/og-banner.jpg" />
-	<meta property="og:image:type" content="image/jpeg" />
-	<meta property="og:image:width" content="600" />
-	<meta property="og:image:height" content="300" />
-	<link rel="icon" href="/favicon.ico" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="manifest" href="/manifest.json">
-	%sveltekit.head%
-</head>
+	<body>
+		<div>%sveltekit.body%</div>
+	</body>
 
-<body>
-	<div>%sveltekit.body%</div>
-</body>
+	<script>
+		(function () {
+			let updated = false;
 
-<script>
-	(function () {
-    let updated = false;
+			navigator.serviceWorker.addEventListener('controllerchange', () => {
+				console.log({state: 'updated'});
+				updated = true;
+				checkUpdate();
+			});
 
-    navigator.serviceWorker.addEventListener('controllerchange', () => {
-        console.log({ state: "updated" });
-        updated = true;
-        checkUpdate();
-    });
-
-    function checkUpdate() {
-        if (updated) {
-            console.log("Application was updated refreshing the page...");
-            window.location.reload();
-        }
-    }
-})();
-</script>
-
+			function checkUpdate() {
+				if (updated) {
+					console.log('Application was updated refreshing the page...');
+					window.location.reload();
+				}
+			}
+		})();
+	</script>
 </html>

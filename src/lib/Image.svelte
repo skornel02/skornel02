@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { ImageMetadata } from './images-helper';
-	import { createEventDispatcher } from 'svelte';
+	import type {ImageMetadata} from './images-helper';
+	import {createEventDispatcher} from 'svelte';
 
 	const dispatch = createEventDispatcher();
 
-	let clazz: string;
-	export { clazz as class };
+	let clazz: string = '';
+	export {clazz as class};
 
 	/**
 	 * the output of a vite-imagetools import, using the `meta` query for output
@@ -162,10 +162,16 @@
 <picture>
 	{#each [...sources.entries()] as [format, meta]}
 		<source
-			{sizes}
+			sizes="{sizes}"
 			type="image/{format}"
-			srcset={meta.map((m) => `${m.src} ${m.width}w`).join(', ')}
+			srcset="{meta.map((m) => `${m.src} ${m.width}w`).join(', ')}"
 		/>
 	{/each}
-	<img class={clazz} src={image.src} {alt} {loading} on:load={propogateLoad} />
+	<img
+		class="{clazz}"
+		src="{image.src}"
+		alt="{alt}"
+		loading="{loading}"
+		on:load="{propogateLoad}"
+	/>
 </picture>
