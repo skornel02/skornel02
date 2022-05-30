@@ -1,7 +1,7 @@
 const build = [
-  "/internal/immutable/start-4cc14471.js",
-  "/internal/immutable/pages/__layout.svelte-02c50d8b.js",
-  "/internal/immutable/assets/pages/__layout.svelte-86bfd406.css",
+  "/internal/immutable/start-c398a0a5.js",
+  "/internal/immutable/pages/__layout.svelte-b5ab2e52.js",
+  "/internal/immutable/assets/pages/__layout.svelte-5cf008c7.css",
   "/internal/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
   "/internal/immutable/assets/fira-mono-all-400-normal-1e3b098c.woff",
   "/internal/immutable/assets/fira-mono-cyrillic-400-normal-c7d433fd.woff2",
@@ -10,22 +10,22 @@ const build = [
   "/internal/immutable/assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
   "/internal/immutable/assets/fira-mono-latin-400-normal-e43b3538.woff2",
   "/internal/immutable/error.svelte-171bdd71.js",
-  "/internal/immutable/pages/404.svelte-87f78a92.js",
+  "/internal/immutable/pages/404.svelte-f4417765.js",
   "/internal/immutable/assets/pages/404.svelte-390392b8.css",
-  "/internal/immutable/pages/index.svelte-cd539d40.js",
-  "/internal/immutable/assets/pages/index.svelte-ebef69cb.css",
-  "/internal/immutable/pages/posts/_post_.svelte-1c195e38.js",
-  "/internal/immutable/pages/posts.svelte-06f7eb04.js",
+  "/internal/immutable/pages/index.svelte-19607d81.js",
+  "/internal/immutable/assets/pages/index.svelte-98299e5a.css",
+  "/internal/immutable/pages/posts/_post_.svelte-a14f5314.js",
+  "/internal/immutable/pages/posts.svelte-c5266080.js",
   "/internal/immutable/assets/pages/posts.svelte-eba483ce.css",
   "/internal/immutable/chunks/index-1dd851d7.js",
   "/internal/immutable/chunks/preload-helper-e51e4937.js",
-  "/internal/immutable/chunks/IconBase-e377e718.js",
+  "/internal/immutable/chunks/IconBase-fe8dd898.js",
   "/internal/immutable/assets/IconBase-b1158a4e.css",
-  "/internal/immutable/chunks/emojik-es-a-windows-b0290b1b.js",
-  "/internal/immutable/chunks/_post-514a53ba.js",
+  "/internal/immutable/chunks/emojik-es-a-windows-43d23127.js",
+  "/internal/immutable/chunks/_post-e931ddf1.js",
   "/internal/immutable/assets/_post-b312ce0f.css",
-  "/internal/immutable/chunks/hidden-post-a19a20ba.js",
-  "/internal/immutable/chunks/welcome-4372c441.js",
+  "/internal/immutable/chunks/hidden-post-e355d6e1.js",
+  "/internal/immutable/chunks/welcome-4d47ed6e.js",
   "/internal/immutable/chunks/giscus.es-d0a804e6.js"
 ];
 const files = [
@@ -84,7 +84,7 @@ const prerendered = [
   "/posts/welcome",
   "/shlinks/---posts---welcome.txt"
 ];
-const version = "1653841931886";
+const version = "1653924099379";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
