@@ -1,6 +1,6 @@
 <!-- _post.svelte -->
 <script>
-	import Giscus from '@giscus/svelte'
+	import Giscus from '@giscus/svelte';
 	import 'github-markdown-css/github-markdown.css';
 	import './prism.css';
 	import './markers.scss';
@@ -15,10 +15,10 @@
 
 <svelte:head>
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content={title} />
-	<meta property="og:published_time" content={`${date}T${time}Z`} />
+	<meta property="og:title" content="{title}" />
+	<meta property="og:published_time" content="{`${date}T${time}Z`}" />
 	<title>{title} - SK blog</title>
-	<meta name="description" content={description} />
+	<meta name="description" content="{description}" />
 	{#if hidden}
 		<meta name="robots" content="noindex" />
 	{/if}
@@ -41,18 +41,18 @@
 	</article>
 	<hr />
 	<footer id="comments">
-		<Giscus 
+		<Giscus
 			repo="skornel02/skornel02"
 			repoId="R_kgDOG9KgxQ"
 			category="Comment section"
 			categoryId="DIC_kwDOG9Kgxc4CPOyt"
 			mapping="title"
-			reactionsEnabled="1"			
+			reactionsEnabled="1"
 			emitMetadata="0"
 			inputPosition="top"
 			theme="preferred_color_scheme"
 			loading="lazy"
-			lang="en"			
+			lang="en"
 		/>
 	</footer>
 </main>

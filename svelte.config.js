@@ -1,23 +1,21 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import path from 'path';
-import { imagetools } from 'vite-imagetools';
-import { mdsvex } from 'mdsvex'
-import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import {imagetools} from 'vite-imagetools';
+import {mdsvex} from 'mdsvex';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkSubSuper from 'remark-sub-super';
 import remarkEmoji from 'remark-emoji';
 import remarkFootnotes from 'remark-footnotes';
-import { readdirSync } from 'fs';
+import {readdirSync} from 'fs';
 
 const posts = [];
 try {
-	posts.push(...(
-		readdirSync('src/posts/').map(post => `/posts/${post}`.replace('.md', ''))
-	));
-	console.log("Loaded posts: ", posts);
+	posts.push(...readdirSync('src/posts/').map((post) => `/posts/${post}`.replace('.md', '')));
+	console.log('Loaded posts: ', posts);
 } catch (e) {
-	console.log("Post loading failed!", e);
+	console.log('Post loading failed!', e);
 }
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -27,24 +25,17 @@ const config = {
 	preprocess: [
 		preprocess({
 			scss: {
-				prependData: '@use "src/variables.scss" as *;'
-			}
+				prependData: '@use "src/variables.scss" as *;',
+			},
 		}),
 		mdsvex({
 			extensions: ['.md'],
 			layout: {
-				post: "src/routes/posts/_post.svelte"
+				post: 'src/routes/posts/_post.svelte',
 			},
-			remarkPlugins: [
-				remarkSubSuper,
-				remarkEmoji,
-				remarkFootnotes
-			],
-			rehypePlugins: [
-				rehypeSlug,
-				rehypeAutolinkHeadings
-			]
-		})
+			remarkPlugins: [remarkSubSuper, remarkEmoji, remarkFootnotes],
+			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+		}),
 	],
 
 	extensions: ['.svelte', '.md'],
@@ -54,16 +45,16 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: null,
-			precompress: false
+			precompress: false,
 		}),
-		appDir: "internal",
+		appDir: 'internal',
 		files: {
-			assets: "static"
+			assets: 'static',
 		},
 
 		prerender: {
 			default: true,
-			entries: ["*", "/sitemap.xml", "/rss.xml", ...posts]
+			entries: ['*', '/sitemap.xml', '/rss.xml', ...posts],
 		},
 
 		vite: {
@@ -71,20 +62,18 @@ const config = {
 				alias: {
 					$static: path.resolve('static'),
 					$src: path.resolve('src'),
-				}
+				},
 			},
 			css: {
 				preprocessorOptions: {
 					scss: {
-						additionalData: '@use "src/variables.scss" as *;'
-					}
-				}
+						additionalData: '@use "src/variables.scss" as *;',
+					},
+				},
 			},
-			plugins: [
-				imagetools()
-			]
-		}
-	}
+			plugins: [imagetools()],
+		},
+	},
 };
 
 export default config;

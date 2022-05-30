@@ -1,16 +1,16 @@
 <script lang="ts">
-	import type { AwardEntry } from '../../showcase';
+	import type {AwardEntry} from '../../showcase';
 	import ShowcaseFrame from './ShowcaseFrame.svelte';
-	import { typeToIcon } from './showcaseHelper';
+	import {typeToIcon} from './showcaseHelper';
 	import ShowcaseLink from './ShowcaseLink.svelte';
 	import TeamMember from './TeamMember.svelte';
 
 	export let award: AwardEntry;
 </script>
 
-<ShowcaseFrame id={award.id}>
-	<div class:highlight={award.id !== undefined} class="icon text-warning mx-1">
-		<svelte:component this={typeToIcon(award.icon)} />
+<ShowcaseFrame id="{award.id}">
+	<div class:highlight="{award.id !== undefined}" class="icon text-warning mx-1">
+		<svelte:component this="{typeToIcon(award.icon)}" />
 	</div>
 	<span class="badge bg-primary rounded-pill">
 		{award.placement}
@@ -20,16 +20,14 @@
 			<div class="fw-bold">{award.title}</div>
 			<div class="d-flex justify-content-end">
 				{#each award.links as link}
-					<ShowcaseLink {link} />
+					<ShowcaseLink link="{link}" />
 				{/each}
 			</div>
 			{#if award.team !== undefined}
 				<div class="d-flex teams">
-					<p class="fw-light">
-						Team: 
-					</p>
+					<p class="fw-light">Team:</p>
 					{#each award.team as member}
-						<TeamMember {member} />
+						<TeamMember member="{member}" />
 					{/each}
 				</div>
 			{/if}
@@ -54,7 +52,7 @@
 		animation-duration: 2s;
 	}
 
-	.teams>p {
+	.teams > p {
 		line-height: 40px;
 		margin: 0;
 	}

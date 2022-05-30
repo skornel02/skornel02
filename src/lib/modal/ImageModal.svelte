@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Image from '$lib/Image.svelte';
-	import type { ImageMetadata } from '$lib/images-helper';
-	import { Modal } from 'sveltestrap';
+	import type {ImageMetadata} from '$lib/images-helper';
+	import {Modal} from 'sveltestrap';
 
 	let clazz: string = 'btn btn-primary';
-	export { clazz as class };
+	export {clazz as class};
 	export let title: string;
 	export let location: string;
 	export let metadata: ImageMetadata[];
@@ -25,24 +25,24 @@
 </script>
 
 <a
-	href={location}
-	on:click|preventDefault={toggle}
+	href="{location}"
+	on:click|preventDefault="{toggle}"
 	target="_blank"
 	rel="noopener"
-	class={clazz}
-	{title}
+	class="{clazz}"
+	title="{title}"
 >
 	<slot />
 </a>
-<Modal body header="Image preview" isOpen={open} {toggle}>
+<Modal body header="Image preview" isOpen="{open}" toggle="{toggle}">
 	{#if loading}
 		<div style="--loader-height: {metadata[0].height}px;">
-			<div class="loading-image" />
+			<div class="loading-image"></div>
 		</div>
 	{/if}
-	<Image meta={metadata} alt="" on:load={imageLoad} />
+	<Image meta="{metadata}" alt="" on:load="{imageLoad}" />
 	<!-- <img {srcset} alt="preview" class:loading-image={loading} on:load={imageLoad} /> -->
-	<a href={location} class="btn btn-primary modal-button" target="_blank" rel="noopener">Open</a>
+	<a href="{location}" class="btn btn-primary modal-button" target="_blank" rel="noopener">Open</a>
 </Modal>
 
 <style>

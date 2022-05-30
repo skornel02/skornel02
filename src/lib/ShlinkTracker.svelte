@@ -1,4 +1,4 @@
-<script context="module">    
+<script context="module">
 	export const prerender = false;
 </script>
 
@@ -7,12 +7,12 @@
 </script>
 
 {#if shlinkUrl}
-	<img src={shlinkUrl} alt="" />
+	<img src="{shlinkUrl}" alt="" />
 {/if}
 
 <style>
-    img {
-        width: 1px;
-        height: 1px;
-    }
+	img {
+		width: 1px;
+		height: 1px;
+	}
 </style>

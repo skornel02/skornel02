@@ -1,18 +1,18 @@
 <script lang="ts" context="module">
-	import { loadPostsOrdered, type Post } from '$lib/posts';
-	import { onDestroy, onMount } from 'svelte';
+	import {loadPostsOrdered, type Post} from '$lib/posts';
+	import type {LoadOutput} from '@sveltejs/kit';
 	import Fuse from 'fuse.js';
 
 	export const prerender = true;
 
-	export const load = async () => {
+	export const load = async (): Promise<LoadOutput> => {
 		const sortedPosts = await loadPostsOrdered(false);
 
 		return {
 			status: 200,
 			props: {
-				posts: sortedPosts
-			}
+				posts: sortedPosts,
+			},
 		};
 	};
 </script>
@@ -25,9 +25,9 @@
 	const searchOptions = {
 		includeScore: true,
 		keys: [
-			{ name: 'metadata.title', weight: 0.8 },
-			{ name: 'metadata.description', weight: 0.2 }
-		]
+			{name: 'metadata.title', weight: 0.8},
+			{name: 'metadata.description', weight: 0.2},
+		],
 	};
 	let search = '';
 	const fuse = new Fuse(posts, searchOptions);
@@ -35,7 +35,7 @@
 	$: {
 		if (search !== '') {
 			const result = fuse.search(search);
-			postsShown = result.map(r => r.item);
+			postsShown = result.map((r) => r.item);
 		} else {
 			postsShown = posts;
 		}
@@ -57,10 +57,10 @@
 			class="form-control form-control-lg"
 			type="text"
 			placeholder="Search..."
-			bind:value={search}
+			bind:value="{search}"
 		/>
 	</div>
-	<hr>
+	<hr />
 	<div class="d-flex flex-column">
 		{#each postsShown as post, index}
 			<div id="post-{index}" class="w-100 d-flex flex-column post">
@@ -72,7 +72,7 @@
 				</p>
 				<div class="d-flex justify-content-end">
 					<div class="d-flex flex-column">
-						<a href={post.path} class="btn btn-outline-primary">Read</a>
+						<a href="{post.path}" class="btn btn-outline-primary">Read</a>
 						<p>{new Date(post.metadata.date).toLocaleDateString()}</p>
 					</div>
 				</div>
