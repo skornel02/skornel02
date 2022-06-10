@@ -51,6 +51,13 @@
 </footer>
 
 <style lang="scss">
+	@media (min-width: 992px) {
+		:global(body) {
+			padding-top: 0;
+			padding-left: 17rem;
+		}
+	}
+
 	main {
 		flex: 1;
 		display: flex;
