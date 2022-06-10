@@ -1,5 +1,5 @@
 const build = [
-  "/internal/immutable/start-3eb11cd7.js",
+  "/internal/immutable/start-299f493e.js",
   "/internal/immutable/pages/__layout.svelte-dc2396bd.js",
   "/internal/immutable/assets/pages/__layout.svelte-187fdff2.css",
   "/internal/immutable/error.svelte-55cfa41e.js",
@@ -13,7 +13,7 @@ const build = [
   "/internal/immutable/pages/posts/_post_.svelte-807546eb.js",
   "/internal/immutable/pages/posts.svelte-ad869ae6.js",
   "/internal/immutable/assets/pages/posts.svelte-eba483ce.css",
-  "/internal/immutable/pages/me@min.svelte-03832b84.js",
+  "/internal/immutable/pages/me@min.svelte-5d24f069.js",
   "/internal/immutable/chunks/index-df60f785.js",
   "/internal/immutable/chunks/preload-helper-e51e4937.js",
   "/internal/immutable/chunks/layout-helper-4156d03e.js",
@@ -29,9 +29,17 @@ const build = [
   "/internal/immutable/assets/IconBase-b1158a4e.css",
   "/internal/immutable/chunks/Face-f7aea7a5.js",
   "/internal/immutable/chunks/Image-974178cf.js",
-  "/internal/immutable/chunks/me@min-a65f8a3f.js",
-  "/internal/immutable/assets/me@min-ae06963e.css",
-  "/internal/immutable/chunks/index-8bddcf51.js",
+  "/internal/immutable/chunks/me@min-2888b4dd.js",
+  "/internal/immutable/assets/me@min-f32b8a81.css",
+  "/internal/immutable/assets/noto-serif-cyrillic-ext-400-normal-436635b5.woff2",
+  "/internal/immutable/assets/noto-serif-all-400-normal-dcff534d.woff",
+  "/internal/immutable/assets/noto-serif-cyrillic-400-normal-749532b4.woff2",
+  "/internal/immutable/assets/noto-serif-greek-ext-400-normal-aa2efad2.woff2",
+  "/internal/immutable/assets/noto-serif-greek-400-normal-dd234652.woff2",
+  "/internal/immutable/assets/noto-serif-vietnamese-400-normal-f4d5af74.woff2",
+  "/internal/immutable/assets/noto-serif-latin-ext-400-normal-3d7aa71c.woff2",
+  "/internal/immutable/assets/noto-serif-latin-400-normal-25475d82.woff2",
+  "/internal/immutable/chunks/index-a7a37689.js",
   "/internal/immutable/chunks/pathseg-93424b96.js",
   "/internal/immutable/chunks/emojik-es-a-windows-6f30b325.js",
   "/internal/immutable/chunks/_post-f5495c7b.js",
@@ -74,6 +82,8 @@ const files = [
   "/assets/people/sk.jpeg",
   "/assets/people/unknownhe.jpeg",
   "/assets/posts/yt1f9UbfqqHlknfx-image-1653148385384.png",
+  "/assets/svg/business-card-back.svg",
+  "/assets/svg/business-card-front.svg",
   "/favicon-16x16.png",
   "/favicon-32x32.png",
   "/favicon.ico",
@@ -98,7 +108,7 @@ const prerendered = [
   "/posts/welcome",
   "/shlinks/---posts---welcome.txt"
 ];
-const version = "1654881358064";
+const version = "1654895504551";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
