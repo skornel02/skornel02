@@ -10,6 +10,7 @@ import remarkEmoji from 'remark-emoji';
 import remarkFootnotes from 'remark-footnotes';
 import {readdirSync} from 'fs';
 
+const staticFiles = ['/sitemap.xml', '/rss.xml'];
 const posts = [];
 try {
 	posts.push(...readdirSync('src/posts/').map((post) => `/posts/${post}`.replace('.md', '')));
@@ -54,7 +55,7 @@ const config = {
 
 		prerender: {
 			default: true,
-			entries: ['*', '/sitemap.xml', '/rss.xml', ...posts],
+			entries: ['*', ...staticFiles, ...posts],
 		},
 
 		vite: {

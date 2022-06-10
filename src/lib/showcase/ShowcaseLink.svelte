@@ -2,7 +2,7 @@
 	import ImageModal from '$lib/modal/ImageModal.svelte';
 	import PdfModal from '$lib/modal/PdfModal.svelte';
 	import type {ImgLink, PdfLink, SimpleLink} from '../../showcase';
-	import {typeToIcon} from './showcaseHelper';
+	import {typeToIcon} from './showcase-helper';
 
 	export let link: SimpleLink | PdfLink | ImgLink;
 </script>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type {CertificateEntry} from '../../showcase';
 	import ShowcaseFrame from './ShowcaseFrame.svelte';
-	import {typeToIcon} from './showcaseHelper';
+	import {typeToIcon} from './showcase-helper';
 	import ShowcaseLink from './ShowcaseLink.svelte';
 
 	export let certificate: CertificateEntry;
