@@ -84,12 +84,6 @@ body {
 	background-color: $background-color;
 	background-color: var(--color-background);
 }
-@media (min-width: 992px) {
-	body {
-		padding-top: 0;
-		padding-left: 17rem;
-	}
-}
 h1,
 h2,
 h3,
