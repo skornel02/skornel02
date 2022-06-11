@@ -1,9 +1,10 @@
 const build = [
-  "/internal/immutable/start-76ef18e4.js",
+  "/internal/immutable/start-152ffd40.js",
   "/internal/immutable/pages/__layout.svelte-7d936875.js",
   "/internal/immutable/assets/pages/__layout.svelte-d99b141c.css",
   "/internal/immutable/error.svelte-a9c60147.js",
-  "/internal/immutable/pages/__layout-empty.svelte-3cdae3b2.js",
+  "/internal/immutable/pages/__layout-empty.svelte-d2ff2f46.js",
+  "/internal/immutable/assets/pages/__layout-empty.svelte-2ec9c7fa.css",
   "/internal/immutable/pages/__layout-min.svelte-800ee938.js",
   "/internal/immutable/assets/pages/__layout-min.svelte-1d19a228.css",
   "/internal/immutable/pages/404.svelte-b351b6d2.js",
@@ -15,7 +16,7 @@ const build = [
   "/internal/immutable/pages/posts/_post_.svelte-f71c89a2.js",
   "/internal/immutable/pages/posts.svelte-71734857.js",
   "/internal/immutable/assets/pages/posts.svelte-eba483ce.css",
-  "/internal/immutable/pages/me@min.svelte-8d1f5f27.js",
+  "/internal/immutable/pages/me@min.svelte-b1148839.js",
   "/internal/immutable/chunks/index-9f48fb1e.js",
   "/internal/immutable/chunks/preload-helper-e51e4937.js",
   "/internal/immutable/chunks/layout-helper-3745b586.js",
@@ -31,19 +32,11 @@ const build = [
   "/internal/immutable/assets/IconBase-b1158a4e.css",
   "/internal/immutable/chunks/Face-777ef943.js",
   "/internal/immutable/chunks/Image-f54d85b7.js",
-  "/internal/immutable/chunks/me@min-7ffd8621.js",
-  "/internal/immutable/assets/me@min-f32b8a81.css",
-  "/internal/immutable/assets/noto-serif-cyrillic-ext-400-normal-436635b5.woff2",
-  "/internal/immutable/assets/noto-serif-all-400-normal-dcff534d.woff",
-  "/internal/immutable/assets/noto-serif-cyrillic-400-normal-749532b4.woff2",
-  "/internal/immutable/assets/noto-serif-greek-ext-400-normal-aa2efad2.woff2",
-  "/internal/immutable/assets/noto-serif-greek-400-normal-dd234652.woff2",
-  "/internal/immutable/assets/noto-serif-vietnamese-400-normal-f4d5af74.woff2",
-  "/internal/immutable/assets/noto-serif-latin-ext-400-normal-3d7aa71c.woff2",
-  "/internal/immutable/assets/noto-serif-latin-400-normal-25475d82.woff2",
+  "/internal/immutable/chunks/me@min-cd43b568.js",
+  "/internal/immutable/assets/me@min-ae06963e.css",
   "/internal/immutable/assets/business-card-back-a1d8274a.svg",
   "/internal/immutable/assets/business-card-front-e406004a.svg",
-  "/internal/immutable/chunks/index-b3fa0f91.js",
+  "/internal/immutable/chunks/index-acc1711a.js",
   "/internal/immutable/chunks/pathseg-93424b96.js",
   "/internal/immutable/chunks/emojik-es-a-windows-c94c2649.js",
   "/internal/immutable/chunks/_post-78ce29da.js",
@@ -114,7 +107,7 @@ const prerendered = [
   "/posts/welcome",
   "/shlinks/---posts---welcome.txt"
 ];
-const version = "1654933512722";
+const version = "1654934082439";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
