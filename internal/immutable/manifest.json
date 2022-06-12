@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-152ffd40.js",
+    "file": "start-b28676fd.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
+      "_index-df60f785.js",
       "_preload-helper-e51e4937.js"
     ],
     "dynamicImports": [
@@ -13,116 +13,96 @@
       "src/routes/__layout-empty.svelte",
       "src/routes/__layout-min.svelte",
       "src/routes/404.svelte",
-      "src/routes/business-card-back@empty.svelte",
-      "src/routes/business-card-front@empty.svelte",
       "src/routes/index.svelte",
-      "_me@min-cd43b568.js",
+      "_me@min-c3c26da9.js",
       "src/routes/posts/[post].svelte",
       "src/routes/posts.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-7d936875.js",
+    "file": "pages/__layout.svelte-f0257e6d.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
-      "_IconBase-2916b725.js",
-      "_Face-777ef943.js",
-      "_layout-helper-3745b586.js",
-      "_Image-f54d85b7.js"
+      "_index-df60f785.js",
+      "_IconBase-e0487dc5.js",
+      "_Face-f7aea7a5.js",
+      "_layout-helper-cb74064b.js",
+      "_Image-974178cf.js"
     ],
     "css": [
       "assets/pages/__layout.svelte-d99b141c.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-a9c60147.js",
+    "file": "error.svelte-55cfa41e.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js"
+      "_index-df60f785.js"
     ]
   },
   "src/routes/__layout-empty.svelte": {
-    "file": "pages/__layout-empty.svelte-d2ff2f46.js",
+    "file": "pages/__layout-empty.svelte-8c4afab8.js",
     "src": "src/routes/__layout-empty.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js"
+      "_index-df60f785.js"
     ],
     "css": [
       "assets/pages/__layout-empty.svelte-2ec9c7fa.css"
     ]
   },
   "src/routes/__layout-min.svelte": {
-    "file": "pages/__layout-min.svelte-800ee938.js",
+    "file": "pages/__layout-min.svelte-ccb16848.js",
     "src": "src/routes/__layout-min.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
-      "_layout-helper-3745b586.js"
+      "_index-df60f785.js",
+      "_layout-helper-cb74064b.js"
     ],
     "css": [
       "assets/pages/__layout-min.svelte-1d19a228.css"
     ]
   },
   "src/routes/404.svelte": {
-    "file": "pages/404.svelte-b351b6d2.js",
+    "file": "pages/404.svelte-dff7e735.js",
     "src": "src/routes/404.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js"
+      "_index-df60f785.js"
     ],
     "css": [
       "assets/pages/404.svelte-390392b8.css"
     ]
   },
-  "src/routes/business-card-back@empty.svelte": {
-    "file": "pages/business-card-back@empty.svelte-f559e323.js",
-    "src": "src/routes/business-card-back@empty.svelte",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-9f48fb1e.js"
-    ]
-  },
-  "src/routes/business-card-front@empty.svelte": {
-    "file": "pages/business-card-front@empty.svelte-df1d4aea.js",
-    "src": "src/routes/business-card-front@empty.svelte",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-9f48fb1e.js"
-    ]
-  },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-db805621.js",
+    "file": "pages/index.svelte-f239424f.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
-      "_IconBase-2916b725.js",
-      "_Image-f54d85b7.js"
+      "_index-df60f785.js",
+      "_IconBase-e0487dc5.js",
+      "_Image-974178cf.js"
     ],
     "css": [
       "assets/pages/index.svelte-98299e5a.css"
     ]
   },
   "src/routes/posts/[post].svelte": {
-    "file": "pages/posts/_post_.svelte-f71c89a2.js",
+    "file": "pages/posts/_post_.svelte-807546eb.js",
     "src": "src/routes/posts/[post].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-e51e4937.js",
-      "_index-9f48fb1e.js"
+      "_index-df60f785.js"
     ],
     "dynamicImports": [
       "src/posts/emojik-es-a-windows.md",
@@ -131,12 +111,12 @@
     ]
   },
   "src/routes/posts.svelte": {
-    "file": "pages/posts.svelte-71734857.js",
+    "file": "pages/posts.svelte-ad869ae6.js",
     "src": "src/routes/posts.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
+      "_index-df60f785.js",
       "_preload-helper-e51e4937.js"
     ],
     "dynamicImports": [
@@ -149,27 +129,27 @@
     ]
   },
   "src/routes/me@min.svelte": {
-    "file": "pages/me@min.svelte-b1148839.js",
+    "file": "pages/me@min.svelte-9439c13f.js",
     "src": "src/routes/me@min.svelte",
     "isEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
-      "_me@min-cd43b568.js",
-      "_Face-777ef943.js",
-      "_Image-f54d85b7.js",
+      "_index-df60f785.js",
+      "_me@min-c3c26da9.js",
+      "_Face-f7aea7a5.js",
+      "_Image-974178cf.js",
       "_preload-helper-e51e4937.js"
     ]
   },
-  "_index-9f48fb1e.js": {
-    "file": "chunks/index-9f48fb1e.js"
+  "_index-df60f785.js": {
+    "file": "chunks/index-df60f785.js"
   },
   "_preload-helper-e51e4937.js": {
     "file": "chunks/preload-helper-e51e4937.js"
   },
-  "_layout-helper-3745b586.js": {
-    "file": "chunks/layout-helper-3745b586.js",
+  "_layout-helper-cb74064b.js": {
+    "file": "chunks/layout-helper-cb74064b.js",
     "imports": [
-      "_index-9f48fb1e.js"
+      "_index-df60f785.js"
     ],
     "css": [
       "assets/layout-helper-4c95b4d4.css"
@@ -184,34 +164,34 @@
       "assets/fira-mono-latin-400-normal-e43b3538.woff2"
     ]
   },
-  "_IconBase-2916b725.js": {
-    "file": "chunks/IconBase-2916b725.js",
+  "_IconBase-e0487dc5.js": {
+    "file": "chunks/IconBase-e0487dc5.js",
     "imports": [
-      "_index-9f48fb1e.js"
+      "_index-df60f785.js"
     ],
     "css": [
       "assets/IconBase-b1158a4e.css"
     ]
   },
-  "_Face-777ef943.js": {
-    "file": "chunks/Face-777ef943.js",
+  "_Face-f7aea7a5.js": {
+    "file": "chunks/Face-f7aea7a5.js",
     "imports": [
-      "_index-9f48fb1e.js",
-      "_Image-f54d85b7.js"
+      "_index-df60f785.js",
+      "_Image-974178cf.js"
     ]
   },
-  "_Image-f54d85b7.js": {
-    "file": "chunks/Image-f54d85b7.js",
+  "_Image-974178cf.js": {
+    "file": "chunks/Image-974178cf.js",
     "imports": [
-      "_index-9f48fb1e.js"
+      "_index-df60f785.js"
     ]
   },
-  "_me@min-cd43b568.js": {
-    "file": "chunks/me@min-cd43b568.js",
+  "_me@min-c3c26da9.js": {
+    "file": "chunks/me@min-c3c26da9.js",
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
-      "_Face-777ef943.js",
+      "_index-df60f785.js",
+      "_Face-f7aea7a5.js",
       "_preload-helper-e51e4937.js"
     ],
     "dynamicImports": [
@@ -220,21 +200,17 @@
     ],
     "css": [
       "assets/me@min-ae06963e.css"
-    ],
-    "assets": [
-      "assets/business-card-back-a1d8274a.svg",
-      "assets/business-card-front-e406004a.svg"
     ]
   },
   "node_modules/.pnpm/svelte-particles@2.0.6_svelte@3.48.0/node_modules/svelte-particles/src/index.ts": {
-    "file": "chunks/index-acc1711a.js",
+    "file": "chunks/index-f7657e60.js",
     "src": "node_modules/.pnpm/svelte-particles@2.0.6_svelte@3.48.0/node_modules/svelte-particles/src/index.ts",
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
-      "_me@min-cd43b568.js",
-      "_Face-777ef943.js",
-      "_Image-f54d85b7.js",
+      "_index-df60f785.js",
+      "_me@min-c3c26da9.js",
+      "_Face-f7aea7a5.js",
+      "_Image-974178cf.js",
       "_preload-helper-e51e4937.js"
     ]
   },
@@ -244,19 +220,19 @@
     "isDynamicEntry": true
   },
   "src/posts/emojik-es-a-windows.md": {
-    "file": "chunks/emojik-es-a-windows-c94c2649.js",
+    "file": "chunks/emojik-es-a-windows-6f30b325.js",
     "src": "src/posts/emojik-es-a-windows.md",
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
-      "__post-78ce29da.js",
+      "_index-df60f785.js",
+      "__post-f5495c7b.js",
       "_preload-helper-e51e4937.js"
     ]
   },
-  "__post-78ce29da.js": {
-    "file": "chunks/_post-78ce29da.js",
+  "__post-f5495c7b.js": {
+    "file": "chunks/_post-f5495c7b.js",
     "imports": [
-      "_index-9f48fb1e.js",
+      "_index-df60f785.js",
       "_preload-helper-e51e4937.js"
     ],
     "dynamicImports": [
@@ -267,22 +243,22 @@
     ]
   },
   "src/posts/hidden-post.md": {
-    "file": "chunks/hidden-post-586d444b.js",
+    "file": "chunks/hidden-post-a7262dd7.js",
     "src": "src/posts/hidden-post.md",
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
-      "__post-78ce29da.js",
+      "_index-df60f785.js",
+      "__post-f5495c7b.js",
       "_preload-helper-e51e4937.js"
     ]
   },
   "src/posts/welcome.md": {
-    "file": "chunks/welcome-02447463.js",
+    "file": "chunks/welcome-7526d89c.js",
     "src": "src/posts/welcome.md",
     "isDynamicEntry": true,
     "imports": [
-      "_index-9f48fb1e.js",
-      "__post-78ce29da.js",
+      "_index-df60f785.js",
+      "__post-f5495c7b.js",
       "_preload-helper-e51e4937.js"
     ]
   },
