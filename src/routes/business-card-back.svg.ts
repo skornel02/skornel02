@@ -12,7 +12,8 @@ export async function get() {
             { name: 'removeAttrs', active: true, params: { attrs: 'inkscape.*' } },
             { name: 'mergePaths', active: true},
             { name: 'removeOffCanvasPaths', active: true },
-            { name: 'reusePaths', active: true }
+            { name: 'reusePaths', active: true },
+            { name: "inlineStyles", active: false},
         ]
     }) as OptimizedSvg;
     const svg = optimized.data;
