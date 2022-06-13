@@ -1,5 +1,5 @@
 const build = [
-  "/internal/immutable/start-b28676fd.js",
+  "/internal/immutable/start-f75ae108.js",
   "/internal/immutable/pages/__layout.svelte-f0257e6d.js",
   "/internal/immutable/assets/pages/__layout.svelte-d99b141c.css",
   "/internal/immutable/error.svelte-55cfa41e.js",
@@ -48,6 +48,7 @@ const files = [
   "/apple-touch-icon.png",
   "/assets/card/business-card-back.svg",
   "/assets/card/business-card-front.svg",
+  "/assets/card/windmill.svg",
   "/assets/certificates/CCNA-1-certificate.pdf",
   "/assets/competitions/ASZEV2022.jpeg",
   "/assets/competitions/Accenture Java 2020.pdf",
@@ -103,7 +104,7 @@ const prerendered = [
   "/business-card-front.svg",
   "/business-card-back.svg"
 ];
-const version = "1655045973665";
+const version = "1655101332685";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
