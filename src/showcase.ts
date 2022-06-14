@@ -50,7 +50,12 @@ export interface CertificateEntry extends ShowcaseItem {
 	type: 'certificate';
 }
 
-export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
+export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [	
+	{
+		type: 'separator',
+		text: '2022',
+		date: '2023-01-01',
+	},
 	{
 		type: 'award',
 		id: 'aszev',

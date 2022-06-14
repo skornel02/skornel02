@@ -21,4 +21,10 @@
 		width: 16px;
 		height: 16px;
 	}
+
+	@media print {
+		.list-group {
+			display: block;
+		}
+	}
 </style>

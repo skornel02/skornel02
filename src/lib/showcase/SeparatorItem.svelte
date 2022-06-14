@@ -6,7 +6,7 @@
 </script>
 
 <ShowcaseFrame>
-	<div class="w-100 text-center text-secondary fw-bold">
+	<div class="w-100 text-center text-secondary fw-bold separator">
 		<p>
 			{separator.text}
 		</p>
