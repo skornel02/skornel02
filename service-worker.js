@@ -1,7 +1,7 @@
 const build = [
-  "/internal/immutable/start-cb4929a2.js",
-  "/internal/immutable/pages/__layout.svelte-f0257e6d.js",
-  "/internal/immutable/assets/pages/__layout.svelte-d99b141c.css",
+  "/internal/immutable/start-79e8cdac.js",
+  "/internal/immutable/pages/__layout.svelte-7d77970e.js",
+  "/internal/immutable/assets/pages/__layout.svelte-f76da56c.css",
   "/internal/immutable/error.svelte-55cfa41e.js",
   "/internal/immutable/pages/__layout-empty.svelte-8c4afab8.js",
   "/internal/immutable/assets/pages/__layout-empty.svelte-2ec9c7fa.css",
@@ -9,8 +9,8 @@ const build = [
   "/internal/immutable/assets/pages/__layout-min.svelte-1d19a228.css",
   "/internal/immutable/pages/404.svelte-dff7e735.js",
   "/internal/immutable/assets/pages/404.svelte-390392b8.css",
-  "/internal/immutable/pages/index.svelte-cdb00092.js",
-  "/internal/immutable/assets/pages/index.svelte-1f4004a9.css",
+  "/internal/immutable/pages/index.svelte-c8208adc.js",
+  "/internal/immutable/assets/pages/index.svelte-f2fd8d86.css",
   "/internal/immutable/pages/posts/_post_.svelte-807546eb.js",
   "/internal/immutable/pages/posts.svelte-ad869ae6.js",
   "/internal/immutable/assets/pages/posts.svelte-eba483ce.css",
@@ -104,7 +104,7 @@ const prerendered = [
   "/business-card-front.svg",
   "/business-card-back.svg"
 ];
-const version = "1655126290629";
+const version = "1655199802586";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
