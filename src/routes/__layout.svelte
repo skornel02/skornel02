@@ -40,7 +40,7 @@
 	</main>
 {/key}
 
-<footer id="footer">
+<footer id="footer" class="d-flex d-print-none flex-column justify-content-center align-items-center">
 	<p>
 		Have a nice day! • {year} © •
 		<a href="/rss.xml">
@@ -67,14 +67,6 @@
 		max-width: 1024px;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
 	}
 
 	footer :global(svg) {

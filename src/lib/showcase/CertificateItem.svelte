@@ -34,7 +34,7 @@
 		<div
 			class="d-none d-sm-block col-sm-6 d-flex justify-content-center justify-content-sm-start teams"
 		></div>
-		<div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end mt-1">
+		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1">
 			{#each certificate.links as link}
 				<ShowcaseLink link="{link}" />
 			{/each}

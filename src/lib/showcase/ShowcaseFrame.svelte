@@ -27,4 +27,17 @@
 		transform: scale(1.01);
 		z-index: 10;
 	}
+
+	@media print {
+		.list-group-item {
+			width: 100%;
+			display: inline-block;
+			page-break-before: always;
+			page-break-inside: avoid;
+			page-break-after: always;
+		}
+		li:hover {
+			transform: unset;
+		}
+	}
 </style>

@@ -20,6 +20,7 @@
 	import Showcase from '$lib/showcase/Showcase.svelte';
 	import {animateScroll} from 'svelte-scrollto-element';
 	import {backOut, circInOut} from 'svelte/easing';
+	import Experiences from '$lib/experiences/Experiences.svelte';
 
 	let darkTheme = false;
 
@@ -116,7 +117,7 @@
 <div class="container-fluid p-0">
 	<section class="resume-section p-3 p-lg-5 d-flex d-column" id="about" x-description="SK - Home">
 		<div class="my-auto">
-			<h1 class="mb-0">
+			<h1 id="name" class="mb-0">
 				<div class="text-secondary">Stefán</div>
 				<span class="text-primary">Kornél</span>
 			</h1>
@@ -155,104 +156,14 @@
 		id="experience"
 		x-description="SK - Experiences"
 	>
-		<div class="my-auto">
-			<h2 class="mb-5">Experience</h2>
-
-			<div class="resume-item d-flex flex-column flex-md-row mb-5">
-				<div class="resume-content mr-auto">
-					<h3 class="mb-0">Full stack developer</h3>
-					<div class="subheading mb-3">ParkMyst Project</div>
-					<p>
-						What started out as a fun project for our trip, turned into a very serious project. The
-						main goal of this project is to provide a platform for game creators where they can
-						create games from building blocks (low code/no code) and a client for players to play
-						these games.
-					</p>
-					<p>
-						My role in this project was mostly backend focused, but I also took responsibility in
-						creating the frontend aspect of the software too. I am very proud of this software, and
-						the team I work with. Furthermore, we are very proud of the recognition we got in the
-						form of
-						<a href="#parkmyst">competition first place</a>.
-					</p>
-				</div>
-				<div class="resume-date text-md-right">
-					<span class="text-primary">2019 - Present</span>
-				</div>
-			</div>
-			<div class="resume-item d-flex flex-column flex-md-row mb-5">
-				<div class="resume-content mr-auto">
-					<h3 class="mb-0">Full stack developer</h3>
-					<div class="subheading mb-3">THR Logisztika</div>
-					<p>
-						At this company there was a need for a custom built shift scheduling system, and I got
-						the chance to work on it. With no previous infrastructure it was my role to negotiate
-						how the system should work, what kind of interface it should have and then delivering
-						it.
-					</p>
-				</div>
-				<div class="resume-date text-md-right">
-					<span class="text-primary">2019</span>
-				</div>
-			</div>
-			<div class="resume-item d-flex flex-column flex-md-row mb-5">
-				<div class="resume-content mr-auto">
-					<h3 class="mb-0">Backend developer</h3>
-					<div class="subheading mb-3">Házizz Project</div>
-					<p>
-						Everyone knows the hardships of a student. You must always be on point with homework and
-						assignments. To ease this burden, we created a social platform where you can share this
-						information with your classmates.
-					</p>
-					<p>
-						This was my, and my project partners’, first large-scale project. For me this was an
-						invaluable experience in leadership and software architecture. My role was primarily
-						working on the backend of the project and negotiating how it will communicate with
-						multiple clients.
-					</p>
-				</div>
-				<div class="resume-date text-md-right">
-					<span class="text-primary">2018 - 2020</span>
-				</div>
-			</div>
-		</div>
+		<Experiences />
 	</section>
 
 	<section
 		class="resume-section p-3 p-lg-5 d-flex flex-column"
 		id="education"
 		x-description="SK - Education"
-	>
-		<div class="my-auto">
-			<h2 class="mb-5">Education</h2>
-
-			<div class="resume-item d-flex flex-column flex-md-row mb-5">
-				<div class="resume-content mr-auto">
-					<h3 class="mb-0">BMSZC Neumann János Informatikai Technikum</h3>
-					<div class="subheading mb-3">Vocational secondary school</div>
-					<div>Programming and networking</div>
-					<p>
-						After an intense English year I have learned the fundemantals of the IT industry for 4
-						years. While studying i also took part in a variety of IT competitions.
-					</p>
-				</div>
-				<div class="resume-date text-md-right">
-					<span class="text-primary">2017 - 2022</span>
-				</div>
-			</div>
-			<div class="resume-item d-flex flex-column flex-md-row mb-5">
-				<div class="resume-content mr-auto">
-					<h3 class="mb-0">Budaörsi Herman Ottó</h3>
-					<div class="subheading mb-3">Primary school</div>
-					<div>Media production</div>
-					<p>I have worked on numerous projects as a cameraman and also as a video editor.</p>
-				</div>
-				<div class="resume-date text-md-right">
-					<span class="text-primary">2009 - 2017</span>
-				</div>
-			</div>
-		</div>
-	</section>
+	></section>
 
 	<section
 		class="resume-section p-3 p-lg-5 d-flex flex-column"
@@ -460,21 +371,9 @@
 		height: 32px;
 	}
 
-	section.resume-section {
-		border-bottom: 1px solid;
-		border-color: var(--color-secondary);
-		padding-top: 5rem !important;
-		padding-bottom: 5rem !important;
-	}
-	section.resume-section .resume-item .resume-date {
-		min-width: max-content;
-	}
 	@media (min-width: 768px) {
 		section.resume-section {
 			min-height: 100vh;
-		}
-		section.resume-section .resume-item .resume-date {
-			min-width: 12rem;
 		}
 	}
 
@@ -482,6 +381,34 @@
 		section.resume-section {
 			padding-top: 3rem !important;
 			padding-bottom: 3rem !important;
+		}
+	}
+
+	@media print {
+		section.resume-section {
+			padding-top: 1rem !important;
+			padding-bottom: 1rem !important;
+			border-bottom-width: 0;
+
+			:first-child {
+				padding-top: 0 !important;
+				margin-top: 0 !important;
+			}
+
+			:global(h2) {
+				text-align: center;
+			}
+		}
+		
+		#name {
+			text-align: center;
+			div {
+				display: inline;
+			}
+		}
+
+		#awards.resume-section {
+			page-break-inside: unset;
 		}
 	}
 </style>
