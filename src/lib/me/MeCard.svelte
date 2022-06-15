@@ -1,19 +1,36 @@
 <script lang="ts">
+	import {browser} from '$app/env';
 	import Face from '$lib/header/Face.svelte';
 	import BusinessCard from './BusinessCard.svelte';
-import MeBackground from './MeBackground.svelte';
+import CardContacts from './CardContacts.svelte';
+	import CardTitle from './CardTitle.svelte';
+	import MeBackground from './MeBackground.svelte';
+
+	let hidden = browser ? true : false;
+
+	const onLoad = () => {
+		hidden = false;
+	};
 </script>
 
 <svelte:head>
-    <title>Stefán Kornél</title>
+	<title>Stefán Kornél</title>
+	<meta name="description" content="Digital personal information card"/>
 </svelte:head>
 
-
-<div class="card">
+<div id="me-card" class="card">
+	<div id="nameSlot">
+		<CardTitle on:load="{onLoad}" />
+	</div>
 	<div id="faceSlot" class="mx-auto">
 		<Face class="img-fluid img-profile rounded" />
 	</div>
-	<div id="cardSlot" class="mx-auto">
+	<hr />
+	<div id="contactSlot">
+		<CardContacts />
+	</div>
+	<hr class="opacity-0" class:opacity-100="{!hidden}"/>
+	<div id="cardSlot" class="mx-auto opacity-0" class:opacity-100="{!hidden}">
 		<BusinessCard />
 	</div>
 </div>
@@ -21,18 +38,26 @@ import MeBackground from './MeBackground.svelte';
 <MeBackground />
 
 <style lang="scss">
+	#me-card {
+		padding: 1rem;
+		div, hr {
+			transition: 0.75s opacity;
+		}
+	}
 	.card {
 		border-color: var(--color-secondary);
 	}
+	#nameSlot {
+		height: 3rem;
+	}
 	#faceSlot {
-		margin-top: 1rem;
 		width: 128px;
 		:global(.img-profile) {
 			border: 0.2rem solid var(--color-primary);
 		}
 	}
 	#cardSlot {
-		padding: 1rem;
+		padding: 0 1rem;
 		perspective: 1000px;
 		width: 100%;
 		max-width: 320px;
@@ -40,5 +65,9 @@ import MeBackground from './MeBackground.svelte';
 			width: 100%;
 			height: 100%;
 		}
+	}
+	hr {
+		color: var(--color-secondary);
+		opacity: unset;
 	}
 </style>

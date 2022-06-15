@@ -21,6 +21,7 @@
 	import {animateScroll} from 'svelte-scrollto-element';
 	import {backOut, circInOut} from 'svelte/easing';
 	import Experiences from '$lib/experiences/Experiences.svelte';
+	import Education from '$lib/experiences/Education.svelte';
 
 	let darkTheme = false;
 
@@ -141,7 +142,7 @@
 					</a>
 				</li>
 				<li id="social-email" class="list-inline-item">
-					<a href="mailto:stefankornel02@gmail.com">
+					<a href="mailto:contact@skornel02.hu">
 						<div class="icon">
 							<FaEnvelope />
 						</div>
@@ -163,7 +164,9 @@
 		class="resume-section p-3 p-lg-5 d-flex flex-column"
 		id="education"
 		x-description="SK - Education"
-	></section>
+	>
+		<Education />
+	</section>
 
 	<section
 		class="resume-section p-3 p-lg-5 d-flex flex-column"
@@ -371,21 +374,36 @@
 		height: 32px;
 	}
 
+	:global(section.resume-section) {
+		border-bottom: 1px solid;
+		border-color: var(--color-secondary);
+		padding-top: 5rem !important;
+		padding-bottom: 5rem !important;
+	}
+
+	:global(section.resume-section) :global(.resume-item) :global(.resume-date) {
+		min-width: max-content;
+	}
+
 	@media (min-width: 768px) {
-		section.resume-section {
+		section:global(.resume-section) {
 			min-height: 100vh;
+		}
+
+		:global(section.resume-section) :global(.resume-item) :global(.resume-date) {
+			min-width: 12rem;
 		}
 	}
 
 	@media (min-width: 992px) {
-		section.resume-section {
+		:global(section.resume-section) {
 			padding-top: 3rem !important;
 			padding-bottom: 3rem !important;
 		}
 	}
 
 	@media print {
-		section.resume-section {
+		:global(section.resume-section) {
 			padding-top: 1rem !important;
 			padding-bottom: 1rem !important;
 			border-bottom-width: 0;
@@ -399,7 +417,7 @@
 				text-align: center;
 			}
 		}
-		
+
 		#name {
 			text-align: center;
 			div {
@@ -407,8 +425,13 @@
 			}
 		}
 
-		#awards.resume-section {
+		:global(#awards.resume-section) {
 			page-break-inside: unset;
+		}
+
+		:global(.resume-item) {
+			break-inside: avoid;
+			page-break-inside: avoid;
 		}
 	}
 </style>

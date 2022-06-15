@@ -1,93 +1,27 @@
 <script>
 	import {onMount} from 'svelte';
 	import {loadFull} from 'tsparticles';
+	import {createConfig} from './particle.config';
 
 	const DISABLE_ON_PHONE = false;
 	let ParticlesComponent;
+	let particlesConfig;
 
 	onMount(async () => {
 		const module = await import('svelte-particles');
-
+		const style = getComputedStyle(document.body);
+		particlesConfig = createConfig({
+			link: style.getPropertyValue('--color-primary').trim(),
+		});
 		ParticlesComponent = module.default;
 	});
 
-	let particlesConfig = {
-		background: {
-			color: {
-				value: '#232741',
-			},
-		},
-		fullScreen: {
-			zIndex: -1,
-		},
-		particles: {
-			color: {
-				value: '#ffffff',
-			},
-			links: {
-				color: {
-					value: '#ffffff',
-				},
-				distance: 150,
-				opacity: 0.4,
-			},
-			move: {
-				attract: {
-					rotate: {
-						x: 600,
-						y: 600,
-					},
-				},
-				enable: true,
-				outModes: {
-					bottom: 'out',
-					left: 'out',
-					right: 'out',
-					top: 'out',
-				},
-				random: true,
-				speed: 1,
-			},
-			number: {
-				density: {
-					enable: true,
-				},
-				value: 160,
-			},
-			opacity: {
-				random: {
-					enable: true,
-				},
-				value: {
-					min: 0,
-					max: 1,
-				},
-				animation: {
-					enable: true,
-					speed: 1,
-					minimumValue: 0,
-				},
-			},
-			size: {
-				random: {
-					enable: true,
-				},
-				value: {
-					min: 1,
-					max: 3,
-				},
-				animation: {
-					speed: 4,
-					minimumValue: 0.3,
-				},
-			},
-		},
-	};
-
 	let onParticlesLoaded = (event) => {
 		const particlesContainer = event.detail.particles;
-		if ((DISABLE_ON_PHONE && window.matchMedia('(max-width: 500px)').matches) 
-			|| window.matchMedia('prefers-reduced-motion').matches) {
+		if (
+			(DISABLE_ON_PHONE && window.matchMedia('(max-width: 500px)').matches) ||
+			window.matchMedia('prefers-reduced-motion').matches
+		) {
 			setInterval(() => {
 				particlesContainer.pause();
 			}, 1000);

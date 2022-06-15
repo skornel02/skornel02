@@ -16,6 +16,10 @@ export async function get() {
     <lastmod>${new Date().toISOString().slice(0, 10)}</lastmod>
   </url>
   <url>
+    <loc>https://skornel02.hu/me</loc>
+    <lastmod>${new Date().toISOString().slice(0, 10)}</lastmod>
+  </url>
+  <url>
     <loc>https://skornel02.hu/posts</loc>
     <lastmod>${posts[0].metadata.date}</lastmod>
   </url>

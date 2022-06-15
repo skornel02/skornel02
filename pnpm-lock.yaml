@@ -38,10 +38,12 @@ specifiers:
   svelte-particles: ^2.0.6
   svelte-preprocess: ^4.10.6
   svelte-scrollto-element: ^0.7.0
+  svelte-typewriter: 3.0.0-alpha.11
   sveltestrap: github:laxadev/sveltestrap
   svgo: ^2.8.0
   tslib: ^2.3.1
   tsparticles: ^2.0.6
+  tsparticles-engine: ^2.0.6
   typescript: ~4.6.2
   vite-imagetools: ^4.0.3
   vite-svg-loader: ^3.3.0
@@ -65,6 +67,7 @@ dependencies:
   svelte-intersection-observer: 0.10.0
   svelte-scrollto-element: 0.7.0_svelte@3.48.0
   sveltestrap: github.com/laxadev/sveltestrap/d01fce867e16efddbfafe0b89575c7f2ad03ef6c_svelte@3.48.0
+  tsparticles-engine: 2.0.6
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.50
@@ -89,6 +92,7 @@ devDependencies:
   svelte-check: 2.7.1_z434eqozevnbbwe3f6vej4eilu
   svelte-particles: 2.0.6_svelte@3.48.0
   svelte-preprocess: 4.10.6_6i6usygkpfkof6fx2u4hsuu6we
+  svelte-typewriter: 3.0.0-alpha.11_svelte@3.48.0
   svgo: 2.8.0
   tslib: 2.3.1
   tsparticles: 2.0.6
@@ -2988,6 +2992,14 @@ packages:
       svelte: 3.48.0
     dev: false
 
+  /svelte-typewriter/3.0.0-alpha.11_svelte@3.48.0:
+    resolution: {integrity: sha512-7SO2UR3jTbAWyxgRVdLL+iMHucModnKTcPr+K9oBKHU1Y36OZgDYTTL3B+wZYRPGKdUnzk4xheXvHaDBFV8/Uw==}
+    peerDependencies:
+      svelte: '>=3.46.x'
+    dependencies:
+      svelte: 3.48.0
+    dev: true
+
   /svelte/3.48.0:
     resolution: {integrity: sha512-fN2YRm/bGumvjUpu6yI3BpvZnpIm9I6A7HR4oUNYd7ggYyIwSA/BX7DJ+UXXffLp6XNcUijyLvttbPVCYa/3xQ==}
     engines: {node: '>= 8'}
@@ -3104,7 +3116,6 @@ packages:
   /tsparticles-engine/2.0.6:
     resolution: {integrity: sha512-qsAMp68No1ncbFQbyjILrVtS9LeNTtBmxPa91COvHq4iLELReUjVxXTWfLWi0+xczTbdpNPRPx92r0V3xlqeHw==}
     requiresBuild: true
-    dev: true
 
   /tsparticles-interaction-external-attract/2.0.6:
     resolution: {integrity: sha512-EJxW+e9nlQYPwknPLzA4GpcFTIu7qFHR1ALj133Jv7ah7QynNFT2Erhpx6xvOZIlPbeICC+BkEpLLQZDtH5lPA==}
