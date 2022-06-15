@@ -1,6 +1,6 @@
 const build = [
-  "/internal/immutable/start-79e8cdac.js",
-  "/internal/immutable/pages/__layout.svelte-7d77970e.js",
+  "/internal/immutable/start-5d81d7db.js",
+  "/internal/immutable/pages/__layout.svelte-aa1f7bf8.js",
   "/internal/immutable/assets/pages/__layout.svelte-f76da56c.css",
   "/internal/immutable/error.svelte-55cfa41e.js",
   "/internal/immutable/pages/__layout-empty.svelte-8c4afab8.js",
@@ -9,12 +9,12 @@ const build = [
   "/internal/immutable/assets/pages/__layout-min.svelte-1d19a228.css",
   "/internal/immutable/pages/404.svelte-dff7e735.js",
   "/internal/immutable/assets/pages/404.svelte-390392b8.css",
-  "/internal/immutable/pages/index.svelte-c8208adc.js",
-  "/internal/immutable/assets/pages/index.svelte-f2fd8d86.css",
+  "/internal/immutable/pages/index.svelte-b9ef2f01.js",
+  "/internal/immutable/assets/pages/index.svelte-43d283d6.css",
   "/internal/immutable/pages/posts/_post_.svelte-807546eb.js",
   "/internal/immutable/pages/posts.svelte-ad869ae6.js",
   "/internal/immutable/assets/pages/posts.svelte-eba483ce.css",
-  "/internal/immutable/pages/me@min.svelte-9439c13f.js",
+  "/internal/immutable/pages/me@min.svelte-e6033906.js",
   "/internal/immutable/chunks/index-df60f785.js",
   "/internal/immutable/chunks/preload-helper-e51e4937.js",
   "/internal/immutable/chunks/layout-helper-cb74064b.js",
@@ -26,19 +26,27 @@ const build = [
   "/internal/immutable/assets/fira-mono-greek-400-normal-a8be01ce.woff2",
   "/internal/immutable/assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
   "/internal/immutable/assets/fira-mono-latin-400-normal-e43b3538.woff2",
-  "/internal/immutable/chunks/IconBase-e0487dc5.js",
-  "/internal/immutable/assets/IconBase-b1158a4e.css",
-  "/internal/immutable/chunks/Face-f7aea7a5.js",
-  "/internal/immutable/chunks/Image-974178cf.js",
-  "/internal/immutable/chunks/me@min-c3c26da9.js",
-  "/internal/immutable/assets/me@min-ae06963e.css",
-  "/internal/immutable/chunks/index-f7657e60.js",
+  "/internal/immutable/chunks/service-60783f8f.js",
+  "/internal/immutable/assets/service-fbf9cc71.css",
+  "/internal/immutable/chunks/Face-a0bd5c4e.js",
+  "/internal/immutable/chunks/IconBase-379d5b9d.js",
+  "/internal/immutable/assets/IconBase-05c40767.css",
+  "/internal/immutable/chunks/FaEnvelope-e7d31840.js",
+  "/internal/immutable/chunks/me@min-e53bebdf.js",
+  "/internal/immutable/assets/me@min-5ec7ccd7.css",
+  "/internal/immutable/chunks/index-cf0a13bb.js",
+  "/internal/immutable/chunks/loopTypewriter-ee12c4f6.js",
+  "/internal/immutable/chunks/writeEffect-21e9f3ea.js",
+  "/internal/immutable/chunks/sleep-648bee9f.js",
+  "/internal/immutable/chunks/scramble-eb2f712e.js",
+  "/internal/immutable/chunks/typewriter-02d7975e.js",
   "/internal/immutable/chunks/pathseg-93424b96.js",
   "/internal/immutable/chunks/emojik-es-a-windows-6f30b325.js",
   "/internal/immutable/chunks/_post-f5495c7b.js",
   "/internal/immutable/assets/_post-b312ce0f.css",
   "/internal/immutable/chunks/hidden-post-a7262dd7.js",
   "/internal/immutable/chunks/welcome-7526d89c.js",
+  "/internal/immutable/chunks/getLongestTextElement-873fd343.js",
   "/internal/immutable/chunks/giscus.es-d0a804e6.js"
 ];
 const files = [
@@ -104,7 +112,7 @@ const prerendered = [
   "/business-card-front.svg",
   "/business-card-back.svg"
 ];
-const version = "1655199802586";
+const version = "1655289657306";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
