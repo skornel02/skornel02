@@ -9,14 +9,10 @@
 			<div class="flip-container">
 				<div class="flipper">
 					<div class="front">
-						<div class="inner">
-							<BusinessCardFront />
-						</div>
+						<BusinessCardFront />
 					</div>
 					<div class="back">
-						<div class="inner">
-							<BusinessCardBack />
-						</div>
+						<BusinessCardBack />
 					</div>
 				</div>
 			</div>
@@ -45,6 +41,8 @@
 	.back {
 		width: 100%;
 		height: 180px;
+		display: flex;
+		justify-content: center;
 	}
 
 	/* flip speed goes here */

@@ -1,1 +1,8 @@
-<img src="/business-card-front.svg" class="img-fluid" alt="Frontside of business card">
+<img src="/business-card-front.svg" alt="Frontside of business card">
+
+<style>
+    img {
+        width: auto;
+        height: 100%;
+    }
+</style>
