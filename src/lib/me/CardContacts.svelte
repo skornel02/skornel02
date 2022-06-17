@@ -42,7 +42,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-        font-weight: bold;
+		font-weight: bold;
 	}
 	.icon {
 		display: inline;

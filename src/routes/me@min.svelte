@@ -17,6 +17,6 @@
 <style lang="scss">
 	#content {
 		padding: 2rem 1rem;
-        min-width: 320px;
+		min-width: 320px;
 	}
 </style>
