@@ -35,16 +35,3 @@
 {/key}
 
 <ShlinkTracker shlinkUrl="{shlinkUrl}" />
-
-<style>
-	main {
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	@media (min-width: 992px) {
-		:global(body) {
-			padding-left: 0 !important;
-		}
-	}
-</style>

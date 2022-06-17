@@ -53,5 +53,5 @@
 		<div class="resume-date text-md-right">
 			<span class="text-primary">2018 - 2020</span>
 		</div>
-	</div>    
+	</div>
 </div>

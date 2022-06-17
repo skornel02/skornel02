@@ -50,7 +50,7 @@ export interface CertificateEntry extends ShowcaseItem {
 	type: 'certificate';
 }
 
-export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [	
+export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 	{
 		type: 'separator',
 		text: '2022',
@@ -85,6 +85,12 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 				text: 'Reference',
 				icon: 'file',
 				data: getImageData('/assets/competitions/Skills-Junior-Web-2022.jpeg'),
+			},
+			{
+				type: 'simple',
+				text: 'website',
+				icon: 'globe',
+				url: 'https://skillsit.hu/hirek/nagyszeru-eredmenyek-a-skills-junior-webfejleszto-kategoriajanak-dontojen/',
 			},
 		],
 	},
@@ -136,6 +142,12 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 				text: 'Reference',
 				icon: 'file',
 				data: getImageData('/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.jpeg'),
+			},
+			{
+				type: 'simple',
+				text: 'website',
+				icon: 'globe',
+				url: 'https://mik.uni-pannon.hu/szervezet/hirek/kar-tovabbi-hirei/bakonyi-bitfarago-bajnoksag-2022',
 			},
 		],
 		team: [HGergely, SKornel, VAvar],
@@ -214,6 +226,12 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 				text: 'Reference',
 				icon: 'file',
 				data: getImageData('/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.jpeg'),
+			},
+			{
+				type: 'simple',
+				text: 'website',
+				icon: 'globe',
+				url: 'https://mik.uni-pannon.hu/szervezet/hirek/kar-tovabbi-hirei/osszefoglalo-a-8-bakonyi-bitfarago-bajnoksagrol',
 			},
 		],
 		team: [HGergely, SKornel, VAvar],

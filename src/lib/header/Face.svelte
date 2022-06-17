@@ -6,4 +6,4 @@
 	export {clazz as class};
 </script>
 
-<Image class={clazz} meta="{face}" alt="SK" />
+<Image class="{clazz}" meta="{face}" alt="SK" />

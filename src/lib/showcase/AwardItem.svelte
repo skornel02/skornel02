@@ -11,9 +11,7 @@
 <ShowcaseFrame id="{award.id}">
 	<div class="row">
 		<div class="col-12 d-flex justify-content-center order-0 order-sm-1">
-			<div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;">
-
-			</div>
+			<div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
 			<div class="d-flex justify-content-center">
 				<div class:highlight="{award.id !== undefined}" class="icon text-warning mx-1">
 					<svelte:component this="{typeToIcon(award.icon)}" />
@@ -45,7 +43,9 @@
 				{/each}
 			{/if}
 		</div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1">
+		<div
+			class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"
+		>
 			{#each award.links as link}
 				<ShowcaseLink link="{link}" />
 			{/each}

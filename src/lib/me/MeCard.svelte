@@ -2,11 +2,11 @@
 	import {browser} from '$app/env';
 	import Face from '$lib/header/Face.svelte';
 	import BusinessCard from './BusinessCard.svelte';
-import CardContacts from './CardContacts.svelte';
+	import CardContacts from './CardContacts.svelte';
 	import CardTitle from './CardTitle.svelte';
 	import MeBackground from './MeBackground.svelte';
 
-	let hidden = browser ? true : false;
+	let hidden = true;
 
 	const onLoad = () => {
 		hidden = false;
@@ -15,7 +15,7 @@ import CardContacts from './CardContacts.svelte';
 
 <svelte:head>
 	<title>Stefán Kornél</title>
-	<meta name="description" content="Digital personal information card"/>
+	<meta name="description" content="Digital personal information card" />
 </svelte:head>
 
 <div id="me-card" class="card">
@@ -29,7 +29,7 @@ import CardContacts from './CardContacts.svelte';
 	<div id="contactSlot">
 		<CardContacts />
 	</div>
-	<hr class="opacity-0" class:opacity-100="{!hidden}"/>
+	<hr class="opacity-0" class:opacity-100="{!hidden}" />
 	<div id="cardSlot" class="mx-auto opacity-0" class:opacity-100="{!hidden}">
 		<BusinessCard />
 	</div>
@@ -40,7 +40,8 @@ import CardContacts from './CardContacts.svelte';
 <style lang="scss">
 	#me-card {
 		padding: 1rem;
-		div, hr {
+		div,
+		hr {
 			transition: 0.75s opacity;
 		}
 	}

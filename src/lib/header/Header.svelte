@@ -20,7 +20,7 @@
 		<div use:scrolltotop="{{}}" class="navbar-brand w-lg-100">
 			<span class="d-block d-lg-none">Stefán Kornél</span>
 			<span class="d-none d-lg-block">
-				<Face class="img-fluid img-profile rounded-circle"/>
+				<Face class="img-fluid img-profile rounded-circle" />
 			</span>
 		</div>
 		<NavbarToggler
