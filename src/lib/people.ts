@@ -1,3 +1,5 @@
+export const unknownHeSrc = '/assets/people/unknownhe.jpeg';
+
 export interface Person {
 	name: string;
 	website?: string;
@@ -11,12 +13,12 @@ export const FMate: Person = {
 export const HGergely: Person = {
 	name: 'Horváth Gergely',
 	website: 'https://gergelyhorvath.com',
-	pictureUrl: '/assets/people/unknownhe.jpeg',
+	pictureUrl: unknownHeSrc,
 };
 export const IErik: Person = {
 	name: 'Isakov Erik',
 	website: 'https://github.com/indeednt',
-	pictureUrl: '/assets/people/unknownhe.jpeg',
+	pictureUrl: unknownHeSrc,
 };
 export const RGergely: Person = {
 	name: 'Ruzsa Gergely Gábor',

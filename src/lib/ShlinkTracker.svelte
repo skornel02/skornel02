@@ -12,6 +12,10 @@
 
 <style>
 	img {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
 		width: 1px;
 		height: 1px;
 	}

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import {browser} from '$app/env';
 	import Face from '$lib/header/Face.svelte';
 	import BusinessCard from './BusinessCard.svelte';
 	import CardContacts from './CardContacts.svelte';
@@ -18,6 +17,7 @@
 	<meta name="description" content="Digital personal information card" />
 </svelte:head>
 
+<MeBackground />
 <div id="me-card" class="card">
 	<div id="nameSlot">
 		<CardTitle on:load="{onLoad}" />
@@ -34,8 +34,6 @@
 		<BusinessCard />
 	</div>
 </div>
-
-<MeBackground />
 
 <style lang="scss">
 	#me-card {

@@ -62,6 +62,7 @@
 	}
 
 	main {
+		padding-top: 54px;
 		flex: 1;
 		display: flex;
 		flex-direction: column;
