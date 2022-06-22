@@ -14,7 +14,8 @@ export const createConfig = (colors: Colors): ISourceOptions => {
 			},
 		},
 		fullScreen: {
-			zIndex: -1,
+			zIndex: 0,
+			enable: true,
 		},
 		particles: {
 			color: {
@@ -73,7 +74,7 @@ export const createConfig = (colors: Colors): ISourceOptions => {
 			},
 		},
 		interactivity: {
-			detect_on: 'parent',
+			detect_on: 'canvas',
 			events: {
 				onDiv: {
 					enable: true,

@@ -20,7 +20,11 @@
 		<div use:scrolltotop="{{}}" class="navbar-brand w-lg-100">
 			<span class="d-block d-lg-none">Stefán Kornél</span>
 			<span class="d-none d-lg-block">
-				<Face class="img-fluid img-profile rounded-circle" />
+				{#if $page.url.pathname === '/'}
+					<Face class="img-fluid img-profile rounded-circle" />
+				{:else}
+					<h3>Stefán Kornél</h3>
+				{/if}
 			</span>
 		</div>
 		<NavbarToggler
@@ -103,6 +107,13 @@
 						max-width: 10rem;
 						max-height: 10rem;
 						border: 0.5rem solid fade-out($white, 0.8);
+					}
+					h3 {
+						display: flex;
+						align-items: center;
+						margin: auto 0;
+						color: white;
+						height: 160px;
 					}
 				}
 				:global(.navbar-collapse) {

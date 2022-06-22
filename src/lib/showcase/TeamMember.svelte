@@ -1,15 +1,21 @@
 <script lang="ts">
 	import {Tooltip} from 'sveltestrap';
-	import type {Person} from '$lib/people';
+	import {unknownHeSrc, type Person} from '$lib/people';
 
 	export let member: Person;
 
 	let elem: HTMLElement;
+	
+	let src = member.pictureUrl;
+
+	const onError = () => {
+		src= unknownHeSrc;
+	}
 </script>
 
 <a href="{member.website}" disabled="{member.website === undefined}" target="_blank">
 	<div bind:this="{elem}">
-		<img src="{member.pictureUrl}" alt="{member.name}" title="{member.name}" />
+		<img src={src} alt="{member.name}" title="{member.name}" on:error={onError} />
 	</div>
 	<Tooltip target="{elem}">{member.name}</Tooltip>
 </a>
