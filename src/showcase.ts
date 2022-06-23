@@ -57,6 +57,20 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 		date: '2023-01-01',
 	},
 	{
+		type: 'certificate',
+		title: 'CCNA Routing and Switching: Routing and Switching Essentials',
+		icon: 'certificate',
+		date: '2022-06-14',
+		links: [
+			{
+				type: 'pdf',
+				text: 'Reference',
+				icon: 'file',
+				url: '/assets/certificates/CCNA-2-certificate.pdf',
+			},
+		],
+	},
+	{
 		type: 'award',
 		id: 'aszev',
 		title:
