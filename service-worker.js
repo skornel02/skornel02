@@ -1,5 +1,5 @@
 const build = [
-  "/internal/immutable/start-3de75074.js",
+  "/internal/immutable/start-28127f5d.js",
   "/internal/immutable/pages/__layout.svelte-2465cb37.js",
   "/internal/immutable/error.svelte-0df6c89d.js",
   "/internal/immutable/pages/__layout-min.svelte-063afc8a.js",
@@ -8,7 +8,7 @@ const build = [
   "/internal/immutable/assets/pages/__layout-web.svelte-4ffd4aff.css",
   "/internal/immutable/pages/404@web.svelte-483e0431.js",
   "/internal/immutable/assets/pages/404@web.svelte-a878e5d1.css",
-  "/internal/immutable/pages/index@web.svelte-90537a59.js",
+  "/internal/immutable/pages/index@web.svelte-847ef6a8.js",
   "/internal/immutable/assets/pages/index@web.svelte-24efcdca.css",
   "/internal/immutable/pages/me-card-wrapped.svelte-3ed9c8cc.js",
   "/internal/immutable/pages/me@min.svelte-c5757826.js",
@@ -49,6 +49,7 @@ const files = [
   "/apple-touch-icon.png",
   "/assets/card/windmill.svg",
   "/assets/certificates/CCNA-1-certificate.pdf",
+  "/assets/certificates/CCNA-2-certificate.pdf",
   "/assets/competitions/ASZEV2022.jpeg",
   "/assets/competitions/Accenture Java 2020.pdf",
   "/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.jpeg",
@@ -104,7 +105,7 @@ const prerendered = [
   "/business-card-front.svg",
   "/business-card-back.svg"
 ];
-const version = "1655889284006";
+const version = "1655969542653";
 try {
   self["workbox:core:6.5.2"] && _();
 } catch (e) {
