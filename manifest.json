@@ -1,15 +1,606 @@
 {
-	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
-	"name": "SK website",
-	"short_name": "SK",
-	"description": "This is the personal website of SK",
-	"start_url": ".",
-	"icons": [
-		{"src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png"},
-		{"src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png"}
-	],
-	"theme_color": "#2E74B5",
-	"background_color": "#ffffff",
-	"display": "browser",
-	"lang": "en"
+  "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-ext-400-normal.woff2": {
+    "file": "internal/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
+    "src": "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-ext-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff2": {
+    "file": "internal/immutable/assets/fira-mono-cyrillic-400-normal-c7d433fd.woff2",
+    "src": "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-greek-ext-400-normal.woff2": {
+    "file": "internal/immutable/assets/fira-mono-greek-ext-400-normal-9e2fe623.woff2",
+    "src": "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-greek-ext-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-greek-400-normal.woff2": {
+    "file": "internal/immutable/assets/fira-mono-greek-400-normal-a8be01ce.woff2",
+    "src": "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-greek-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-latin-ext-400-normal.woff2": {
+    "file": "internal/immutable/assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
+    "src": "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-latin-ext-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-latin-400-normal.woff2": {
+    "file": "internal/immutable/assets/fira-mono-latin-400-normal-e43b3538.woff2",
+    "src": "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-latin-400-normal.woff2"
+  },
+  "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-all-400-normal.woff": {
+    "file": "internal/immutable/assets/fira-mono-all-400-normal-1e3b098c.woff",
+    "src": "node_modules/.pnpm/@fontsource+fira-mono@4.5.4/node_modules/@fontsource/fira-mono/files/fira-mono-all-400-normal.woff"
+  },
+  "sk.jpg": {
+    "file": "internal/immutable/assets/sk-c8852f92.jpg",
+    "src": "sk.jpg"
+  },
+  "sk.webp": {
+    "file": "internal/immutable/assets/sk-706ac9fe.webp",
+    "src": "sk.webp"
+  },
+  "Dusza-mobil-2021.webp": {
+    "file": "internal/immutable/assets/Dusza-mobil-2021-107b44e5.webp",
+    "src": "Dusza-mobil-2021.webp"
+  },
+  "Dusza-mobil-2020.webp": {
+    "file": "internal/immutable/assets/Dusza-mobil-2020-7b1e11f8.webp",
+    "src": "Dusza-mobil-2020.webp"
+  },
+  "Dusza-mobil-2019.webp": {
+    "file": "internal/immutable/assets/Dusza-mobil-2019-e0d3b031.webp",
+    "src": "Dusza-mobil-2019.webp"
+  },
+  "Ifju-Tudosok-2022.webp": {
+    "file": "internal/immutable/assets/Ifju-Tudosok-2022-4389b3bc.webp",
+    "src": "Ifju-Tudosok-2022.webp"
+  },
+  "Merklik-2021.webp": {
+    "file": "internal/immutable/assets/Merklik-2021-faccd106.webp",
+    "src": "Merklik-2021.webp"
+  },
+  "Bakonyi-Bitfarago-Bajnoksag-2021.webp": {
+    "file": "internal/immutable/assets/Bakonyi-Bitfarago-Bajnoksag-2021-b1cc32b2.webp",
+    "src": "Bakonyi-Bitfarago-Bajnoksag-2021.webp"
+  },
+  "Innovacios-tehetsegkutato-2021.webp": {
+    "file": "internal/immutable/assets/Innovacios-tehetsegkutato-2021-89e298c2.webp",
+    "src": "Innovacios-tehetsegkutato-2021.webp"
+  },
+  "Kodolj-Hatarok-Nelkul-2021.webp": {
+    "file": "internal/immutable/assets/Kodolj-Hatarok-Nelkul-2021-f6cd611e.webp",
+    "src": "Kodolj-Hatarok-Nelkul-2021.webp"
+  },
+  "Innovacios-tehetsegkutato-2020.webp": {
+    "file": "internal/immutable/assets/Innovacios-tehetsegkutato-2020-95189328.webp",
+    "src": "Innovacios-tehetsegkutato-2020.webp"
+  },
+  "Kodolj-Hatarok-Nelkul-2020.webp": {
+    "file": "internal/immutable/assets/Kodolj-Hatarok-Nelkul-2020-6d5ca2ad.webp",
+    "src": "Kodolj-Hatarok-Nelkul-2020.webp"
+  },
+  "SZIIV-2020.webp": {
+    "file": "internal/immutable/assets/SZIIV-2020-06406d7e.webp",
+    "src": "SZIIV-2020.webp"
+  },
+  "Bakonyi-Bitfarago-Bajnoksag-2020.webp": {
+    "file": "internal/immutable/assets/Bakonyi-Bitfarago-Bajnoksag-2020-13f68239.webp",
+    "src": "Bakonyi-Bitfarago-Bajnoksag-2020.webp"
+  },
+  "Webex-Teams-Hackathlon-2019-photo.webp": {
+    "file": "internal/immutable/assets/Webex-Teams-Hackathlon-2019-photo-ba6c1a2a.webp",
+    "src": "Webex-Teams-Hackathlon-2019-photo.webp"
+  },
+  "Dusza-2020.webp": {
+    "file": "internal/immutable/assets/Dusza-2020-1b56d4b0.webp",
+    "src": "Dusza-2020.webp"
+  },
+  "Bakonyi-Bitfarago-Bajnoksag-2019.webp": {
+    "file": "internal/immutable/assets/Bakonyi-Bitfarago-Bajnoksag-2019-e34ace99.webp",
+    "src": "Bakonyi-Bitfarago-Bajnoksag-2019.webp"
+  },
+  "SZIIV-2019.webp": {
+    "file": "internal/immutable/assets/SZIIV-2019-d986bf56.webp",
+    "src": "SZIIV-2019.webp"
+  },
+  "Dusza-2019.webp": {
+    "file": "internal/immutable/assets/Dusza-2019-ad68845c.webp",
+    "src": "Dusza-2019.webp"
+  },
+  "Skills-Junior-Web-2022.webp": {
+    "file": "internal/immutable/assets/Skills-Junior-Web-2022-607b0efc.webp",
+    "src": "Skills-Junior-Web-2022.webp"
+  },
+  "Iskola-programozas-verseny-2018.webp": {
+    "file": "internal/immutable/assets/Iskola-programozas-verseny-2018-1e3e274c.webp",
+    "src": "Iskola-programozas-verseny-2018.webp"
+  },
+  "Nemes-Tihamer-2019.webp": {
+    "file": "internal/immutable/assets/Nemes-Tihamer-2019-6b82fe06.webp",
+    "src": "Nemes-Tihamer-2019.webp"
+  },
+  "Dusza-mobil-2021.jpg": {
+    "file": "internal/immutable/assets/Dusza-mobil-2021-1099f730.jpg",
+    "src": "Dusza-mobil-2021.jpg"
+  },
+  "Dusza-mobil-2019.jpg": {
+    "file": "internal/immutable/assets/Dusza-mobil-2019-2c39fa70.jpg",
+    "src": "Dusza-mobil-2019.jpg"
+  },
+  "Dusza-mobil-2020.jpg": {
+    "file": "internal/immutable/assets/Dusza-mobil-2020-a8e82388.jpg",
+    "src": "Dusza-mobil-2020.jpg"
+  },
+  "Merklik-2021.jpg": {
+    "file": "internal/immutable/assets/Merklik-2021-400e93d3.jpg",
+    "src": "Merklik-2021.jpg"
+  },
+  "Kodolj-Hatarok-Nelkul-2021.jpg": {
+    "file": "internal/immutable/assets/Kodolj-Hatarok-Nelkul-2021-b5676f16.jpg",
+    "src": "Kodolj-Hatarok-Nelkul-2021.jpg"
+  },
+  "Ifju-Tudosok-2022.jpg": {
+    "file": "internal/immutable/assets/Ifju-Tudosok-2022-28902e66.jpg",
+    "src": "Ifju-Tudosok-2022.jpg"
+  },
+  "Innovacios-tehetsegkutato-2021.jpg": {
+    "file": "internal/immutable/assets/Innovacios-tehetsegkutato-2021-307778ff.jpg",
+    "src": "Innovacios-tehetsegkutato-2021.jpg"
+  },
+  "Kodolj-Hatarok-Nelkul-2020.jpg": {
+    "file": "internal/immutable/assets/Kodolj-Hatarok-Nelkul-2020-a33151ad.jpg",
+    "src": "Kodolj-Hatarok-Nelkul-2020.jpg"
+  },
+  "Bakonyi-Bitfarago-Bajnoksag-2021.jpg": {
+    "file": "internal/immutable/assets/Bakonyi-Bitfarago-Bajnoksag-2021-67f79f7c.jpg",
+    "src": "Bakonyi-Bitfarago-Bajnoksag-2021.jpg"
+  },
+  "Innovacios-tehetsegkutato-2020.jpg": {
+    "file": "internal/immutable/assets/Innovacios-tehetsegkutato-2020-52ea43a0.jpg",
+    "src": "Innovacios-tehetsegkutato-2020.jpg"
+  },
+  "Bakonyi-Bitfarago-Bajnoksag-2020.jpg": {
+    "file": "internal/immutable/assets/Bakonyi-Bitfarago-Bajnoksag-2020-a54a8bf9.jpg",
+    "src": "Bakonyi-Bitfarago-Bajnoksag-2020.jpg"
+  },
+  "Dusza-2020.jpg": {
+    "file": "internal/immutable/assets/Dusza-2020-a2277c96.jpg",
+    "src": "Dusza-2020.jpg"
+  },
+  "SZIIV-2020.jpg": {
+    "file": "internal/immutable/assets/SZIIV-2020-97c79f2f.jpg",
+    "src": "SZIIV-2020.jpg"
+  },
+  "Webex-Teams-Hackathlon-2019-photo.jpg": {
+    "file": "internal/immutable/assets/Webex-Teams-Hackathlon-2019-photo-54e6a713.jpg",
+    "src": "Webex-Teams-Hackathlon-2019-photo.jpg"
+  },
+  "Skills-Junior-Web-2022.jpg": {
+    "file": "internal/immutable/assets/Skills-Junior-Web-2022-fa2a2006.jpg",
+    "src": "Skills-Junior-Web-2022.jpg"
+  },
+  "Bakonyi-Bitfarago-Bajnoksag-2019.jpg": {
+    "file": "internal/immutable/assets/Bakonyi-Bitfarago-Bajnoksag-2019-783a2eb2.jpg",
+    "src": "Bakonyi-Bitfarago-Bajnoksag-2019.jpg"
+  },
+  "Dusza-2019.jpg": {
+    "file": "internal/immutable/assets/Dusza-2019-d577e7ef.jpg",
+    "src": "Dusza-2019.jpg"
+  },
+  "SZIIV-2019.jpg": {
+    "file": "internal/immutable/assets/SZIIV-2019-7c0e8d8f.jpg",
+    "src": "SZIIV-2019.jpg"
+  },
+  "Iskola-programozas-verseny-2018.jpg": {
+    "file": "internal/immutable/assets/Iskola-programozas-verseny-2018-2bcab67d.jpg",
+    "src": "Iskola-programozas-verseny-2018.jpg"
+  },
+  "Nemes-Tihamer-2019.jpg": {
+    "file": "internal/immutable/assets/Nemes-Tihamer-2019-0babb42a.jpg",
+    "src": "Nemes-Tihamer-2019.jpg"
+  },
+  "ASZEV2022.webp": {
+    "file": "internal/immutable/assets/ASZEV2022-8a7b693b.webp",
+    "src": "ASZEV2022.webp"
+  },
+  "ASZEV2022.jpg": {
+    "file": "internal/immutable/assets/ASZEV2022-bcc53251.jpg",
+    "src": "ASZEV2022.jpg"
+  },
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "internal/immutable/start-a3e68af2.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "_preload-helper-30e8f224.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/__layout-min.svelte",
+      "src/routes/__layout-web.svelte",
+      "src/routes/404@web.svelte",
+      "src/routes/index@web.svelte",
+      "src/routes/me-card-wrapped.svelte",
+      "src/routes/me@min.svelte",
+      "src/routes/posts/[post]@web.svelte",
+      "src/routes/posts@web.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "internal/immutable/pages/__layout.svelte-01e1a688.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "internal/immutable/error.svelte-ba70b162.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js"
+    ]
+  },
+  "src/routes/__layout-min.svelte": {
+    "file": "internal/immutable/pages/__layout-min.svelte-813bd829.js",
+    "src": "src/routes/__layout-min.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "_layout-helper-c7a27558.js"
+    ],
+    "css": [
+      "internal/immutable/assets/app-51826010.css"
+    ]
+  },
+  "src/routes/__layout-web.svelte": {
+    "file": "internal/immutable/pages/__layout-web.svelte-4f0a46b6.js",
+    "src": "src/routes/__layout-web.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "_service-95f68a5c.js",
+      "_Face-8d009a19.js",
+      "_layout-helper-c7a27558.js",
+      "_IconBase-35237b9e.js"
+    ],
+    "css": [
+      "internal/immutable/assets/__layout-web-138e1b49.css",
+      "internal/immutable/assets/app-51826010.css"
+    ]
+  },
+  "src/routes/404@web.svelte": {
+    "file": "internal/immutable/pages/404@web.svelte-fb346653.js",
+    "src": "src/routes/404@web.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js"
+    ],
+    "css": [
+      "internal/immutable/assets/404@web-42a5e5d1.css"
+    ]
+  },
+  "src/routes/index@web.svelte": {
+    "file": "internal/immutable/pages/index@web.svelte-1296a864.js",
+    "src": "src/routes/index@web.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "_FaEnvelope-c9851864.js",
+      "_IconBase-35237b9e.js",
+      "_service-95f68a5c.js"
+    ],
+    "css": [
+      "internal/immutable/assets/index@web-50378ec7.css"
+    ]
+  },
+  "src/routes/me-card-wrapped.svelte": {
+    "file": "internal/immutable/pages/me-card-wrapped.svelte-bcf04fa8.js",
+    "src": "src/routes/me-card-wrapped.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "_MeCard-954f0439.js",
+      "_Face-8d009a19.js",
+      "_IconBase-35237b9e.js",
+      "_FaEnvelope-c9851864.js",
+      "_preload-helper-30e8f224.js"
+    ],
+    "css": [
+      "internal/immutable/assets/app-51826010.css"
+    ]
+  },
+  "src/routes/me@min.svelte": {
+    "file": "internal/immutable/pages/me@min.svelte-5928adb2.js",
+    "src": "src/routes/me@min.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "_MeCard-954f0439.js",
+      "_Face-8d009a19.js",
+      "_IconBase-35237b9e.js",
+      "_FaEnvelope-c9851864.js",
+      "_preload-helper-30e8f224.js"
+    ],
+    "css": [
+      "internal/immutable/assets/me@min-4ff9918c.css"
+    ]
+  },
+  "src/routes/posts/[post]@web.svelte": {
+    "file": "internal/immutable/pages/posts/_post_@web.svelte-9d86b593.js",
+    "src": "src/routes/posts/[post]@web.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_preload-helper-30e8f224.js",
+      "_index-63d179ed.js"
+    ],
+    "dynamicImports": [
+      "src/posts/emojik-es-a-windows.md",
+      "src/posts/hidden-post.md",
+      "src/posts/welcome.md"
+    ]
+  },
+  "src/routes/posts@web.svelte": {
+    "file": "internal/immutable/pages/posts@web.svelte-b4364c14.js",
+    "src": "src/routes/posts@web.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "_preload-helper-30e8f224.js"
+    ],
+    "dynamicImports": [
+      "src/posts/emojik-es-a-windows.md",
+      "src/posts/hidden-post.md",
+      "src/posts/welcome.md"
+    ],
+    "css": [
+      "internal/immutable/assets/posts@web-e0148492.css"
+    ]
+  },
+  "_index-63d179ed.js": {
+    "file": "internal/immutable/chunks/index-63d179ed.js"
+  },
+  "_preload-helper-30e8f224.js": {
+    "file": "internal/immutable/chunks/preload-helper-30e8f224.js"
+  },
+  "_layout-helper-c7a27558.js": {
+    "file": "internal/immutable/chunks/layout-helper-c7a27558.js",
+    "imports": [
+      "_index-63d179ed.js"
+    ],
+    "css": [
+      "internal/immutable/assets/app-51826010.css"
+    ]
+  },
+  "_service-95f68a5c.js": {
+    "file": "internal/immutable/chunks/service-95f68a5c.js",
+    "imports": [
+      "_index-63d179ed.js"
+    ],
+    "css": [
+      "internal/immutable/assets/service-60614438.css"
+    ]
+  },
+  "_Face-8d009a19.js": {
+    "file": "internal/immutable/chunks/Face-8d009a19.js",
+    "imports": [
+      "_index-63d179ed.js",
+      "_IconBase-35237b9e.js"
+    ]
+  },
+  "_IconBase-35237b9e.js": {
+    "file": "internal/immutable/chunks/IconBase-35237b9e.js",
+    "imports": [
+      "_index-63d179ed.js"
+    ],
+    "css": [
+      "internal/immutable/assets/IconBase-6bf551a2.css"
+    ]
+  },
+  "_FaEnvelope-c9851864.js": {
+    "file": "internal/immutable/chunks/FaEnvelope-c9851864.js",
+    "imports": [
+      "_index-63d179ed.js",
+      "_IconBase-35237b9e.js"
+    ]
+  },
+  "_MeCard-954f0439.js": {
+    "file": "internal/immutable/chunks/MeCard-954f0439.js",
+    "imports": [
+      "_index-63d179ed.js",
+      "_Face-8d009a19.js",
+      "_FaEnvelope-c9851864.js",
+      "_preload-helper-30e8f224.js"
+    ],
+    "dynamicImports": [
+      "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/loopTypewriter.js",
+      "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/scramble.js",
+      "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/typewriter.js",
+      "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js",
+      "node_modules/.pnpm/tsparticles-plugin-polygon-mask@2.0.6/node_modules/tsparticles-plugin-polygon-mask/esm/pathseg.js",
+      "node_modules/.pnpm/svelte-particles@2.0.6_svelte@3.48.0/node_modules/svelte-particles/src/index.ts"
+    ],
+    "css": [
+      "internal/immutable/assets/MeCard-fc36dd26.css"
+    ]
+  },
+  "node_modules/.pnpm/svelte-particles@2.0.6_svelte@3.48.0/node_modules/svelte-particles/src/index.ts": {
+    "file": "internal/immutable/chunks/index-056b5e13.js",
+    "src": "node_modules/.pnpm/svelte-particles@2.0.6_svelte@3.48.0/node_modules/svelte-particles/src/index.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "_MeCard-954f0439.js",
+      "_Face-8d009a19.js",
+      "_IconBase-35237b9e.js",
+      "_FaEnvelope-c9851864.js",
+      "_preload-helper-30e8f224.js"
+    ]
+  },
+  "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/loopTypewriter.js": {
+    "file": "internal/immutable/chunks/loopTypewriter-9662c409.js",
+    "src": "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/loopTypewriter.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_writeEffect-6c629c6d.js",
+      "_MeCard-954f0439.js",
+      "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js",
+      "_index-63d179ed.js",
+      "_Face-8d009a19.js",
+      "_IconBase-35237b9e.js",
+      "_FaEnvelope-c9851864.js",
+      "_preload-helper-30e8f224.js"
+    ]
+  },
+  "_writeEffect-6c629c6d.js": {
+    "file": "internal/immutable/chunks/writeEffect-6c629c6d.js",
+    "imports": [
+      "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js",
+      "_MeCard-954f0439.js"
+    ]
+  },
+  "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js": {
+    "file": "internal/immutable/chunks/sleep-c89e9a38.js",
+    "src": "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/scramble.js": {
+    "file": "internal/immutable/chunks/scramble-675c3d15.js",
+    "src": "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/scramble.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js",
+      "_MeCard-954f0439.js",
+      "_index-63d179ed.js",
+      "_Face-8d009a19.js",
+      "_IconBase-35237b9e.js",
+      "_FaEnvelope-c9851864.js",
+      "_preload-helper-30e8f224.js"
+    ]
+  },
+  "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/typewriter.js": {
+    "file": "internal/immutable/chunks/typewriter-0f489855.js",
+    "src": "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/typewriter.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_preload-helper-30e8f224.js",
+      "_writeEffect-6c629c6d.js",
+      "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js",
+      "_MeCard-954f0439.js",
+      "_index-63d179ed.js",
+      "_Face-8d009a19.js",
+      "_IconBase-35237b9e.js",
+      "_FaEnvelope-c9851864.js"
+    ],
+    "dynamicImports": [
+      "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/getLongestTextElement.js"
+    ]
+  },
+  "node_modules/.pnpm/tsparticles-plugin-polygon-mask@2.0.6/node_modules/tsparticles-plugin-polygon-mask/esm/pathseg.js": {
+    "file": "internal/immutable/chunks/pathseg-64c2e5a9.js",
+    "src": "node_modules/.pnpm/tsparticles-plugin-polygon-mask@2.0.6/node_modules/tsparticles-plugin-polygon-mask/esm/pathseg.js",
+    "isDynamicEntry": true
+  },
+  "src/posts/emojik-es-a-windows.md": {
+    "file": "internal/immutable/chunks/emojik-es-a-windows-555492b9.js",
+    "src": "src/posts/emojik-es-a-windows.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "__post-887d8481.js",
+      "_preload-helper-30e8f224.js"
+    ]
+  },
+  "__post-887d8481.js": {
+    "file": "internal/immutable/chunks/_post-887d8481.js",
+    "imports": [
+      "_index-63d179ed.js",
+      "_preload-helper-30e8f224.js"
+    ],
+    "dynamicImports": [
+      "node_modules/.pnpm/giscus@1.0.5/node_modules/giscus/dist/giscus.es.js"
+    ],
+    "css": [
+      "internal/immutable/assets/_post-2c05d00e.css"
+    ]
+  },
+  "src/posts/hidden-post.md": {
+    "file": "internal/immutable/chunks/hidden-post-ff0a2c42.js",
+    "src": "src/posts/hidden-post.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "__post-887d8481.js",
+      "_preload-helper-30e8f224.js"
+    ]
+  },
+  "src/posts/welcome.md": {
+    "file": "internal/immutable/chunks/welcome-99d49286.js",
+    "src": "src/posts/welcome.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-63d179ed.js",
+      "__post-887d8481.js",
+      "_preload-helper-30e8f224.js"
+    ]
+  },
+  "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/getLongestTextElement.js": {
+    "file": "internal/immutable/chunks/getLongestTextElement-c055ee71.js",
+    "src": "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/getLongestTextElement.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/.pnpm/giscus@1.0.5/node_modules/giscus/dist/giscus.es.js": {
+    "file": "internal/immutable/chunks/giscus.es-4bdaf6f4.js",
+    "src": "node_modules/.pnpm/giscus@1.0.5/node_modules/giscus/dist/giscus.es.js",
+    "isDynamicEntry": true
+  },
+  "src/routes/__layout-web.css": {
+    "file": "internal/immutable/assets/__layout-web-138e1b49.css",
+    "src": "src/routes/__layout-web.css"
+  },
+  "src/routes/404@web.css": {
+    "file": "internal/immutable/assets/404@web-42a5e5d1.css",
+    "src": "src/routes/404@web.css"
+  },
+  "service.css": {
+    "file": "internal/immutable/assets/service-60614438.css",
+    "src": "service.css"
+  },
+  "IconBase.css": {
+    "file": "internal/immutable/assets/IconBase-6bf551a2.css",
+    "src": "IconBase.css"
+  },
+  "src/routes/index@web.css": {
+    "file": "internal/immutable/assets/index@web-50378ec7.css",
+    "src": "src/routes/index@web.css"
+  },
+  "MeCard.css": {
+    "file": "internal/immutable/assets/MeCard-fc36dd26.css",
+    "src": "MeCard.css"
+  },
+  "src/routes/me@min.css": {
+    "file": "internal/immutable/assets/me@min-4ff9918c.css",
+    "src": "src/routes/me@min.css"
+  },
+  "src/routes/posts@web.css": {
+    "file": "internal/immutable/assets/posts@web-e0148492.css",
+    "src": "src/routes/posts@web.css"
+  },
+  "_post.css": {
+    "file": "internal/immutable/assets/_post-2c05d00e.css",
+    "src": "_post.css"
+  },
+  "app.css": {
+    "file": "internal/immutable/assets/app-51826010.css",
+    "src": "app.css"
+  }
 }

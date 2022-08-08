@@ -13,21 +13,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="manifest" href="/manifest.json" />
 		<meta http-equiv="content-security-policy" content=""><title>Stefán Kornél</title><meta name="description" content="Digital personal information card" data-svelte="svelte-hkeinf">
-	<link rel="stylesheet" href="/internal/immutable/assets/app-06572f29.css">
-	<link rel="stylesheet" href="/internal/immutable/assets/MeCard-45065f41.css">
-	<link rel="stylesheet" href="/internal/immutable/assets/IconBase-05c40767.css">
-	<link rel="modulepreload" href="/internal/immutable/start-28127f5d.js">
-	<link rel="modulepreload" href="/internal/immutable/chunks/index-cab9287c.js">
-	<link rel="modulepreload" href="/internal/immutable/chunks/preload-helper-e51e4937.js">
-	<link rel="modulepreload" href="/internal/immutable/pages/__layout.svelte-2465cb37.js">
-	<link rel="modulepreload" href="/internal/immutable/pages/me-card-wrapped.svelte-3ed9c8cc.js">
-	<link rel="modulepreload" href="/internal/immutable/chunks/MeCard-ad7fabc2.js">
-	<link rel="modulepreload" href="/internal/immutable/chunks/Face-41e641a6.js">
-	<link rel="modulepreload" href="/internal/immutable/chunks/IconBase-e9d3d119.js">
-	<link rel="modulepreload" href="/internal/immutable/chunks/FaEnvelope-b83c4dad.js">
+	<link href="/internal/immutable/assets/app-51826010.css" rel="stylesheet">
+	<link href="/internal/immutable/assets/MeCard-fc36dd26.css" rel="stylesheet">
+	<link href="/internal/immutable/assets/IconBase-6bf551a2.css" rel="stylesheet">
+	<link rel="modulepreload" href="/internal/immutable/start-a3e68af2.js">
+	<link rel="modulepreload" href="/internal/immutable/chunks/index-63d179ed.js">
+	<link rel="modulepreload" href="/internal/immutable/chunks/preload-helper-30e8f224.js">
+	<link rel="modulepreload" href="/internal/immutable/pages/__layout.svelte-01e1a688.js">
+	<link rel="modulepreload" href="/internal/immutable/pages/me-card-wrapped.svelte-bcf04fa8.js">
+	<link rel="modulepreload" href="/internal/immutable/chunks/MeCard-954f0439.js">
+	<link rel="modulepreload" href="/internal/immutable/chunks/Face-8d009a19.js">
+	<link rel="modulepreload" href="/internal/immutable/chunks/IconBase-35237b9e.js">
+	<link rel="modulepreload" href="/internal/immutable/chunks/FaEnvelope-c9851864.js">
 			<script>
 		if ('serviceWorker' in navigator) {
-			addEventListener('load', () => {
+			addEventListener('load', function () {
 				navigator.serviceWorker.register('/service-worker.js');
 			});
 		}
@@ -68,7 +68,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="zr43cc">
-		import { start } from "/internal/immutable/start-28127f5d.js";
+		import { set_public_env, start } from "/internal/immutable/start-a3e68af2.js";
+
+		set_public_env({});
+
 		start({
 			target: document.querySelector('[data-sveltekit-hydrate="zr43cc"]').parentNode,
 			paths: {"base":"","assets":""},
