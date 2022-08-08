@@ -1,7 +1,7 @@
 import backCard from '../lib/me/business-card-back.svg?raw';
 import {optimize, type OptimizedSvg} from 'svgo';
 
-export async function get() {
+export async function GET() {
 	const optimized = optimize(backCard, {
 		multipass: true,
 		plugins: [

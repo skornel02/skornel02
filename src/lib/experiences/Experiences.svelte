@@ -24,7 +24,7 @@
 	<div class="resume-item d-flex flex-column flex-md-row mb-5">
 		<div class="resume-content mr-auto">
 			<h3 class="mb-0">Full stack developer</h3>
-			<div class="subheading mb-3">THR Logisztika</div>
+			<div class="subheading mb-3">TRH Logisztika</div>
 			<p>
 				At this company there was a need for a custom built shift scheduling system, and I got the
 				chance to work on it. With no previous infrastructure it was my role to negotiate how the

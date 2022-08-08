@@ -1,7 +1,7 @@
 import frontCard from '../lib/me/business-card-front.svg?raw';
 import {optimize, type OptimizedSvg} from 'svgo';
 
-export async function get() {
+export async function GET() {
 	const optimized = optimize(frontCard, {
 		multipass: true,
 		plugins: [
