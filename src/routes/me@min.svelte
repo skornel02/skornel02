@@ -1,5 +1,4 @@
 <script lang="ts">
-	import MeBackground from '$lib/me/MeBackground.svelte';
 	import MeCard from '$lib/me/MeCard.svelte';
 </script>
 

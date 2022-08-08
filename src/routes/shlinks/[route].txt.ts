@@ -1,6 +1,6 @@
 import type {RequestHandler} from '@sveltejs/kit';
 
-export const get: RequestHandler = async ({params}) => {
+export const GET: RequestHandler = async ({params}) => {
 	let shlinkData: string | undefined = undefined;
 
 	const shlinkKey = process.env.SHLINK_KEY;

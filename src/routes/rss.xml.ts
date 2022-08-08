@@ -1,6 +1,6 @@
 import {loadPostsOrdered} from '$lib/posts';
 
-export async function get() {
+export async function GET() {
 	const posts = await loadPostsOrdered(false);
 
 	const headers = {
