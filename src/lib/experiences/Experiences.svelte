@@ -1,6 +1,18 @@
 <div class="my-auto d-flex flex-column">
 	<h2 class="mb-5">Experience</h2>
-
+	<div class="resume-item d-flex flex-column flex-md-row mb-5">
+		<div class="resume-content mr-auto">
+			<h3 class="mb-0">Dual internship</h3>
+			<div class="subheading mb-3">GriffSoft Zrt.</div>
+			<p>
+				While studying at the University of Szeged I have been working at GriffSoft Zrt. as a dual intern. 
+				I have been placed on the company's machine learning team.
+			</p>
+		</div>
+		<div class="resume-date text-md-right">
+			<span class="text-primary">2022 - Present</span>
+		</div>
+	</div>
 	<div class="resume-item d-flex flex-column flex-md-row mb-5">
 		<div class="resume-content mr-auto">
 			<h3 class="mb-0">Full stack developer</h3>
@@ -18,13 +30,13 @@
 			</p>
 		</div>
 		<div class="resume-date text-md-right">
-			<span class="text-primary">2019 - Present</span>
+			<span class="text-primary">2019 - 2022</span>
 		</div>
 	</div>
 	<div class="resume-item d-flex flex-column flex-md-row mb-5">
 		<div class="resume-content mr-auto">
 			<h3 class="mb-0">Full stack developer</h3>
-			<div class="subheading mb-3">TRH Logisztika</div>
+			<div class="subheading mb-3">TRANS HUNGÁRIA SZÁLLÍTMÁNYOZÁSI ÉS LOGISZTIKAI KFT.</div>
 			<p>
 				At this company there was a need for a custom built shift scheduling system, and I got the
 				chance to work on it. With no previous infrastructure it was my role to negotiate how the
