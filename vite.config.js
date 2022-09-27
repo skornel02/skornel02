@@ -1,10 +1,10 @@
+import { defineConfig } from "vite";
 import {sveltekit} from '@sveltejs/kit/vite';
 import path from 'path';
 import {imagetools} from 'vite-imagetools';
 import svgLoader from 'vite-svg-loader';
 
-/** @type {import('vite').UserConfig} */
-const config = {
+const config = defineConfig(() => ({
 	resolve: {
 		alias: {
 			$static: path.resolve('static'),
@@ -34,6 +34,6 @@ const config = {
 		}),
 		imagetools(),
 	],
-};
+}));
 
 export default config;
