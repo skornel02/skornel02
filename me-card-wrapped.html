@@ -16,7 +16,7 @@
 	<link href="/internal/immutable/assets/app-51826010.css" rel="stylesheet">
 	<link href="/internal/immutable/assets/MeCard-fc36dd26.css" rel="stylesheet">
 	<link href="/internal/immutable/assets/IconBase-6bf551a2.css" rel="stylesheet">
-	<link rel="modulepreload" href="/internal/immutable/start-4bb90acc.js">
+	<link rel="modulepreload" href="/internal/immutable/start-c61a649c.js">
 	<link rel="modulepreload" href="/internal/immutable/chunks/index-63d179ed.js">
 	<link rel="modulepreload" href="/internal/immutable/chunks/preload-helper-30e8f224.js">
 	<link rel="modulepreload" href="/internal/immutable/pages/__layout.svelte-01e1a688.js">
@@ -25,13 +25,6 @@
 	<link rel="modulepreload" href="/internal/immutable/chunks/Face-8d009a19.js">
 	<link rel="modulepreload" href="/internal/immutable/chunks/IconBase-35237b9e.js">
 	<link rel="modulepreload" href="/internal/immutable/chunks/FaEnvelope-c9851864.js">
-			<script>
-		if ('serviceWorker' in navigator) {
-			addEventListener('load', function () {
-				navigator.serviceWorker.register('/service-worker.js');
-			});
-		}
-	</script>
 	</head>
 
 	<body>
@@ -68,7 +61,7 @@
 
 
 		<script type="module" data-sveltekit-hydrate="zr43cc">
-		import { set_public_env, start } from "/internal/immutable/start-4bb90acc.js";
+		import { set_public_env, start } from "/internal/immutable/start-c61a649c.js";
 
 		set_public_env({});
 
@@ -106,6 +99,13 @@
 					window.location.reload();
 				}
 			}
+			
+			/** Blocking: https://github.com/sveltejs/kit/issues/5682 */
+			navigator.serviceWorker.getRegistrations().then(function(registrations) {
+				for(let registration of registrations) {
+				registration.unregister()
+				} 
+			})
 		})();
 	</script>
 </html>
