@@ -1,5 +1,7 @@
 import {loadPostsOrdered} from '$lib/posts';
 
+export const prerender = true;
+
 export async function GET() {
 	const posts = await loadPostsOrdered(false);
 
@@ -7,9 +9,7 @@ export async function GET() {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
 		'Content-Type': 'application/xml',
 	};
-	return {
-		headers,
-		body: `<?xml version="1.0" encoding="UTF-8" ?>
+	return new Response(`<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <atom:link href="https://skornel02.hu/rss.xml" rel="self" type="application/rss+xml" />
@@ -30,6 +30,5 @@ export async function GET() {
 			})
 			.join('\n')}
   </channel>
-</rss>`,
-	};
+</rss>`, { headers });
 }

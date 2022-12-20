@@ -1,4 +1,3 @@
-<!-- _post.svelte -->
 <script>
 	import Giscus from '@giscus/svelte';
 	import 'github-markdown-css/github-markdown.css';

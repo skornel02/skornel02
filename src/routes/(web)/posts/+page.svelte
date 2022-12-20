@@ -1,26 +1,10 @@
-<script lang="ts" context="module">
-	import {loadPostsOrdered, type Post} from '$lib/posts';
-	import type {LoadOutput} from '@sveltejs/kit';
+<script lang="ts">
+	import type {PageData} from './$types';
 	import Fuse from 'fuse.js';
 
-	export const prerender = true;
+	export let data: PageData;
 
-	export const load = async (): Promise<LoadOutput> => {
-		const sortedPosts = await loadPostsOrdered(false);
-
-		return {
-			status: 200,
-			props: {
-				posts: sortedPosts,
-			},
-		};
-	};
-</script>
-
-<script lang="ts">
-	export let posts: Post[];
-
-	let postsShown = posts;
+	let postsShown = data.posts;
 
 	const searchOptions = {
 		includeScore: true,
@@ -30,14 +14,14 @@
 		],
 	};
 	let search = '';
-	const fuse = new Fuse(posts, searchOptions);
+	const fuse = new Fuse(data.posts, searchOptions);
 
 	$: {
 		if (search !== '') {
 			const result = fuse.search(search);
 			postsShown = result.map((r) => r.item);
 		} else {
-			postsShown = posts;
+			postsShown = data.posts;
 		}
 	}
 </script>

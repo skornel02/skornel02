@@ -32,8 +32,5 @@ export const GET: RequestHandler = async ({params}) => {
 		console.warn('SHLINK_KEY is not defined');
 	}
 
-	return {
-		body: shlinkData ?? 'https://link.skornel02.hu/t8I9I',
-		status: 200,
-	};
+	return new Response(shlinkData ?? 'https://link.skornel02.hu/t8I9I');
 };
