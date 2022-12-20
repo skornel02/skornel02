@@ -1,0 +1,1 @@
+const o=async(r,n,t)=>{if(!n){console.error("The specified parent element does not exists!");return}let e=r;do{if(e===n)return;t(e),e=e.parentElement||e.parentNode}while(e!==null&&e.nodeType===1)};export{o as r};
