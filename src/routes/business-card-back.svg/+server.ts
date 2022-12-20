@@ -1,5 +1,7 @@
-import backCard from '../lib/me/business-card-back.svg?raw';
+import backCard from '../../lib/me/business-card-back.svg?raw';
 import {optimize, type OptimizedSvg} from 'svgo';
+
+export const prerender = true;
 
 export async function GET() {
 	const optimized = optimize(backCard, {
@@ -23,8 +25,5 @@ export async function GET() {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
 		'Content-Type': 'image/svg+xml',
 	};
-	return {
-		headers,
-		body: svg,
-	};
+	return new Response(svg, {headers});
 }

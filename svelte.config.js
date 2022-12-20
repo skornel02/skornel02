@@ -30,7 +30,7 @@ const config = {
 		mdsvex({
 			extensions: ['.md'],
 			layout: {
-				post: 'src/routes/posts/_post.svelte',
+				post: 'src/routes/(web)/posts/_post.svelte',
 			},
 			remarkPlugins: [remarkSubSuper, remarkEmoji, remarkFootnotes],
 			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
@@ -52,7 +52,6 @@ const config = {
 		},
 
 		prerender: {
-			default: true,
 			entries: ['*', ...staticFiles, ...posts],
 		},
 	},

@@ -1,18 +1,5 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-
-	interface SectionData {
-		[key: string]: Section;
-	}
-
-	interface Section {
-		index: number;
-		top: number;
-		title: string;
-	}
-</script>
-
 <script lang="ts">
+	import type { SectionData } from './+page';
 	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
 	import FaFacebook from 'svelte-icons/fa/FaFacebook.svelte';
 	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';

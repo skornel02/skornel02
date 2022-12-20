@@ -1,29 +1,13 @@
-<script context="module" lang="ts">
-	import type {LoadEvent, LoadOutput} from '@sveltejs/kit';
-
-	export const load = async ({url, fetch}: LoadEvent): Promise<LoadOutput> => {
-		const route: string = url.pathname;
-		let shlinkUrl: string | undefined = await loadShlinkUrl(route, fetch);
-
-		return {
-			props: {
-				route,
-				shlinkUrl,
-			},
-		};
-	};
-</script>
-
 <script lang="ts">
+	import type {LayoutData} from './$types';
 	import Header from '$lib/header/Header.svelte';
 	import ShlinkTracker from '$lib/ShlinkTracker.svelte';
 	import FaRssSquare from 'svelte-icons/fa/FaRssSquare.svelte';
 	import {fade} from 'svelte/transition';
-	import {loadShlinkUrl} from '$lib/layout-helper';
-	import '../app.scss';
+	import '../../app.scss';
 
-	export let route: string;
-	export let shlinkUrl: string | undefined;
+	export let data: LayoutData;
+	const {route, shlinkUrl} = data;
 
 	const year = new Date().getFullYear();
 </script>

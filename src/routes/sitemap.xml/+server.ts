@@ -1,5 +1,7 @@
 import {loadPostsOrdered} from '$lib/posts';
 
+export const prerender = true;
+
 export async function GET() {
 	const posts = await loadPostsOrdered(false);
 
@@ -7,9 +9,7 @@ export async function GET() {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
 		'Content-Type': 'application/xml',
 	};
-	return {
-		headers,
-		body: `<?xml version="1.0" encoding="UTF-8" ?>
+	return new Response(`<?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://skornel02.hu</loc>
@@ -33,6 +33,5 @@ export async function GET() {
   </url>`;
 			})
 			.join('\n')}
-</urlset>`,
-	};
+</urlset>`, { headers });
 }
