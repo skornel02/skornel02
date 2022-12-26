@@ -4,11 +4,17 @@
 	import CardContacts from './CardContacts.svelte';
 	import CardTitle from './CardTitle.svelte';
 	import MeBackground from './MeBackground.svelte';
+	import {fade, type FadeParams} from 'svelte/transition';
 
-	let hidden = true;
+	const fadeParams: FadeParams = {
+		duration: 750,
+		delay: 200,
+	};
+
+	let loaded = false;
 
 	const onLoad = () => {
-		hidden = false;
+		loaded = true;
 	};
 </script>
 
@@ -18,33 +24,37 @@
 </svelte:head>
 
 <MeBackground />
-<div id="me-card" class="card">
+<div id="me-card" class="card" class:card-loaded="{loaded}">
 	<div id="nameSlot">
 		<CardTitle on:load="{onLoad}" />
 	</div>
-	<div id="faceSlot" class="mx-auto">
-		<Face class="img-fluid img-profile rounded" />
-	</div>
-	<hr />
-	<div id="contactSlot">
-		<CardContacts />
-	</div>
-	<hr class="opacity-0" class:opacity-100="{!hidden}" />
-	<div id="cardSlot" class="mx-auto opacity-0" class:opacity-100="{!hidden}">
-		<BusinessCard />
-	</div>
+	{#if loaded}
+		<div id="faceSlot" class="mx-auto" in:fade="{fadeParams}">
+			<Face class="img-fluid img-profile rounded" />
+		</div>
+		<hr in:fade="{fadeParams}" />
+		<div id="contactSlot" in:fade="{fadeParams}">
+			<CardContacts />
+		</div>
+		<hr in:fade="{fadeParams}" />
+		<div id="cardSlot" class="mx-auto" in:fade="{fadeParams}">
+			<BusinessCard />
+		</div>
+	{/if}
 </div>
 
 <style lang="scss">
 	#me-card {
 		padding: 1rem;
-		div,
-		hr {
-			transition: 0.75s opacity;
-		}
 	}
 	.card {
 		border-color: var(--color-secondary);
+		height: fit-content;
+		max-height: 100px;
+		transition: max-height 0.5s;
+	}
+	.card-loaded {
+		max-height: 800px;
 	}
 	#nameSlot {
 		height: 3rem;

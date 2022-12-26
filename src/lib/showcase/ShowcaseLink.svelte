@@ -10,15 +10,11 @@
 <div class="showcase-link">
 	{#if link.type === 'img'}
 		<ImageModal location="{link.data.path}" title="{link.text}" metadata="{link.data.meta}">
-			<div class="file">
-				<svelte:component this="{typeToIcon(link.icon)}" />
-			</div>
+			<svelte:component this="{typeToIcon(link.icon)}" size="{24}" />
 		</ImageModal>
 	{:else if link.type === 'pdf'}
 		<PdfModal location="{link.url}" title="{link.text}">
-			<div class="file">
-				<svelte:component this="{typeToIcon(link.icon)}" />
-			</div>
+			<svelte:component this="{typeToIcon(link.icon)}" size="{24}" />
 		</PdfModal>
 	{:else if link.type === 'simple'}
 		<a
@@ -28,9 +24,7 @@
 			class="btn btn-secondary"
 			title="{link.text}"
 		>
-			<div class="file">
-				<svelte:component this="{typeToIcon(link.icon)}" />
-			</div>
+			<svelte:component this="{typeToIcon(link.icon)}" size="{24}" />
 		</a>
 	{/if}
 </div>

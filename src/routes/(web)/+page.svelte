@@ -1,8 +1,6 @@
 <script lang="ts">
 	import type { SectionData } from './+page';
-	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
-	import FaFacebook from 'svelte-icons/fa/FaFacebook.svelte';
-	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
+	import {Github, Facebook, Mail} from 'lucide-svelte';
 	import {onMount} from 'svelte';
 	import Showcase from '$lib/showcase/Showcase.svelte';
 	import {animateScroll} from 'svelte-scrollto-element';
@@ -117,21 +115,21 @@
 				<li class="list-inline-item">
 					<a id="social-gh" href="https://github.com/skornel02">
 						<div class="icon">
-							<FaGithub />
+							<Github size="{32}"/>
 						</div>
 					</a>
 				</li>
 				<li id="social-fb" class="list-inline-item">
 					<a href="https://www.facebook.com/stefankornel02">
 						<div class="icon">
-							<FaFacebook />
+							<Facebook size="{32}" />
 						</div>
 					</a>
 				</li>
 				<li id="social-email" class="list-inline-item">
 					<a href="mailto:contact@skornel02.hu">
 						<div class="icon">
-							<FaEnvelope />
+							<Mail size="{32}" />
 						</div>
 					</a>
 				</li>

@@ -2,7 +2,7 @@
 	import type {LayoutData} from './$types';
 	import Header from '$lib/header/Header.svelte';
 	import ShlinkTracker from '$lib/ShlinkTracker.svelte';
-	import FaRssSquare from 'svelte-icons/fa/FaRssSquare.svelte';
+	import {Rss} from 'lucide-svelte';
 	import {fade} from 'svelte/transition';
 	import '../../app.scss';
 
@@ -31,7 +31,7 @@
 	<p>
 		Have a nice day! • {year} © •
 		<a href="/rss.xml">
-			<FaRssSquare />
+			<Rss />
 		</a>
 		<ShlinkTracker shlinkUrl="{shlinkUrl}" />
 	</p>
