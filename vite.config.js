@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import {sveltekit} from '@sveltejs/kit/vite';
 import path from 'path';
-import {imagetools} from 'vite-imagetools';
 import svgLoader from 'vite-svg-loader';
 
 const config = defineConfig(() => ({
@@ -32,7 +31,6 @@ const config = defineConfig(() => ({
 				multipass: true,
 			},
 		}),
-		imagetools(),
 	],
 }));
 

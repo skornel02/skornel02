@@ -7,7 +7,7 @@
 <div class="column">
 	<div class="row">
 		<div class="col-12 col-sm-8 offset-0 offset-sm-2 py-1">
-			<a id="gh" href="https://github.com/skornel02" target="_blank" class="btn btn-secondary">
+			<a id="gh" href="https://github.com/skornel02" target="_blank" rel="noreferrer noopener" class="btn btn-secondary">
 				<i class="icon"> <FaGithub /></i>
 				Github
 			</a>
@@ -19,6 +19,7 @@
 				id="fb"
 				href="https://www.facebook.com/stefankornel02"
 				target="_blank"
+				rel="noreferrer noopener"
 				class="btn btn-secondary"
 			>
 				<i class="icon"> <FaFacebook /></i>

@@ -169,6 +169,12 @@ a:hover {
 	color: var(--color-secondary);
 }
 
+picture {
+	img {
+		width: 100%;
+	}
+}
+
 /* darkmode fix */
 
 .card {

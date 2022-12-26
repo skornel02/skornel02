@@ -17,31 +17,5 @@
 
 	<body>
 		<div>%sveltekit.body%</div>
-	</body>
-
-	<script>
-		(function () {
-			let updated = false;
-
-			navigator.serviceWorker.addEventListener('controllerchange', () => {
-				console.log({state: 'updated'});
-				updated = true;
-				checkUpdate();
-			});
-
-			function checkUpdate() {
-				if (updated) {
-					console.log('Application was updated refreshing the page...');
-					window.location.reload();
-				}
-			}
-			
-			/** Blocking: https://github.com/sveltejs/kit/issues/5682 */
-			navigator.serviceWorker.getRegistrations().then(function(registrations) {
-				for(let registration of registrations) {
-				registration.unregister()
-				} 
-			})
-		})();
-	</script>
+	</body>	
 </html>
