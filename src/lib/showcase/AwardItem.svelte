@@ -14,7 +14,7 @@
 			<div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
 			<div class="d-flex justify-content-center">
 				<div class:highlight="{award.id !== undefined}" class="icon text-warning mx-1">
-					<svelte:component this="{typeToIcon(award.icon)}" />
+					<svelte:component this="{typeToIcon(award.icon)}" size="{32}"/>
 				</div>
 				<div>
 					<span class="badge bg-primary rounded-pill">

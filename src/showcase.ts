@@ -1,5 +1,5 @@
 import {getCompetitionImageData} from '$lib/images';
-import type {ImageData} from '$lib/images-helper';
+import type {ImageData} from '$lib/images';
 import {FMate, HGergely, IErik, RGergely, SKornel, VAvar, VTibor, type Person} from '$lib/people';
 
 interface Link {
@@ -141,6 +141,12 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 				icon: 'file',
 				data: getCompetitionImageData('Dusza-mobil-2021'),
 			},
+			{
+				type: 'simple',
+				text: 'Repository',
+				icon: 'github',
+				url: 'https://github.com/skornel02/duszamobile2021',
+			},
 		],
 		team: [IErik, HGergely, SKornel],
 	},
@@ -162,6 +168,12 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 				text: 'website',
 				icon: 'globe',
 				url: 'https://mik.uni-pannon.hu/szervezet/hirek/kar-tovabbi-hirei/bakonyi-bitfarago-bajnoksag-2022',
+			},
+			{
+				type: 'simple',
+				text: 'Repository',
+				icon: 'github',
+				url: 'https://github.com/skornel02/b3-2021',
 			},
 		],
 		team: [HGergely, SKornel, VAvar],
@@ -208,6 +220,12 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 				text: 'Reference',
 				icon: 'file',
 				data: getCompetitionImageData('Kodolj-Hatarok-Nelkul-2021'),
+			},
+			{
+				type: 'simple',
+				text: 'Repository',
+				icon: 'github',
+				url: 'https://github.com/skornel02/khn2021',
 			},
 		],
 		team: [RGergely, SKornel, VAvar],
@@ -293,6 +311,12 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 				icon: 'file',
 				data: getCompetitionImageData('Dusza-mobil-2020'),
 			},
+			{
+				type: 'simple',
+				text: 'Repository',
+				icon: 'github',
+				url: 'https://github.com/skornel02/duszamobile2020',
+			},
 		],
 		team: [IErik, HGergely, SKornel],
 	},
@@ -331,6 +355,12 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 				text: 'Reference',
 				icon: 'file',
 				data: getCompetitionImageData('Kodolj-Hatarok-Nelkul-2020'),
+			},
+			{
+				type: 'simple',
+				text: 'Repository',
+				icon: 'github',
+				url: 'https://github.com/skornel02/khn2020',
 			},
 		],
 		team: [RGergely, SKornel, VAvar],
@@ -415,6 +445,18 @@ export const showcase: Array<AwardEntry | CertificateEntry | SeparatorEntry> = [
 				text: 'Reference',
 				icon: 'file',
 				data: getCompetitionImageData('Dusza-mobil-2019'),
+			},
+			{
+				type: 'simple',
+				text: 'Repository',
+				icon: 'github',
+				url: 'https://github.com/skornel02/FelElek',
+			},
+			{
+				type: 'simple',
+				text: 'PlayStore',
+				icon: 'playstore',
+				url: 'https://play.google.com/store/apps/details?id=com.hazizz.dusza2019',
 			},
 		],
 		team: [IErik, HGergely, SKornel],

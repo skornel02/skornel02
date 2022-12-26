@@ -1,22 +1,22 @@
-import FaTrophy from 'svelte-icons/fa/FaTrophy.svelte';
-import FaMedal from 'svelte-icons/fa/FaMedal.svelte';
-import FaCertificate from 'svelte-icons/fa/FaCertificate.svelte';
-import FaFile from 'svelte-icons/fa/FaFile.svelte';
-import FaGlobe from 'svelte-icons/fa/FaGlobe.svelte';
+import { Trophy, Medal, File, Globe, Album, Github, Smartphone } from 'lucide-svelte';
 
-export const typeToIcon = (type: string): typeof FaTrophy => {
+export const typeToIcon = (type: string): typeof Trophy => {
 	switch (type) {
 		case 'trophy':
-			return FaTrophy;
+			return Trophy;
 		case 'medal':
-			return FaMedal;
+			return Medal;
 		case 'certificate':
-			return FaCertificate;
+			return Album;
 		case 'file':
-			return FaFile;
+			return File;
 		case 'globe':
-			return FaGlobe;
+			return Globe;
+		case 'github':
+			return Github;
+		case 'playstore':
+			return Smartphone;
 		default:
-			return FaFile;
+			return File;
 	}
 };

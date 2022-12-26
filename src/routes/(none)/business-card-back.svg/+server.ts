@@ -4,7 +4,10 @@ import {optimize, type OptimizedSvg} from 'svgo';
 export const prerender = true;
 
 export async function GET() {
-	const optimized = optimize(backCard, {
+	const backCardCleaned = backCard
+		.replace(/\/\*/g, '')
+		.replace(/\*\//g, '');
+	const optimized = optimize(backCardCleaned, {
 		multipass: true,
 		plugins: [
 			{name: 'removeDimensions', active: false},

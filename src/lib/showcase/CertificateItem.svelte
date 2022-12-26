@@ -13,7 +13,7 @@
 			<div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
 			<div class="d-flex justify-content-center">
 				<div class:highlight="{certificate.id !== undefined}" class="icon text-warning mx-4">
-					<svelte:component this="{typeToIcon(certificate.icon)}" />
+					<svelte:component this="{typeToIcon(certificate.icon)}" size="{32}" />
 				</div>
 			</div>
 			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;">

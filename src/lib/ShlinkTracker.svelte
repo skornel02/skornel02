@@ -1,7 +1,3 @@
-<script context="module">
-	export const prerender = false;
-</script>
-
 <script lang="ts">
 	export let shlinkUrl: string | undefined;
 </script>
