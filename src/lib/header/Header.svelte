@@ -43,7 +43,7 @@
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<a
-						sveltekit:prefetch
+						data-sveltekit-preload-data="hover"
 						class="nav-link"
 						class:active="{$page.url.pathname === '/'}"
 						href="/">Home</a
@@ -51,7 +51,7 @@
 				</li>
 				<li class="nav-item">
 					<a
-						sveltekit:prefetch
+						data-sveltekit-preload-data="hover"
 						class="nav-link disabled"
 						class:active="{$page.url.pathname.startsWith('/projects')}"
 						href="/">Projects</a
@@ -59,7 +59,7 @@
 				</li>
 				<li class="nav-item">
 					<a
-						sveltekit:prefetch
+						data-sveltekit-preload-data="hover"
 						class="nav-link"
 						class:active="{$page.url.pathname.startsWith('/posts')}"
 						href="/posts">Blog</a

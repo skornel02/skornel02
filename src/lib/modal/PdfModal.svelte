@@ -14,7 +14,7 @@
 	href="{location}"
 	on:click|preventDefault="{toggle}"
 	target="_blank"
-	rel="noopener"
+	rel="noreferrer noopener"
 	class="{clazz}"
 	title="{title}"
 >
@@ -22,7 +22,7 @@
 </a>
 <Modal body header="Image preview" isOpen="{open}" toggle="{toggle}" size="lg">
 	<iframe src="{location}" frameborder="0" title="Embedded pfd" width="100%"></iframe>
-	<a href="{location}" class="btn btn-primary modal-button" target="_blank" rel="noopener">Open</a>
+	<a href="{location}" class="btn btn-primary modal-button" target="_blank" rel="noreferrer noopener">Open</a>
 </Modal>
 
 <style>

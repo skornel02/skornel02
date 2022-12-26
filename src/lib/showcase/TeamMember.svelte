@@ -13,7 +13,7 @@
 	};
 </script>
 
-<a href="{member.website}" disabled="{member.website === undefined}" target="_blank">
+<a href="{member.website}" disabled="{member.website === undefined}" target="_blank" rel="noreferrer noopener">
 	<div bind:this="{elem}">
 		<img src="{src}" alt="{member.name}" title="{member.name}" on:error="{onError}" />
 	</div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Image from '$lib/Image.svelte';
-	import type {ImageMetadata} from '$lib/images-helper';
+	import type {ImageMetadata} from '$lib/images';
 	import {Modal} from 'sveltestrap';
 
 	let clazz: string = 'btn btn-primary';
@@ -28,7 +28,7 @@
 	href="{location}"
 	on:click|preventDefault="{toggle}"
 	target="_blank"
-	rel="noopener"
+	rel="noreferrer noopener"
 	class="{clazz}"
 	title="{title}"
 >
@@ -42,7 +42,7 @@
 	{/if}
 	<Image meta="{metadata}" alt="" on:load="{imageLoad}" />
 	<!-- <img {srcset} alt="preview" class:loading-image={loading} on:load={imageLoad} /> -->
-	<a href="{location}" class="btn btn-primary modal-button" target="_blank" rel="noopener">Open</a>
+	<a href="{location}" class="btn btn-primary modal-button" target="_blank" rel="noreferrer noopener">Open</a>
 </Modal>
 
 <style>

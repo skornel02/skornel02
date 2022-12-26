@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type {ImageMetadata} from './images-helper';
+	import type {ImageMetadata} from './images';
 	import {createEventDispatcher} from 'svelte';
 
 	const dispatch = createEventDispatcher();
@@ -15,7 +15,7 @@
 	 * [code](https://github.com/JonasKruckenberg/imagetools/blob/main/packages/core/src/output-formats.ts),
 	 * [docs](https://github.com/JonasKruckenberg/imagetools/blob/main/docs/guide/getting-started.md#metadata)
 	 */
-	export let meta: ImageMetadata[];
+	export let meta: ImageMetadata[] | ImageMetadata;
 	// if there is only one, vite-imagetools won't wrap the object in an array
 	if (!(meta instanceof Array)) meta = [meta];
 

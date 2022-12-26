@@ -24,7 +24,7 @@
 		<a
 			href="{link.url}"
 			target="_blank"
-			rel="noopener"
+			rel="noreferrer noopener"
 			class="btn btn-secondary"
 			title="{link.text}"
 		>
