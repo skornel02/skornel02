@@ -18,7 +18,7 @@
 		<link href="./internal/immutable/assets/Face-52089387.css" rel="stylesheet">
 		<link href="./internal/immutable/assets/app-e31199ff.css" rel="stylesheet">
 		<link href="./internal/immutable/assets/_page-50378ec7.css" rel="stylesheet">
-		<link rel="modulepreload" href="./internal/immutable/start-09b0167f.js">
+		<link rel="modulepreload" href="./internal/immutable/start-028d970a.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/index-2ac3dbf5.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/singletons-b3bcd9ea.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/preload-helper-41c905a7.js">
@@ -36,7 +36,14 @@
 		<link rel="modulepreload" href="./internal/immutable/components/pages/(web)/_page.svelte-68731617.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/mail-b948d46f.js">
 		<link rel="modulepreload" href="./internal/immutable/modules/pages/(web)/_page.ts-94291217.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/_page-da46b06b.js"><title></title><!-- HEAD_svelte-s660wh_START --><meta property="og:url" content="https://skornel02.hu/"><!-- HEAD_svelte-s660wh_END --><!-- HEAD_svelte-1fcixaz_START --><meta property="og:title" content="SK" class="svelte-1pdgfch"><meta property="og:description" content="Personal site of SK" class="svelte-1pdgfch"><meta property="og:type" content="profile" class="svelte-1pdgfch"><meta name="description" content="Personal site of SK" class="svelte-1pdgfch"><!-- HEAD_svelte-1fcixaz_END -->
+		<link rel="modulepreload" href="./internal/immutable/chunks/_page-da46b06b.js">
+		<script>
+			if ('serviceWorker' in navigator) {
+				addEventListener('load', function () {
+					navigator.serviceWorker.register('./service-worker.js');
+				});
+			}
+		</script><title></title><!-- HEAD_svelte-s660wh_START --><meta property="og:url" content="https://skornel02.hu/"><!-- HEAD_svelte-s660wh_END --><!-- HEAD_svelte-1fcixaz_START --><meta property="og:title" content="SK" class="svelte-1pdgfch"><meta property="og:description" content="Personal site of SK" class="svelte-1pdgfch"><meta property="og:type" content="profile" class="svelte-1pdgfch"><meta name="description" content="Personal site of SK" class="svelte-1pdgfch"><!-- HEAD_svelte-1fcixaz_END -->
 	</head>
 
 	<body>
@@ -589,13 +596,13 @@
 
 
 		<script type="module" data-sveltekit-hydrate="xwk0w8">
-			import { start } from "./internal/immutable/start-09b0167f.js";
+			import { start } from "./internal/immutable/start-028d970a.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
 				target: document.querySelector('[data-sveltekit-hydrate="xwk0w8"]').parentNode,
-				version: "1672084467399",
+				version: "1672133353299",
 				hydrate: {
 					node_ids: [0, 3, 7],
 					data: [null,null,null],
@@ -605,4 +612,23 @@
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/shlinks/---.txt">{"status":200,"statusText":"","headers":{},"body":"https://link.skornel02.hu/t8I9I"}</script></div>
 	</body>	
+
+	<script>
+		(function () {
+			let updated = false;
+
+			navigator.serviceWorker.addEventListener('controllerchange', () => {
+				console.log({state: 'updated'});
+				updated = true;
+				checkUpdate();
+			});
+
+			function checkUpdate() {
+				if (updated) {
+					console.log('Application was updated refreshing the page...');
+					window.location.reload();
+				}
+			}
+		})();
+	</script>
 </html>

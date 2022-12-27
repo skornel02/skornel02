@@ -17,7 +17,7 @@
 		<link href="./internal/immutable/assets/_page-4ff9918c.css" rel="stylesheet">
 		<link href="./internal/immutable/assets/MeCard-8b6dd12c.css" rel="stylesheet">
 		<link href="./internal/immutable/assets/Face-52089387.css" rel="stylesheet">
-		<link rel="modulepreload" href="./internal/immutable/start-09b0167f.js">
+		<link rel="modulepreload" href="./internal/immutable/start-028d970a.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/index-2ac3dbf5.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/singletons-b3bcd9ea.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/preload-helper-41c905a7.js">
@@ -34,7 +34,14 @@
 		<link rel="modulepreload" href="./internal/immutable/chunks/mail-b948d46f.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/Icon-111ef362.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/runOnEveryParentUntil-67f0ce31.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/index-14421b90.js"><title>Stefán Kornél</title><!-- HEAD_svelte-s660wh_START --><meta property="og:url" content="https://skornel02.hu/me"><!-- HEAD_svelte-s660wh_END --><!-- HEAD_svelte-hkeinf_START --><meta name="description" content="Digital personal information card"><!-- HEAD_svelte-hkeinf_END -->
+		<link rel="modulepreload" href="./internal/immutable/chunks/index-14421b90.js">
+		<script>
+			if ('serviceWorker' in navigator) {
+				addEventListener('load', function () {
+					navigator.serviceWorker.register('./service-worker.js');
+				});
+			}
+		</script><title>Stefán Kornél</title><!-- HEAD_svelte-s660wh_START --><meta property="og:url" content="https://skornel02.hu/me"><!-- HEAD_svelte-s660wh_END --><!-- HEAD_svelte-hkeinf_START --><meta name="description" content="Digital personal information card"><!-- HEAD_svelte-hkeinf_END -->
 	</head>
 
 	<body>
@@ -61,13 +68,13 @@
 
 
 		<script type="module" data-sveltekit-hydrate="15sf2vz">
-			import { start } from "./internal/immutable/start-09b0167f.js";
+			import { start } from "./internal/immutable/start-028d970a.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
 				target: document.querySelector('[data-sveltekit-hydrate="15sf2vz"]').parentNode,
-				version: "1672084467399",
+				version: "1672133353299",
 				hydrate: {
 					node_ids: [0, 2, 4],
 					data: [null,null,null],
@@ -77,4 +84,23 @@
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/shlinks/---me.txt">{"status":200,"statusText":"","headers":{},"body":"https://link.skornel02.hu/VWXTd"}</script></div>
 	</body>	
+
+	<script>
+		(function () {
+			let updated = false;
+
+			navigator.serviceWorker.addEventListener('controllerchange', () => {
+				console.log({state: 'updated'});
+				updated = true;
+				checkUpdate();
+			});
+
+			function checkUpdate() {
+				if (updated) {
+					console.log('Application was updated refreshing the page...');
+					window.location.reload();
+				}
+			}
+		})();
+	</script>
 </html>

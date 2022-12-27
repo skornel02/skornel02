@@ -17,8 +17,9 @@
 		<link href="../internal/immutable/assets/service-60614438.css" rel="stylesheet">
 		<link href="../internal/immutable/assets/Face-52089387.css" rel="stylesheet">
 		<link href="../internal/immutable/assets/app-e31199ff.css" rel="stylesheet">
-		<link href="../internal/immutable/assets/_post-2c05d00e.css" rel="stylesheet">
-		<link rel="modulepreload" href="../internal/immutable/start-09b0167f.js">
+		<link href="../internal/immutable/assets/_post-e754f88c.css" rel="stylesheet">
+		<link href="../internal/immutable/assets/github-markdown-42b94d5a.css" rel="stylesheet">
+		<link rel="modulepreload" href="../internal/immutable/start-028d970a.js">
 		<link rel="modulepreload" href="../internal/immutable/chunks/index-2ac3dbf5.js">
 		<link rel="modulepreload" href="../internal/immutable/chunks/singletons-b3bcd9ea.js">
 		<link rel="modulepreload" href="../internal/immutable/chunks/preload-helper-41c905a7.js">
@@ -34,8 +35,15 @@
 		<link rel="modulepreload" href="../internal/immutable/chunks/Icon-111ef362.js">
 		<link rel="modulepreload" href="../internal/immutable/chunks/index-1abd32fd.js">
 		<link rel="modulepreload" href="../internal/immutable/components/pages/(web)/posts/_post_/_page.svelte-2beff5cc.js">
-		<link rel="modulepreload" href="../internal/immutable/modules/pages/(web)/posts/_post_/_page.ts-1c010df2.js">
-		<link rel="modulepreload" href="../internal/immutable/chunks/_page-85fcec11.js"><title>Emojik és a Windows - SK blog</title><!-- HEAD_svelte-s660wh_START --><meta property="og:url" content="https://skornel02.hu/posts/emojik-es-a-windows"><!-- HEAD_svelte-s660wh_END --><!-- HEAD_svelte-1shs0gm_START --><meta property="og:type" content="article"><meta property="og:title" content="Emojik és a Windows"><meta property="og:published_time" content="2022-05-21T19:00:00Z"><meta name="description" content="Minimális történelem, közepesen érdekes információk és a Windows emoji verziójának frissítése"><!-- HEAD_svelte-1shs0gm_END -->
+		<link rel="modulepreload" href="../internal/immutable/modules/pages/(web)/posts/_post_/_page.ts-b78b1c97.js">
+		<link rel="modulepreload" href="../internal/immutable/chunks/_page-cb905ec4.js">
+		<script>
+			if ('serviceWorker' in navigator) {
+				addEventListener('load', function () {
+					navigator.serviceWorker.register('../service-worker.js');
+				});
+			}
+		</script><title>Emojik és a Windows - SK blog</title><!-- HEAD_svelte-s660wh_START --><meta property="og:url" content="https://skornel02.hu/posts/emojik-es-a-windows"><!-- HEAD_svelte-s660wh_END --><!-- HEAD_svelte-1shs0gm_START --><meta property="og:type" content="article"><meta property="og:title" content="Emojik és a Windows"><meta property="og:published_time" content="2022-05-21T19:00:00Z"><meta name="description" content="Minimális történelem, közepesen érdekes információk és a Windows emoji verziójának frissítése"><!-- HEAD_svelte-1shs0gm_END -->
 	</head>
 
 	<body>
@@ -93,13 +101,13 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1llqe0c">
-			import { start } from "../internal/immutable/start-09b0167f.js";
+			import { start } from "../internal/immutable/start-028d970a.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
 				target: document.querySelector('[data-sveltekit-hydrate="1llqe0c"]').parentNode,
-				version: "1672084467399",
+				version: "1672133353299",
 				hydrate: {
 					node_ids: [0, 3, 10],
 					data: [null,null,null],
@@ -109,4 +117,23 @@
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/shlinks/---posts---emojik-es-a-windows.txt">{"status":200,"statusText":"","headers":{},"body":"https://link.skornel02.hu/mGkNd"}</script></div>
 	</body>	
+
+	<script>
+		(function () {
+			let updated = false;
+
+			navigator.serviceWorker.addEventListener('controllerchange', () => {
+				console.log({state: 'updated'});
+				updated = true;
+				checkUpdate();
+			});
+
+			function checkUpdate() {
+				if (updated) {
+					console.log('Application was updated refreshing the page...');
+					window.location.reload();
+				}
+			}
+		})();
+	</script>
 </html>

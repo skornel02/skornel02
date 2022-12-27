@@ -18,7 +18,7 @@
 		<link href="./internal/immutable/assets/Face-52089387.css" rel="stylesheet">
 		<link href="./internal/immutable/assets/app-e31199ff.css" rel="stylesheet">
 		<link href="./internal/immutable/assets/_page-42a5e5d1.css" rel="stylesheet">
-		<link rel="modulepreload" href="./internal/immutable/start-09b0167f.js">
+		<link rel="modulepreload" href="./internal/immutable/start-028d970a.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/index-2ac3dbf5.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/singletons-b3bcd9ea.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/preload-helper-41c905a7.js">
@@ -33,7 +33,14 @@
 		<link rel="modulepreload" href="./internal/immutable/chunks/app-2d8d75ee.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/Icon-111ef362.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/index-1abd32fd.js">
-		<link rel="modulepreload" href="./internal/immutable/components/pages/(web)/404/_page.svelte-73fcdc0e.js"><!-- HEAD_svelte-s660wh_START --><meta property="og:url" content="https://skornel02.hu/404"><!-- HEAD_svelte-s660wh_END --><!-- HEAD_svelte-kafwwa_START --><meta http-equiv="refresh" content="5; url=/"><!-- HEAD_svelte-kafwwa_END -->
+		<link rel="modulepreload" href="./internal/immutable/components/pages/(web)/404/_page.svelte-73fcdc0e.js">
+		<script>
+			if ('serviceWorker' in navigator) {
+				addEventListener('load', function () {
+					navigator.serviceWorker.register('./service-worker.js');
+				});
+			}
+		</script><!-- HEAD_svelte-s660wh_START --><meta property="og:url" content="https://skornel02.hu/404"><!-- HEAD_svelte-s660wh_END --><!-- HEAD_svelte-kafwwa_START --><meta http-equiv="refresh" content="5; url=/"><!-- HEAD_svelte-kafwwa_END -->
 	</head>
 
 	<body>
@@ -67,13 +74,13 @@
 
 
 		<script type="module" data-sveltekit-hydrate="tzy4mr">
-			import { start } from "./internal/immutable/start-09b0167f.js";
+			import { start } from "./internal/immutable/start-028d970a.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
 				target: document.querySelector('[data-sveltekit-hydrate="tzy4mr"]').parentNode,
-				version: "1672084467399",
+				version: "1672133353299",
 				hydrate: {
 					node_ids: [0, 3, 8],
 					data: [null,null,null],
@@ -83,4 +90,23 @@
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/shlinks/---404.txt">{"status":200,"statusText":"","headers":{},"body":"https://link.skornel02.hu/OBb45"}</script></div>
 	</body>	
+
+	<script>
+		(function () {
+			let updated = false;
+
+			navigator.serviceWorker.addEventListener('controllerchange', () => {
+				console.log({state: 'updated'});
+				updated = true;
+				checkUpdate();
+			});
+
+			function checkUpdate() {
+				if (updated) {
+					console.log('Application was updated refreshing the page...');
+					window.location.reload();
+				}
+			}
+		})();
+	</script>
 </html>
