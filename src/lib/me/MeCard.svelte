@@ -60,7 +60,6 @@
 		height: 3rem;
 	}
 	#faceSlot {
-		width: 128px;
 		:global(.img-profile) {
 			border: 0.2rem solid var(--color-primary);
 		}

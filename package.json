@@ -63,6 +63,7 @@
 		"svelte-scrollto-element": "^0.7.0",
 		"sveltestrap": "github:laxadev/sveltestrap",
 		"tsparticles-engine": "^2.0.6",
-		"vite": "4.0.2"
+		"vite": "4.0.2",
+		"workbox-precaching": "^6.5.4"
 	}
 }

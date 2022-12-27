@@ -7,7 +7,7 @@
 
 - 🌐 Check out my website [skornel02.hu](https://skornel02.hu)
 
-- 📫 How to reach me **stefankornel02@gmail.com**
+- 📫 How to reach me **contact@skornel02.hu**
 
 - ⚡ Fun fact **I love scones**
 

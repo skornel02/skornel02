@@ -3,7 +3,7 @@ import {sveltekit} from '@sveltejs/kit/vite';
 import path from 'path';
 import svgLoader from 'vite-svg-loader';
 
-const config = defineConfig(() => ({
+const config = defineConfig(({mode}) => ({
 	resolve: {
 		alias: {
 			$static: path.resolve('static'),
@@ -32,6 +32,9 @@ const config = defineConfig(() => ({
 			},
 		}),
 	],
+	define: {
+		'process.env.NODE_ENV': mode === 'production' ? '"production"' : '"development"'
+	}
 }));
 
 export default config;

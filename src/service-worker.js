@@ -4,7 +4,7 @@ import {cleanupOutdatedCaches, precacheAndRoute} from 'workbox-precaching';
 console.log('Hello from service-worker.js', {build, files, prerendered, version});
 
 const urls = [...files, ...prerendered, ...build]
-	.filter((file) => !file.endsWith('.jpeg') && !file.endsWith('.png') && !file.endsWith('.pdf'))
+	.filter((file) => !file.endsWith('.jpeg') && !file.endsWith(".jpg") && !file.endsWith(".avif") && !file.endsWith(".webp") && !file.endsWith('.png') && !file.endsWith('.pdf'))
 	.filter((file) => !file.startsWith('/.'));
 
 console.log('Service worker urls: ', urls);
