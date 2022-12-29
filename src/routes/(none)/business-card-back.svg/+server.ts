@@ -1,4 +1,4 @@
-import backCard from '$lib/me/business-card-back.svg?raw';
+import backCard from '$lib/card/business-card-back.svg?raw';
 import {optimize, type OptimizedSvg} from 'svgo';
 
 export const prerender = true;

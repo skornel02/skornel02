@@ -1,4 +1,4 @@
-import frontCard from '$lib/me/business-card-front.svg?raw';
+import frontCard from '$lib/card/business-card-front.svg?raw';
 import {optimize, type OptimizedSvg} from 'svgo';
 
 export const prerender = true;

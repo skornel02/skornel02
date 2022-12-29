@@ -1,19 +1,20 @@
 <h1 align="center">Hi 👋, I'm Kornél</h1>
 <h3 align="center">A tinkerer from Hungary</h3>
 
-- 🛠 My current hobby project is [ParkMyst](https://play.parkmyst.hu)
+- 🛠 My current hobby project is working on legacy code.
 
-- 👨‍🎓 I'm currently studying for **University entrances**
+- 👨‍🎓 I'm currently studying Computer Engineering at [University Of Szeged](https://u-szeged.hu/english)
 
 - 🌐 Check out my website [skornel02.hu](https://skornel02.hu)
 
-- 📫 How to reach me **contact@skornel02.hu**
+- 📫 Reach me at @ **contact@skornel02.hu**
 
 - ⚡ Fun fact **I love scones**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://fb.com/stefankornel02" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="stefankornel02" height="30" width="40" /></a>
+<a href="https://fb.com/stefankornel02" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="facebook link" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/skornel02" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="linkedin link" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
@@ -37,6 +38,10 @@
 <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> 
 </p>
 
-<p>
-<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact" alt="skornel02" />
+---
+
+<p align="center">
+<a href="https://skornel02.hu/me">
+<img src="/business-card-front.svg" alt="skornel02" />
+</a>
 </p>

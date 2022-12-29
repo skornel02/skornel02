@@ -31,7 +31,7 @@
 	<p>
 		Have a nice day! • {year} © •
 		<a href="/rss.xml">
-			<Rss />
+			<Rss size={16}/>
 		</a>
 		<ShlinkTracker shlinkUrl="{shlinkUrl}" />
 	</p>
@@ -57,15 +57,17 @@
 		box-sizing: border-box;
 	}
 
-	footer :global(svg) {
-		color: orange;
-		height: 16px;
-		width: 16px;
-		transition: 0.1s color;
-	}
-
-	footer :global(svg:hover) {
-		color: darkred;
+	footer {
+		p {
+			margin: auto 0;
+		}
+		:global(svg) {
+			color: orange;
+			transition: 0.1s color;
+		}
+		:global(svg:hover) {
+			color: darkred;
+		}
 	}
 
 	@media (min-width: 480px) {

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { SectionData } from './+page';
-	import {Github, Facebook, Mail} from 'lucide-svelte';
+	import {Github, Facebook, Mail, Linkedin, List} from 'lucide-svelte';
 	import {onMount} from 'svelte';
 	import Showcase from '$lib/showcase/Showcase.svelte';
 	import {animateScroll} from 'svelte-scrollto-element';
@@ -15,7 +15,7 @@
 	let currentSection = {
 		index: -1,
 		top: 0,
-		title: '',
+		title: 'Website of SK',
 	};
 
 	$: {
@@ -113,6 +113,13 @@
 			</p>
 			<ul class="list-inline list-social-icons mb-0">
 				<li class="list-inline-item">
+					<a id="social-card" href="/me" data-sveltekit-reload>
+						<div class="icon">
+							<List size="{32}"/>
+						</div>
+					</a>
+				</li>
+				<li class="list-inline-item">
 					<a id="social-gh" href="https://github.com/skornel02">
 						<div class="icon">
 							<Github size="{32}"/>
@@ -123,6 +130,13 @@
 					<a href="https://www.facebook.com/stefankornel02">
 						<div class="icon">
 							<Facebook size="{32}" />
+						</div>
+					</a>
+				</li>
+				<li id="social-fb" class="list-inline-item">
+					<a href="https://linkedin.com/in/skornel02">
+						<div class="icon">
+							<Linkedin size="{32}" />
 						</div>
 					</a>
 				</li>
