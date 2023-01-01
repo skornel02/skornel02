@@ -1,9 +1,10 @@
 import backCard from '$lib/card/business-card-back.svg?raw';
 import {optimize, type OptimizedSvg} from 'svgo';
+import type { RequestHandler } from './$types';
 
 export const prerender = true;
 
-export async function GET() {
+export const GET: RequestHandler = async () => {
 	const backCardCleaned = backCard
 		.replace(/\/\*/g, '')
 		.replace(/\*\//g, '');

@@ -3,8 +3,10 @@ title: Emojik és a Windows
 description: Minimális történelem, közepesen érdekes információk és a Windows emoji verziójának frissítése
 date: '2022-05-21'
 time: '19:00:00'
-layout: post
+tags: []
+language: hu
 proofreader: 'Horváth Gergely'
+layout: post
 ---
 
 # Emojik és a Windows
