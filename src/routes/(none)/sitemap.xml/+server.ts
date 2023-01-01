@@ -1,9 +1,11 @@
-import {loadPostsOrdered} from '$lib/posts';
+import type { Post} from '$lib/posts';
+import type { RequestHandler } from './$types';
 
 export const prerender = true;
 
-export async function GET() {
-	const posts = await loadPostsOrdered(false);
+export const GET: RequestHandler = async ({fetch}) => {
+  const posts: Post[] = await fetch('/posts.json')
+    .then((res) => res.json());
 
 	const headers = {
 		'Cache-Control': 'max-age=0, s-maxage=3600',

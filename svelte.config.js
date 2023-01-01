@@ -10,7 +10,7 @@ import remarkEmoji from 'remark-emoji';
 import remarkFootnotes from 'remark-footnotes';
 import {readdirSync} from 'fs';
 
-const staticFiles = ['/sitemap.xml', '/rss.xml', '/readme.md'];
+const staticFiles = ['/sitemap.xml', '/rss.xml', '/readme.md', "/posts.json"];
 const posts = [];
 try {
 	posts.push(...readdirSync('src/posts/').map((post) => `/posts/${post}`.replace('.md', '')));

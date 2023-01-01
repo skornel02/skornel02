@@ -3,6 +3,8 @@ title: Welcome
 description: Welcome to my personal site!
 date: '2022-03-30'
 time: '17:40:00'
+tags: [meta]
+language: en
 layout: post
 ---
 

@@ -1,12 +1,12 @@
 import type {RequestHandler} from '@sveltejs/kit';
 
-export const GET: RequestHandler = async ({params}) => {
+export const GET: RequestHandler = async ({params, fetch}) => {
 	let shlinkData: string | undefined = undefined;
 
 	const shlinkKey = process.env.SHLINK_KEY;
 	if (shlinkKey !== undefined && shlinkKey.length !== 0) {
 		try {
-			const param = decodeURI(params.route).replaceAll('---', '/');
+			const param = decodeURI(params.route ?? "/").replaceAll('---', '/');
 			const headers = {
 				'X-Api-Key': shlinkKey,
 				'Content-Type': 'application/json',

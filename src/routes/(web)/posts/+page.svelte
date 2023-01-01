@@ -13,7 +13,7 @@
 			{name: 'metadata.description', weight: 0.2},
 		],
 	};
-	let search = '';
+	let search = "";
 	const fuse = new Fuse(data.posts, searchOptions);
 
 	$: {
@@ -37,11 +37,11 @@
 <div class="container">
 	<h1>Blog Posts</h1>
 	<div id="search">
-		<input
+		<input  
+			bind:value="{search}"
 			class="form-control form-control-lg"
 			type="text"
 			placeholder="Search..."
-			bind:value="{search}"
 		/>
 	</div>
 	<hr />

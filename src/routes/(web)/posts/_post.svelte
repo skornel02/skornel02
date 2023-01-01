@@ -4,11 +4,11 @@
 	import './prism.css';
 	import './markers.scss';
 
-	export let title;
-	export let date;
-	export let time;
-	export let hidden;
-	export let description;
+	/**
+	 * @type {import('$lib/posts').Metadata}
+	 */
+	let { title, date, time, description, hidden } = $$props;
+
 	if (time === undefined) time = '12:00:00';
 </script>
 

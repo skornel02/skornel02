@@ -12,10 +12,15 @@ export const load: PageServerLoad = async ({url, fetch}) => {
         })
     ).text();
 
-    const renderedMarkdown = (await compile(
+    const compiled = await compile(
         markDown,
         {}
-    )).code;
+    );
+    if (compiled === undefined) {
+        throw new Error('Compiled is undefined');
+    }
+
+    const renderedMarkdown = compiled.code;
 
 	return {
 		route,
