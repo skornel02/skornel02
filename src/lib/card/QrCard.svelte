@@ -10,7 +10,7 @@
 </svelte:head>
 
 
-<div id="me-card" class="card" in:fade={{duration: 700, delay: 250}}>
+<div id="me-card" class="card" in:fade={{duration: 700, delay: 250}} out:fade={{duration: 150}}>
     <BusinessCard />
     <hr>
     <div id="navigationSlot">

@@ -35,11 +35,9 @@
 		"svelte-preprocess": "^4.10.6",
 		"svelte-typewriter": "3.0.0-alpha.11",
 		"svgo": "^2.8.0",
-		"svimg": "^3.1.0",
 		"tslib": "^2.3.1",
 		"tsparticles": "^2.0.6",
-		"typescript": "4.9.4",
-		"vite-svg-loader": "^3.3.0"
+		"typescript": "4.9.4"
 	},
 	"type": "module",
 	"dependencies": {
@@ -52,6 +50,7 @@
 		"env-cmd": "^10.1.0",
 		"fuse.js": "^6.6.2",
 		"github-markdown-css": "^5.1.0",
+		"liquidjs": "^10.3.3",
 		"lucide-svelte": "^0.104.0",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.0.1",
@@ -59,7 +58,6 @@
 		"remark-sub-super": "^1.0.20",
 		"sharp": "0.31.3",
 		"svelte-intersection-observer": "^0.10.0",
-		"svelte-preprocess-import-assets": "^0.2.5",
 		"svelte-scrollto-element": "^0.7.0",
 		"sveltestrap": "github:laxadev/sveltestrap",
 		"tsparticles-engine": "^2.0.6",

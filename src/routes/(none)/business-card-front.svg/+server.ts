@@ -1,11 +1,16 @@
 import frontCard from '$lib/card/business-card-front.svg?raw';
 import {optimize, type OptimizedSvg} from 'svgo';
+import {Liquid} from 'liquidjs';
 import type { RequestHandler } from './$types';
 
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
-	const optimized = optimize(frontCard, {
+	const engine = new Liquid();
+
+	const frontCardRendered = await engine.parseAndRender(frontCard);
+
+	const optimized = optimize(frontCardRendered, {
 		multipass: true,
 		plugins: [
 			{name: 'removeDimensions', active: false},

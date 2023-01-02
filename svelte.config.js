@@ -1,14 +1,12 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
-import importAssets from 'svelte-preprocess-import-assets'
-import { imagePreprocessor } from 'svimg';
-import {mdsvex} from 'mdsvex';
+import { mdsvex } from 'mdsvex';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkSubSuper from 'remark-sub-super';
 import remarkEmoji from 'remark-emoji';
 import remarkFootnotes from 'remark-footnotes';
-import {readdirSync} from 'fs';
+import { readdirSync } from 'fs';
 
 const staticFiles = ['/sitemap.xml', '/rss.xml', '/readme.md', "/posts.json"];
 const posts = [];
@@ -19,13 +17,16 @@ try {
 	console.log('Post loading failed!', e);
 }
 
-const competitionImages = [];
+const optimizedImages = [];
+const folders = ['competitions', 'people'];
 try {
-	competitionImages.push(...readdirSync('static/assets/competitions/')
-		.filter(name => name.endsWith(".jpeg"))
-		.map(name => name.replace(".jpeg", ""))
-		.flatMap((image) => [`/images/competitions/${image}.jpg`, `/images/competitions/${image}.webp`]));
-	console.log('Loaded competition images: ', competitionImages);
+	for (const folder of folders) {
+		optimizedImages.push(...readdirSync(`static/assets/${folder}/`)
+			.filter(name => name.endsWith(".jpeg"))
+			.map(name => name.replace(".jpeg", ""))
+			.flatMap((image) => [`/images/${folder}/${image}.jpg`, `/images/${folder}/${image}.webp`, `/images/${folder}/${image}.avif`]));
+	}
+	console.log('Loaded optimized images: ', optimizedImages);
 } catch (e) {
 	console.log('Competition images failed!', e);
 }
@@ -33,28 +34,10 @@ try {
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [
-		imagePreprocessor({
-			inputDir: "static/",
-			outputDir: "static/g/",
-			avif: true,
-			webp: true,
-		}),
 		preprocess({
 			scss: {
 				prependData: '@use "src/variables.scss" as *;',
 			},
-		}),
-		importAssets({
-			http: false,
-			sources: [
-				{
-					tag: 'img',
-					srcAttributes: ['src'],
-					srcsetAttributes: ['srcset'],
-					filter: ({attributes}) => 'srcset' in attributes 
-						&& (attributes.srcset.includes('?srcset') || attributes.srcset.includes('&srcset')),
-				},
-			]			
 		}),
 		mdsvex({
 			extensions: ['.md'],
@@ -81,7 +64,7 @@ const config = {
 		},
 
 		prerender: {
-			entries: ['*', ...staticFiles, ...posts, ...competitionImages],
+			entries: ['*', ...staticFiles, ...posts, ...optimizedImages],
 		},
 	},
 };

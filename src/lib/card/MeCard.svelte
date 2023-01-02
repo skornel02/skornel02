@@ -22,7 +22,7 @@
 	<meta name="description" content="Digital personal information card" />
 </svelte:head>
 
-<div id="me-card" class="card" class:card-loaded="{loaded}">
+<div id="me-card" class="card" class:card-loaded="{loaded}" in:fade={{delay: 200}} out:fade={{duration: 150}}>
 	<div id="nameSlot">
 		<CardTitle on:load="{onLoad}" />
 	</div>

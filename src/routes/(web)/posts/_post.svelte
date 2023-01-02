@@ -57,8 +57,14 @@
 </main>
 
 <style>
+	@media (max-width: 992px) {
+		.container {
+			margin-top: 4rem;
+		}
+	}
+
 	@media print {
-		header a {
+		header a{
 			display: none;
 		}
 		article :global(a) {
