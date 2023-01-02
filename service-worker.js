@@ -1,11 +1,4 @@
 const U = [
-  "/internal/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
-  "/internal/immutable/assets/fira-mono-cyrillic-400-normal-c7d433fd.woff2",
-  "/internal/immutable/assets/fira-mono-greek-ext-400-normal-9e2fe623.woff2",
-  "/internal/immutable/assets/fira-mono-greek-400-normal-a8be01ce.woff2",
-  "/internal/immutable/assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
-  "/internal/immutable/assets/fira-mono-latin-400-normal-e43b3538.woff2",
-  "/internal/immutable/assets/fira-mono-all-400-normal-1e3b098c.woff",
   "/internal/immutable/chunks/Bakonyi-Bitfarago-Bajnoksag-2019-bdc8a1d7.js",
   "/internal/immutable/assets/Bakonyi-Bitfarago-Bajnoksag-2019-93acf6d0.jpeg",
   "/internal/immutable/chunks/Bakonyi-Bitfarago-Bajnoksag-2020-c9371c25.js",
@@ -24,14 +17,12 @@ const U = [
   "/internal/immutable/assets/Ifju-Tudosok-2022-66758e93.jpeg",
   "/internal/immutable/chunks/Innovacios-tehetsegkutato-2020-750c0d90.js",
   "/internal/immutable/assets/Innovacios-tehetsegkutato-2020-57e8b332.jpeg",
-  "/internal/immutable/chunks/Dusza-mobil-2019-3e4d948d.js",
-  "/internal/immutable/assets/Dusza-mobil-2019-721cb137.jpeg",
-  "/internal/immutable/chunks/ASZEV2022-7880cdac.js",
-  "/internal/immutable/assets/ASZEV2022-89e1cc38.jpeg",
   "/internal/immutable/chunks/Innovacios-tehetsegkutato-2021-d78bce4b.js",
   "/internal/immutable/assets/Innovacios-tehetsegkutato-2021-e24552e1.jpeg",
   "/internal/immutable/chunks/Iskola-programozas-verseny-2018-bc488745.js",
   "/internal/immutable/assets/Iskola-programozas-verseny-2018-3f5ff933.jpeg",
+  "/internal/immutable/chunks/Dusza-mobil-2019-3e4d948d.js",
+  "/internal/immutable/assets/Dusza-mobil-2019-721cb137.jpeg",
   "/internal/immutable/chunks/Kodolj-Hatarok-Nelkul-2020-cfd79b50.js",
   "/internal/immutable/assets/Kodolj-Hatarok-Nelkul-2020-bbd8c8ca.jpeg",
   "/internal/immutable/chunks/Kodolj-Hatarok-Nelkul-2021-881ff0de.js",
@@ -40,6 +31,8 @@ const U = [
   "/internal/immutable/assets/Merklik-2021-c483c600.jpeg",
   "/internal/immutable/chunks/Nemes-Tihamer-2019-47dc9912.js",
   "/internal/immutable/assets/Nemes-Tihamer-2019-259bb313.jpeg",
+  "/internal/immutable/chunks/ASZEV2022-7880cdac.js",
+  "/internal/immutable/assets/ASZEV2022-89e1cc38.jpeg",
   "/internal/immutable/chunks/SZIIV-2019-63ec36f4.js",
   "/internal/immutable/assets/SZIIV-2019-c3c1339f.jpeg",
   "/internal/immutable/chunks/SZIIV-2020-5026d4df.js",
@@ -48,82 +41,94 @@ const U = [
   "/internal/immutable/assets/Skills-Junior-Web-2022-4fbac8e3.jpeg",
   "/internal/immutable/chunks/Webex-Teams-Hackathlon-2019-photo-78c3c23d.js",
   "/internal/immutable/assets/Webex-Teams-Hackathlon-2019-photo-d924e58a.jpeg",
+  "/internal/immutable/chunks/sk-0f0b05f8.js",
+  "/internal/immutable/assets/sk-c01ce8fa.jpeg",
+  "/internal/immutable/chunks/unknownhe-6dfe5866.js",
+  "/internal/immutable/assets/unknownhe-54c4279e.jpeg",
+  "/internal/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
+  "/internal/immutable/assets/fira-mono-cyrillic-400-normal-c7d433fd.woff2",
+  "/internal/immutable/assets/fira-mono-greek-ext-400-normal-9e2fe623.woff2",
+  "/internal/immutable/assets/fira-mono-greek-400-normal-a8be01ce.woff2",
+  "/internal/immutable/assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
+  "/internal/immutable/assets/fira-mono-latin-400-normal-e43b3538.woff2",
+  "/internal/immutable/assets/fira-mono-all-400-normal-1e3b098c.woff",
   "/internal/immutable/assets/_layout-4ff9918c.css",
-  "/internal/immutable/assets/_layout-1f79e20d.css",
-  "/internal/immutable/assets/_page-80abbc45.css",
+  "/internal/immutable/assets/_layout-fb8e9fe1.css",
   "/internal/immutable/assets/service-60614438.css",
-  "/internal/immutable/assets/Face-52089387.css",
-  "/internal/immutable/assets/_post-e754f88c.css",
-  "/internal/immutable/assets/_page-50378ec7.css",
-  "/internal/immutable/assets/_page-e0148492.css",
-  "/internal/immutable/assets/MeCard-256f4e47.css",
+  "/internal/immutable/assets/Face-a1686178.css",
+  "/internal/immutable/assets/_page-80abbc45.css",
+  "/internal/immutable/assets/_post-4935ef40.css",
+  "/internal/immutable/assets/_page-c9577ee0.css",
   "/internal/immutable/assets/_page-42a5e5d1.css",
-  "/internal/immutable/assets/CardNavigation-abeca64d.css",
-  "/internal/immutable/assets/_page-defec1af.css",
+  "/internal/immutable/assets/_page-47be19b1.css",
   "/internal/immutable/assets/github-markdown-42b94d5a.css",
+  "/internal/immutable/assets/MeCard-256f4e47.css",
+  "/internal/immutable/assets/_page-defec1af.css",
+  "/internal/immutable/assets/CardNavigation-abeca64d.css",
   "/internal/immutable/assets/app-e31199ff.css",
-  "/internal/immutable/components/pages/(web)/404/_page.svelte-73fcdc0e.js",
-  "/internal/immutable/chunks/CardNavigation-e1a85cbf.js",
-  "/internal/immutable/components/pages/(none)/readme/_page.svelte-ea3ef774.js",
-  "/internal/immutable/start-faf09664.js",
-  "/internal/immutable/components/pages/_layout.svelte-37b32647.js",
-  "/internal/immutable/chunks/Icon-111ef362.js",
-  "/internal/immutable/chunks/list-9e6389d7.js",
-  "/internal/immutable/components/pages/(none)/me-card-wrapped/_page.svelte-fe04a1ca.js",
-  "/internal/immutable/components/pages/(web)/posts/_page.svelte-2d69cb31.js",
-  "/internal/immutable/chunks/2-6e6a1524.js",
-  "/internal/immutable/chunks/3-374b692a.js",
-  "/internal/immutable/chunks/4-6db5f93b.js",
-  "/internal/immutable/chunks/5-d58fa2ea.js",
-  "/internal/immutable/chunks/6-ed7ab994.js",
-  "/internal/immutable/chunks/8-804ad700.js",
-  "/internal/immutable/chunks/10-a6eab23c.js",
-  "/internal/immutable/chunks/11-652deca9.js",
-  "/internal/immutable/components/pages/(card)/me/_page.svelte-fe04a1ca.js",
-  "/internal/immutable/modules/pages/_layout.ts-b411215a.js",
-  "/internal/immutable/chunks/getLongestTextElement-29cbbbbc.js",
-  "/internal/immutable/chunks/runOnEveryParentUntil-67f0ce31.js",
-  "/internal/immutable/chunks/7-c293fcdf.js",
-  "/internal/immutable/chunks/9-1bb35758.js",
-  "/internal/immutable/chunks/index-67bacc70.js",
-  "/internal/immutable/chunks/pathseg-234b9b0b.js",
-  "/internal/immutable/chunks/sleep-ea0e718f.js",
-  "/internal/immutable/chunks/typewriter-1e983e07.js",
-  "/internal/immutable/chunks/hidden-post-d0510ec7.js",
-  "/internal/immutable/chunks/emojik-es-a-windows-d5149ee7.js",
-  "/internal/immutable/chunks/stores-b5c5c1c0.js",
-  "/internal/immutable/components/pages/(card)/card/_page.svelte-4b27fe64.js",
-  "/internal/immutable/chunks/service-3f13ad91.js",
-  "/internal/immutable/modules/pages/(web)/posts/_post_/_page.ts-8cc66aee.js",
-  "/internal/immutable/chunks/Face-d3e9ebc7.js",
-  "/internal/immutable/chunks/_post-b57eabf0.js",
-  "/internal/immutable/chunks/app-2d8d75ee.js",
-  "/internal/immutable/chunks/preload-helper-41c905a7.js",
-  "/internal/immutable/chunks/index-1abd32fd.js",
-  "/internal/immutable/chunks/_page-5ebc51af.js",
-  "/internal/immutable/modules/pages/(web)/posts/_page.ts-e64b46af.js",
-  "/internal/immutable/chunks/mail-b632c90f.js",
-  "/internal/immutable/components/pages/(card)/_layout.svelte-59b26590.js",
-  "/internal/immutable/modules/pages/(web)/_page.ts-94291217.js",
-  "/internal/immutable/chunks/1-3b350bfd.js",
   "/internal/immutable/chunks/_page-da46b06b.js",
-  "/internal/immutable/chunks/0-8e0a7449.js",
-  "/internal/immutable/components/pages/(web)/_layout.svelte-c45482cb.js",
-  "/internal/immutable/chunks/loopTypewriter-80568ecd.js",
   "/internal/immutable/chunks/scramble-48e08db1.js",
   "/internal/immutable/chunks/writeEffect-748b5f3a.js",
-  "/internal/immutable/chunks/giscus.es-01a213ab.js",
-  "/internal/immutable/chunks/singletons-b3bcd9ea.js",
-  "/internal/immutable/chunks/_layout-c607bd72.js",
-  "/internal/immutable/chunks/control-f5b05b5f.js",
-  "/internal/immutable/components/error.svelte-032ee067.js",
-  "/internal/immutable/chunks/_page-17a318e7.js",
+  "/internal/immutable/chunks/sleep-ea0e718f.js",
+  "/internal/immutable/chunks/list-9e6389d7.js",
+  "/internal/immutable/chunks/images-93bbe771.js",
+  "/internal/immutable/chunks/8-b6cb0e35.js",
+  "/internal/immutable/chunks/7-c293fcdf.js",
+  "/internal/immutable/chunks/9-1bb35758.js",
+  "/internal/immutable/chunks/10-34f108a1.js",
+  "/internal/immutable/chunks/11-e0872d54.js",
+  "/internal/immutable/chunks/index-67bacc70.js",
+  "/internal/immutable/chunks/pathseg-234b9b0b.js",
+  "/internal/immutable/chunks/loopTypewriter-80568ecd.js",
+  "/internal/immutable/chunks/stores-b5c5c1c0.js",
+  "/internal/immutable/chunks/1-3b350bfd.js",
+  "/internal/immutable/chunks/2-6e6a1524.js",
+  "/internal/immutable/chunks/3-8e9295ae.js",
+  "/internal/immutable/chunks/4-d1b8e021.js",
+  "/internal/immutable/components/pages/(card)/me/_page.svelte-950a9132.js",
+  "/internal/immutable/chunks/preload-helper-41c905a7.js",
+  "/internal/immutable/chunks/mail-b632c90f.js",
+  "/internal/immutable/chunks/runOnEveryParentUntil-67f0ce31.js",
+  "/internal/immutable/chunks/index-1abd32fd.js",
+  "/internal/immutable/components/pages/(none)/me-card-wrapped/_page.svelte-950a9132.js",
+  "/internal/immutable/chunks/Icon-111ef362.js",
+  "/internal/immutable/chunks/5-cab6e615.js",
   "/internal/immutable/components/pages/(web)/posts/_post_/_page.svelte-2beff5cc.js",
-  "/internal/immutable/chunks/welcome-d11069a5.js",
+  "/internal/immutable/chunks/_layout-34122678.js",
+  "/internal/immutable/chunks/6-33e6fb5d.js",
+  "/internal/immutable/chunks/singletons-b3bcd9ea.js",
+  "/internal/immutable/components/pages/_layout.svelte-37b32647.js",
+  "/internal/immutable/chunks/typewriter-1e983e07.js",
+  "/internal/immutable/start-5f86eb2d.js",
+  "/internal/immutable/chunks/_page-5b80b3e7.js",
+  "/internal/immutable/chunks/emojik-es-a-windows-d6daef35.js",
+  "/internal/immutable/components/pages/(card)/_layout.svelte-59b26590.js",
+  "/internal/immutable/components/error.svelte-032ee067.js",
+  "/internal/immutable/chunks/control-f5b05b5f.js",
+  "/internal/immutable/modules/pages/(web)/posts/_page.ts-e64b46af.js",
+  "/internal/immutable/modules/pages/_layout.ts-b411215a.js",
+  "/internal/immutable/modules/pages/(web)/posts/_post_/_page.ts-91ea42f1.js",
+  "/internal/immutable/chunks/welcome-6369eb82.js",
+  "/internal/immutable/chunks/giscus.es-01a213ab.js",
+  "/internal/immutable/chunks/hidden-post-127f593e.js",
   "/internal/immutable/chunks/index-2ac3dbf5.js",
-  "/internal/immutable/components/pages/(web)/_page.svelte-f8060921.js",
-  "/internal/immutable/chunks/MeCard-f6d3d055.js",
-  "/internal/immutable/chunks/_layout-34122678.js"
+  "/internal/immutable/chunks/getLongestTextElement-29cbbbbc.js",
+  "/internal/immutable/chunks/_page-17a318e7.js",
+  "/internal/immutable/modules/pages/(web)/_page.ts-94291217.js",
+  "/internal/immutable/chunks/Face-7119ed1c.js",
+  "/internal/immutable/chunks/service-3f13ad91.js",
+  "/internal/immutable/components/pages/(none)/readme/_page.svelte-ea3ef774.js",
+  "/internal/immutable/chunks/app-2d8d75ee.js",
+  "/internal/immutable/chunks/0-8e0a7449.js",
+  "/internal/immutable/components/pages/(card)/card/_page.svelte-46359b2d.js",
+  "/internal/immutable/chunks/_post-518c6967.js",
+  "/internal/immutable/components/pages/(web)/404/_page.svelte-73fcdc0e.js",
+  "/internal/immutable/chunks/MeCard-d094c717.js",
+  "/internal/immutable/chunks/CardNavigation-e1a85cbf.js",
+  "/internal/immutable/components/pages/(web)/posts/_page.svelte-27a638b6.js",
+  "/internal/immutable/components/pages/(web)/_page.svelte-35915024.js",
+  "/internal/immutable/components/pages/(web)/_layout.svelte-7248c081.js",
+  "/internal/immutable/chunks/_layout-c607bd72.js"
 ], x = [
   "/.nojekyll",
   "/android-chrome-192x192.png",
@@ -166,7 +171,7 @@ const U = [
   "/manifest.json",
   "/readme-template.md",
   "/robots.txt"
-], L = [
+], T = [
   "/",
   "/shlinks/---.txt",
   "/404",
@@ -196,81 +201,108 @@ const U = [
   "/shlinks/---posts---welcome.txt",
   "/images/competitions/ASZEV2022.jpg",
   "/images/competitions/ASZEV2022.webp",
+  "/images/competitions/ASZEV2022.avif",
   "/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.jpg",
   "/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.webp",
+  "/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.avif",
   "/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.jpg",
   "/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.webp",
+  "/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.avif",
   "/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.jpg",
   "/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.webp",
+  "/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.avif",
   "/images/competitions/Dusza-2019.jpg",
   "/images/competitions/Dusza-2019.webp",
+  "/images/competitions/Dusza-2019.avif",
   "/images/competitions/Dusza-2020.jpg",
   "/images/competitions/Dusza-2020.webp",
+  "/images/competitions/Dusza-2020.avif",
   "/images/competitions/Dusza-mobil-2019.jpg",
   "/images/competitions/Dusza-mobil-2019.webp",
+  "/images/competitions/Dusza-mobil-2019.avif",
   "/images/competitions/Dusza-mobil-2020.jpg",
   "/images/competitions/Dusza-mobil-2020.webp",
+  "/images/competitions/Dusza-mobil-2020.avif",
   "/images/competitions/Dusza-mobil-2021.jpg",
   "/images/competitions/Dusza-mobil-2021.webp",
+  "/images/competitions/Dusza-mobil-2021.avif",
   "/images/competitions/Ifju-Tudosok-2022.jpg",
   "/images/competitions/Ifju-Tudosok-2022.webp",
+  "/images/competitions/Ifju-Tudosok-2022.avif",
   "/images/competitions/Innovacios-tehetsegkutato-2020.jpg",
   "/images/competitions/Innovacios-tehetsegkutato-2020.webp",
+  "/images/competitions/Innovacios-tehetsegkutato-2020.avif",
   "/images/competitions/Innovacios-tehetsegkutato-2021.jpg",
   "/images/competitions/Innovacios-tehetsegkutato-2021.webp",
+  "/images/competitions/Innovacios-tehetsegkutato-2021.avif",
   "/images/competitions/Iskola-programozas-verseny-2018.jpg",
   "/images/competitions/Iskola-programozas-verseny-2018.webp",
+  "/images/competitions/Iskola-programozas-verseny-2018.avif",
   "/images/competitions/Kodolj-Hatarok-Nelkul-2020.jpg",
   "/images/competitions/Kodolj-Hatarok-Nelkul-2020.webp",
+  "/images/competitions/Kodolj-Hatarok-Nelkul-2020.avif",
   "/images/competitions/Kodolj-Hatarok-Nelkul-2021.jpg",
   "/images/competitions/Kodolj-Hatarok-Nelkul-2021.webp",
+  "/images/competitions/Kodolj-Hatarok-Nelkul-2021.avif",
   "/images/competitions/Merklik-2021.jpg",
   "/images/competitions/Merklik-2021.webp",
+  "/images/competitions/Merklik-2021.avif",
   "/images/competitions/Nemes-Tihamer-2019.jpg",
   "/images/competitions/Nemes-Tihamer-2019.webp",
+  "/images/competitions/Nemes-Tihamer-2019.avif",
   "/images/competitions/SZIIV-2019.jpg",
   "/images/competitions/SZIIV-2019.webp",
+  "/images/competitions/SZIIV-2019.avif",
   "/images/competitions/SZIIV-2020.jpg",
   "/images/competitions/SZIIV-2020.webp",
+  "/images/competitions/SZIIV-2020.avif",
   "/images/competitions/Skills-Junior-Web-2022.jpg",
   "/images/competitions/Skills-Junior-Web-2022.webp",
+  "/images/competitions/Skills-Junior-Web-2022.avif",
   "/images/competitions/Webex-Teams-Hackathlon-2019-photo.jpg",
-  "/images/competitions/Webex-Teams-Hackathlon-2019-photo.webp"
-], T = "1672575450010";
+  "/images/competitions/Webex-Teams-Hackathlon-2019-photo.webp",
+  "/images/competitions/Webex-Teams-Hackathlon-2019-photo.avif",
+  "/images/people/sk.jpg",
+  "/images/people/sk.webp",
+  "/images/people/sk.avif",
+  "/images/people/unknownhe.jpg",
+  "/images/people/unknownhe.webp",
+  "/images/people/unknownhe.avif"
+], N = "1672662383507";
 try {
   self["workbox:core:6.5.3"] && _();
 } catch {
 }
-const B = (a, ...e) => {
+const D = (a, ...e) => {
   let t = a;
   return e.length > 0 && (t += ` :: ${JSON.stringify(e)}`), t;
-}, D = B;
+}, P = D;
 class l extends Error {
   constructor(e, t) {
-    const s = D(e, t);
+    const s = P(e, t);
     super(s), this.name = e, this.details = t;
   }
 }
-const m = {
+const h = {
   googleAnalytics: "googleAnalytics",
   precache: "precache-v2",
   prefix: "workbox",
   runtime: "runtime",
   suffix: typeof registration < "u" ? registration.scope : ""
-}, j = (a) => [m.prefix, a, m.suffix].filter((e) => e && e.length > 0).join("-"), S = (a) => {
-  for (const e of Object.keys(m))
+}, y = (a) => [h.prefix, a, h.suffix].filter((e) => e && e.length > 0).join("-"), S = (a) => {
+  for (const e of Object.keys(h))
     a(e);
-}, y = {
+}, j = {
   updateDetails: (a) => {
     S((e) => {
-      typeof a[e] == "string" && (m[e] = a[e]);
+      typeof a[e] == "string" && (h[e] = a[e]);
     });
   },
-  getGoogleAnalyticsName: (a) => a || j(m.googleAnalytics),
-  getPrecacheName: (a) => a || j(m.precache),
-  getPrefix: () => m.prefix,
-  getRuntimeName: (a) => a || j(m.runtime),
-  getSuffix: () => m.suffix
+  getGoogleAnalyticsName: (a) => a || y(h.googleAnalytics),
+  getPrecacheName: (a) => a || y(h.precache),
+  getPrefix: () => h.prefix,
+  getRuntimeName: (a) => a || y(h.runtime),
+  getSuffix: () => h.suffix
 };
 function v(a, e) {
   const t = e();
@@ -280,8 +312,8 @@ try {
   self["workbox:precaching:6.5.3"] && _();
 } catch {
 }
-const E = "__WB_REVISION__";
-function W(a) {
+const W = "__WB_REVISION__";
+function E(a) {
   if (!a)
     throw new l("add-to-cache-list-unexpected-type", { entry: a });
   if (typeof a == "string") {
@@ -302,7 +334,7 @@ function W(a) {
     };
   }
   const s = new URL(t, location.href), n = new URL(t, location.href);
-  return s.searchParams.set(E, e), {
+  return s.searchParams.set(W, e), {
     cacheKey: s.href,
     url: n.href
   };
@@ -320,7 +352,7 @@ class H {
     };
   }
 }
-class M {
+class z {
   constructor({ precacheController: e }) {
     this.cacheKeyWillBeUsed = async ({ request: t, params: s }) => {
       const n = (s == null ? void 0 : s.cacheKey) || this._precacheController.getCacheKeyForURL(t.url);
@@ -328,21 +360,21 @@ class M {
     }, this._precacheController = e;
   }
 }
-let d;
-function O() {
-  if (d === void 0) {
+let g;
+function M() {
+  if (g === void 0) {
     const a = new Response("");
     if ("body" in a)
       try {
-        new Response(a.body), d = !0;
+        new Response(a.body), g = !0;
       } catch {
-        d = !1;
+        g = !1;
       }
-    d = !1;
+    g = !1;
   }
-  return d;
+  return g;
 }
-async function z(a, e) {
+async function O(a, e) {
   let t = null;
   if (a.url && (t = new URL(a.url).origin), t !== self.location.origin)
     throw new l("cross-origin-copy-response", { origin: t });
@@ -350,7 +382,7 @@ async function z(a, e) {
     headers: new Headers(s.headers),
     status: s.status,
     statusText: s.statusText
-  }, i = e ? e(n) : n, o = O() ? s.body : await s.blob();
+  }, i = e ? e(n) : n, o = M() ? s.body : await s.blob();
   return new Response(o, i);
 }
 const A = (a) => new URL(String(a), location.href).href.replace(new RegExp(`^${location.origin}`), "");
@@ -476,12 +508,12 @@ class $ {
     ) : null;
     try {
       await r.put(n, u ? i.clone() : i);
-    } catch (h) {
-      if (h instanceof Error)
-        throw h.name === "QuotaExceededError" && await Z(), h;
+    } catch (m) {
+      if (m instanceof Error)
+        throw m.name === "QuotaExceededError" && await Z(), m;
     }
-    for (const h of this.iterateCallbacks("cacheDidUpdate"))
-      await h({
+    for (const m of this.iterateCallbacks("cacheDidUpdate"))
+      await m({
         cacheName: o,
         oldResponse: f,
         newResponse: i.clone(),
@@ -550,7 +582,7 @@ class $ {
 }
 class G {
   constructor(e = {}) {
-    this.cacheName = y.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
+    this.cacheName = j.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
   }
   handle(e) {
     const [t] = this.handleAll(e);
@@ -609,7 +641,7 @@ class G {
 }
 class p extends G {
   constructor(e = {}) {
-    e.cacheName = y.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(p.copyRedirectedCacheableResponsesPlugin);
+    e.cacheName = j.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(p.copyRedirectedCacheableResponsesPlugin);
   }
   async _handle(e, t) {
     const s = await t.cacheMatch(e);
@@ -654,16 +686,16 @@ p.defaultPrecacheCacheabilityPlugin = {
 };
 p.copyRedirectedCacheableResponsesPlugin = {
   async cacheWillUpdate({ response: a }) {
-    return a.redirected ? await z(a) : a;
+    return a.redirected ? await O(a) : a;
   }
 };
 class Q {
   constructor({ cacheName: e, plugins: t = [], fallbackToNetwork: s = !0 } = {}) {
     this._urlsToCacheKeys = /* @__PURE__ */ new Map(), this._urlsToCacheModes = /* @__PURE__ */ new Map(), this._cacheKeysToIntegrities = /* @__PURE__ */ new Map(), this._strategy = new p({
-      cacheName: y.getPrecacheName(e),
+      cacheName: j.getPrecacheName(e),
       plugins: [
         ...t,
-        new M({ precacheController: this })
+        new z({ precacheController: this })
       ],
       fallbackToNetwork: s
     }), this.install = this.install.bind(this), this.activate = this.activate.bind(this);
@@ -678,7 +710,7 @@ class Q {
     const t = [];
     for (const s of e) {
       typeof s == "string" ? t.push(s) : s && s.revision === void 0 && t.push(s.url);
-      const { cacheKey: n, url: i } = W(s), o = typeof s != "string" && s.revision ? "reload" : "default";
+      const { cacheKey: n, url: i } = E(s), o = typeof s != "string" && s.revision ? "reload" : "default";
       if (this._urlsToCacheKeys.has(i) && this._urlsToCacheKeys.get(i) !== n)
         throw new l("add-to-cache-list-conflicting-entries", {
           firstEntry: this._urlsToCacheKeys.get(i),
@@ -752,14 +784,14 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
   }
 }
 let R;
-const K = () => (R || (R = new Q()), R);
+const B = () => (R || (R = new Q()), R);
 try {
   self["workbox:routing:6.5.3"] && _();
 } catch {
 }
-const N = "GET", w = (a) => a && typeof a == "object" ? a : { handle: a };
+const K = "GET", w = (a) => a && typeof a == "object" ? a : { handle: a };
 class b {
-  constructor(e, t, s = N) {
+  constructor(e, t, s = K) {
     this.handler = w(t), this.match = e, this.method = s;
   }
   setCatchHandler(e) {
@@ -818,20 +850,20 @@ class Y {
     let u;
     try {
       u = c.handle({ url: s, request: e, event: t, params: i });
-    } catch (h) {
-      u = Promise.reject(h);
+    } catch (m) {
+      u = Promise.reject(m);
     }
     const f = o && o.catchHandler;
-    return u instanceof Promise && (this._catchHandler || f) && (u = u.catch(async (h) => {
+    return u instanceof Promise && (this._catchHandler || f) && (u = u.catch(async (m) => {
       if (f)
         try {
           return await f.handle({ url: s, request: e, event: t, params: i });
         } catch (C) {
-          C instanceof Error && (h = C);
+          C instanceof Error && (m = C);
         }
       if (this._catchHandler)
         return this._catchHandler.handle({ url: s, request: e, event: t });
-      throw h;
+      throw m;
     })), u;
   }
   findMatchingRoute({ url: e, sameOrigin: t, request: s, event: n }) {
@@ -844,7 +876,7 @@ class Y {
     }
     return {};
   }
-  setDefaultHandler(e, t = N) {
+  setDefaultHandler(e, t = K) {
     this._defaultHandlerMap.set(t, w(e));
   }
   setCatchHandler(e) {
@@ -865,8 +897,8 @@ class Y {
       throw new l("unregister-route-route-not-registered");
   }
 }
-let g;
-const ee = () => (g || (g = new Y(), g.addFetchListener(), g.addCacheListener()), g);
+let d;
+const ee = () => (d || (d = new Y(), d.addFetchListener(), d.addCacheListener()), d);
 function te(a, e, t) {
   let s;
   if (typeof a == "string") {
@@ -925,7 +957,7 @@ class ne extends b {
   }
 }
 function ie(a) {
-  const e = K(), t = new ne(e, a);
+  const e = B(), t = new ne(e, a);
   te(t);
 }
 const oe = "-precache-", ce = async (a, e = oe) => {
@@ -934,24 +966,24 @@ const oe = "-precache-", ce = async (a, e = oe) => {
 };
 function re() {
   self.addEventListener("activate", (a) => {
-    const e = y.getPrecacheName();
+    const e = j.getPrecacheName();
     a.waitUntil(ce(e).then((t) => {
     }));
   });
 }
 function le(a) {
-  K().precache(a);
+  B().precache(a);
 }
 function ue(a, e) {
   le(a), ie(e);
 }
-console.log("Hello from service-worker.js", { build: U, files: x, prerendered: L, version: T });
-const P = [...x, ...L, ...U].filter((a) => !a.endsWith(".jpeg") && !a.endsWith(".jpg") && !a.endsWith(".avif") && !a.endsWith(".webp") && !a.endsWith(".png") && !a.endsWith(".pdf")).filter((a) => !a.startsWith("/."));
-console.log("Service worker urls: ", P);
+console.log("Hello from service-worker.js", { build: U, files: x, prerendered: T, version: N });
+const L = [...x, ...T, ...U].filter((a) => !a.endsWith(".jpeg") && !a.endsWith(".jpg") && !a.endsWith(".avif") && !a.endsWith(".webp") && !a.endsWith(".png") && !a.endsWith(".pdf")).filter((a) => !a.startsWith("/."));
+console.log("Service worker urls: ", L);
 ue(
-  P.map((a) => ({
+  L.map((a) => ({
     url: a,
-    revision: T
+    revision: N
   })),
   {
     cleanURLs: !1
