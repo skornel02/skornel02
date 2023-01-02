@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import {sveltekit} from '@sveltejs/kit/vite';
 import path from 'path';
-import svgLoader from 'vite-svg-loader';
 
 const config = defineConfig(({mode}) => ({
 	resolve: {
@@ -23,14 +22,7 @@ const config = defineConfig(({mode}) => ({
 		},
 	},
 	plugins: [
-		sveltekit(),
-		svgLoader({
-			defaultImport: 'url',
-			svgo: true,
-			svgoConfig: {
-				multipass: true,
-			},
-		}),
+		sveltekit()
 	],
 	define: {
 		'process.env.NODE_ENV': mode === 'production' ? '"production"' : '"development"'

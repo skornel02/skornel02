@@ -1,14 +1,22 @@
 import backCard from '$lib/card/business-card-back.svg?raw';
 import {optimize, type OptimizedSvg} from 'svgo';
+import {Liquid} from 'liquidjs';
 import type { RequestHandler } from './$types';
 
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
+	const engine = new Liquid();
 	const backCardCleaned = backCard
 		.replace(/\/\*/g, '')
 		.replace(/\*\//g, '');
-	const optimized = optimize(backCardCleaned, {
+
+	const backCardRendered = await engine.parseAndRender(backCardCleaned, {
+		email: "contact@skornel02.hu",
+		website: "skornel02.hu"
+	});
+
+	const optimized = optimize(backCardRendered, {
 		multipass: true,
 		plugins: [
 			{name: 'removeDimensions', active: false},

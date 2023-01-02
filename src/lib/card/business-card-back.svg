@@ -447,10 +447,10 @@
       <tspan sodipodi:role="line" id="tspan12685" x="16.288334" y="10.428606" dx="0 0 0 0 0 0">+36 (30) --- ----</tspan>
     </text>
     <text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:4.23333px;line-height:0;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:.264583px;display:inline;stroke-width:.262565" font-family="Noto Sans" x="16.267166" y="19.362917" id="text11035-7" inkscape:label="Email address">
-      <tspan sodipodi:role="line" id="tspan1515" x="16.267166" y="19.362917">contact@skornel02.hu</tspan>
+      <tspan sodipodi:role="line" id="tspan1515" x="16.267166" y="19.362917">{{email}}</tspan>
     </text>
     <text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:4.23333px;line-height:0;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:.264583px;display:inline;stroke-width:.262565" font-family="Noto Sans" x="16.2841" y="28.558073" id="text11035-7-8" inkscape:label="Weblink">
-      <tspan sodipodi:role="line" id="tspan3511" x="16.2841" y="28.558073">skornel02.hu</tspan>
+      <tspan sodipodi:role="line" id="tspan3511" x="16.2841" y="28.558073">{{website}}</tspan>
     </text>
     <g id="g13357" transform="matrix(.25 0 0 .25 5 5)" inkscape:label="Telefon">
       <path d="M26 29h-.17C6.18 27.87 3.39 11.29 3 6.23A3 3 0 0 1 5.76 3h5.51a2 2 0 0 1 1.86 1.26L14.65 8a2 2 0 0 1-.44 2.16l-2.13 2.15a9.37 9.37 0 0 0 7.58 7.6l2.17-2.15a2 2 0 0 1 2.17-.41l3.77 1.51A2 2 0 0 1 29 20.72V26a3 3 0 0 1-3 3zM6 5a1 1 0 0 0-1 1v.08C5.46 12 8.41 26 25.94 27a1 1 0 0 0 1.06-.94v-5.34l-3.77-1.51-2.87 2.85-.48-.06c-8.7-1.09-9.88-9.79-9.88-9.88l-.06-.48 2.84-2.87L11.28 5Z" id="pathPhoneNumber" />

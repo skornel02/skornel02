@@ -1,12 +1,16 @@
 <script lang="ts">
-	import Image from 'svimg';
+	import Image from '$lib/Image.svelte';
+	import { getPeopleImageData } from "$lib/images";
+
 
 	let clazz: string;
 	export {clazz as class};
+
+	const meMetadata = getPeopleImageData('sk').meta;
 </script>
 
 <div>
-	<Image class="{clazz}" src="assets/people/sk.jpeg" quality="85" alt=""/>
+	<Image meta="{meMetadata}" alt="" class={clazz} />
 </div>
 
 <style>
