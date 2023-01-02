@@ -2,8 +2,8 @@
 	import type {LayoutData} from './$types';
 	import ShlinkTracker from '$lib/ShlinkTracker.svelte';
 	import {fade} from 'svelte/transition';
-	import '../../app.scss';
 	import MeBackground from '$lib/card/CardBackground.svelte';
+	import '../../app.css';
 
 	export let data: LayoutData;
 	const {route, shlinkUrl} = data;
