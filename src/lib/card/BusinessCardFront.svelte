@@ -4,5 +4,6 @@
 	img {
 		width: auto;
 		height: 100%;
+		max-width: unset;
 	}
 </style>

@@ -10,18 +10,17 @@
 </svelte:head>
 
 
-<div id="me-card" class="card" in:fade={{duration: 700, delay: 250}} out:fade={{duration: 150}}>
-    <BusinessCard />
-    <hr>
-    <div id="navigationSlot">
-        <CardNavigation  home={true} card={false} details={true}/>
-    </div>
+<div class="card w-80 sm:w-96 bg-base-100 m-auto"  in:fade={{duration: 700, delay: 250}} out:fade={{duration: 150}}>
+	<div class="card-body">
+		<BusinessCard />
+		<hr>
+		<div id="navigationSlot">
+			<CardNavigation  home={true} card={false} details={true}/>
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
-	#me-card {
-		padding: 1rem;
-	}
 	hr {
 		color: var(--color-secondary);
 		opacity: unset;

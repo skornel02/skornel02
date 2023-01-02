@@ -22,31 +22,30 @@
 	<meta name="description" content="Digital personal information card" />
 </svelte:head>
 
-<div id="me-card" class="card" class:card-loaded="{loaded}" in:fade={{delay: 200}} out:fade={{duration: 150}}>
-	<div id="nameSlot">
-		<CardTitle on:load="{onLoad}" />
+<div class="card w-80 sm:w-96 bg-base-100 m-auto" in:fade="{{delay: 200}}" out:fade="{{duration: 150}}">
+	<div class="card-body" class:card-loaded="{loaded}">
+		<div id="nameSlot" class="sm:card-title">
+			<CardTitle on:load="{onLoad}" />
+		</div>
+		{#if loaded}
+			<hr in:fade="{fadeParams}" />
+			<div id="faceSlot" class="mx-auto avatar ring ring-primary rounded" in:fade="{fadeParams}">
+				<Face class="rounded ring-offset-base-100 ring-offset-2" />
+			</div>
+			<hr in:fade="{fadeParams}" />
+			<div id="contactSlot" in:fade="{fadeParams}">
+				<CardContacts />
+			</div>
+			<hr in:fade="{fadeParams}" />
+			<div id="navigationSlot" in:fade="{fadeParams}">
+				<CardNavigation home="{true}" card="{true}" details="{false}" />
+			</div>
+		{/if}
 	</div>
-	{#if loaded}
-		<hr in:fade="{fadeParams}" />
-		<div id="faceSlot" class="mx-auto" in:fade="{fadeParams}">
-			<Face class="img-fluid img-profile rounded" />
-		</div>
-		<hr in:fade="{fadeParams}" />
-		<div id="contactSlot" in:fade="{fadeParams}">
-			<CardContacts />
-		</div>
-		<hr in:fade="{fadeParams}" />
-		<div id="navigationSlot" in:fade="{fadeParams}">
-			<CardNavigation home={true} card={true} details={false}/>
-		</div>
-	{/if}
 </div>
 
-<style lang="scss">
-	#me-card {
-		padding: 1rem;
-	}
-	.card {
+<style>
+	.card-body {
 		border-color: var(--color-secondary);
 		height: fit-content;
 		max-height: 100px;
@@ -58,16 +57,9 @@
 	#nameSlot {
 		height: 3rem;
 	}
-	#faceSlot {
-		:global(.img-profile) {
-			border: 0.2rem solid var(--color-primary);
-		}
-	}
-	#navigationSlot {
-
-	}
 	hr {
-		color: var(--color-secondary);
-		opacity: unset;
+		color: #f00;
+		border: 0;
+		height: 1px;
 	}
 </style>
