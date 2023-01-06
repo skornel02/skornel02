@@ -1,4 +1,4 @@
-import readme from '$static/readme-template.md?raw';
+import readme from '$static/readme.template.md?raw';
 import type { RequestHandler } from './$types';
 
 export const prerender = true;
