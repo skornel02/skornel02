@@ -1,17 +1,15 @@
-import backCard from '$lib/card/business-card-back.svg?raw';
+import backCard from '$static/business-card-back.template.svg?raw';
 import {optimize, type OptimizedSvg} from 'svgo';
 import {Liquid} from 'liquidjs';
 import type { RequestHandler } from './$types';
+import { error } from '@sveltejs/kit';
 
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
 	const engine = new Liquid();
-	const backCardCleaned = backCard
-		.replace(/\/\*/g, '')
-		.replace(/\*\//g, '');
 
-	const backCardRendered = await engine.parseAndRender(backCardCleaned, {
+	const backCardRendered = await engine.parseAndRender(backCard, {
 		email: "contact@skornel02.hu",
 		website: "skornel02.hu"
 	});
@@ -29,7 +27,12 @@ export const GET: RequestHandler = async () => {
 			{name: 'reusePaths', active: true},
 			{name: 'inlineStyles', active: false},
 		],
-	}) as OptimizedSvg;
+	});
+	if (optimized.error !== undefined) {
+		console.error("Error while optimizing SVG:", optimized.error);
+		throw error(500, optimized.error);
+	}
+
 	const svg = optimized.data;
 	console.log(`SVG optimization on back: ${backCard.length}->${svg.length}`);
 

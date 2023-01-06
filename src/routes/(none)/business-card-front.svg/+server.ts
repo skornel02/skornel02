@@ -1,7 +1,8 @@
-import frontCard from '$lib/card/business-card-front.svg?raw';
+import frontCard from '$static/business-card-front.template.svg?raw';
 import {optimize, type OptimizedSvg} from 'svgo';
 import {Liquid} from 'liquidjs';
 import type { RequestHandler } from './$types';
+import { error } from '@sveltejs/kit';
 
 export const prerender = true;
 
@@ -22,7 +23,12 @@ export const GET: RequestHandler = async () => {
 			{name: 'removeOffCanvasPaths', active: true},
 			{name: 'reusePaths', active: true},
 		],
-	}) as OptimizedSvg;
+	});
+	if (optimized.error !== undefined) {
+		console.error("Error while optimizing SVG:", optimized.error);
+		throw error(500, optimized.error);
+	}
+
 	const svg = optimized.data;
 	console.log(`SVG optimization on front: ${frontCard.length}->${svg.length}`);
 

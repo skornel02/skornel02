@@ -37,7 +37,7 @@ const getImageData = (folder: string, url: string, images: string[]): ImageData 
 
 	const imageData = {
 		path: `/assets/${folder}/${url}.jpeg`,
-		meta: [] as ImageMetadata[],
+		meta: new Array(),
 	};
 	imageData.meta = [
 		{
