@@ -11,8 +11,8 @@
 
 <Typewriter cascade="{true}" interval="{100}" on:done="{onDone}">
 	<h1>
-		<span id="lastName">Stefán</span>
-		<span id="firstName">Kornél</span>
+		<span class="text-secondary">Stefán</span>
+		<span class="text-primary">Kornél</span>
 	</h1>
 </Typewriter>
 
@@ -21,11 +21,5 @@
 		font-size: 1.9em;
 		text-align: center;
 		white-space: nowrap;
-	}
-	#lastName {
-		color: var(--color-secondary);
-	}
-	#firstName {
-		color: var(--color-primary);
 	}
 </style>

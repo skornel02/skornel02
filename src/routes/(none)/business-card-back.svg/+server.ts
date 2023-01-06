@@ -1,5 +1,5 @@
 import backCard from '$static/business-card-back.template.svg?raw';
-import {optimize, type OptimizedSvg} from 'svgo';
+import {optimize} from 'svgo';
 import {Liquid} from 'liquidjs';
 import type { RequestHandler } from './$types';
 import { error } from '@sveltejs/kit';

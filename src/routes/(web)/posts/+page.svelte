@@ -76,10 +76,4 @@
 			color: var(--color-primary);
 		}
 	}
-
-	@media (max-width: 992px) {
-		.container {
-			margin-top: 4rem;
-		}
-	}
 </style>
