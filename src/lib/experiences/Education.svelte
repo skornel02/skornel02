@@ -1,5 +1,5 @@
 <div class="my-auto d-flex flex-column">
-	<h2 class="mb-5">Education</h2>
+	<h2 class="mb-5 text-pageSection">Education</h2>
 	<div class="resume-item d-flex flex-column flex-md-row mb-5">
 		<div class="resume-content mr-auto">
 			<h3 class="mb-0">University of Szeged</h3>

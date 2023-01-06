@@ -4,7 +4,7 @@
 	import ShlinkTracker from '$lib/ShlinkTracker.svelte';
 	import {Rss} from 'lucide-svelte';
 	import {fade} from 'svelte/transition';
-	import '../../app.scss';
+	import '../../app.css';
 
 	export let data: LayoutData;
 	const {route, shlinkUrl} = data;
@@ -19,34 +19,30 @@
 <Header />
 
 {#key route}
-	<main in:fade="{{duration: 150, delay: 100}}" out:fade="{{duration: 100}}">
+	<main
+		class="lg:pl-sideBar lg:pt-0"
+		in:fade="{{duration: 150, delay: 100}}"
+		out:fade="{{duration: 100}}"
+	>
 		<slot />
 	</main>
 {/key}
 
 <footer
 	id="footer"
-	class="d-flex d-print-none flex-column justify-content-center align-items-center"
+	class="flex print:hidden flex-col justify-center items-center lg:pl-sideBar"
 >
 	<p>
 		Have a nice day! • {year} © •
 		<a href="/rss.xml">
-			<Rss size={16}/>
+			<Rss size="{16}" class="inline" />
 		</a>
 		<ShlinkTracker shlinkUrl="{shlinkUrl}" />
 	</p>
 </footer>
 
 <style lang="scss">
-	@media (min-width: 992px) {
-		:global(body) {
-			padding-top: 0;
-			padding-left: 17rem;
-		}
-	}
-
 	main {
-		padding-top: 54px;
 		flex: 1;
 		display: flex;
 		flex-direction: column;

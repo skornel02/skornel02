@@ -1,172 +1,66 @@
 <script lang="ts">
 	import {page} from '$app/stores';
-	import {Collapse, Navbar, NavbarToggler} from 'sveltestrap';
 	import {scrolltotop} from 'svelte-scrollto-element';
 	import Face from './Face.svelte';
-
-	let width = 1000;
-	let isOpen = true;
-	$: isOpen = width >= 992;
-
-	const handleUpdate = (e: any) => {
-		isOpen = e.detail.isOpen;
-	};
 </script>
 
-<svelte:window bind:innerWidth="{width}" />
-
-<header>
-	<Navbar dark color="primary" fixed="top" expand="lg" id="sideNav">
-		<div use:scrolltotop="{{}}" class="navbar-brand w-lg-100">
-			<span class="d-block d-lg-none">Stefán Kornél</span>
-			<span class="d-none d-lg-block">
+<header
+	id="sideNav"
+	class="bg-primary h-topBar xs:navbar lg:drawer lg:w-sideBar lg:h-screen lg:left-0 lg:top-0 lg:fixed lg:text-center print:hidden"
+>
+	<div class="drawer-side flex flex-row lg:flex-col justify-center">
+		<div
+			use:scrolltotop="{{}}"
+			class="ml-2 my-auto flex-1 normal-case text-background text-2xl lg:text-center lg:my-0 lg:mx-auto lg:flex-grow-0"
+		>
+			<span class="block lg:hidden">Stefán Kornél</span>
+			<span class="hidden lg:flex h-44 justify-center flex-col">
 				{#if $page.url.pathname === '/'}
-					<Face class="img-fluid img-profile rounded-circle" />
+					<div class="avatar">
+						<Face class="mask mask-squircle" />
+					</div>
 				{:else}
-					<h3>Stefán Kornél</h3>
+					<span class=" text-4xl">Stefán Kornél</span>
 				{/if}
 			</span>
 		</div>
-		<NavbarToggler
-			on:click="{() => (isOpen = !isOpen)}"
-			type="button"
-			data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent"
-			aria-expanded="false"
-			aria-label="Toggle navigation"
+		<ul
+			class="menu menu-compact sm:menu-normal menu-horizontal lg:menu-vertical bg-primary text-background text-opacity-75 p-4 w-64"
 		>
-			<span class="navbar-toggler-icon"></span>
-		</NavbarToggler>
-
-		<Collapse isOpen="{isOpen}" navbar id="navbarSupportedContent" on:update="{handleUpdate}">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a
-						data-sveltekit-preload-data="hover"
-						class="nav-link"
-						class:active="{$page.url.pathname === '/'}"
-						href="/">Home</a
-					>
-				</li>
-				<li class="nav-item">
-					<a
-						data-sveltekit-preload-data="hover"
-						class="nav-link disabled"
-						class:active="{$page.url.pathname.startsWith('/projects')}"
-						href="/">Projects</a
-					>
-				</li>
-				<li class="nav-item">
-					<a
-						data-sveltekit-preload-data="hover"
-						class="nav-link"
-						class:active="{$page.url.pathname.startsWith('/posts')}"
-						href="/posts">Blog</a
-					>
-				</li>
-			</ul>
-		</Collapse>
-	</Navbar>
+			<li>
+				<a data-sveltekit-preload-data="hover" class:active="{$page.url.pathname === '/'}" href="/"
+					>Home</a
+				>
+			</li>
+			<li class="disabled">
+				<a
+					data-sveltekit-preload-data="hover"
+					class:active="{$page.url.pathname.startsWith('/projects')}"
+					href="/">Projects</a
+				>
+			</li>
+			<li>
+				<a
+					data-sveltekit-preload-data="hover"
+					class:active="{$page.url.pathname.startsWith('/posts')}"
+					href="/posts">Blog</a
+				>
+			</li>
+		</ul>
+	</div>
 </header>
+
 <div id="page-top"></div>
 
-<style lang="scss">
-	@media print {
-		:global(#sideNav) {
-			display: none;
-		}
+<style>
+	a.active {
+		color: var(--color-background);
+		background-color: var(--color-secondary);
+		opacity: 1;
 	}
 
-	:global(#sideNav) {
-		.navbar-nav .nav-item .nav-link {
-			font-weight: 600;
-			text-transform: uppercase;
-		}
-	}
-
-	@media (min-width: 992px) {
-		:global(#sideNav) {
-			text-align: center;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: $sidebar-base-width;
-			height: 100vh;
-			:global(.container-fluid) {
-				margin: auto 0;
-				display: flex;
-				flex-direction: column;
-
-				:global(.navbar-brand) {
-					display: flex;
-
-					margin: auto auto 0;
-					padding: 0.5rem;
-					:global(.img-profile) {
-						max-width: 10rem;
-						max-height: 10rem;
-						border: 0.5rem solid fade-out($white, 0.8);
-					}
-					h3 {
-						display: flex;
-						align-items: center;
-						margin: auto 0;
-						color: white;
-						height: 160px;
-					}
-				}
-				:global(.navbar-collapse) {
-					display: flex;
-					align-items: flex-start;
-					flex-grow: 0;
-
-					width: 100%;
-					margin-bottom: auto;
-					:global(.navbar-nav) {
-						flex-direction: column;
-
-						width: 100%;
-						:global(.nav-item) {
-							display: block;
-							.nav-link {
-								display: block;
-							}
-						}
-					}
-				}
-			}
-		}
-		:global(#sideNav) :global(.navbar-brand) {
-			display: flex;
-			margin: auto auto 0;
-			padding: 0.5rem;
-		}
-		:global(#sideNav) :global(.navbar-brand) :global(.img-profile) {
-			max-width: 10rem;
-			max-height: 10rem;
-			border: 0.5rem solid rgba(255, 255, 255, 0.2);
-		}
-		:global(#sideNav) :global(.navbar-collapse) {
-			display: flex;
-			align-items: flex-start;
-			flex-grow: 0;
-			width: 100%;
-			margin-bottom: auto;
-		}
-		:global(#sideNav) :global(.navbar-collapse) :global(.navbar-nav) {
-			flex-direction: column;
-			width: 100%;
-		}
-		:global(#sideNav) :global(.navbar-collapse) :global(.navbar-nav) :global(.nav-item) {
-			display: block;
-		}
-		:global(#sideNav)
-			:global(.navbar-collapse)
-			:global(.navbar-nav)
-			:global(.nav-item)
-			:global(.nav-link) {
-			display: block;
-		}
+	li.disabled > a {
+		cursor: default;
+		color: var(--color-title);
 	}
 </style>

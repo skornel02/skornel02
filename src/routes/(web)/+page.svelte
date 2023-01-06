@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SectionData } from './+page';
+	import type {SectionData} from './+page';
 	import {Github, Facebook, Mail, Linkedin, List} from 'lucide-svelte';
 	import {onMount} from 'svelte';
 	import Showcase from '$lib/showcase/Showcase.svelte';
@@ -40,8 +40,8 @@
 			if (el.classList.contains('d-none')) return;
 			sections[el.id] = {
 				index: index++,
-				top: document.getElementById(el.id).offsetTop,
-				title: document.getElementById(el.id).getAttribute('x-description'),
+				top: document.getElementById(el.id)!.offsetTop,
+				title: document.getElementById(el.id)!.getAttribute('x-description') ?? 'SK - Home',
 			};
 		});
 		const top = sections['about'].top ?? 0;
@@ -54,32 +54,36 @@
 	const handleKeyboard = (e: KeyboardEvent) => {
 		if (e.key === 'ArrowLeft') {
 			if (currentSection.index > 0) {
+				e.preventDefault();
 				animateScroll.scrollTo({
-					element: document.getElementById(Object.keys(sections)[currentSection.index - 1]),
+					element: document.getElementById(Object.keys(sections)[currentSection.index - 1])!,
 					duration: 250,
 					easing: circInOut,
 				});
 			}
 		} else if (e.key === 'ArrowRight') {
 			if (currentSection.index < Object.keys(sections).length - 1) {
+				e.preventDefault();
 				animateScroll.scrollTo({
-					element: document.getElementById(Object.keys(sections)[currentSection.index + 1]),
+					element: document.getElementById(Object.keys(sections)[currentSection.index + 1])!,
 					duration: 250,
 					easing: circInOut,
 				});
 			}
 		} else if (e.key === 'PageUp') {
 			if (currentSection.index > 0) {
+				e.preventDefault();
 				animateScroll.scrollTo({
-					element: document.getElementById(Object.keys(sections)[currentSection.index - 1]),
+					element: document.getElementById(Object.keys(sections)[currentSection.index - 1])!,
 					duration: 0,
 					easing: backOut,
 				});
 			}
 		} else if (e.key === 'PageDown') {
 			if (currentSection.index < Object.keys(sections).length - 1) {
+				e.preventDefault();
 				animateScroll.scrollTo({
-					element: document.getElementById(Object.keys(sections)[currentSection.index + 1]),
+					element: document.getElementById(Object.keys(sections)[currentSection.index + 1])!,
 					duration: 0,
 					easing: backOut,
 				});
@@ -100,10 +104,10 @@
 	<meta name="description" content="Personal site of SK" />
 </svelte:head>
 
-<div class="container-fluid p-0">
-	<section class="resume-section p-3 p-lg-5 d-flex d-column" id="about" x-description="SK - Home">
+<div class="md:container md:mx-auto p-0">
+	<section class="resume-section p-3 lg:p-5 flex flex-col" id="about" x-description="SK - Home">
 		<div class="my-auto">
-			<h1 id="name" class="mb-0">
+			<h1 id="name" class="mb-0 text-pageTitle leading-pageTitle">
 				<div class="text-secondary">Stefán</div>
 				<span class="text-primary">Kornél</span>
 			</h1>
@@ -111,48 +115,40 @@
 				I am a young tinkerer that loves programming. My current goal is to start working in the
 				field. Learning to bake is in progress!
 			</p>
-			<ul class="list-inline list-social-icons mb-0">
-				<li class="list-inline-item">
-					<a id="social-card" href="/me" data-sveltekit-reload>
-						<div class="icon">
-							<List size="{32}"/>
-						</div>
-					</a>
-				</li>
-				<li class="list-inline-item">
-					<a id="social-gh" href="https://github.com/skornel02">
-						<div class="icon">
-							<Github size="{32}"/>
-						</div>
-					</a>
-				</li>
-				<li id="social-fb" class="list-inline-item">
-					<a href="https://www.facebook.com/stefankornel02">
-						<div class="icon">
-							<Facebook size="{32}" />
-						</div>
-					</a>
-				</li>
-				<li id="social-fb" class="list-inline-item">
-					<a href="https://linkedin.com/in/skornel02">
-						<div class="icon">
-							<Linkedin size="{32}" />
-						</div>
-					</a>
-				</li>
-				<li id="social-email" class="list-inline-item">
-					<a href="mailto:contact@skornel02.hu">
-						<div class="icon">
-							<Mail size="{32}" />
-						</div>
-					</a>
-				</li>
-			</ul>
+			<d class="mx-0">
+				<a
+					id="social-card"
+					class="btn btn-md btn-outline btn-secondary"
+					href="/me"
+					data-sveltekit-reload
+				>
+					<List size="{32}" />
+				</a>
+				<a
+					id="social-gh"
+					class="btn btn-md btn-outline btn-primary"
+					href="https://github.com/skornel02"
+				>
+					<Github size="{32}" />
+				</a>
+				<a
+					class="btn btn-md btn-outline btn-primary"
+					href="https://www.facebook.com/stefankornel02"
+				>
+					<Facebook size="{32}" />
+				</a>
+				<a class="btn btn-md btn-outline btn-primary" href="https://linkedin.com/in/skornel02">
+					<Linkedin size="{32}" />
+				</a>
+				<a class="btn btn-md btn-outline btn-primary" href="mailto:contact@skornel02.hu">
+					<Mail size="{32}" />
+				</a>
+			</d>
 		</div>
 	</section>
 
 	<section
-		class="resume-section p-3 p-lg-5 d-flex flex-column"
+		class="resume-section p-3 p-lg-5 flex flex-col"
 		id="experience"
 		x-description="SK - Experiences"
 	>
@@ -160,7 +156,7 @@
 	</section>
 
 	<section
-		class="resume-section p-3 p-lg-5 d-flex flex-column"
+		class="resume-section p-3 p-lg-5 flex flex-col"
 		id="education"
 		x-description="SK - Education"
 	>
@@ -168,12 +164,12 @@
 	</section>
 
 	<section
-		class="resume-section p-3 p-lg-5 d-flex flex-column"
+		class="resume-section p-3 p-lg-5 flex flex-col"
 		id="skills"
 		x-description="SK - Skills"
 	>
 		<div class="my-auto">
-			<h2 class="mb-5">Skills</h2>
+			<h2 class="mb-5 text-pageSection">Skills</h2>
 
 			<div class="subheading mb-3">Programming Languages &amp; Tools</div>
 			<ul class="list-inline list-icons">
@@ -315,7 +311,7 @@
 				</li>
 			</ul>
 			<img
-				class="d-block mx-auto img-fluid"
+				class="block mx-auto"
 				src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact&theme={darkTheme
 					? 'dark'
 					: 'light'}"
@@ -326,37 +322,26 @@
 	</section>
 
 	<section
-		class="resume-section p-3 p-lg-5 d-flex flex-column d-none"
+		class="resume-section p-3 p-lg-5 flex-col hidden"
 		id="interests"
 		x-description="SK - Interests"
 	>
 		<div class="my-auto">
-			<h2 class="mb-5">Interests</h2>
+			<h2 class="mb-5 text-pageSection">Interests</h2>
 			<p></p>
 			<p class="mb-0"></p>
 		</div>
 	</section>
 
-	<section
-		class="resume-section p-3 p-lg-5 d-flex flex-column"
-		id="awards"
-		x-description="SK - Awards"
-	>
+	<section class="resume-section p-3 p-lg-5 flex flex-col" id="awards" x-description="SK - Awards">
 		<div class="my-auto">
-			<h2 class="mb-5">Awards &amp; Certifications</h2>
+			<h2 class="mb-5 text-pageSection">Awards &amp; Certifications</h2>
 			<Showcase />
 		</div>
 	</section>
 </div>
 
 <style lang="scss">
-	h1 {
-		font-size: 6rem;
-		line-height: 5.5rem;
-	}
-	h2 {
-		font-size: 3.5rem;
-	}
 	@media (max-width: 768px) {
 		h1 {
 			font-size: 3rem;
