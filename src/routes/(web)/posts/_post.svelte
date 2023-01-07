@@ -2,12 +2,12 @@
 	import Giscus from '@giscus/svelte';
 	import 'github-markdown-css/github-markdown.css';
 	import './prism.css';
-	import './markers.scss';
+	import './markers.css';
 
 	/**
 	 * @type {import('$lib/posts').Metadata}
 	 */
-	let { title, date, time, description, hidden } = $$props;
+	let {title, date, time, description, hidden} = $$props;
 
 	if (time === undefined) time = '12:00:00';
 </script>
@@ -25,21 +25,23 @@
 
 <main class="container">
 	<header>
-		<div class="row">
-			<div class="col-9 d-flex">
+		<div class="flex my-2">
+			<div class="w-3/4 flex">
 				<p class="my-auto">Published: {date}</p>
 			</div>
-			<div class="col-3">
-				<a href="/posts" class="d-block m-auto btn btn-outline-dark"> Back </a>
+			<div class="w-1/4 flex justify-end">
+				<a href="/posts" class="d-block m-auto btn btn-outline btn-secondary print:hidden">
+					Back
+				</a>
 			</div>
 		</div>
 	</header>
-	<hr />
+	<div class="divider">{title}</div>
 	<article class="markdown-body">
 		<slot />
 	</article>
 	<hr />
-	<footer id="comments">
+	<footer id="comments" class="print:hidden">
 		<Giscus
 			repo="skornel02/skornel02"
 			repoId="R_kgDOG9KgxQ"
@@ -57,20 +59,8 @@
 </main>
 
 <style>
-	@media (max-width: 992px) {
-		.container {
-			margin-top: 4rem;
-		}
-	}
-
 	@media print {
-		header a{
-			display: none;
-		}
 		article :global(a) {
-			display: none;
-		}
-		footer {
 			display: none;
 		}
 	}

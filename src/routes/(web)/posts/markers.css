@@ -1,0 +1,22 @@
+.markdown-body :where(h1, h2, h3, h4, h5, h6) .icon {
+	width: 0px;
+	height: 1em;
+}
+
+.markdown-body :where(h1, h2, h3, h4, h5, h6) .icon-link {
+	position: relative;
+}
+
+.markdown-body :where(h1, h2, h3, h4, h5, h6) .icon-link::before {
+	content: '#';
+	position: absolute;
+	left: -1rem;
+	top: 0;
+	line-height: 1em;
+	opacity: 0;
+	text-decoration: underline;
+}
+
+.markdown-body :where(h1, h2, h3, h4, h5, h6):hover .icon-link::before {
+	opacity: 1;
+}

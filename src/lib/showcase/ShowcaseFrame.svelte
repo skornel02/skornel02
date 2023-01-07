@@ -2,23 +2,14 @@
 	export let id: string | undefined = undefined;
 </script>
 
-<li id="{id}" class="list-group-item column justify-content-between align-items-center">
+<li
+	id="{id}"
+	class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md"
+>
 	<slot />
 </li>
 
 <style>
-	@keyframes highlight {
-		0% {
-			transform: none;
-		}
-		50% {
-			transform: scale(1.1);
-		}
-		100% {
-			transform: none;
-		}
-	}
-
 	li {
 		transition: 0.1s;
 	}
@@ -28,8 +19,16 @@
 		z-index: 10;
 	}
 
+	li:has(>.divider) {
+		border: 0;
+	}
+
+	li:hover:has(>.divider) {
+		transform: unset;
+	}
+
 	@media print {
-		.list-group-item {
+		li {
 			width: 100%;
 			display: inline-block;
 			page-break-before: always;

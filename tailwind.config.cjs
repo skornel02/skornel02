@@ -22,7 +22,7 @@ module.exports = {
       },
       fontSize: {
         'pageTitle': '6rem',
-        'pageSection': '3.5rem',
+        'pageSection': '3.3rem',
       },
       lineHeight: {
         'pageTitle': '5.5rem',

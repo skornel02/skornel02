@@ -1,8 +1,8 @@
-<div class="my-auto d-flex flex-column">
-	<h2 class="mb-5 text-pageSection">Experience</h2>
-	<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="my-auto flex flex-col">
+	<h2 class="mb-5 text-3xl sm:text-pageSection">Experience</h2>
+	<div class="resume-item">
 		<div class="resume-content mr-auto">
-			<h3 class="mb-0">Dual internship</h3>
+			<h3 class="text-xl mb-0">Dual internship</h3>
 			<div class="subheading mb-3">GriffSoft Zrt.</div>
 			<p>
 				While studying at the University of Szeged I have been working at GriffSoft Zrt. as a dual intern. 
@@ -13,9 +13,9 @@
 			<span class="text-primary">2022 - Present</span>
 		</div>
 	</div>
-	<div class="resume-item d-flex flex-column flex-md-row mb-5">
+	<div class="resume-item">
 		<div class="resume-content mr-auto">
-			<h3 class="mb-0">Full stack developer</h3>
+			<h3 class="text-xl mb-0">Full stack developer</h3>
 			<div class="subheading mb-3">ParkMyst Project</div>
 			<p>
 				What started out as a fun project for our trip, turned into a very serious project. The main
@@ -33,9 +33,9 @@
 			<span class="text-primary">2019 - 2022</span>
 		</div>
 	</div>
-	<div class="resume-item d-flex flex-column flex-md-row mb-5">
+	<div class="resume-item">
 		<div class="resume-content mr-auto">
-			<h3 class="mb-0">Full stack developer</h3>
+			<h3 class="text-xl mb-0">Full stack developer</h3>
 			<div class="subheading mb-3">TRANS HUNGÁRIA SZÁLLÍTMÁNYOZÁSI ÉS LOGISZTIKAI KFT.</div>
 			<p>
 				At this company there was a need for a custom built shift scheduling system, and I got the
@@ -49,7 +49,7 @@
 	</div>
 	<div class="resume-item d-flex flex-column flex-md-row mb-5">
 		<div class="resume-content mr-auto">
-			<h3 class="mb-0">Backend developer</h3>
+			<h3 class="text-xl mb-0">Backend developer</h3>
 			<div class="subheading mb-3">Házizz Project</div>
 			<p>
 				Everyone knows the hardships of a student. You must always be on point with homework and

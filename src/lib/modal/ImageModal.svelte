@@ -1,62 +1,44 @@
 <script lang="ts">
 	import Image from '$lib/Image.svelte';
-	import type {ImageMetadata} from '$lib/images';
-	import {Modal} from 'sveltestrap';
+	import type {ImgLink} from 'src/showcase';
+	import {closeModal} from 'svelte-modals';
 
-	let clazz: string = 'btn btn-primary';
-	export {clazz as class};
-	export let title: string;
-	export let location: string;
-	export let metadata: ImageMetadata[];
+	export let isOpen: boolean;
+	export let link: ImgLink;
 
 	let loading = true;
-	let open = false;
 
-	const toggle = () => {
-		open = !open;
-		if (!open) {
+	$: {
+		if (isOpen) {
 			loading = true;
 		}
-	};
+	}
 
 	const imageLoad = () => {
 		loading = false;
 	};
 </script>
 
-<a
-	href="{location}"
-	on:click|preventDefault="{toggle}"
-	target="_blank"
-	rel="noreferrer noopener"
-	class="{clazz}"
-	title="{title}"
->
-	<slot />
-</a>
-<Modal body header="Image preview" isOpen="{open}" toggle="{toggle}">
-	{#if loading}
-		<div style="--loader-height: {metadata[0].height}px;">
-			<div class="loading-image"></div>
+{#if isOpen}
+	<div role="dialog" class="popup-modal">
+		<div class="modal-box h-full pointer-events-auto flex flex-col">
+			<button class="btn btn-sm btn-circle absolute right-2 top-2" on:click="{closeModal}">✕</button
+			>
+			<h2 class="text-center text-title text-3xl">Image preview</h2>
+			<div class="flex-grow flex-shrink mx-auto my-4 flex flex-col justify-center">
+				{#if loading}
+					<progress class="progress w-56"></progress>
+				{/if}
+				<Image class="max-w-full max-h-full" meta="{link.data.meta}" alt="" on:load="{imageLoad}" />
+			</div>
+			<div class="flex flex-col justify-end">
+				<a
+					href="{link.data.path}"
+					class="btn btn-primary flex justify-center"
+					target="_blank"
+					rel="noreferrer noopener">Open</a
+				>
+			</div>
 		</div>
-	{/if}
-	<Image meta="{metadata}" alt="" on:load="{imageLoad}" />
-	<!-- <img {srcset} alt="preview" class:loading-image={loading} on:load={imageLoad} /> -->
-	<a href="{location}" class="btn btn-primary modal-button" target="_blank" rel="noreferrer noopener">Open</a>
-</Modal>
-
-<style>
-	:global(img) {
-		max-width: 100%;
-		max-height: 100%;
-	}
-	.loading-image {
-		height: 500px !important;
-		height: var(--loader-height) !important;
-	}
-
-	a.modal-button {
-		display: flex;
-		justify-content: center;
-	}
-</style>
+	</div>
+{/if}

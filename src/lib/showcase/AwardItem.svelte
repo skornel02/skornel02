@@ -9,42 +9,42 @@
 </script>
 
 <ShowcaseFrame id="{award.id}">
-	<div class="row">
-		<div class="col-12 d-flex justify-content-center order-0 order-sm-1">
-			<div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center">
+	<div class="flex flex-wrap">
+		<div class="w-full flex justify-center order-1 sm:order-2">
+			<div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center">
 				<div class:highlight="{award.id !== undefined}" class="icon text-warning mx-1">
 					<svelte:component this="{typeToIcon(award.icon)}" size="{32}"/>
 				</div>
 				<div>
-					<span class="badge bg-primary rounded-pill">
+					<span class="badge bg-primary rounded">
 						{award.placement}
 					</span>
 				</div>
 			</div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;">
-				<p class="text-end">
+			<div class="flex-grow basis-0 ml-auto">
+				<p class="text-end text-title">
 					<small>
 						{award.date}
 					</small>
 				</p>
 			</div>
 		</div>
-		<div class="col-12 my-1 order-1 order-sm-0">
-			<div class="fw-bold text-center">{award.title}</div>
+		<div class="w-full my-1 order-2 sm:order-1">
+			<div class="font-bold text-title text-center">{award.title}</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams">
+	<div class="flex flex-wrap">
+		<div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams">
 			{#if Array.isArray(award.team)}
-				<p class="fw-light">Team:</p>
+				<p class="font-light text-title">Team:</p>
 				{#each award.team as member}
 					<TeamMember member="{member}" />
 				{/each}
 			{/if}
 		</div>
 		<div
-			class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"
+			class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"
 		>
 			{#each award.links as link}
 				<ShowcaseLink link="{link}" />
@@ -54,6 +54,18 @@
 </ShowcaseFrame>
 
 <style>
+	@keyframes highlight {
+		0% {
+			transform: none;
+		}
+		50% {
+			transform: scale(1.1);
+		}
+		100% {
+			transform: none;
+		}
+	}
+
 	.icon {
 		min-width: 32px;
 		min-height: 32px;

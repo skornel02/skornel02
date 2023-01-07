@@ -55,7 +55,7 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style>
 	.btn {
 		display: flex;
 		justify-content: center;

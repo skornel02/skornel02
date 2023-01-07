@@ -1,37 +1,36 @@
 <script lang="ts">
-	import {Modal} from 'sveltestrap';
+	import type { PdfLink } from "src/showcase";
+	import {closeModal} from 'svelte-modals';
 
-	let clazz: string = 'btn btn-primary';
-	export {clazz as class};
-	export let title: string;
-	export let location: string;
-
-	let open = false;
-	const toggle = () => (open = !open);
+	export let isOpen: boolean;
+	export let link: PdfLink;
 </script>
 
-<a
-	href="{location}"
-	on:click|preventDefault="{toggle}"
-	target="_blank"
-	rel="noreferrer noopener"
-	class="{clazz}"
-	title="{title}"
->
-	<slot />
-</a>
-<Modal body header="Image preview" isOpen="{open}" toggle="{toggle}" size="lg">
-	<iframe src="{location}" frameborder="0" title="Embedded pfd" width="100%"></iframe>
-	<a href="{location}" class="btn btn-primary modal-button" target="_blank" rel="noreferrer noopener">Open</a>
-</Modal>
+{#if isOpen}
+	<div role="dialog" class="popup-modal">
+		<div class="modal-box h-full pointer-events-auto flex flex-col">
+			<button class="btn btn-sm btn-circle absolute right-2 top-2" on:click="{closeModal}">✕</button
+			>
+			<h2 class="text-center text-title text-3xl">Pdf preview</h2>
+			<div class="max-h-[80%] my-4">
+				<iframe src="{link.url}" frameborder="0" title="Embedded pfd" width="100%"></iframe>
+			</div>
+			<div class="flex-grow flex flex-col justify-end">
+				<a
+					href="{link.url}"
+					class="btn btn-primary flex justify-center"
+					target="_blank"
+					rel="noreferrer noopener">Open</a
+				>
+			</div>
+		</div>
+	</div>
+{/if}
+
 
 <style>
 	iframe {
 		width: 100%;
 		height: 70vh;
-	}
-	a.modal-button {
-		display: flex;
-		justify-content: center;
 	}
 </style>
