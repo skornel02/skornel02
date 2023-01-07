@@ -13,30 +13,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="manifest" href="/manifest.json" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./internal/immutable/assets/_layout-f712be48.css" rel="stylesheet">
-		<link href="./internal/immutable/assets/service-60614438.css" rel="stylesheet">
+		<link href="./internal/immutable/assets/_layout-b36e2b9b.css" rel="stylesheet">
 		<link href="./internal/immutable/assets/Face-a1686178.css" rel="stylesheet">
-		<link href="./internal/immutable/assets/ShlinkTracker-3e15de12.css" rel="stylesheet">
-		<link href="./internal/immutable/assets/_page-0e85a269.css" rel="stylesheet">
-		<link rel="modulepreload" href="./internal/immutable/start-6b27d331.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/index-2ac3dbf5.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/singletons-b3bcd9ea.js">
+		<link href="./internal/immutable/assets/app-0cfcbca7.css" rel="stylesheet">
+		<link href="./internal/immutable/assets/_page-8f2df470.css" rel="stylesheet">
+		<link rel="modulepreload" href="./internal/immutable/start-6eb85e85.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/index-331adb22.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/singletons-bde32163.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/index-1cfb91fd.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/preload-helper-41c905a7.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/control-f5b05b5f.js">
-		<link rel="modulepreload" href="./internal/immutable/components/pages/_layout.svelte-37b32647.js">
+		<link rel="modulepreload" href="./internal/immutable/components/pages/_layout.svelte-dcb69c73.js">
 		<link rel="modulepreload" href="./internal/immutable/modules/pages/_layout.ts-b411215a.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/_layout-34122678.js">
-		<link rel="modulepreload" href="./internal/immutable/components/pages/(web)/_layout.svelte-3fe15db9.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/stores-b5c5c1c0.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/service-3f13ad91.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/Face-590ae698.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/images-649250f9.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/ShlinkTracker-2d8d75ee.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/Icon-111ef362.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/index-1abd32fd.js">
-		<link rel="modulepreload" href="./internal/immutable/components/pages/(web)/_page.svelte-0a0acd72.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/mail-b632c90f.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/list-9e6389d7.js">
+		<link rel="modulepreload" href="./internal/immutable/components/pages/(web)/_layout.svelte-b533eb27.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/stores-90156e97.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/store-286e051b.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/Face-ef673591.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/images-23ecbbff.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/Icon-11041057.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/home-4fd22cb6.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/app-e2047777.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/index-61cc8a1d.js">
+		<link rel="modulepreload" href="./internal/immutable/components/pages/(web)/_page.svelte-57f53507.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/mail-57d28ad4.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/list-26cabb75.js">
 		<link rel="modulepreload" href="./internal/immutable/modules/pages/(web)/_page.ts-94291217.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/_page-da46b06b.js">
 		<script>
@@ -45,7 +46,7 @@
 					navigator.serviceWorker.register('./service-worker.js');
 				});
 			}
-		</script><title>Website of SK</title><!-- HEAD_svelte-s660wh_START --><meta property="og:url" content="https://skornel02.hu/"><!-- HEAD_svelte-s660wh_END --><!-- HEAD_svelte-1fcixaz_START --><meta property="og:title" content="SK" class="svelte-yqum2t"><meta property="og:description" content="Personal site of SK" class="svelte-yqum2t"><meta property="og:type" content="profile" class="svelte-yqum2t"><meta name="description" content="Personal site of SK" class="svelte-yqum2t"><!-- HEAD_svelte-1fcixaz_END -->
+		</script><title>Website of SK</title><!-- HEAD_svelte-s660wh_START --><meta property="og:url" content="https://skornel02.hu/"><!-- HEAD_svelte-s660wh_END --><!-- HEAD_svelte-1fcixaz_START --><meta property="og:title" content="SK"><meta property="og:description" content="Personal site of SK"><meta property="og:type" content="profile"><meta name="description" content="Personal site of SK"><!-- HEAD_svelte-1fcixaz_END -->
 	</head>
 
 	<body>
@@ -54,45 +55,43 @@
 
 
 
-
-
-<header><nav id="sideNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"><div class="container-fluid"><div class="navbar-brand w-lg-100"><span class="d-block d-lg-none">Stefán Kornél</span>
-			<span class="d-none d-lg-block"><div class="svelte-rsfirp">
+<header id="sideNav" class="bg-primary h-topBar fixed navbar z-20 lg:drawer lg:w-sideBar lg:h-screen lg:left-0 lg:top-0 lg:text-center print:hidden"><div class="drawer-side w-full flex flex-row lg:flex-col justify-center"><div class="ml-2 my-auto flex-1 normal-case text-background text-2xl lg:text-center lg:my-0 lg:mx-auto lg:flex-grow-0"><span class="block lg:hidden">Stefán Kornél</span>
+			<span class="hidden lg:flex h-44 justify-center flex-col"><div class="avatar"><div class="svelte-rsfirp">
 <picture><source sizes="160px" type="image/webp" srcset="/images/people/sk.webp 160w"><source sizes="160px" type="image/jpeg" srcset="/images/people/sk.jpg 160w"><source sizes="160px" type="image/avif" srcset="/images/people/sk.avif 160w">
-	<img class="img-fluid img-profile rounded-circle" src="/images/people/sk.avif" alt=""></picture>
-</div></span></div>
-		<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler btn btn-secondary" value="" style=""><span class="navbar-toggler-icon"></span></button>
+	<img class="mask mask-squircle" src="/images/people/sk.avif" alt=""></picture>
+</div></div></span></div>
+		<ul class="menu menu-compact sm:menu-normal menu-horizontal lg:menu-vertical bg-primary text-background text-opacity-75 p-4 w-64"><li><a data-sveltekit-preload-data="hover" href="/" class="svelte-liy8wa active"><span class="hidden sm:inline">Home</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-home inline sm:hidden"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></a></li>
+			<li class="disabled svelte-liy8wa"><a data-sveltekit-preload-data="hover" href="/" class="svelte-liy8wa"><span class="hidden sm:inline">Projects</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-hammer inline sm:hidden"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"></path><path d="M17.64 15 22 10.64"></path><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"></path></svg></a></li>
+			<li><a data-sveltekit-preload-data="hover" href="/posts" class="svelte-liy8wa"><span class="hidden sm:inline">Blog</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-newspaper inline sm:hidden"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg></a></li></ul></div></header>
 
-		
+<div id="page-top" class="h-topBar lg:h-0"></div>
 
-<div id="navbarSupportedContent" class="navbar-collapse"><ul class="navbar-nav svelte-shqovx"><li class="nav-item"><a data-sveltekit-preload-data="hover" class="nav-link svelte-shqovx active" href="/">Home</a></li>
-				<li class="nav-item"><a data-sveltekit-preload-data="hover" class="nav-link disabled svelte-shqovx" href="/">Projects</a></li>
-				<li class="nav-item"><a data-sveltekit-preload-data="hover" class="nav-link svelte-shqovx" href="/posts">Blog</a></li></ul></div></div></nav></header>
-<div id="page-top"></div>
-
-<main class="svelte-15r9722">
+<main class="lg:pl-sideBar lg:pt-0 svelte-11oucbm">
 
 
 
-<div class="container-fluid p-0 svelte-yqum2t"><section class="resume-section p-3 p-lg-5 d-flex d-column svelte-yqum2t" id="about" x-description="SK - Home"><div class="my-auto svelte-yqum2t"><h1 id="name" class="mb-0 svelte-yqum2t"><div class="text-secondary svelte-yqum2t">Stefán</div>
-				<span class="text-primary svelte-yqum2t">Kornél</span></h1>
-			<p class="mb-5 svelte-yqum2t">I am a young tinkerer that loves programming. My current goal is to start working in the
+<div class="md:container md:mx-auto p-0"><section class="resume-section" id="about" data-description="SK - Home"><div class="my-auto"><h1 id="name" class="mb-0 svelte-ms9svp"><div class="text-secondary svelte-ms9svp">Stefán</div>
+				<span class="text-primary">Kornél</span></h1>
+			<p class="mb-5">I am a young tinkerer that loves programming. My current goal is to start working in the
 				field. Learning to bake is in progress!
 			</p>
-			<ul class="list-inline list-social-icons mb-0 svelte-yqum2t"><li class="list-inline-item svelte-yqum2t"><a id="social-card" href="/me" data-sveltekit-reload class="svelte-yqum2t"><div class="icon svelte-yqum2t"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-list "><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div></a></li>
-				<li class="list-inline-item svelte-yqum2t"><a id="social-gh" href="https://github.com/skornel02" class="svelte-yqum2t"><div class="icon svelte-yqum2t"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></div></a></li>
-				<li id="social-fb" class="list-inline-item svelte-yqum2t"><a href="https://www.facebook.com/stefankornel02" class="svelte-yqum2t"><div class="icon svelte-yqum2t"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-facebook "><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></div></a></li>
-				<li id="social-fb" class="list-inline-item svelte-yqum2t"><a href="https://linkedin.com/in/skornel02" class="svelte-yqum2t"><div class="icon svelte-yqum2t"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-linkedin "><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></div></a></li>
-				<li id="social-email" class="list-inline-item svelte-yqum2t"><a href="mailto:contact@skornel02.hu" class="svelte-yqum2t"><div class="icon svelte-yqum2t"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-mail "><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div></a></li></ul></div></section>
+			<d class="mx-0"><a id="social-card" class="btn btn-md btn-outline btn-secondary" href="/me" data-sveltekit-reload><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-list "><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></a>
+				<a id="social-gh" class="btn btn-md btn-outline btn-primary" href="https://github.com/skornel02"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+				<a class="btn btn-md btn-outline btn-primary" href="https://www.facebook.com/stefankornel02"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-facebook "><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+				<a class="btn btn-md btn-outline btn-primary" href="https://linkedin.com/in/skornel02"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-linkedin "><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+				<a class="btn btn-md btn-outline btn-primary" href="mailto:contact@skornel02.hu"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-mail "><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a></d></div></section>
 
-	<section class="resume-section p-3 p-lg-5 d-flex flex-column svelte-yqum2t" id="experience" x-description="SK - Experiences"><div class="my-auto d-flex flex-column"><h2 class="mb-5">Experience</h2>
-	<div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">Dual internship</h3>
+	<section class="resume-section" id="experience" data-description="SK - Experiences"><div class="my-auto flex flex-col"><h2 class="mb-5 text-3xl sm:text-pageSection">Experience</h2>
+	<div class="resume-item"><div class="resume-content mr-auto"><h3 class="text-xl mb-0">Dual internship</h3>
 			<div class="subheading mb-3">GriffSoft Zrt.</div>
 			<p>While studying at the University of Szeged I have been working at GriffSoft Zrt. as a dual intern. 
 				I have been placed on the company&#39;s machine learning team.
 			</p></div>
 		<div class="resume-date text-md-right"><span class="text-primary">2022 - Present</span></div></div>
-	<div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">Full stack developer</h3>
+	<div class="resume-item"><div class="resume-content mr-auto"><h3 class="text-xl mb-0">Full stack developer</h3>
 			<div class="subheading mb-3">ParkMyst Project</div>
 			<p>What started out as a fun project for our trip, turned into a very serious project. The main
 				goal of this project is to provide a platform for game creators where they can create games
@@ -104,14 +103,14 @@
 				<a href="#parkmyst">competition first place</a>.
 			</p></div>
 		<div class="resume-date text-md-right"><span class="text-primary">2019 - 2022</span></div></div>
-	<div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">Full stack developer</h3>
+	<div class="resume-item"><div class="resume-content mr-auto"><h3 class="text-xl mb-0">Full stack developer</h3>
 			<div class="subheading mb-3">TRANS HUNGÁRIA SZÁLLÍTMÁNYOZÁSI ÉS LOGISZTIKAI KFT.</div>
 			<p>At this company there was a need for a custom built shift scheduling system, and I got the
 				chance to work on it. With no previous infrastructure it was my role to negotiate how the
 				system should work, what kind of interface it should have and then delivering it.
 			</p></div>
 		<div class="resume-date text-md-right"><span class="text-primary">2019</span></div></div>
-	<div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">Backend developer</h3>
+	<div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="text-xl mb-0">Backend developer</h3>
 			<div class="subheading mb-3">Házizz Project</div>
 			<p>Everyone knows the hardships of a student. You must always be on point with homework and
 				assignments. To ease this burden, we created a social platform where you can share this
@@ -123,22 +122,22 @@
 			</p></div>
 		<div class="resume-date text-md-right"><span class="text-primary">2018 - 2020</span></div></div></div></section>
 
-	<section class="resume-section p-3 p-lg-5 d-flex flex-column svelte-yqum2t" id="education" x-description="SK - Education"><div class="my-auto d-flex flex-column"><h2 class="mb-5">Education</h2>
-	<div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">University of Szeged</h3>
+	<section class="resume-section" id="education" data-description="SK - Education"><div class="my-auto flex flex-col"><h2 class="mb-5 text-3xl sm:text-pageSection">Education</h2>
+	<div class="resume-item"><div class="resume-content mr-auto"><h3 class="text-xl mb-0">University of Szeged</h3>
 			<div class="subheading mb-3">Institute of informatics</div>
 			<div>Engineering Information Technology</div>
 			<p>Currently studying at the University of Szeged, Faculty of Informatics. I am in my 1st year of my 
 				3.5 year long degree. 
 			</p></div>
 		<div class="resume-date text-md-right"><span class="text-primary">2022 - 2025 (?)</span></div></div>
-	<div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">BMSZC Neumann János Informatikai Technikum</h3>
+	<div class="resume-item"><div class="resume-content mr-auto"><h3 class="text-xl mb-0">BMSZC Neumann János Informatikai Technikum</h3>
 			<div class="subheading mb-3">Vocational secondary school</div>
 			<div>Programming and networking</div>
 			<p>After an intense English year I have learned the fundemantals of the IT industry for 4
 				years. While studying i also took part in a variety of IT competitions.
 			</p></div>
 		<div class="resume-date text-md-right"><span class="text-primary">2017 - 2022</span></div></div>
-	<div class="resume-item d-flex flex-column flex-md-row mb-5"><div class="resume-content mr-auto"><h3 class="mb-0">Budaörsi Herman Ottó</h3>
+	<div class="resume-item"><div class="resume-content mr-auto"><h3 class="text-xl mb-0">Budaörsi Herman Ottó</h3>
 			<div class="subheading mb-3">Primary school</div>
 			<div>Media production</div>
 			<p>I have worked on numerous multimedia projects as a cameraman and also as a video editor. 
@@ -146,461 +145,370 @@
 			</p></div>
 		<div class="resume-date text-md-right"><span class="text-primary">2009 - 2017</span></div></div></div></section>
 
-	<section class="resume-section p-3 p-lg-5 d-flex flex-column svelte-yqum2t" id="skills" x-description="SK - Skills"><div class="my-auto svelte-yqum2t"><h2 class="mb-5 svelte-yqum2t">Skills</h2>
+	<section class="resume-section" id="skills" data-description="SK - Skills"><div class="my-auto"><h2 class="mb-5 text-3xl sm:text-pageSection">Skills</h2>
 
-			<div class="subheading mb-3 svelte-yqum2t">Programming Languages &amp; Tools</div>
-			<ul class="list-inline list-icons svelte-yqum2t"><li class="list-inline-item svelte-yqum2t"><img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="rust" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" alt="svelte" width="40" height="40" class="svelte-yqum2t"></li>
-				<li class="list-inline-item svelte-yqum2t"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40" class="svelte-yqum2t"></li></ul>
-			<img class="d-block mx-auto img-fluid svelte-yqum2t" src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact&theme=light" alt="skornel02's stats on github" width="350"></div></section>
+			<div class="subheading mb-3">Programming Languages &amp; Tools</div>
+			<ul class="flex flex-wrap"><li><img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"></li>
+				<li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"></li>
+				<li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"></li>
+				<li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"></li>
+				<li><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"></li>
+				<li><img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"></li>
+				<li><img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"></li>
+				<li><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"></li>
+				<li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"></li>
+				<li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"></li>
+				<li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"></li>
+				<li><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"></li>
+				<li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"></li>
+				<li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"></li>
+				<li><img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"></li>
+				<li><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" alt="svelte" width="40" height="40"></li>
+				<li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"></li></ul>
+			<img class="block mx-auto" src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact&theme=light" alt="skornel02's stats on github" width="350"></div></section>
 
-	<section class="resume-section p-3 p-lg-5 d-flex flex-column d-none svelte-yqum2t" id="interests" x-description="SK - Interests"><div class="my-auto svelte-yqum2t"><h2 class="mb-5 svelte-yqum2t">Interests</h2>
-			<p class="svelte-yqum2t"></p>
-			<p class="mb-0 svelte-yqum2t"></p></div></section>
+	<section class="resume-section hidden" id="interests" data-description="SK - Interests"><div class="my-auto"><h2 class="mb-5 text-3xl sm:text-pageSection">Interests</h2>
+			<p></p>
+			<p class="mb-0"></p></div></section>
 
-	<section class="resume-section p-3 p-lg-5 d-flex flex-column svelte-yqum2t" id="awards" x-description="SK - Awards"><div class="my-auto svelte-yqum2t"><h2 class="mb-5 svelte-yqum2t">Awards &amp; Certifications</h2>
-			<ul class="list-group svelte-hwgjci"><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="w-100 text-center text-secondary fw-bold separator"><p class="svelte-1ckrydg">2022</p></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-album "><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><polyline points="11 3 11 11 14 8 17 11 17 3"></polyline></svg></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2022-06-14</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">CCNA Routing and Switching: Routing and Switching Essentials</div></div></div>
-	<div class="row"><div class="d-none d-sm-block col-sm-6 d-flex justify-content-center justify-content-sm-start teams"></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/certificates/CCNA-2-certificate.pdf" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1f8k03o" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+	<section class="resume-section svelte-ms9svp" id="awards" data-description="SK - Awards"><div class="my-auto"><h2 class="mb-5 text-3xl sm:text-pageSection">Awards &amp; Certifications</h2>
+			<ul class="flex flex-col px-0 rounded-sm print:block"><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="w-full text-center text-secondary font-bold divider">2022</div>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-album "><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><polyline points="11 3 11 11 14 8 17 11 17 3"></polyline></svg></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end"><small>2022-06-14</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">CCNA Routing and Switching: Routing and Switching Essentials</div></div></div>
+	<div class="flex flex-wrap"><div class="hidden sm:block w-full sm:w-1/2 justify-center sm:justify-start"></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/certificates/CCNA-2-certificate.pdf" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li id="aszev" class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0 highlight"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2022-04-13</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Ágazati és ágazaton belüli specializáció szakmai érettségi vizsgatárgyak versenye - 2022</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/ASZEV2022.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+</li><li id="aszev" class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5 highlight"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2022-04-13</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Ágazati és ágazaton belüli specializáció szakmai érettségi vizsgatárgyak versenye - 2022</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/ASZEV2022.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2022-04-02</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Skills Junior 2022 - Web category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Skills-Junior-Web-2022.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
-</div><div class="showcase-link svelte-mwa367"><a href="https://skillsit.hu/hirek/nagyszeru-eredmenyek-a-skills-junior-webfejleszto-kategoriajanak-dontojen/" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="website"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-globe "><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2022-04-02</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Skills Junior 2022 - Web category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Skills-Junior-Web-2022.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://skillsit.hu/hirek/nagyszeru-eredmenyek-a-skills-junior-webfejleszto-kategoriajanak-dontojen/" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-globe "><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">Finalist</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2022-03-08</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Ifjútudosok tudományos vetélkedő - 2022 - Traditional category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Ifju-Tudosok-2022.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">Finalist</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2022-03-08</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Ifjútudosok tudományos vetélkedő - 2022 - Traditional category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Ifju-Tudosok-2022.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="w-100 text-center text-secondary fw-bold separator"><p class="svelte-1ckrydg">2021</p></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2021-12-04</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Dusza Árpád Országos Programozói Emlékverseny - 2021 - Mobile category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
-	
-</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="w-full text-center text-secondary font-bold divider">2021</div>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2021-12-04</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Dusza Árpád Országos Programozói Emlékverseny - 2021 - Mobile category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Isakov Erik"><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
+</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Dusza-mobil-2021.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
-</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/duszamobile2021" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="Repository"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Dusza-mobil-2021.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/duszamobile2021" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2021-11-20</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Bakonyi Bitfaragó Bajnokság - 2021</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2021-11-20</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Bakonyi Bitfaragó Bajnokság - 2021</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
-</div><div class="showcase-link svelte-mwa367"><a href="https://mik.uni-pannon.hu/szervezet/hirek/kar-tovabbi-hirei/bakonyi-bitfarago-bajnoksag-2022" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="website"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-globe "><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
-</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/b3-2021" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="Repository"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2021.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://mik.uni-pannon.hu/szervezet/hirek/kar-tovabbi-hirei/bakonyi-bitfarago-bajnoksag-2022" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-globe "><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/b3-2021" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">Finalist</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2021-06-22</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">30. Ifjúsági Tudományos és Innovációs Tehetségkutató Verseny</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">Finalist</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2021-06-22</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">30. Ifjúsági Tudományos és Innovációs Tehetségkutató Verseny</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Innovacios-tehetsegkutato-2021.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Innovacios-tehetsegkutato-2021.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-album "><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><polyline points="11 3 11 11 14 8 17 11 17 3"></polyline></svg></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2021-06-03</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">CCNA Routing and Switching: Introduction to Networking</div></div></div>
-	<div class="row"><div class="d-none d-sm-block col-sm-6 d-flex justify-content-center justify-content-sm-start teams"></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/certificates/CCNA-1-certificate.pdf" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1f8k03o" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-album "><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><polyline points="11 3 11 11 14 8 17 11 17 3"></polyline></svg></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end"><small>2021-06-03</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">CCNA Routing and Switching: Introduction to Networking</div></div></div>
+	<div class="flex flex-wrap"><div class="hidden sm:block w-full sm:w-1/2 justify-center sm:justify-start"></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/certificates/CCNA-1-certificate.pdf" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">Finalist</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2021-06-01</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Kódolj Határok Nélkül! - 2021</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://ruzger.hu/"  target="_blank" rel="noreferrer noopener"><div><img src="https://ruzger.hu/kepek/profil_uj.jpg" alt="Ruzsa Gergely Gábor" title="Ruzsa Gergely Gábor" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">Finalist</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2021-06-01</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Kódolj Határok Nélkül! - 2021</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://ruzger.hu/"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Ruzsa Gergely Gábor"><img src="https://ruzger.hu/kepek/profil_uj.jpg" alt="Ruzsa Gergely Gábor" title="Ruzsa Gergely Gábor" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
-</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/khn2021" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="Repository"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/khn2021" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2021-04-17</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Bakonyi Bitfaragó Bajnokság - 2020</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2021-04-17</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Bakonyi Bitfaragó Bajnokság - 2020</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
-</div><div class="showcase-link svelte-mwa367"><a href="https://mik.uni-pannon.hu/szervezet/hirek/kar-tovabbi-hirei/osszefoglalo-a-8-bakonyi-bitfarago-bajnoksagrol" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="website"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-globe "><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://mik.uni-pannon.hu/szervezet/hirek/kar-tovabbi-hirei/osszefoglalo-a-8-bakonyi-bitfarago-bajnoksagrol" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-globe "><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">Finalist</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2021-04-15</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">II. Merklik László problémamegoldó verseny</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">Finalist</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2021-04-15</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">II. Merklik László problémamegoldó verseny</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">II. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2021-01-27</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Neumann János Egyetem Programming contest - 2020</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">II. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2021-01-27</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Neumann János Egyetem Programming contest - 2020</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Isakov Erik"><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/GAMF programozó verseny 2020.pdf" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1f8k03o" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/GAMF programozó verseny 2020.pdf" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">II. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2021-01-05</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">WebGraf - 2020</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">II. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2021-01-05</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">WebGraf - 2020</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="w-100 text-center text-secondary fw-bold separator"><p class="svelte-1ckrydg">2020</p></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2020-12-05</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Dusza Árpád Országos Programozói Emlékverseny - 2020 - Mobile category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
-	
-</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"></div></div>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="w-full text-center text-secondary font-bold divider">2020</div>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2020-12-05</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Dusza Árpád Országos Programozói Emlékverseny - 2020 - Mobile category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Isakov Erik"><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
+</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Dusza-mobil-2020.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
-</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/duszamobile2020" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="Repository"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Dusza-mobil-2020.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/duszamobile2020" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
 </div></div></div>
-</li><li id="parkmyst" class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0 highlight"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2020-11-07</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Szegedi Innovatív Informatika Verseny - 2020 - Software category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li id="parkmyst" class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5 highlight"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2020-11-07</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Szegedi Innovatív Informatika Verseny - 2020 - Software category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/SZIIV-2020.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
-</div><div class="showcase-link svelte-mwa367"><a href="https://www.inf.u-szeged.hu/sziiv2020/eredmenyek#:~:text=hazizz%20velunk%3A%20parkmyst" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="website"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-globe "><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/SZIIV-2020.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://www.inf.u-szeged.hu/sziiv2020/eredmenyek#:~:text=hazizz%20velunk%3A%20parkmyst" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-globe "><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">Finalist</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2020-09-15</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Kódolj Határok Nélkül! - 2020</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://ruzger.hu/"  target="_blank" rel="noreferrer noopener"><div><img src="https://ruzger.hu/kepek/profil_uj.jpg" alt="Ruzsa Gergely Gábor" title="Ruzsa Gergely Gábor" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">Finalist</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2020-09-15</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Kódolj Határok Nélkül! - 2020</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://ruzger.hu/"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Ruzsa Gergely Gábor"><img src="https://ruzger.hu/kepek/profil_uj.jpg" alt="Ruzsa Gergely Gábor" title="Ruzsa Gergely Gábor" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Kodolj-Hatarok-Nelkul-2020.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
-</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/khn2020" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="Repository"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Kodolj-Hatarok-Nelkul-2020.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/khn2020" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">Finalist</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2020-07-06</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Accenture Java competition - 2020</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a disabled target="_blank" rel="noreferrer noopener"><div><img src="https://avatars.githubusercontent.com/u/18264803?v=4" alt="Fekete Máté" title="Fekete Máté" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://mocman.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://avatars.githubusercontent.com/u/14221367?v=4" alt="Várkonyi Tibor" title="Várkonyi Tibor" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">Finalist</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2020-07-06</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Accenture Java competition - 2020</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Fekete Máté"><img src="https://avatars.githubusercontent.com/u/18264803?v=4" alt="Fekete Máté" title="Fekete Máté" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://mocman.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Várkonyi Tibor"><img src="https://avatars.githubusercontent.com/u/14221367?v=4" alt="Várkonyi Tibor" title="Várkonyi Tibor" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Accenture Java 2020.pdf" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1f8k03o" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Accenture Java 2020.pdf" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">Finalist</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2020-05-28</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">29. Ifjúsági Tudományos és Innovációs Tehetségkutató Verseny</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">Finalist</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2020-05-28</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">29. Ifjúsági Tudományos és Innovációs Tehetségkutató Verseny</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Innovacios-tehetsegkutato-2020.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Innovacios-tehetsegkutato-2020.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">39. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2020-04-15</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Nemes Tihamér Nemzetközi Informatikai Tanulmányi Verseny - 2020 - Programming category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Nemes-Tihamer-2020.pdf" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1f8k03o" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">39. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2020-04-15</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Nemes Tihamér Nemzetközi Informatikai Tanulmányi Verseny - 2020 - Programming category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Nemes-Tihamer-2020.pdf" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">II. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2020-02-22</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Dusza Árpád Országos Programozói Emlékverseny - 2020 - Traditional category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
-	
-</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">II. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2020-02-22</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Dusza Árpád Országos Programozói Emlékverseny - 2020 - Traditional category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Isakov Erik"><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
+</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Dusza-2020.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Dusza-2020.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="w-100 text-center text-secondary fw-bold separator"><p class="svelte-1ckrydg">2019</p></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2019-12-07</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Dusza Árpád Országos Programozói Emlékverseny - 2019 - Mobile category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
-	
-</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="w-full text-center text-secondary font-bold divider">2019</div>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2019-12-07</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Dusza Árpád Országos Programozói Emlékverseny - 2019 - Mobile category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Isakov Erik"><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
+</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Dusza-mobil-2019.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
-</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/FelElek" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="Repository"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
-</div><div class="showcase-link svelte-mwa367"><a href="https://play.google.com/store/apps/details?id=com.hazizz.dusza2019" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="PlayStore"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-smartphone "><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg></a>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Dusza-mobil-2019.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://github.com/skornel02/FelElek" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://play.google.com/store/apps/details?id=com.hazizz.dusza2019" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-smartphone "><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">Finalist</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2019-11-09</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Bakonyi Bitfaragó Bajnokság - 2019</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://ruzger.hu/"  target="_blank" rel="noreferrer noopener"><div><img src="https://ruzger.hu/kepek/profil_uj.jpg" alt="Ruzsa Gergely Gábor" title="Ruzsa Gergely Gábor" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">Finalist</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2019-11-09</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Bakonyi Bitfaragó Bajnokság - 2019</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://ruzger.hu/"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Ruzsa Gergely Gábor"><img src="https://ruzger.hu/kepek/profil_uj.jpg" alt="Ruzsa Gergely Gábor" title="Ruzsa Gergely Gábor" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2019-04-12</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Http Alapítvány - Cisco Webex Hacathlon - 2019</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
-	
-</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2019-04-12</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Http Alapítvány - Cisco Webex Hacathlon - 2019</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Isakov Erik"><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
+</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Webex-Teams-Hackathlon-2019-photo.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Webex-Teams-Hackathlon-2019-photo.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li id="hazizz" class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0 highlight"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2019-04-06</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Szegedi Innovatív Informatika Verseny - 2019 - Software category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
-</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
-	
+</li><li id="hazizz" class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5 highlight"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2019-04-06</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Szegedi Innovatív Informatika Verseny - 2019 - Software category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Isakov Erik"><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
+</a><a href="https://vadavar.hu"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Vad Avar"><img src="https://vadavar.hu/me.jpg" alt="Vad Avar" title="Vad Avar" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/SZIIV-2019.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
-</div><div class="showcase-link svelte-mwa367"><a href="https://www.inf.u-szeged.hu/sziiv2019/eredmenyek#:~:text=hazizz%20velunk" target="_blank" rel="noreferrer noopener" class="btn btn-secondary" title="website"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-globe "><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/SZIIV-2019.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
+</div><div class="showcase-link svelte-mwa367"><a href="https://www.inf.u-szeged.hu/sziiv2019/eredmenyek#:~:text=hazizz%20velunk" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-globe "><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">41. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2019-04-05</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Nemes Tihamér Nemzetközi Informatikai Tanulmányi Verseny - 2019 - Programming category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Nemes-Tihamer-2019.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-medal "><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"></circle><path d="M12 18v-2h-.5"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">41. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2019-04-05</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Nemes Tihamér Nemzetközi Informatikai Tanulmányi Verseny - 2019 - Programming category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Nemes-Tihamer-2019.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2019-02-21</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Dusza Árpád Országos Programozói Emlékverseny - 2019 - Traditional category</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"><p class="fw-light svelte-j6fxh0">Team:</p>
-				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
-	
-</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
-	
-</a><a disabled target="_blank" rel="noreferrer noopener"><div><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
-	
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2019-02-21</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Dusza Árpád Országos Programozói Emlékverseny - 2019 - Traditional category</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"><p class="font-light text-title svelte-1rt26e5">Team:</p>
+				<a href="https://github.com/indeednt"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Isakov Erik"><img src="/assets/people/unknownhe.jpeg" alt="Isakov Erik" title="Isakov Erik" class="svelte-707vx6"></div>
+</a><a href="https://gergelyhorvath.com"  target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Horváth Gergely"><img src="/assets/people/unknownhe.jpeg" alt="Horváth Gergely" title="Horváth Gergely" class="svelte-707vx6"></div>
+</a><a disabled target="_blank" rel="noreferrer noopener"><div class="tooltip" data-tip="Stefán Kornél"><img src="/assets/people/sk.jpeg" alt="Stefán Kornél" title="Stefán Kornél" class="svelte-707vx6"></div>
 </a></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Dusza-2019.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Dusza-2019.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li><li class="list-group-item column justify-content-between align-items-center svelte-bmiwkj"><div class="row"><div class="col-12 d-flex justify-content-center order-0 order-sm-1"><div class="flex-grow-0 flex-sm-grow-1 mr-auto" style="flex-basis: 0;"></div>
-			<div class="d-flex justify-content-center"><div class="icon text-warning mx-1 svelte-j6fxh0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-				<div><span class="badge bg-primary rounded-pill svelte-j6fxh0">I. place</span></div></div>
-			<div class="flex-grow-1 ml-auto" style="flex-basis: 0;"><p class="text-end"><small>2019-02-21</small></p></div></div>
-		<div class="col-12 my-1 order-1 order-sm-0"><div class="fw-bold text-center">Secondary School Programming contest - 2018</div></div></div>
-	<div class="row"><div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start teams svelte-j6fxh0"></div>
-		<div class="col-12 col-sm-6 d-flex d-print-none justify-content-center justify-content-sm-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Iskola-programozas-verseny-2018.jpeg" target="_blank" rel="noreferrer noopener" class="btn btn-primary svelte-1fv95wk" title="Reference"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
-
-<div></div>
+</li><li class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md svelte-ja56uu"><div class="flex flex-wrap"><div class="w-full flex justify-center order-1 sm:order-2"><div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center"><div class="icon text-warning mx-1 svelte-1rt26e5"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-trophy "><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+				<div><span class="badge bg-primary rounded svelte-1rt26e5">I. place</span></div></div>
+			<div class="flex-grow basis-0 ml-auto"><p class="text-end text-title"><small>2019-02-21</small></p></div></div>
+		<div class="w-full my-1 order-2 sm:order-1"><div class="font-bold text-title text-center">Secondary School Programming contest - 2018</div></div></div>
+	<div class="flex flex-wrap"><div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams svelte-1rt26e5"></div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"><div class="showcase-link svelte-mwa367"><a href="/assets/competitions/Iskola-programozas-verseny-2018.jpeg" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-file "><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></a>
 </div></div></div>
-</li>
-</ul></div></section>
+</li></ul>
+
+<div id="showcase-modal" class="modal"><div class="modal-box relative"><label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+		<h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+		<p class="py-4">You&#39;ve been selected for a chance to get one year of subscription to use Wikipedia for free!
+		</p>
+		<div class="modal-action"><label for="showcase-modal" class="btn">Yay!</label></div></div>
+</div></div></section></div>
+<input type="checkbox" id="showcase-modal" class="modal-toggle">
+<div class="modal"><div id="showcase-modal-data" class="modal-box"><h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+		<p class="py-4">You&#39;ve been selected for a chance to get one year of subscription to use Wikipedia for free!
+		</p>
+		<div class="modal-action"><label for="showcase-modal" class="btn">Yay!</label></div></div>
 </div></main>
 
-<footer id="footer" class="d-flex d-print-none flex-column justify-content-center align-items-center svelte-15r9722"><p class="svelte-15r9722">Have a nice day! • 2023 © •
-		<a href="/rss.xml"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-rss "><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
-		<img src="https://link.skornel02.hu/t8I9I" alt="" class="svelte-174dowg"></p>
-</footer>
+<footer id="footer" class="flex print:hidden flex-col justify-center items-center lg:pl-sideBar svelte-11oucbm"><p class="my-auto">Have a nice day! • 2023 © •
+		<a href="/rss.xml"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-rss inline text-orange-400 hover:text-orange-700 transition-colors"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		<img src="https://link.skornel02.hu/t8I9I" alt="" class="svelte-174dowg"></p></footer>
 
 
-		<script type="module" data-sveltekit-hydrate="12amn0b">
-			import { start } from "./internal/immutable/start-6b27d331.js";
+
+
+  
+
+
+
+		<script type="module" data-sveltekit-hydrate="1kaxig4">
+			import { start } from "./internal/immutable/start-6eb85e85.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="12amn0b"]').parentNode,
-				version: "1673029369387",
+				target: document.querySelector('[data-sveltekit-hydrate="1kaxig4"]').parentNode,
+				version: "1673110936046",
 				hydrate: {
 					node_ids: [0, 3, 8],
 					data: [null,null,null],

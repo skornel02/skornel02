@@ -29,12 +29,12 @@ const U = [
   "/internal/immutable/assets/Merklik-2021-c483c600.jpeg",
   "/internal/immutable/chunks/Nemes-Tihamer-2019-47dc9912.js",
   "/internal/immutable/assets/Nemes-Tihamer-2019-259bb313.jpeg",
+  "/internal/immutable/chunks/SZIIV-2019-63ec36f4.js",
+  "/internal/immutable/assets/SZIIV-2019-c3c1339f.jpeg",
   "/internal/immutable/chunks/Dusza-mobil-2019-3e4d948d.js",
   "/internal/immutable/assets/Dusza-mobil-2019-721cb137.jpeg",
   "/internal/immutable/chunks/ASZEV2022-7880cdac.js",
   "/internal/immutable/assets/ASZEV2022-89e1cc38.jpeg",
-  "/internal/immutable/chunks/SZIIV-2019-63ec36f4.js",
-  "/internal/immutable/assets/SZIIV-2019-c3c1339f.jpeg",
   "/internal/immutable/chunks/SZIIV-2020-5026d4df.js",
   "/internal/immutable/assets/SZIIV-2020-8240b8b4.jpeg",
   "/internal/immutable/chunks/Skills-Junior-Web-2022-a743f0d7.js",
@@ -45,90 +45,82 @@ const U = [
   "/internal/immutable/assets/sk-c01ce8fa.jpeg",
   "/internal/immutable/chunks/unknownhe-6dfe5866.js",
   "/internal/immutable/assets/unknownhe-54c4279e.jpeg",
-  "/internal/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
-  "/internal/immutable/assets/fira-mono-cyrillic-400-normal-c7d433fd.woff2",
-  "/internal/immutable/assets/fira-mono-greek-ext-400-normal-9e2fe623.woff2",
-  "/internal/immutable/assets/fira-mono-greek-400-normal-a8be01ce.woff2",
-  "/internal/immutable/assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
-  "/internal/immutable/assets/fira-mono-latin-400-normal-e43b3538.woff2",
-  "/internal/immutable/assets/fira-mono-all-400-normal-1e3b098c.woff",
-  "/internal/immutable/assets/github-markdown-625cc4c8.css",
-  "/internal/immutable/assets/_page-0e85a269.css",
-  "/internal/immutable/assets/_page-42a5e5d1.css",
-  "/internal/immutable/assets/_page-47be19b1.css",
-  "/internal/immutable/assets/ShlinkTracker-3e15de12.css",
-  "/internal/immutable/assets/service-60614438.css",
+  "/internal/immutable/assets/_layout-1b24a0f8.css",
+  "/internal/immutable/assets/MeCard-ce2e8493.css",
   "/internal/immutable/assets/Face-a1686178.css",
-  "/internal/immutable/assets/_layout-0e2257eb.css",
-  "/internal/immutable/assets/_post-05855dd5.css",
+  "/internal/immutable/assets/_layout-b36e2b9b.css",
+  "/internal/immutable/assets/_page-547ce551.css",
   "/internal/immutable/assets/_page-defec1af.css",
-  "/internal/immutable/assets/CardNavigation-abeca64d.css",
-  "/internal/immutable/assets/_page-162fa728.css",
-  "/internal/immutable/assets/MeCard-4c917125.css",
-  "/internal/immutable/assets/_layout-f712be48.css",
-  "/internal/immutable/start-6b27d331.js",
-  "/internal/immutable/chunks/list-9e6389d7.js",
-  "/internal/immutable/chunks/singletons-b3bcd9ea.js",
-  "/internal/immutable/chunks/index-2ac3dbf5.js",
-  "/internal/immutable/chunks/control-f5b05b5f.js",
-  "/internal/immutable/chunks/preload-helper-41c905a7.js",
-  "/internal/immutable/components/pages/_layout.svelte-37b32647.js",
+  "/internal/immutable/assets/github-markdown-625cc4c8.css",
+  "/internal/immutable/assets/_page-8f2df470.css",
+  "/internal/immutable/assets/_page-42a5e5d1.css",
+  "/internal/immutable/assets/_post-2f710471.css",
+  "/internal/immutable/assets/app-0cfcbca7.css",
+  "/internal/immutable/chunks/index-61cc8a1d.js",
+  "/internal/immutable/start-6eb85e85.js",
   "/internal/immutable/chunks/_layout-34122678.js",
-  "/internal/immutable/components/error.svelte-032ee067.js",
-  "/internal/immutable/chunks/Icon-111ef362.js",
-  "/internal/immutable/chunks/images-649250f9.js",
-  "/internal/immutable/components/pages/(card)/me/_page.svelte-33b3bdeb.js",
-  "/internal/immutable/chunks/stores-b5c5c1c0.js",
-  "/internal/immutable/chunks/_page-da46b06b.js",
-  "/internal/immutable/chunks/mail-b632c90f.js",
+  "/internal/immutable/components/error.svelte-7d5798b6.js",
+  "/internal/immutable/chunks/stores-90156e97.js",
+  "/internal/immutable/components/pages/(web)/posts/_page.svelte-d7552fb1.js",
+  "/internal/immutable/chunks/store-286e051b.js",
+  "/internal/immutable/chunks/images-23ecbbff.js",
+  "/internal/immutable/components/pages/(card)/me/_page.svelte-04fdd42c.js",
+  "/internal/immutable/chunks/mail-57d28ad4.js",
   "/internal/immutable/chunks/runOnEveryParentUntil-67f0ce31.js",
-  "/internal/immutable/components/pages/(none)/me-card-wrapped/_page.svelte-33b3bdeb.js",
-  "/internal/immutable/chunks/0-8e0a7449.js",
-  "/internal/immutable/components/pages/(web)/posts/_post_/_page.svelte-2beff5cc.js",
-  "/internal/immutable/chunks/_page-5b80b3e7.js",
-  "/internal/immutable/chunks/_layout-4555baaa.js",
-  "/internal/immutable/components/pages/(none)/readme/_page.svelte-ea3ef774.js",
-  "/internal/immutable/chunks/CardNavigation-00365559.js",
-  "/internal/immutable/chunks/1-3b350bfd.js",
-  "/internal/immutable/chunks/2-09a5359d.js",
-  "/internal/immutable/chunks/3-9487acb3.js",
-  "/internal/immutable/chunks/4-3f9c8e99.js",
-  "/internal/immutable/chunks/5-a2770104.js",
-  "/internal/immutable/chunks/6-5708b39d.js",
-  "/internal/immutable/chunks/8-ae233a27.js",
-  "/internal/immutable/chunks/9-1bb35758.js",
-  "/internal/immutable/chunks/10-34f108a1.js",
-  "/internal/immutable/chunks/11-e0872d54.js",
+  "/internal/immutable/components/pages/(none)/me-card-wrapped/_page.svelte-04fdd42c.js",
+  "/internal/immutable/chunks/_page-da46b06b.js",
+  "/internal/immutable/chunks/singletons-bde32163.js",
+  "/internal/immutable/chunks/index-331adb22.js",
+  "/internal/immutable/chunks/index-1cfb91fd.js",
+  "/internal/immutable/chunks/control-f5b05b5f.js",
+  "/internal/immutable/components/pages/_layout.svelte-dcb69c73.js",
+  "/internal/immutable/chunks/home-4fd22cb6.js",
+  "/internal/immutable/chunks/Icon-11041057.js",
+  "/internal/immutable/components/pages/(web)/posts/_post_/_page.svelte-790f9f11.js",
+  "/internal/immutable/chunks/CardNavigation-ae105502.js",
+  "/internal/immutable/chunks/list-26cabb75.js",
+  "/internal/immutable/components/pages/(web)/_layout.svelte-b533eb27.js",
+  "/internal/immutable/chunks/preload-helper-41c905a7.js",
+  "/internal/immutable/chunks/2-d4d76490.js",
+  "/internal/immutable/chunks/3-4f2da317.js",
+  "/internal/immutable/chunks/4-46af381d.js",
+  "/internal/immutable/chunks/6-3da07223.js",
+  "/internal/immutable/chunks/9-ea3c7685.js",
+  "/internal/immutable/chunks/10-9f9266ae.js",
+  "/internal/immutable/chunks/11-d3a18666.js",
   "/internal/immutable/chunks/pathseg-234b9b0b.js",
+  "/internal/immutable/chunks/app-e2047777.js",
   "/internal/immutable/modules/pages/_layout.ts-b411215a.js",
-  "/internal/immutable/components/pages/(card)/_layout.svelte-ff305816.js",
+  "/internal/immutable/components/pages/(card)/_layout.svelte-65d00242.js",
   "/internal/immutable/modules/pages/(web)/_page.ts-94291217.js",
   "/internal/immutable/modules/pages/(web)/posts/_page.ts-e64b46af.js",
-  "/internal/immutable/chunks/7-c293fcdf.js",
-  "/internal/immutable/modules/pages/(web)/posts/_post_/_page.ts-91ea42f1.js",
-  "/internal/immutable/chunks/MeCard-a18d6ebb.js",
-  "/internal/immutable/chunks/index-1abd32fd.js",
-  "/internal/immutable/chunks/index-1d2e9e63.js",
+  "/internal/immutable/modules/pages/(web)/posts/_post_/_page.ts-361a735b.js",
+  "/internal/immutable/chunks/_post-76650bc1.js",
+  "/internal/immutable/chunks/1-ea0fd86c.js",
+  "/internal/immutable/chunks/0-f4bb33fb.js",
+  "/internal/immutable/chunks/5-3fe2ec34.js",
+  "/internal/immutable/chunks/7-6015051f.js",
+  "/internal/immutable/chunks/8-af5a508e.js",
+  "/internal/immutable/chunks/index-4413829e.js",
   "/internal/immutable/chunks/loopTypewriter-80568ecd.js",
   "/internal/immutable/chunks/writeEffect-748b5f3a.js",
   "/internal/immutable/chunks/sleep-ea0e718f.js",
   "/internal/immutable/chunks/scramble-48e08db1.js",
   "/internal/immutable/chunks/typewriter-1e983e07.js",
-  "/internal/immutable/chunks/_page-17a318e7.js",
-  "/internal/immutable/chunks/emojik-es-a-windows-d6daef35.js",
-  "/internal/immutable/chunks/hidden-post-127f593e.js",
-  "/internal/immutable/chunks/welcome-6369eb82.js",
+  "/internal/immutable/chunks/emojik-es-a-windows-ed526d21.js",
+  "/internal/immutable/chunks/hidden-post-d55a08e0.js",
+  "/internal/immutable/chunks/welcome-05271941.js",
   "/internal/immutable/chunks/getLongestTextElement-29cbbbbc.js",
+  "/internal/immutable/chunks/_page-17a318e7.js",
+  "/internal/immutable/chunks/MeCard-1ca3e3c3.js",
+  "/internal/immutable/chunks/Face-ef673591.js",
+  "/internal/immutable/components/pages/(card)/card/_page.svelte-957c5428.js",
+  "/internal/immutable/components/pages/(none)/readme/_page.svelte-4f86e67d.js",
+  "/internal/immutable/components/pages/(web)/404/_page.svelte-df295d29.js",
   "/internal/immutable/chunks/giscus.es-01a213ab.js",
-  "/internal/immutable/chunks/_post-518c6967.js",
-  "/internal/immutable/chunks/Face-590ae698.js",
-  "/internal/immutable/components/pages/(card)/card/_page.svelte-43946c45.js",
-  "/internal/immutable/chunks/ShlinkTracker-2d8d75ee.js",
-  "/internal/immutable/chunks/service-3f13ad91.js",
-  "/internal/immutable/components/pages/(web)/_layout.svelte-3fe15db9.js",
-  "/internal/immutable/components/pages/(web)/posts/_page.svelte-27a638b6.js",
-  "/internal/immutable/components/pages/(web)/404/_page.svelte-73fcdc0e.js",
-  "/internal/immutable/components/pages/(web)/_page.svelte-0a0acd72.js"
+  "/internal/immutable/chunks/_page-79625c92.js",
+  "/internal/immutable/components/pages/(web)/_page.svelte-57f53507.js",
+  "/internal/immutable/chunks/_layout-b3c0524e.js"
 ], x = [
   "/.nojekyll",
   "/android-chrome-192x192.png",
@@ -270,7 +262,7 @@ const U = [
   "/images/people/unknownhe.jpg",
   "/images/people/unknownhe.webp",
   "/images/people/unknownhe.avif"
-], N = "1673029369387";
+], B = "1673110936046";
 try {
   self["workbox:core:6.5.3"] && _();
 } catch {
@@ -285,26 +277,26 @@ class l extends Error {
     super(s), this.name = e, this.details = t;
   }
 }
-const h = {
+const m = {
   googleAnalytics: "googleAnalytics",
   precache: "precache-v2",
   prefix: "workbox",
   runtime: "runtime",
   suffix: typeof registration < "u" ? registration.scope : ""
-}, y = (a) => [h.prefix, a, h.suffix].filter((e) => e && e.length > 0).join("-"), S = (a) => {
-  for (const e of Object.keys(h))
+}, y = (a) => [m.prefix, a, m.suffix].filter((e) => e && e.length > 0).join("-"), S = (a) => {
+  for (const e of Object.keys(m))
     a(e);
-}, j = {
+}, w = {
   updateDetails: (a) => {
     S((e) => {
-      typeof a[e] == "string" && (h[e] = a[e]);
+      typeof a[e] == "string" && (m[e] = a[e]);
     });
   },
-  getGoogleAnalyticsName: (a) => a || y(h.googleAnalytics),
-  getPrecacheName: (a) => a || y(h.precache),
-  getPrefix: () => h.prefix,
-  getRuntimeName: (a) => a || y(h.runtime),
-  getSuffix: () => h.suffix
+  getGoogleAnalyticsName: (a) => a || y(m.googleAnalytics),
+  getPrecacheName: (a) => a || y(m.precache),
+  getPrefix: () => m.prefix,
+  getRuntimeName: (a) => a || y(m.runtime),
+  getSuffix: () => m.suffix
 };
 function v(a, e) {
   const t = e();
@@ -510,12 +502,12 @@ class $ {
     ) : null;
     try {
       await r.put(n, u ? i.clone() : i);
-    } catch (m) {
-      if (m instanceof Error)
-        throw m.name === "QuotaExceededError" && await Z(), m;
+    } catch (h) {
+      if (h instanceof Error)
+        throw h.name === "QuotaExceededError" && await Z(), h;
     }
-    for (const m of this.iterateCallbacks("cacheDidUpdate"))
-      await m({
+    for (const h of this.iterateCallbacks("cacheDidUpdate"))
+      await h({
         cacheName: o,
         oldResponse: f,
         newResponse: i.clone(),
@@ -584,7 +576,7 @@ class $ {
 }
 class G {
   constructor(e = {}) {
-    this.cacheName = j.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
+    this.cacheName = w.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
   }
   handle(e) {
     const [t] = this.handleAll(e);
@@ -643,7 +635,7 @@ class G {
 }
 class p extends G {
   constructor(e = {}) {
-    e.cacheName = j.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(p.copyRedirectedCacheableResponsesPlugin);
+    e.cacheName = w.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(p.copyRedirectedCacheableResponsesPlugin);
   }
   async _handle(e, t) {
     const s = await t.cacheMatch(e);
@@ -694,7 +686,7 @@ p.copyRedirectedCacheableResponsesPlugin = {
 class Q {
   constructor({ cacheName: e, plugins: t = [], fallbackToNetwork: s = !0 } = {}) {
     this._urlsToCacheKeys = /* @__PURE__ */ new Map(), this._urlsToCacheModes = /* @__PURE__ */ new Map(), this._cacheKeysToIntegrities = /* @__PURE__ */ new Map(), this._strategy = new p({
-      cacheName: j.getPrecacheName(e),
+      cacheName: w.getPrecacheName(e),
       plugins: [
         ...t,
         new z({ precacheController: this })
@@ -786,18 +778,18 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
   }
 }
 let R;
-const B = () => (R || (R = new Q()), R);
+const K = () => (R || (R = new Q()), R);
 try {
   self["workbox:routing:6.5.3"] && _();
 } catch {
 }
-const K = "GET", w = (a) => a && typeof a == "object" ? a : { handle: a };
+const L = "GET", j = (a) => a && typeof a == "object" ? a : { handle: a };
 class b {
-  constructor(e, t, s = K) {
-    this.handler = w(t), this.match = e, this.method = s;
+  constructor(e, t, s = L) {
+    this.handler = j(t), this.match = e, this.method = s;
   }
   setCatchHandler(e) {
-    this.catchHandler = w(e);
+    this.catchHandler = j(e);
   }
 }
 class X extends b {
@@ -852,20 +844,20 @@ class Y {
     let u;
     try {
       u = c.handle({ url: s, request: e, event: t, params: i });
-    } catch (m) {
-      u = Promise.reject(m);
+    } catch (h) {
+      u = Promise.reject(h);
     }
     const f = o && o.catchHandler;
-    return u instanceof Promise && (this._catchHandler || f) && (u = u.catch(async (m) => {
+    return u instanceof Promise && (this._catchHandler || f) && (u = u.catch(async (h) => {
       if (f)
         try {
           return await f.handle({ url: s, request: e, event: t, params: i });
         } catch (C) {
-          C instanceof Error && (m = C);
+          C instanceof Error && (h = C);
         }
       if (this._catchHandler)
         return this._catchHandler.handle({ url: s, request: e, event: t });
-      throw m;
+      throw h;
     })), u;
   }
   findMatchingRoute({ url: e, sameOrigin: t, request: s, event: n }) {
@@ -878,11 +870,11 @@ class Y {
     }
     return {};
   }
-  setDefaultHandler(e, t = K) {
-    this._defaultHandlerMap.set(t, w(e));
+  setDefaultHandler(e, t = L) {
+    this._defaultHandlerMap.set(t, j(e));
   }
   setCatchHandler(e) {
-    this._catchHandler = w(e);
+    this._catchHandler = j(e);
   }
   registerRoute(e) {
     this._routes.has(e.method) || this._routes.set(e.method, []), this._routes.get(e.method).push(e);
@@ -959,7 +951,7 @@ class ne extends b {
   }
 }
 function ie(a) {
-  const e = B(), t = new ne(e, a);
+  const e = K(), t = new ne(e, a);
   te(t);
 }
 const oe = "-precache-", ce = async (a, e = oe) => {
@@ -968,24 +960,24 @@ const oe = "-precache-", ce = async (a, e = oe) => {
 };
 function re() {
   self.addEventListener("activate", (a) => {
-    const e = j.getPrecacheName();
+    const e = w.getPrecacheName();
     a.waitUntil(ce(e).then((t) => {
     }));
   });
 }
 function le(a) {
-  B().precache(a);
+  K().precache(a);
 }
 function ue(a, e) {
   le(a), ie(e);
 }
-console.log("Hello from service-worker.js", { build: U, files: x, prerendered: T, version: N });
-const L = [...x, ...T, ...U].filter((a) => !a.endsWith(".jpeg") && !a.endsWith(".jpg") && !a.endsWith(".avif") && !a.endsWith(".webp") && !a.endsWith(".png") && !a.endsWith(".pdf")).filter((a) => !a.startsWith("/."));
-console.log("Service worker urls: ", L);
+console.log("Hello from service-worker.js", { build: U, files: x, prerendered: T, version: B });
+const N = [...x, ...T, ...U].filter((a) => !a.endsWith(".jpeg") && !a.endsWith(".jpg") && !a.endsWith(".avif") && !a.endsWith(".webp") && !a.endsWith(".png") && !a.endsWith(".pdf")).filter((a) => !a.startsWith("/."));
+console.log("Service worker urls: ", N);
 ue(
-  L.map((a) => ({
+  N.map((a) => ({
     url: a,
-    revision: N
+    revision: B
   })),
   {
     cleanURLs: !1
