@@ -35,45 +35,34 @@
 </svelte:head>
 
 <div class="container">
-	<h1>Blog Posts</h1>
+	<h1 class="text-4xl text-center">Blog Posts</h1>
+	<div class="divider" >Search</div>
 	<div id="search">
 		<input  
 			bind:value="{search}"
-			class="form-control form-control-lg"
+			class="input input-bordered w-full "
 			type="text"
-			placeholder="Search..."
+			placeholder="Title..."
 		/>
 	</div>
-	<hr />
+	<div class="divider" >Posts</div>
 	<div class="d-flex flex-column">
 		{#each postsShown as post, index}
-			<div id="post-{index}" class="w-100 d-flex flex-column post">
-				<h2>
+			<div id="post-{index}" class="w-100 flex flex-col p-4">
+				<h2 class="text-xl">
 					{post.metadata.title}
 				</h2>
 				<p>
 					{post.metadata.description ?? 'No description'}
 				</p>
-				<div class="d-flex justify-content-end">
-					<div class="d-flex flex-column">
-						<a href="{post.path}" class="btn btn-outline-primary">Read</a>
+				<div class="flex justify-end">
+					<div class="flex flex-col">
+						<a href="{post.path}" class="btn btn-outline btn-primary">Read</a>
 						<p>{new Date(post.metadata.date).toLocaleDateString()}</p>
 					</div>
 				</div>
-				<hr />
+				<div class="divider"/>
 			</div>
 		{/each}
 	</div>
 </div>
-
-<style lang="scss">
-	.post {
-		padding: 1em;
-		h2 {
-			font-size: 1.2rem;
-		}
-		hr {
-			color: var(--color-primary);
-		}
-	}
-</style>

@@ -34,7 +34,7 @@ export interface SeparatorEntry extends ShowcaseEntry {
 	text: string;
 }
 
-interface ShowcaseItem extends ShowcaseEntry {
+export interface ShowcaseItem extends ShowcaseEntry {
 	title: string;
 	icon: string;
 	links: Array<SimpleLink | PdfLink | ImgLink>;

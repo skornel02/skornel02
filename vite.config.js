@@ -15,13 +15,6 @@ const config = defineConfig(({mode}) => ({
 			allow: ['./static/'],
 		},
 	},
-	css: {
-		preprocessorOptions: {
-			scss: {
-				additionalData: '@use "src/variables.scss" as *;',
-			},
-		},
-	},
 	plugins: [
 		sveltekit(),
 		vitePluginSvelteTemplateTransformer({

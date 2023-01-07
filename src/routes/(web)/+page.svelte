@@ -4,7 +4,7 @@
 	import {onMount} from 'svelte';
 	import Showcase from '$lib/showcase/Showcase.svelte';
 	import {animateScroll} from 'svelte-scrollto-element';
-	import {backOut, circInOut} from 'svelte/easing';
+	import {circInOut, sineInOut} from 'svelte/easing';
 	import Experiences from '$lib/experiences/Experiences.svelte';
 	import Education from '$lib/experiences/Education.svelte';
 
@@ -37,11 +37,11 @@
 
 		let index = 0;
 		document.querySelectorAll('.resume-section').forEach((el) => {
-			if (el.classList.contains('d-none')) return;
+			if (el.classList.contains('hidden')) return;
 			sections[el.id] = {
 				index: index++,
 				top: document.getElementById(el.id)!.offsetTop,
-				title: document.getElementById(el.id)!.getAttribute('x-description') ?? 'SK - Home',
+				title: document.getElementById(el.id)!.getAttribute('data-description') ?? 'SK - Home',
 			};
 		});
 		const top = sections['about'].top ?? 0;
@@ -57,7 +57,7 @@
 				e.preventDefault();
 				animateScroll.scrollTo({
 					element: document.getElementById(Object.keys(sections)[currentSection.index - 1])!,
-					duration: 250,
+					duration: 350,
 					easing: circInOut,
 				});
 			}
@@ -66,7 +66,7 @@
 				e.preventDefault();
 				animateScroll.scrollTo({
 					element: document.getElementById(Object.keys(sections)[currentSection.index + 1])!,
-					duration: 250,
+					duration: 350,
 					easing: circInOut,
 				});
 			}
@@ -75,8 +75,8 @@
 				e.preventDefault();
 				animateScroll.scrollTo({
 					element: document.getElementById(Object.keys(sections)[currentSection.index - 1])!,
-					duration: 0,
-					easing: backOut,
+					duration: 500,
+					easing: sineInOut,
 				});
 			}
 		} else if (e.key === 'PageDown') {
@@ -84,8 +84,8 @@
 				e.preventDefault();
 				animateScroll.scrollTo({
 					element: document.getElementById(Object.keys(sections)[currentSection.index + 1])!,
-					duration: 0,
-					easing: backOut,
+					duration: 500,
+					easing: sineInOut,
 				});
 			}
 		} else if (e.key === 'h') {
@@ -105,9 +105,9 @@
 </svelte:head>
 
 <div class="md:container md:mx-auto p-0">
-	<section class="resume-section p-3 lg:p-5 flex flex-col" id="about" x-description="SK - Home">
+	<section class="resume-section" id="about" data-description="SK - Home">
 		<div class="my-auto">
-			<h1 id="name" class="mb-0 text-pageTitle leading-pageTitle">
+			<h1 id="name" class="mb-0">
 				<div class="text-secondary">Stefán</div>
 				<span class="text-primary">Kornél</span>
 			</h1>
@@ -147,33 +147,21 @@
 		</div>
 	</section>
 
-	<section
-		class="resume-section p-3 p-lg-5 flex flex-col"
-		id="experience"
-		x-description="SK - Experiences"
-	>
+	<section class="resume-section" id="experience" data-description="SK - Experiences">
 		<Experiences />
 	</section>
 
-	<section
-		class="resume-section p-3 p-lg-5 flex flex-col"
-		id="education"
-		x-description="SK - Education"
-	>
+	<section class="resume-section" id="education" data-description="SK - Education">
 		<Education />
 	</section>
 
-	<section
-		class="resume-section p-3 p-lg-5 flex flex-col"
-		id="skills"
-		x-description="SK - Skills"
-	>
+	<section class="resume-section" id="skills" data-description="SK - Skills">
 		<div class="my-auto">
-			<h2 class="mb-5 text-pageSection">Skills</h2>
+			<h2 class="mb-5 text-3xl sm:text-pageSection">Skills</h2>
 
 			<div class="subheading mb-3">Programming Languages &amp; Tools</div>
-			<ul class="list-inline list-icons">
-				<li class="list-inline-item">
+			<ul class="flex flex-wrap">
+				<li>
 					<img
 						src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg"
 						alt="arduino"
@@ -181,7 +169,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
 						alt="bootstrap"
@@ -189,7 +177,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
 						alt="csharp"
@@ -197,7 +185,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
 						alt="css3"
@@ -205,7 +193,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
 						alt="figma"
@@ -213,7 +201,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
 						alt="firebase"
@@ -221,7 +209,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg"
 						alt="flutter"
@@ -229,7 +217,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
 						alt="git"
@@ -237,7 +225,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
 						alt="html5"
@@ -245,7 +233,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
 						alt="java"
@@ -253,7 +241,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
 						alt="javascript"
@@ -261,7 +249,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
 						alt="postman"
@@ -269,7 +257,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
 						alt="react"
@@ -277,7 +265,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg"
 						alt="rust"
@@ -285,7 +273,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg"
 						alt="spring"
@@ -293,7 +281,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg"
 						alt="svelte"
@@ -301,7 +289,7 @@
 						height="40"
 					/>
 				</li>
-				<li class="list-inline-item">
+				<li>
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
 						alt="typescript"
@@ -321,101 +309,45 @@
 		</div>
 	</section>
 
-	<section
-		class="resume-section p-3 p-lg-5 flex-col hidden"
-		id="interests"
-		x-description="SK - Interests"
-	>
+	<section class="resume-section hidden" id="interests" data-description="SK - Interests">
 		<div class="my-auto">
-			<h2 class="mb-5 text-pageSection">Interests</h2>
+			<h2 class="mb-5 text-3xl sm:text-pageSection">Interests</h2>
 			<p></p>
 			<p class="mb-0"></p>
 		</div>
 	</section>
 
-	<section class="resume-section p-3 p-lg-5 flex flex-col" id="awards" x-description="SK - Awards">
+	<section class="resume-section" id="awards" data-description="SK - Awards">
 		<div class="my-auto">
-			<h2 class="mb-5 text-pageSection">Awards &amp; Certifications</h2>
+			<h2 class="mb-5 text-3xl sm:text-pageSection">Awards &amp; Certifications</h2>
 			<Showcase />
 		</div>
 	</section>
 </div>
+<input type="checkbox" id="showcase-modal" class="modal-toggle" />
+<div class="modal">
+	<div id="showcase-modal-data" class="modal-box">
+		<h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+		<p class="py-4">
+			You've been selected for a chance to get one year of subscription to use Wikipedia for free!
+		</p>
+		<div class="modal-action">
+			<label for="showcase-modal" class="btn">Yay!</label>
+		</div>
+	</div>
+</div>
 
-<style lang="scss">
-	@media (max-width: 768px) {
-		h1 {
-			font-size: 3rem;
-			line-height: 3rem;
-		}
-		h2 {
-			font-size: 2rem;
-		}
-	}
-
-	:global(.icon) {
-		display: inline-block;
-		width: 32px;
-		height: 32px;
-	}
-
-	:global(section.resume-section) {
-		border-bottom: 1px solid;
-		border-color: var(--color-secondary);
-		padding-top: 5rem !important;
-		padding-bottom: 5rem !important;
-	}
-
-	:global(section.resume-section) :global(.resume-item) :global(.resume-date) {
-		min-width: max-content;
-	}
-
-	@media (min-width: 768px) {
-		section:global(.resume-section) {
-			min-height: 100vh;
-		}
-
-		:global(section.resume-section) :global(.resume-item) :global(.resume-date) {
-			min-width: 12rem;
-		}
-	}
-
-	@media (min-width: 992px) {
-		:global(section.resume-section) {
-			padding-top: 3rem !important;
-			padding-bottom: 3rem !important;
-		}
-	}
-
+<style>
 	@media print {
-		:global(section.resume-section) {
-			padding-top: 1rem !important;
-			padding-bottom: 1rem !important;
-			border-bottom-width: 0;
-
-			:first-child {
-				padding-top: 0 !important;
-				margin-top: 0 !important;
-			}
-
-			:global(h2) {
-				text-align: center;
-			}
-		}
-
 		#name {
 			text-align: center;
-			div {
-				display: inline;
-			}
+		}
+		#name div {
+			display: inline;
 		}
 
-		:global(#awards.resume-section) {
+		#awards.resume-section {
 			page-break-inside: unset;
-		}
-
-		:global(.resume-item) {
-			break-inside: avoid;
-			page-break-inside: avoid;
 		}
 	}
 </style>

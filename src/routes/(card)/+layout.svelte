@@ -30,7 +30,7 @@
 
 <ShlinkTracker shlinkUrl="{shlinkUrl}" />
 
-<style lang="scss">
+<style>
 	#content {
 		padding: 2rem 1rem;
 		min-width: 320px;

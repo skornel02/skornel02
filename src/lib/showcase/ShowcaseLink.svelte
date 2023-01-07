@@ -1,32 +1,42 @@
 <script lang="ts">
 	import ImageModal from '$lib/modal/ImageModal.svelte';
 	import PdfModal from '$lib/modal/PdfModal.svelte';
+	import {openModal} from 'svelte-modals';
 	import type {ImgLink, PdfLink, SimpleLink} from '../../showcase';
 	import {typeToIcon} from './showcase-helper';
 
 	export let link: SimpleLink | PdfLink | ImgLink;
+
+	let hrefPath = '';
+	switch (link.type) {
+		case 'simple':
+		case 'pdf':
+			hrefPath = link.url;
+			break;
+		case 'img':
+			hrefPath = link.data.path;
+			break;
+	}
+
+	const handleModal = () => {
+		if (link.type === 'pdf') {
+			openModal(PdfModal, {
+				link
+			});
+		} else if (link.type === 'img') {
+			openModal(ImageModal, {
+				link,
+			});
+		} else if (link.type === 'simple') {
+			window.open(link.url, '_blank');
+		}
+	};
 </script>
 
 <div class="showcase-link">
-	{#if link.type === 'img'}
-		<ImageModal location="{link.data.path}" title="{link.text}" metadata="{link.data.meta}">
-			<svelte:component this="{typeToIcon(link.icon)}" size="{24}" />
-		</ImageModal>
-	{:else if link.type === 'pdf'}
-		<PdfModal location="{link.url}" title="{link.text}">
-			<svelte:component this="{typeToIcon(link.icon)}" size="{24}" />
-		</PdfModal>
-	{:else if link.type === 'simple'}
-		<a
-			href="{link.url}"
-			target="_blank"
-			rel="noreferrer noopener"
-			class="btn btn-secondary"
-			title="{link.text}"
-		>
-			<svelte:component this="{typeToIcon(link.icon)}" size="{24}" />
-		</a>
-	{/if}
+	<a href="{hrefPath}" on:click|preventDefault="{handleModal}" class="btn btn-primary">
+		<svelte:component this="{typeToIcon(link.icon)}" size="{24}" />
+	</a>
 </div>
 
 <style>

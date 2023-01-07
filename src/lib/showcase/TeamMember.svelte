@@ -1,10 +1,7 @@
 <script lang="ts">
-	import {Tooltip} from 'sveltestrap';
 	import {unknownHeSrc, type Person} from '$lib/people';
 
 	export let member: Person;
-
-	let elem: HTMLElement;
 
 	let src = member.pictureUrl;
 
@@ -14,10 +11,9 @@
 </script>
 
 <a href="{member.website}" disabled="{member.website === undefined}" target="_blank" rel="noreferrer noopener">
-	<div bind:this="{elem}">
+	<div class="tooltip" data-tip="{member.name}">
 		<img src="{src}" alt="{member.name}" title="{member.name}" on:error="{onError}" />
 	</div>
-	<Tooltip target="{elem}">{member.name}</Tooltip>
 </a>
 
 <style>
