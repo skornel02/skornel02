@@ -9,7 +9,7 @@
 	};
 </script>
 
-<Typewriter cascade="{true}" interval="{100}" on:done="{onDone}">
+<Typewriter mode="cascade" interval="{100}" on:done="{onDone}">
 	<h1>
 		<span class="text-secondary">Stefán</span>
 		<span class="text-primary">Kornél</span>
