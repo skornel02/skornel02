@@ -8,22 +8,21 @@
 	import '../../app.css';
 
 	export let data: LayoutData;
-	const {route, shlinkUrl} = data;
 
 	const year = new Date().getFullYear();
 </script>
 
 <svelte:head>
-	<meta property="og:url" content="{`https://skornel02.hu${route}`}" />
+	<meta property="og:url" content="{`https://skornel02.hu${data.route}`}" />
 </svelte:head>
 
 <Header />
 
-{#key route}
+{#key data.route}
 	<main
 		class="lg:pl-sideBar lg:pt-0"
-		in:fade="{{duration: 150, delay: 100}}"
-		out:fade="{{duration: 100}}"
+		in:fade="{{duration: 200, delay: 100}}"
+		out:fade="{{duration: 150}}"
 	>
 		<slot />
 	</main>
@@ -35,7 +34,7 @@
 		<a href="/rss.xml">
 			<Rss size="{16}" class="inline text-orange-400 hover:text-orange-700 transition-colors" />
 		</a>
-		<ShlinkTracker shlinkUrl="{shlinkUrl}" />
+		<ShlinkTracker shlinkUrl="{data.shlinkUrl}" />
 	</p>
 </footer>
 
