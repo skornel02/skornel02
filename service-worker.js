@@ -29,12 +29,12 @@ const U = [
   "/internal/immutable/assets/Merklik-2021-c483c600.jpeg",
   "/internal/immutable/chunks/Nemes-Tihamer-2019-47dc9912.js",
   "/internal/immutable/assets/Nemes-Tihamer-2019-259bb313.jpeg",
+  "/internal/immutable/chunks/ASZEV2022-7880cdac.js",
+  "/internal/immutable/assets/ASZEV2022-89e1cc38.jpeg",
   "/internal/immutable/chunks/SZIIV-2019-63ec36f4.js",
   "/internal/immutable/assets/SZIIV-2019-c3c1339f.jpeg",
   "/internal/immutable/chunks/Dusza-mobil-2019-3e4d948d.js",
   "/internal/immutable/assets/Dusza-mobil-2019-721cb137.jpeg",
-  "/internal/immutable/chunks/ASZEV2022-7880cdac.js",
-  "/internal/immutable/assets/ASZEV2022-89e1cc38.jpeg",
   "/internal/immutable/chunks/SZIIV-2020-5026d4df.js",
   "/internal/immutable/assets/SZIIV-2020-8240b8b4.jpeg",
   "/internal/immutable/chunks/Skills-Junior-Web-2022-a743f0d7.js",
@@ -46,81 +46,83 @@ const U = [
   "/internal/immutable/chunks/unknownhe-6dfe5866.js",
   "/internal/immutable/assets/unknownhe-54c4279e.jpeg",
   "/internal/immutable/assets/_layout-1b24a0f8.css",
-  "/internal/immutable/assets/MeCard-ce2e8493.css",
+  "/internal/immutable/assets/app-01fb15c9.css",
   "/internal/immutable/assets/Face-a1686178.css",
-  "/internal/immutable/assets/_layout-b36e2b9b.css",
-  "/internal/immutable/assets/_page-547ce551.css",
-  "/internal/immutable/assets/_page-defec1af.css",
-  "/internal/immutable/assets/github-markdown-625cc4c8.css",
-  "/internal/immutable/assets/_page-8f2df470.css",
   "/internal/immutable/assets/_page-42a5e5d1.css",
+  "/internal/immutable/assets/MeCard-49a3f435.css",
+  "/internal/immutable/assets/_page-defec1af.css",
+  "/internal/immutable/assets/_page-8f2df470.css",
+  "/internal/immutable/assets/_page-547ce551.css",
+  "/internal/immutable/assets/github-markdown-625cc4c8.css",
   "/internal/immutable/assets/_post-2f710471.css",
-  "/internal/immutable/assets/app-0cfcbca7.css",
-  "/internal/immutable/chunks/index-61cc8a1d.js",
-  "/internal/immutable/start-6eb85e85.js",
-  "/internal/immutable/chunks/_layout-34122678.js",
-  "/internal/immutable/components/error.svelte-7d5798b6.js",
-  "/internal/immutable/chunks/stores-90156e97.js",
-  "/internal/immutable/components/pages/(web)/posts/_page.svelte-d7552fb1.js",
-  "/internal/immutable/chunks/store-286e051b.js",
-  "/internal/immutable/chunks/images-23ecbbff.js",
-  "/internal/immutable/components/pages/(card)/me/_page.svelte-04fdd42c.js",
-  "/internal/immutable/chunks/mail-57d28ad4.js",
-  "/internal/immutable/chunks/runOnEveryParentUntil-67f0ce31.js",
-  "/internal/immutable/components/pages/(none)/me-card-wrapped/_page.svelte-04fdd42c.js",
+  "/internal/immutable/assets/_layout-b36e2b9b.css",
+  "/internal/immutable/chunks/4-9e1b3b59.js",
+  "/internal/immutable/chunks/5-034d29c7.js",
+  "/internal/immutable/chunks/6-5640ca61.js",
+  "/internal/immutable/chunks/7-afc9625a.js",
+  "/internal/immutable/chunks/8-9d0d0d9e.js",
+  "/internal/immutable/chunks/9-32bef01d.js",
+  "/internal/immutable/chunks/10-377fe146.js",
+  "/internal/immutable/chunks/11-fbdd0028.js",
+  "/internal/immutable/chunks/list-e368b9de.js",
+  "/internal/immutable/components/pages/(card)/me/_page.svelte-f66dd025.js",
+  "/internal/immutable/chunks/mail-fded8a70.js",
+  "/internal/immutable/components/pages/(none)/me-card-wrapped/_page.svelte-f66dd025.js",
   "/internal/immutable/chunks/_page-da46b06b.js",
-  "/internal/immutable/chunks/singletons-bde32163.js",
-  "/internal/immutable/chunks/index-331adb22.js",
-  "/internal/immutable/chunks/index-1cfb91fd.js",
-  "/internal/immutable/chunks/control-f5b05b5f.js",
-  "/internal/immutable/components/pages/_layout.svelte-dcb69c73.js",
-  "/internal/immutable/chunks/home-4fd22cb6.js",
-  "/internal/immutable/chunks/Icon-11041057.js",
-  "/internal/immutable/components/pages/(web)/posts/_post_/_page.svelte-790f9f11.js",
-  "/internal/immutable/chunks/CardNavigation-ae105502.js",
-  "/internal/immutable/chunks/list-26cabb75.js",
-  "/internal/immutable/components/pages/(web)/_layout.svelte-b533eb27.js",
+  "/internal/immutable/chunks/index-b417675e.js",
+  "/internal/immutable/chunks/index-59caaaa6.js",
+  "/internal/immutable/chunks/index-ab440a2a.js",
+  "/internal/immutable/chunks/CardNavigation-38db2a27.js",
+  "/internal/immutable/chunks/3-22a6e047.js",
+  "/internal/immutable/components/pages/(web)/posts/_page.svelte-aeb45126.js",
+  "/internal/immutable/components/pages/(card)/_layout.svelte-dfef018b.js",
   "/internal/immutable/chunks/preload-helper-41c905a7.js",
-  "/internal/immutable/chunks/2-d4d76490.js",
-  "/internal/immutable/chunks/3-4f2da317.js",
-  "/internal/immutable/chunks/4-46af381d.js",
-  "/internal/immutable/chunks/6-3da07223.js",
-  "/internal/immutable/chunks/9-ea3c7685.js",
-  "/internal/immutable/chunks/10-9f9266ae.js",
-  "/internal/immutable/chunks/11-d3a18666.js",
-  "/internal/immutable/chunks/pathseg-234b9b0b.js",
-  "/internal/immutable/chunks/app-e2047777.js",
   "/internal/immutable/modules/pages/_layout.ts-b411215a.js",
-  "/internal/immutable/components/pages/(card)/_layout.svelte-65d00242.js",
   "/internal/immutable/modules/pages/(web)/_page.ts-94291217.js",
   "/internal/immutable/modules/pages/(web)/posts/_page.ts-e64b46af.js",
-  "/internal/immutable/modules/pages/(web)/posts/_post_/_page.ts-361a735b.js",
-  "/internal/immutable/chunks/_post-76650bc1.js",
-  "/internal/immutable/chunks/1-ea0fd86c.js",
-  "/internal/immutable/chunks/0-f4bb33fb.js",
-  "/internal/immutable/chunks/5-3fe2ec34.js",
-  "/internal/immutable/chunks/7-6015051f.js",
-  "/internal/immutable/chunks/8-af5a508e.js",
-  "/internal/immutable/chunks/index-4413829e.js",
-  "/internal/immutable/chunks/loopTypewriter-80568ecd.js",
-  "/internal/immutable/chunks/writeEffect-748b5f3a.js",
-  "/internal/immutable/chunks/sleep-ea0e718f.js",
-  "/internal/immutable/chunks/scramble-48e08db1.js",
-  "/internal/immutable/chunks/typewriter-1e983e07.js",
-  "/internal/immutable/chunks/emojik-es-a-windows-ed526d21.js",
-  "/internal/immutable/chunks/hidden-post-d55a08e0.js",
-  "/internal/immutable/chunks/welcome-05271941.js",
-  "/internal/immutable/chunks/getLongestTextElement-29cbbbbc.js",
   "/internal/immutable/chunks/_page-17a318e7.js",
-  "/internal/immutable/chunks/MeCard-1ca3e3c3.js",
-  "/internal/immutable/chunks/Face-ef673591.js",
-  "/internal/immutable/components/pages/(card)/card/_page.svelte-957c5428.js",
-  "/internal/immutable/components/pages/(none)/readme/_page.svelte-4f86e67d.js",
-  "/internal/immutable/components/pages/(web)/404/_page.svelte-df295d29.js",
-  "/internal/immutable/chunks/giscus.es-01a213ab.js",
-  "/internal/immutable/chunks/_page-79625c92.js",
-  "/internal/immutable/components/pages/(web)/_page.svelte-57f53507.js",
-  "/internal/immutable/chunks/_layout-b3c0524e.js"
+  "/internal/immutable/modules/pages/(web)/posts/_post_/_page.ts-5a35aeb9.js",
+  "/internal/immutable/chunks/concurrent-e6d872ad.js",
+  "/internal/immutable/chunks/writeEffect-7282c7a1.js",
+  "/internal/immutable/chunks/animationSetup-9ad772eb.js",
+  "/internal/immutable/chunks/cascade-52fd6c22.js",
+  "/internal/immutable/chunks/loop-d5a8b536.js",
+  "/internal/immutable/chunks/writeAndUnwriteText-e4d69be2.js",
+  "/internal/immutable/chunks/unwriteEffect-d5f5c545.js",
+  "/internal/immutable/chunks/loopOnce-5ce9aed8.js",
+  "/internal/immutable/chunks/loopRandom-f26c6ef4.js",
+  "/internal/immutable/chunks/scramble-de3fa855.js",
+  "/internal/immutable/chunks/emojik-es-a-windows-373611a9.js",
+  "/internal/immutable/chunks/index-abf45bf1.js",
+  "/internal/immutable/chunks/hidden-post-8a97b6e9.js",
+  "/internal/immutable/chunks/welcome-b81c1412.js",
+  "/internal/immutable/chunks/giscus-93f2434f.js",
+  "/internal/immutable/chunks/app-c2e058f7.js",
+  "/internal/immutable/chunks/Face-9fcfd809.js",
+  "/internal/immutable/components/pages/(web)/404/_page.svelte-44c12d96.js",
+  "/internal/immutable/chunks/MeCard-19d41399.js",
+  "/internal/immutable/components/pages/_layout.svelte-681b8940.js",
+  "/internal/immutable/chunks/store-6dd07c68.js",
+  "/internal/immutable/components/error.svelte-48a9b2e9.js",
+  "/internal/immutable/chunks/stores-9faab1f3.js",
+  "/internal/immutable/chunks/singletons-06edf478.js",
+  "/internal/immutable/chunks/control-e7f5239e.js",
+  "/internal/immutable/chunks/_layout-34122678.js",
+  "/internal/immutable/chunks/images-77c029a6.js",
+  "/internal/immutable/components/pages/(none)/readme/_page.svelte-b865af2b.js",
+  "/internal/immutable/chunks/0-625aa250.js",
+  "/internal/immutable/chunks/Icon-d25f35d7.js",
+  "/internal/immutable/components/pages/(card)/card/_page.svelte-deda407c.js",
+  "/internal/immutable/chunks/1-dfeeb4c5.js",
+  "/internal/immutable/chunks/2-b0fbc3fe.js",
+  "/internal/immutable/chunks/home-8c20b2a3.js",
+  "/internal/immutable/start-500b1017.js",
+  "/internal/immutable/components/pages/(web)/posts/_post_/_page.svelte-1a8a2da6.js",
+  "/internal/immutable/chunks/_layout-e64b3b83.js",
+  "/internal/immutable/chunks/_page-a3ff7aaa.js",
+  "/internal/immutable/components/pages/(web)/_page.svelte-08a5cf70.js",
+  "/internal/immutable/components/pages/(web)/_layout.svelte-5e672ed8.js",
+  "/internal/immutable/chunks/_post-2769beaa.js"
 ], x = [
   "/.nojekyll",
   "/android-chrome-192x192.png",
@@ -262,7 +264,7 @@ const U = [
   "/images/people/unknownhe.jpg",
   "/images/people/unknownhe.webp",
   "/images/people/unknownhe.avif"
-], B = "1673110936046";
+], B = "1675199000389";
 try {
   self["workbox:core:6.5.3"] && _();
 } catch {
@@ -783,9 +785,9 @@ try {
   self["workbox:routing:6.5.3"] && _();
 } catch {
 }
-const L = "GET", j = (a) => a && typeof a == "object" ? a : { handle: a };
+const N = "GET", j = (a) => a && typeof a == "object" ? a : { handle: a };
 class b {
-  constructor(e, t, s = L) {
+  constructor(e, t, s = N) {
     this.handler = j(t), this.match = e, this.method = s;
   }
   setCatchHandler(e) {
@@ -870,7 +872,7 @@ class Y {
     }
     return {};
   }
-  setDefaultHandler(e, t = L) {
+  setDefaultHandler(e, t = N) {
     this._defaultHandlerMap.set(t, j(e));
   }
   setCatchHandler(e) {
@@ -972,10 +974,10 @@ function ue(a, e) {
   le(a), ie(e);
 }
 console.log("Hello from service-worker.js", { build: U, files: x, prerendered: T, version: B });
-const N = [...x, ...T, ...U].filter((a) => !a.endsWith(".jpeg") && !a.endsWith(".jpg") && !a.endsWith(".avif") && !a.endsWith(".webp") && !a.endsWith(".png") && !a.endsWith(".pdf")).filter((a) => !a.startsWith("/."));
-console.log("Service worker urls: ", N);
+const L = [...x, ...T, ...U].filter((a) => !a.endsWith(".jpeg") && !a.endsWith(".jpg") && !a.endsWith(".avif") && !a.endsWith(".webp") && !a.endsWith(".png") && !a.endsWith(".pdf")).filter((a) => !a.startsWith("/."));
+console.log("Service worker urls: ", L);
 ue(
-  N.map((a) => ({
+  L.map((a) => ({
     url: a,
     revision: B
   })),
