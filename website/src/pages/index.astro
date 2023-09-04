@@ -2,22 +2,45 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/navigation/Navbar.astro';
 import {Icon} from 'astro-icon';
-import {getCollection} from 'astro:content';
+import {CollectionEntry, getCollection} from 'astro:content';
+import ExperienceCard from '../components/portfolio/ExperienceCard.astro';
+import EducationCard from '../components/portfolio/EducationCard.astro';
+import GithubCard from '../components/portfolio/GithubCard.astro';
+import LanguagesAndTools from '../components/portfolio/LanguagesAndTools.astro';
+import CompetitionCard from '../components/portfolio/CompetitionCard.astro';
 
-const blogs = (await getCollection('blog'))
-	.filter((post) => !post.data.hidden)
-	.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+interface CompetitionGroup {
+	name: string;
+	competitions: CollectionEntry<'competitions'>[];
+}
 
-const competitions = (await getCollection('competitions')).sort(
-	(a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-);
+const competitionsGrouped: CompetitionGroup[] = [];
+
+(await getCollection('competitions'))
+	.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+	.forEach((competition) => {
+		const compYear = competition.data.date.getFullYear().toString();
+		const group = competitionsGrouped.find((group) => group.name === compYear);
+		if (group) {
+			group.competitions.push(competition);
+		} else {
+			competitionsGrouped.push({
+				name: compYear,
+				competitions: [competition],
+			});
+		}
+	});
+
+const experiences = (await getCollection('experience')).sort((a, b) => b.data.order - a.data.order);
+
+const educations = (await getCollection('education')).sort((a, b) => b.data.order - a.data.order);
 ---
 
 <Layout title="Welcome to Astro.">
 	<meta slot="head" name="description" content="Personal site of SK" />
 
 	<Navbar pageTitle="Portfolio" useFace={true}>
-		<div class="md:container md:mx-auto p-0">
+		<div class="container">
 			<section class="resume-section" id="about" data-description="SK - Home">
 				<div class="my-auto">
 					<h1 id="name" class="mb-0">
@@ -31,36 +54,31 @@ const competitions = (await getCollection('competitions')).sort(
 					<d class="mx-0 join">
 						<a
 							id="social-card"
-							class="btn btn-md btn-outline btn-secondary join-item"
+							class="btn btn-sm md:btn-md btn-outline btn-secondary join-item"
 							href="/me"
-							data-sveltekit-reload
-						>
+							data-sveltekit-reload>
 							<Icon height="100%" name="mdi:format-list-bulleted" />
 						</a>
 						<a
 							id="social-gh"
-							class="btn btn-md btn-outline btn-primary join-item"
-							href="https://github.com/skornel02"
-						>
+							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+							href="https://github.com/skornel02">
 							<Icon height="100%" name="mdi:github" />
 						</a>
 						<a
-							class="btn btn-md btn-outline btn-primary join-item"
-							href="https://www.facebook.com/stefankornel02"
-						>
+							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+							href="https://www.facebook.com/stefankornel02">
 							<Icon height="100%" name="mdi:facebook-box" />
 						</a>
 						<a
-							class="btn btn-md btn-outline btn-primary join-item"
-							href="https://linkedin.com/in/skornel02"
-						>
+							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+							href="https://linkedin.com/in/skornel02">
 							<Icon height="100%" name="mdi:linkedin" />
 						</a>
 						<a
-							class="btn btn-md btn-outline btn-primary join-item"
-							href="mailto:contact@skornel02.hu"
-						>
-							<Icon height="100%" name="mdi:email" />
+							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+							href="https://aemail.com/Elgl">
+							<Icon height="100%" name="mdi:email-fast" />
 						</a>
 					</d>
 				</div>
@@ -68,11 +86,19 @@ const competitions = (await getCollection('competitions')).sort(
 
 			<div class="divider"></div>
 
-			<section class="resume-section" id="experience" data-description="SK - Experiences"></section>
+			<section class="resume-section" id="experience" data-description="SK - Experiences">
+				<h2 class="mb-5 text-3xl sm:text-pageSection">Experience</h2>
+
+				{experiences.map((experience) => <ExperienceCard {experience} />)}
+			</section>
 
 			<div class="divider"></div>
 
-			<section class="resume-section" id="education" data-description="SK - Education"></section>
+			<section class="resume-section" id="education" data-description="SK - Education">
+				<h2 class="mb-5 text-3xl sm:text-pageSection">Education</h2>
+
+				{educations.map((education) => <EducationCard {education} />)}
+			</section>
 
 			<div class="divider"></div>
 
@@ -81,152 +107,10 @@ const competitions = (await getCollection('competitions')).sort(
 					<h2 class="mb-5 text-3xl sm:text-pageSection">Skills</h2>
 
 					<div class="subheading mb-3">Programming Languages &amp; Tools</div>
-					<ul class="flex flex-wrap">
-						<li>
-							<img
-								src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg"
-								alt="arduino"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
-								alt="bootstrap"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
-								alt="csharp"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-								alt="css3"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
-								alt="figma"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
-								alt="firebase"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg"
-								alt="flutter"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-								alt="git"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-								alt="html5"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
-								alt="java"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-								alt="javascript"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
-								alt="postman"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-								alt="react"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg"
-								alt="rust"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg"
-								alt="spring"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg"
-								alt="svelte"
-								width="40"
-								height="40"
-							/>
-						</li>
-						<li>
-							<img
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-								alt="typescript"
-								width="40"
-								height="40"
-							/>
-						</li>
-					</ul>
-					<img
-						class="block mx-auto"
-						src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact&theme={darkTheme
-					? 'dark'
-					: 'light'}"
-						alt="skornel02's stats on github"
-						width="350"
-					/>
+					<LanguagesAndTools />
+
+					<div class="subheading mb-3">Github stats</div>
+					<GithubCard />
 				</div>
 			</section>
 
@@ -244,8 +128,35 @@ const competitions = (await getCollection('competitions')).sort(
 				<div class="my-auto">
 					<h2 class="mb-5 text-3xl sm:text-pageSection">Awards &amp; Certifications</h2>
 				</div>
+
+				<div class="subheading mb-3">Competitions</div>
+				<ul class="flex flex-col px-0 rounded-sm print:block">
+					{
+						competitionsGrouped.map((group, i) => (
+							<>
+								{group.competitions.map((competition) => (
+									<CompetitionCard {competition} />
+								))}
+								{i < competitionsGrouped.length - 1 ? (
+									<li>
+										<div class="w-full text-center text-secondary font-bold divider">
+											{group.name}
+										</div>
+									</li>
+								) : (
+									<> </>
+								)}
+							</>
+						))
+					}
+				</ul>
+
+				
+				<div class="subheading mb-3">Certificates</div>
 			</section>
 		</div>
+
+		<!-- Modal -->
 		<input type="checkbox" id="showcase-modal" class="modal-toggle" />
 		<div class="modal">
 			<div id="showcase-modal-data" class="modal-box">
@@ -267,6 +178,15 @@ const competitions = (await getCollection('competitions')).sort(
 	@tailwind components;
 	@tailwind utilities;
 
+	section ~ .divider {
+		@apply my-0;
+	}
+
+	.divider::before,
+	.divider::after {
+		@apply bg-primary opacity-50;
+	}
+
 	@layer components {
 		.resume-section {
 			@apply py-20 p-4 md:py-12 lg:p-12;
@@ -276,11 +196,11 @@ const competitions = (await getCollection('competitions')).sort(
 		}
 
 		.resume-section h1 {
-			@apply text-5xl leading-[3rem] md:text-pageTitle md:leading-pageTitle;
+			@apply text-5xl leading-[3rem] md:text-pageTitle md:leading-pageTitle font-bold;
 		}
 
 		.resume-section h2 {
-			@apply text-3xl md:text-pageSection;
+			@apply text-3xl md:text-pageSection font-bold;
 			@apply print:text-center;
 		}
 
@@ -323,6 +243,12 @@ const competitions = (await getCollection('competitions')).sort(
 
 		#awards.resume-section {
 			page-break-inside: unset;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.container {
+			max-width: 768px;
 		}
 	}
 </style>

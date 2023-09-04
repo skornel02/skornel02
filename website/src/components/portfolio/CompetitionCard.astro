@@ -1,0 +1,121 @@
+---
+import {Icon} from 'astro-icon';
+import {Image} from 'astro:assets';
+import type {CollectionEntry} from 'astro:content';
+import {getEntries} from 'astro:content';
+import TeamMemberPicture from './TeamMemberPicture.astro';
+
+
+interface Props {
+	competition: CollectionEntry<'competitions'>;
+}
+
+const {competition} = Astro.props;
+const team = competition.data.team ? await getEntries(competition.data.team) : [];
+---
+
+<li
+	class="relative block py-2 px-4 justify-between items-center border border-solid border-black first:rounded-t-md last:rounded-b-md">
+	<div class="flex flex-wrap">
+		<div class="w-full flex justify-center order-1 sm:order-2">
+			<div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
+			<div class="flex justify-center">
+				<Icon
+					class:list={{highlight: competition.data.highlighted}}
+					name={competition.data.icon}
+					color={competition.data.iconColor}
+				/>
+				<div>
+					<span class="badge bg-primary rounded text-white">{competition.data.placement}</span>
+				</div>
+			</div>
+			<div class="flex-grow basis-0 ml-auto">
+				<p class="text-end text-title">
+					<small>{competition.data.date.toISOString().substring(0, 10)}</small>
+				</p>
+			</div>
+		</div>
+		<div class="w-full my-1 order-2 sm:order-1">
+			<div class="font-bold text-title text-center">{competition.data.name}</div>
+		</div>
+	</div>
+	<div class="flex flex-wrap">
+		<div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams">
+			{
+				competition.data.team === undefined ? (
+					<> </>
+				) : (
+					<>
+						<p class="font-light text-title">Team:</p>
+						{team.map((people) => (<TeamMemberPicture class="avatar rounded-full" width={40} height={40} person={people}/>))}
+					</>
+				)
+			}
+		</div>
+		<div class="w-full sm:w-1/2 flex print:hidden justify-center sm:justify-end mt-1"></div>
+	</div>
+</li>
+
+<style>
+	@keyframes highlight {
+		0% {
+			transform: none;
+		}
+		50% {
+			transform: scale(1.1);
+		}
+		100% {
+			transform: none;
+		}
+	}
+
+	[astro-icon] {
+		min-width: 32px;
+		min-height: 32px;
+	}
+
+	.badge {
+		min-width: 80px;
+	}
+
+	[astro-icon].highlight {
+		animation-name: highlight;
+		animation-iteration-count: infinite;
+		animation-duration: 2s;
+	}
+
+	.teams > p {
+		line-height: 40px;
+		margin: 0;
+	}
+
+	li {
+		transition: 0.1s;
+	}
+
+	li:hover {
+		transform: scale(1.01);
+		z-index: 10;
+	}
+
+	li:has(> .divider) {
+		border: 0;
+	}
+
+	li:hover:has(> .divider) {
+		transform: unset;
+	}
+
+	@media print {
+		li {
+			width: 100%;
+			display: inline-block;
+			page-break-before: always;
+			page-break-inside: avoid;
+			page-break-after: always;
+		}
+		li:hover {
+			transform: unset;
+		}
+	}
+</style>
