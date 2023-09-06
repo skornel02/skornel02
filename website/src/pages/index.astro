@@ -36,7 +36,7 @@ const experiences = (await getCollection('experience')).sort((a, b) => b.data.or
 const educations = (await getCollection('education')).sort((a, b) => b.data.order - a.data.order);
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="SK">
 	<meta slot="head" name="description" content="Personal site of SK" />
 
 	<Navbar pageTitle="Portfolio" useFace={true}>
@@ -155,21 +155,6 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 				<div class="subheading mb-3">Certificates</div>
 			</section>
 		</div>
-
-		<!-- Modal -->
-		<input type="checkbox" id="showcase-modal" class="modal-toggle" />
-		<div class="modal">
-			<div id="showcase-modal-data" class="modal-box">
-				<h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
-				<p class="py-4">
-					You've been selected for a chance to get one year of subscription to use Wikipedia for
-					free!
-				</p>
-				<div class="modal-action">
-					<label for="showcase-modal" class="btn">Yay!</label>
-				</div>
-			</div>
-		</div>
 	</Navbar>
 </Layout>
 
@@ -243,12 +228,6 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 
 		#awards.resume-section {
 			page-break-inside: unset;
-		}
-	}
-
-	@media (min-width: 1024px) {
-		.container {
-			max-width: 768px;
 		}
 	}
 </style>

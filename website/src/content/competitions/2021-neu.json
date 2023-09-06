@@ -1,0 +1,15 @@
+{
+	"$schema": "../../schemas/competition.schema.json",
+	"name": "Neumann János Egyetem Programming contest - 2020",
+	"date": "2021-01-27",
+	"placement": "II. place",
+	"icon": "emojione-monotone:1st-place-medal",
+	"highlighted": false,
+    "pdfs": [
+        {
+            "name": "Competition certificate",
+            "src": "/src/pdfs/competitions/GAMF programozó verseny 2020.pdf"
+        }
+    ],
+    "team": ["partfo", "erik", "sk"]
+}

@@ -1,33 +1,33 @@
 import {defineCollection} from 'astro:content';
-import {BlogSchema} from '../schemas/blog';
-import {CompetitionSchema, CompetitionSchemaFactory} from '../schemas/competition';
-import { ExperienceSchema } from '../schemas/experience';
-import { EducationSchema } from '../schemas/education';
-import { PeopleSchemaFactory } from '../schemas/people';
+import {blogSchema} from '../schemas/blog';
+import {competitionSchema, competitionSchemaFactory} from '../schemas/competition';
+import { experienceSchema } from '../schemas/experience';
+import { educationSchema } from '../schemas/education';
+import { peopleSchemaFactory } from '../schemas/people';
 
 const blog = defineCollection({
 	type: 'content',
-	schema: BlogSchema,
+	schema: blogSchema,
 });
 
 const competitions = defineCollection({
 	type: 'data',
-	schema: CompetitionSchemaFactory,
+	schema: competitionSchemaFactory,
 });
 
 const experience = defineCollection({
 	type: 'content',
-	schema: ExperienceSchema,
+	schema: experienceSchema,
 });
 
 const education = defineCollection({
 	type: 'content',
-	schema: EducationSchema,
+	schema: educationSchema,
 });
 
 const people = defineCollection({
 	type: 'data',
-	schema: PeopleSchemaFactory,
+	schema: peopleSchemaFactory,
 });
 
 export const collections = {

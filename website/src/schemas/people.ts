@@ -1,7 +1,7 @@
 import { z } from 'astro/zod';
 import { type ImageFunction, type SchemaContext } from 'astro:content';
 
-export const PeopleSchemaFactory = (context: SchemaContext | undefined = undefined) =>
+export const peopleSchemaFactory = (context: SchemaContext | undefined = undefined) =>
     z.object({
         name: z.string(),
         refer: z.string().url().optional(),
@@ -9,6 +9,6 @@ export const PeopleSchemaFactory = (context: SchemaContext | undefined = undefin
         externalImage: z.string().url().optional(),
     })
     
-export const PeopleSchema = PeopleSchemaFactory();
+export const PeopleSchema = peopleSchemaFactory();
 
 export type PeopleMetadata = z.infer<typeof PeopleSchema>;

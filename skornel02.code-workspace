@@ -9,6 +9,15 @@
 		"files.associations": {
 			"*.css": "tailwindcss"
 		},
-		"prettier.documentSelectors": ["**/*.astro"],
+		"prettier.documentSelectors": [
+			"**/*.astro"
+		],
+		"cSpell.words": [
+			"astro",
+			"tailwindcss",
+			"emojione",
+			"pdfs",
+			"partfo",
+		],
 	}
 }

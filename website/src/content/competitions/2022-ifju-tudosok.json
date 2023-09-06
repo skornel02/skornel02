@@ -1,4 +1,5 @@
 {
+	"$schema": "../../schemas/competition.schema.json",
 	"name": "Ifjútudosok tudományos vetélkedő - 2022 - Traditional category",
 	"date": "2022-03-08",
 	"placement": "Finalist",

@@ -1,4 +1,5 @@
 {
+	"$schema": "../../schemas/competition.schema.json",
 	"name": "Dusza Árpád Országos Programozói Emlékverseny - 2021 - Mobile category",
 	"date": "2021-12-04",
 	"placement": "First place",

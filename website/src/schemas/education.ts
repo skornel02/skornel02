@@ -1,7 +1,7 @@
 import { z } from 'astro/zod';
 import { reference } from 'astro:content';
 
-export const EducationSchema = z.object({
+export const educationSchema = z.object({
 	school: z.string(),
 	major: z.string(),
 	minor: z.string().optional(),
@@ -10,4 +10,4 @@ export const EducationSchema = z.object({
 	blogPost: reference('blog').optional(),
 });
 
-export type EducationMetadata = z.infer<typeof EducationSchema>;
+export type EducationMetadata = z.infer<typeof educationSchema>;

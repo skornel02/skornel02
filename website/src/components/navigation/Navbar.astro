@@ -9,11 +9,9 @@ interface Props {
 }
 
 const {pageTitle, useFace = false} = Astro.props;
-
-
 ---
 
-<div class="drawer lg:drawer-open">
+<div id="navbar" class="drawer lg:drawer-open">
 	<input id="navbar-drawer" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content flex flex-col">
 		<!-- Top navigation bar -->
@@ -34,23 +32,20 @@ const {pageTitle, useFace = false} = Astro.props;
 	<div class="drawer-side">
 		<label for="navbar-drawer" class="drawer-overlay"></label>
 		<div class="min-h-full w-72 bg-primary flex flex-col justify-center">
-			<div>
-				<div
-					class="ml-2 my-auto flex-1 lg:my-0 lg:mx-auto lg:flex-grow-0 flex justify-center">
-					{
-						useFace ? (
-							<Image
-								src={sk}
-								alt="Kornél portray"
-								class="mask mask-squircle"
-								width={160}
-								height={160}
-							/>
-						) : (
-							<span class="normal-case text-background text-4xl text-center">{pageTitle}</span>
-						)
-					}
-				</div>
+			<div class="ml-2 my-auto flex-1 lg:my-0 lg:mx-auto flex justify-center max-h-36">
+				{
+					useFace ? (
+						<Image
+							src={sk}
+							alt="Kornél portray"
+							class="mask mask-squircle"
+							width={160}
+							height={160}
+						/>
+					) : (
+						<div class="normal-case text-background text-4xl text-center my-auto">{pageTitle}</div>
+					)
+				}
 			</div>
 			<ul class="menu menu-lg p-4 w-full">
 				<NavigationItems />
@@ -58,3 +53,17 @@ const {pageTitle, useFace = false} = Astro.props;
 		</div>
 	</div>
 </div>
+
+<style>
+	img {
+		object-fit: cover;
+	}
+</style>
+
+<style is:global>
+	@media (min-width: 1024px) {
+		#navbar .container {
+			max-width: 768px;
+		}
+	}
+</style>
