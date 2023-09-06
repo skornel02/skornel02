@@ -8,7 +8,7 @@
     "pdfs": [
         {
             "name": "Competition certificate",
-            "src": "/src/pdfs/competitions/GAMF programozó verseny 2020.pdf"
+            "src": "/competitions/GAMF programozó verseny 2020.pdf"
         }
     ],
     "team": ["partfo", "erik", "sk"]
