@@ -1,4 +1,5 @@
 {
+	"$schema": "https://skornel02.hu/schema/people.schema.json",
 	"name": "Vad Avar",
 	"refer": "https://vadavar.hu",
 	"externalImage": "https://vadavar.hu/me.jpg"
