@@ -1,0 +1,5 @@
+import{c as s,s as m,r as u,m as c}from"./_astro_assets.740518ae.js";import{u as i}from"./PostsSearch.dacd0b77.js";import"./index.dd835de8.js";const t={};function d(o){return o.replaceAll(/__ASTRO_IMAGE_="([^"]+)"/gm,(a,e)=>m({src:t[e].src,...t[e].attributes}))}const n=d(`<p>I have worked on numerous multimedia projects as a cameraman and also as a video editor.
+Furthermore I also made radio shows for the school.</p>`),l={school:"Budaörsi Herman Ottó",major:"Primary school",minor:"Media production",duration:"2009 - 2017",order:1},p="/home/runner/work/skornel02/skornel02/website/src/content/education/herman.md",f=void 0;function _(){return`
+I have worked on numerous multimedia projects as a cameraman and also as a video editor.
+Furthermore I also made radio shows for the school.
+`}function b(){return n}function g(){return[]}const v=s((o,a,e)=>{const{layout:h,...r}=l;return r.file=p,r.url=f,u`${c()}${i(n)}`});export{v as Content,b as compiledContent,v as default,p as file,l as frontmatter,g as getHeadings,t as images,_ as rawContent,f as url};
