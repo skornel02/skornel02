@@ -1,0 +1,1 @@
+const t=(n,o)=>{const e=document.getElementById(n);if(e===null)throw o&&window.open(o,"_blank"),Error(`Element with id ${n} not found`);if(typeof e.showModal!="function")throw o&&window.open(o,"_blank"),Error(`Element with id ${n} does not have a showModal function`);e.showModal()};export{t as o};

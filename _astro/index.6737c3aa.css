@@ -1,0 +1,1 @@
+.join-item.svelte-ouqavu:where(*:last-child:not(:first-child):not(.join) .join-item){border-top-right-radius:inherit!important;border-bottom-right-radius:inherit!important}

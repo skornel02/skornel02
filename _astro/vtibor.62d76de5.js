@@ -1,0 +1,1 @@
+const t="vtibor",e="people",o={name:"Várkonyi Tibor",refer:"https://mocman.hu",externalImage:"https://avatars.githubusercontent.com/u/14221367?v=4"},n={type:"data",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/people/vtibor.json",rawData:""};export{n as _internal,e as collection,o as data,t as id};

@@ -1,0 +1,1 @@
+const a="avar",e="people",t={name:"Vad Avar",refer:"https://vadavar.hu",externalImage:"https://vadavar.hu/me.jpg"},r={type:"data",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/people/avar.json",rawData:""};export{r as _internal,e as collection,t as data,a as id};

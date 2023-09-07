@@ -1,0 +1,1 @@
+const e="erik",t="people",n={name:"Isakov Erik",refer:"https://github.com/indeednt"},o={type:"data",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/people/erik.json",rawData:""};export{o as _internal,t as collection,n as data,e as id};

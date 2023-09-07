@@ -1,1 +1,0 @@
-https://link.skornel02.hu/PLO9E
