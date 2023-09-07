@@ -2,7 +2,7 @@
 title: Emojik és a Windows
 description: Minimális történelem, közepesen érdekes információk és a Windows emoji verziójának frissítése
 date: 2022-05-21T19:00:00
-tags: []
+tags: ['windows', 'windows 10', 'emoji', 'hun', 'interesting', 'fun', 'educational']
 language: hu
 proofReader: 'Horváth Gergely'
 ---

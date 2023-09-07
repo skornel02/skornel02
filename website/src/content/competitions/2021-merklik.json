@@ -1,5 +1,5 @@
 {
-	"$schema": "../../schemas/competition.schema.json",
+	"$schema": "../../../dist/schema/competition.schema.json",
 	"name": "II. Merklik László problémamegoldó verseny",
 	"date": "2021-04-15",
 	"placement": "Finalist",
@@ -12,5 +12,5 @@
 			"name": "Certificate"
 		}
 	],
-    "team": ["partfo", "sk", "avar"]
+	"team": ["partfo", "sk", "avar"]
 }

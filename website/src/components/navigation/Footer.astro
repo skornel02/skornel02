@@ -1,0 +1,20 @@
+---
+import {Icon} from 'astro-icon';
+---
+
+<footer
+	class="footer footer-center p-4 bg-base-200 text-base-content mt-auto flex justify-center items-center">
+	<p>Have a nice day!</p>
+	<p>{new Date().getFullYear()}©</p>
+	<a href="/rss.xml" data-astro-reload>
+		<Icon name="mdi:rss-box"/>
+	</a>
+</footer>
+
+<style>
+	[astro-icon] {
+		display: inline;
+		color: orange;
+		height: 14px;
+	}
+</style>

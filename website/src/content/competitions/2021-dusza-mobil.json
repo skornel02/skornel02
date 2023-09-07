@@ -1,5 +1,5 @@
 {
-	"$schema": "../../schemas/competition.schema.json",
+	"$schema": "../../../dist/schema/competition.schema.json",
 	"name": "Dusza Árpád Országos Programozói Emlékverseny - 2021 - Mobile category",
 	"date": "2021-12-04",
 	"placement": "First place",
@@ -18,5 +18,5 @@
 			"href": "https://github.com/skornel02/duszamobile2021"
 		}
 	],
-    "team": ["partfo", "erik", "sk"]
+	"team": ["partfo", "erik", "sk"]
 }

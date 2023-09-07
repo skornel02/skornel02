@@ -1,5 +1,5 @@
-import { z } from 'astro/zod';
-import { reference } from 'astro:content';
+import {z} from 'astro/zod';
+import {reference} from 'astro:content';
 
 export const experienceSchema = z.object({
 	name: z.string(),

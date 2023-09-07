@@ -1,0 +1,51 @@
+---
+import { Icon } from 'astro-icon';
+import {CollectionEntry} from 'astro:content';
+import 'github-markdown-css/github-markdown.css';
+import './markers.css';
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+}
+
+const {post} = Astro.props;
+
+const {Content} = await post.render();
+---
+
+<div class="container">
+	<nav class="flex flex-wrap justify-between items-center my-2">
+		<span>
+			Published:
+			{post.data.date.toISOString().substring(0, 10)}
+		</span>
+		<div>
+			{post.data.tags.map((tag) => <div class="badge badge-sm badge-outline badge-info">{tag}</div>)}
+		</div>
+		<a href="1" class="btn btn-sm btn-outline btn-secondary">
+            <Icon name="mdi:step-backward" height="80%"/>
+        </a>
+	</nav>
+	<div class="divider"></div>
+	<article class="markdown-body">
+		<Content />
+	</article>
+    <div class="divider"> Comment section </div>
+    <giscus-widget
+			repo="skornel02/skornel02"
+			repoid="R_kgDOG9KgxQ"
+			category="Comment section"
+			categoryid="DIC_kwDOG9Kgxc4CPOyt"
+			mapping="title"
+			reactionsEnabled="1"
+			emitMetadata="0"
+			inputPosition="top"
+			theme="preferred_color_scheme"
+			loading="lazy"
+			lang="en"
+		/>
+</div>
+
+<script>
+    import 'giscus';
+</script>

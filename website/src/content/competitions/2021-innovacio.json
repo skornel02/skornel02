@@ -1,5 +1,5 @@
 {
-	"$schema": "../../schemas/competition.schema.json",
+	"$schema": "../../../dist/schema/competition.schema.json",
 	"name": "30. Ifjúsági Tudományos és Innovációs Tehetségkutató Verseny",
 	"date": "2021-06-22",
 	"placement": "Finalist",
@@ -12,5 +12,5 @@
 			"name": "Certificate"
 		}
 	],
-    "team": ["sk", "avar"]
+	"team": ["sk", "avar"]
 }

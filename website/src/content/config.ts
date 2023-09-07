@@ -1,9 +1,9 @@
 import {defineCollection} from 'astro:content';
 import {blogSchema} from '../schemas/blog';
 import {competitionSchema, competitionSchemaFactory} from '../schemas/competition';
-import { experienceSchema } from '../schemas/experience';
-import { educationSchema } from '../schemas/education';
-import { peopleSchemaFactory } from '../schemas/people';
+import {experienceSchema} from '../schemas/experience';
+import {educationSchema} from '../schemas/education';
+import {peopleSchemaFactory} from '../schemas/people';
 
 const blog = defineCollection({
 	type: 'content',

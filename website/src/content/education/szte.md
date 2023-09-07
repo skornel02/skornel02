@@ -6,4 +6,4 @@ duration: 2022 - present
 order: 3
 ---
 
-Currently taking part in Bachelor training for Computer Science Engineering. 
+Currently taking part in Bachelor training for Computer Science Engineering.

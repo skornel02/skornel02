@@ -2,16 +2,18 @@
 import {Image} from 'astro:assets';
 import NavigationItems from './NavigationItems.astro';
 import sk from '../../images/people/sk.jpeg';
+import Footer from './Footer.astro';
 
 interface Props {
 	pageTitle: string;
 	useFace?: boolean;
+	footer?: boolean;
 }
 
-const {pageTitle, useFace = false} = Astro.props;
+const {pageTitle, useFace = false, footer = true} = Astro.props;
 ---
 
-<div id="navbar" class="drawer lg:drawer-open">
+<div id="navbar" class="drawer lg:drawer-open min-h-screen">
 	<input id="navbar-drawer" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content flex flex-col">
 		<!-- Top navigation bar -->
@@ -27,6 +29,8 @@ const {pageTitle, useFace = false} = Astro.props;
 		</div>
 
 		<slot />
+
+		{footer && (<Footer />)}
 	</div>
 	<!-- Navigation static sidebar (lg-) -->
 	<div class="drawer-side">

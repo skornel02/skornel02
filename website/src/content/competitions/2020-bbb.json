@@ -1,5 +1,5 @@
 {
-	"$schema": "../../schemas/competition.schema.json",
+	"$schema": "../../../dist/schema/competition.schema.json",
 	"name": "Bakonyi Bitfaragó Bajnokság - 2020",
 	"date": "2021-04-17",
 	"placement": "I. place",

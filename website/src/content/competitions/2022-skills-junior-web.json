@@ -1,5 +1,5 @@
 {
-	"$schema": "../../schemas/competition.schema.json",
+	"$schema": "../../../dist/schema/competition.schema.json",
 	"name": "Skills Junior 2022 - Web category",
 	"date": "2022-04-02",
 	"placement": "First place",
@@ -13,9 +13,9 @@
 		}
 	],
 	"urls": [
-        {
-            "name": "Official website",
-            "href": "https://skillsit.hu/hirek/nagyszeru-eredmenyek-a-skills-junior-webfejleszto-kategoriajanak-dontojen/"
-        }
-    ]
+		{
+			"name": "Official website",
+			"href": "https://skillsit.hu/hirek/nagyszeru-eredmenyek-a-skills-junior-webfejleszto-kategoriajanak-dontojen/"
+		}
+	]
 }

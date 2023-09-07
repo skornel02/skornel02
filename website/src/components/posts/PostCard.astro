@@ -1,0 +1,25 @@
+---
+import {type CollectionEntry} from 'astro:content';
+interface Props {
+	post: CollectionEntry<'blog'>;
+}
+
+const {post} = Astro.props;
+---
+
+<a href={post.slug}>
+    <div class="w-100 block bg-base-100 dark:bg-gray-900 shadow-xl my-2">
+        <div class="card-body">
+            <div class="card-actions flex-wrap justify-between">
+                <h3 class="text-2xl font-bold uppercase">{post.data.title}</h3>
+                <span class="text-secondary flex-grow text-right"
+                    >{post.data.date.toISOString().substring(0, 10)}</span
+                >
+            </div>
+    
+            <p>
+                {post.data.description}
+            </p>
+        </div>
+    </div>
+</a>
