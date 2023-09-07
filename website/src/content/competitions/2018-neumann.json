@@ -1,0 +1,15 @@
+{
+	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"name": "Secondary School Programming contest - 2018",
+	"date": "2018-02-21",
+	"placement": "I. place",
+	"icon": "mdi:trophy-award",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/Iskola-programozas-verseny-2018.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	]
+}

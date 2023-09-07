@@ -1,22 +1,17 @@
 {
 	"$schema": "https://skornel02.hu/schema/competition.schema.json",
-	"name": "Kódolj Határok Nélkül! - 2021",
-	"date": "2021-06-01",
+	"name": "Kódolj Határok Nélkül! - 2020",
+	"date": "2020-09-15",
 	"placement": "Finalist",
 	"icon": "mdi:star",
 	"highlighted": false,
 	"images": [
 		{
-			"src": "/src/images/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg",
+			"src": "/src/images/competitions/Kodolj-Hatarok-Nelkul-2020.jpeg",
 			"alt": "Competition certificate",
 			"name": "Certificate"
 		}
 	],
-	"urls": [
-		{
-			"name": "Repository",
-			"href": "https://github.com/skornel02/khn2021"
-		}
-	],
+	"urls": [{"name": "Repository", "href": "https://github.com/skornel02/khn2020"}],
 	"team": ["ruzsa", "sk", "avar"]
 }

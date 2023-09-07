@@ -1,0 +1,26 @@
+{
+	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"name": "Dusza Árpád Országos Programozói Emlékverseny - 2019 - Mobile category",
+	"date": "2019-12-07",
+	"placement": "I. place",
+	"icon": "mdi:trophy-award",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/Dusza-mobil-2019.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	],
+	"urls": [
+		{
+			"name": "Repository",
+			"href": "https://github.com/skornel02/FelElek"
+		},
+		{
+			"name": "PlayStore",
+			"href": "https://play.google.com/store/apps/details?id=com.hazizz.dusza2019"
+		}
+	],
+	"team": ["erik", "partfo", "sk"]
+}

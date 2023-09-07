@@ -1,16 +1,16 @@
 {
 	"$schema": "https://skornel02.hu/schema/competition.schema.json",
-	"name": "II. Merklik László problémamegoldó verseny",
-	"date": "2021-04-15",
+	"name": "Bakonyi Bitfaragó Bajnokság - 2019",
+	"date": "2019-11-09",
 	"placement": "Finalist",
 	"icon": "mdi:star",
 	"highlighted": false,
 	"images": [
 		{
-			"src": "/src/images/competitions/Merklik-2021.jpeg",
+			"src": "/src/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2019.jpeg",
 			"alt": "Competition certificate",
 			"name": "Certificate"
 		}
 	],
-	"team": ["partfo", "sk", "avar"]
+	"team": ["ruzsa", "sk", "avar"]
 }

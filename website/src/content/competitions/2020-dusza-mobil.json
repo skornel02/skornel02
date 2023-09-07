@@ -1,0 +1,18 @@
+{
+	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"name": "Dusza Árpád Országos Programozói Emlékverseny - 2020 - Mobile category",
+	"date": "2020-12-05",
+	"placement": "I. place",
+	"icon": "mdi:trophy-award",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/Dusza-mobil-2020.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	],
+	"urls": [{"name": "Repository", "href": "https://github.com/skornel02/duszamobile2020"}],
+	"pdfs": [],
+	"team": ["erik", "partfo", "sk"]
+}
