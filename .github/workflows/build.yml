@@ -42,6 +42,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
         
       - name: npm install and build
+        working-directory: 'website'
         run: |
           pnpm install --frozen-lockfile
           pnpm run build
@@ -49,6 +50,7 @@ jobs:
           SHLINK_KEY: ${{ secrets.SHLINK_KEY }}
 
       - name: Deploy 🚀
+        working-directory: 'website'
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
