@@ -2,8 +2,8 @@
 	"$schema": "https://skornel02.hu/schema/competition.schema.json",
 	"name": "Skills Junior 2022 - Web category",
 	"date": "2022-04-02",
-	"placement": "First place",
-	"icon": "emojione-monotone:1st-place-medal",
+	"placement": "I. place",
+	"icon": "mdi:trophy-award",
 	"highlighted": false,
 	"images": [
 		{

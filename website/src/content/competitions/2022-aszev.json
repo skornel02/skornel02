@@ -2,8 +2,8 @@
 	"$schema": "https://skornel02.hu/schema/competition.schema.json",
 	"name": "Ágazati és ágazaton belüli specializáció szakmai érettségi vizsgatárgyak versenye - 2022",
 	"date": "2022-04-13",
-	"placement": "First place",
-	"icon": "emojione-monotone:1st-place-medal",
+	"placement": "I. place",
+	"icon": "mdi:trophy-award",
 	"highlighted": true,
 	"images": [
 		{

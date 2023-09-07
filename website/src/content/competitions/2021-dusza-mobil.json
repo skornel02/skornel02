@@ -2,8 +2,8 @@
 	"$schema": "https://skornel02.hu/schema/competition.schema.json",
 	"name": "Dusza Árpád Országos Programozói Emlékverseny - 2021 - Mobile category",
 	"date": "2021-12-04",
-	"placement": "First place",
-	"icon": "emojione-monotone:1st-place-medal",
+	"placement": "I. place",
+	"icon": "mdi:trophy-award",
 	"highlighted": false,
 	"images": [
 		{

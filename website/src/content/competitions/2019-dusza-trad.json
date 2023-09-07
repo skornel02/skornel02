@@ -1,0 +1,16 @@
+{
+	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"name": "Dusza Árpád Országos Programozói Emlékverseny - 2019 - Traditional category",
+	"date": "2019-02-21",
+	"placement": "I. place",
+	"icon": "mdi:trophy-award",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/Dusza-2019.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	],
+	"team": ["erik", "partfo", "sk"]
+}

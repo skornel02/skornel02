@@ -1,0 +1,16 @@
+{
+	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"name": "Dusza Árpád Országos Programozói Emlékverseny - 2020 - Traditional category",
+	"date": "2020-02-22",
+	"placement": "II. place",
+	"icon": "mdi:medal-outline",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/Dusza-2020.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	],
+	"team": ["erik", "partfo", "sk"]
+}

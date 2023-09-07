@@ -1,0 +1,22 @@
+{
+	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"name": "Szegedi Innovatív Informatika Verseny - 2020 - Software category",
+	"date": "2020-11-07",
+	"placement": "I. place",
+	"icon": "mdi:trophy-award",
+	"highlighted": true,
+	"images": [
+		{
+			"src": "/src/images/competitions/SZIIV-2020.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	],
+	"urls": [
+		{
+			"name": "website",
+			"href": "https://www.inf.u-szeged.hu/sziiv2020/eredmenyek#:~:text=hazizz%20velunk%3A%20parkmyst"
+		}
+	],
+	"team": ["partfo", "sk", "avar"]
+}

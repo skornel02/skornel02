@@ -1,0 +1,15 @@
+{
+	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"name": "Nemes Tihamér Nemzetközi Informatikai Tanulmányi Verseny - 2019 - Programming category",
+	"date": "2019-04-05",
+	"placement": "41. place",
+	"icon": "mdi:star",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/Nemes-Tihamer-2019.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	]
+}
