@@ -50,9 +50,8 @@ jobs:
           SHLINK_KEY: ${{ secrets.SHLINK_KEY }}
 
       - name: Deploy 🚀
-        working-directory: 'website'
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: dist
+          FOLDER: webiste/dist
