@@ -5,7 +5,4 @@
 	"cSpell.words": [
 		"Shlink"
 	],
-	"files.associations": {
-		"*.css": "tailwindcss"
-	}
 }

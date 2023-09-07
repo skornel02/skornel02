@@ -1,0 +1,73 @@
+---
+import {Image} from 'astro:assets';
+import NavigationItems from './NavigationItems.astro';
+import sk from '../../images/people/sk.jpeg';
+import Footer from './Footer.astro';
+
+interface Props {
+	pageTitle: string;
+	useFace?: boolean;
+	footer?: boolean;
+}
+
+const {pageTitle, useFace = false, footer = true} = Astro.props;
+---
+
+<div id="navbar" class="drawer lg:drawer-open min-h-screen">
+	<input id="navbar-drawer" type="checkbox" class="drawer-toggle" />
+	<div class="drawer-content flex flex-col">
+		<!-- Top navigation bar -->
+		<div class="w-full navbar bg-primary flex lg:hidden">
+			<div class="flex-1 ml-2 normal-case text-background text-2xl">{pageTitle}</div>
+
+			<!-- Partial navigation (sm-lg) -->
+			<div class="flex-none sm:block lg:hidden">
+				<ul class="menu menu-horizontal">
+					<NavigationItems />
+				</ul>
+			</div>
+		</div>
+
+		<slot />
+
+		{footer && (<Footer />)}
+	</div>
+	<!-- Navigation static sidebar (lg-) -->
+	<div class="drawer-side">
+		<label for="navbar-drawer" class="drawer-overlay"></label>
+		<div class="min-h-full w-72 bg-primary flex flex-col justify-center">
+			<div class="ml-2 my-auto flex-1 lg:my-0 lg:mx-auto flex justify-center max-h-36">
+				{
+					useFace ? (
+						<Image
+							src={sk}
+							alt="Kornél portray"
+							class="mask mask-squircle"
+							width={160}
+							height={160}
+						/>
+					) : (
+						<div class="normal-case text-background text-4xl text-center my-auto">{pageTitle}</div>
+					)
+				}
+			</div>
+			<ul class="menu menu-lg p-4 w-full">
+				<NavigationItems />
+			</ul>
+		</div>
+	</div>
+</div>
+
+<style>
+	img {
+		object-fit: cover;
+	}
+</style>
+
+<style is:global>
+	@media (min-width: 1024px) {
+		#navbar .container {
+			max-width: 768px;
+		}
+	}
+</style>

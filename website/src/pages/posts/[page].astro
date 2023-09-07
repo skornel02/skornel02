@@ -1,0 +1,97 @@
+---
+import type {GetStaticPaths, Page} from 'astro';
+import {CollectionEntry, getCollection} from 'astro:content';
+import Navbar from '../../components/navigation/Navbar.astro';
+import Layout from '../../layouts/Layout.astro';
+import PostsSearch from '../../components/posts/PostsSearch.svelte';
+import {Icon} from 'astro-icon';
+import PostCard from '../../components/posts/PostCard.astro';
+import { PageSize } from '../../components/posts/PostPagination';
+
+interface Props {
+	page: Page<CollectionEntry<'blog'>>;
+}
+
+export const getStaticPaths = (async ({paginate}) => {
+	const posts = (await getCollection('blog', (post) => !post.data.hidden)).sort(
+		(a, b) => b.data.date.getTime() - a.data.date.getTime()
+	);
+
+	return paginate(posts, {pageSize: PageSize});
+}) satisfies GetStaticPaths;
+
+const posts = (await getCollection('blog', (post) => !post.data.hidden)).sort(
+	(a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+
+const {page} = Astro.props;
+
+const distanceToStart = page.currentPage - 1;
+const distanceToEnd = page.lastPage - page.currentPage;
+
+const showingPageStartAmount = 2 + Math.max(0, 2 - distanceToEnd);
+const showingPageEndAmount = 2 + Math.max(0, 2 - distanceToStart);
+
+const showingPageStart = Math.max(1, page.currentPage - showingPageStartAmount);
+const showingPageEnd = Math.min(page.lastPage, page.currentPage + showingPageEndAmount);
+const pagesToShow = [];
+for (let i = showingPageStart; i <= showingPageEnd; i++) {
+	pagesToShow.push(i);
+}
+
+const postsToShow = page.data;
+---
+
+<Layout title="Posts - SK">
+	<Navbar pageTitle={`Posts`}>
+		<div class="container">
+			<PostsSearch client:visible posts={posts} />
+
+			{postsToShow.map((post) => <PostCard {post} />)}
+
+			<nav class="flex justify-center">
+				<div class="join mx-auto">
+					{
+						page.currentPage > 2 && (
+							<a class="join-item btn btn-primary px-0" href="1">
+								<Icon name="mdi:chevron-double-left" height="80%" />
+							</a>
+						)
+					}
+					{
+						page.url.prev && (
+							<a class="join-item btn btn-primary px-0" href={page.url.prev}>
+								<Icon name="mdi:chevron-left" height="80%" />
+							</a>
+						)
+					}
+					{
+						pagesToShow.map((p) => (
+							<a
+								class="join-item btn"
+								class:list={{'btn-disabled': p === page.currentPage}}
+								href={`${p}`}>
+								{p}
+							</a>
+						))
+					}
+					{
+						page.url.next && (
+							<a class="join-item btn btn-primary px-0" href={page.url.next}>
+								<Icon name="mdi:chevron-right" height="80%" />
+							</a>
+						)
+					}
+
+					{
+						page.currentPage < page.lastPage - 1 && (
+							<a class="join-item btn btn-primary px-0" href={`${page.lastPage}`}>
+								<Icon name="mdi:chevron-double-right" height="80%" />
+							</a>
+						)
+					}
+				</div>
+			</nav>
+		</div>
+	</Navbar>
+</Layout>

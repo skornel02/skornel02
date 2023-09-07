@@ -1,0 +1,233 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/navigation/Navbar.astro';
+import {Icon} from 'astro-icon';
+import {CollectionEntry, getCollection} from 'astro:content';
+import ExperienceCard from '../components/portfolio/ExperienceCard.astro';
+import EducationCard from '../components/portfolio/EducationCard.astro';
+import GithubCard from '../components/portfolio/GithubCard.astro';
+import LanguagesAndTools from '../components/portfolio/LanguagesAndTools.astro';
+import CompetitionCard from '../components/portfolio/CompetitionCard.astro';
+
+interface CompetitionGroup {
+	name: string;
+	competitions: CollectionEntry<'competitions'>[];
+}
+
+const competitionsGrouped: CompetitionGroup[] = [];
+
+(await getCollection('competitions'))
+	.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+	.forEach((competition) => {
+		const compYear = competition.data.date.getFullYear().toString();
+		const group = competitionsGrouped.find((group) => group.name === compYear);
+		if (group) {
+			group.competitions.push(competition);
+		} else {
+			competitionsGrouped.push({
+				name: compYear,
+				competitions: [competition],
+			});
+		}
+	});
+
+const experiences = (await getCollection('experience')).sort((a, b) => b.data.order - a.data.order);
+
+const educations = (await getCollection('education')).sort((a, b) => b.data.order - a.data.order);
+---
+
+<Layout title="SK">
+	<meta slot="head" name="description" content="Personal site of SK" />
+
+	<Navbar pageTitle="Portfolio" useFace={true}>
+		<div class="container">
+			<section class="resume-section" id="about" data-description="SK - Home">
+				<div class="my-auto">
+					<h1 id="name" class="mb-0">
+						<div class="text-secondary">Stefán</div>
+						<span class="text-primary">Kornél</span>
+					</h1>
+					<p class="mb-5">
+						I am a young tinkerer that loves programming. My current goal is to start working in the
+						field. Learning to bake is in progress!
+					</p>
+					<d class="mx-0 join">
+						<a
+							id="social-card"
+							class="btn btn-sm md:btn-md btn-outline btn-secondary join-item"
+							href="/me"
+							data-astro-reload>
+							<Icon height="100%" name="mdi:format-list-bulleted" />
+						</a>
+						<a
+							id="social-gh"
+							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+							href="https://github.com/skornel02">
+							<Icon height="100%" name="mdi:github" />
+						</a>
+						<a
+							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+							href="https://www.facebook.com/stefankornel02">
+							<Icon height="100%" name="mdi:facebook-box" />
+						</a>
+						<a
+							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+							href="https://linkedin.com/in/skornel02">
+							<Icon height="100%" name="mdi:linkedin" />
+						</a>
+						<a
+							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+							href="https://aemail.com/Elgl">
+							<Icon height="100%" name="mdi:email-fast" />
+						</a>
+					</d>
+				</div>
+			</section>
+
+			<div class="divider"></div>
+
+			<section class="resume-section" id="experience" data-description="SK - Experiences">
+				<h2 class="mb-5 text-3xl sm:text-pageSection">Experience</h2>
+
+				{experiences.map((experience) => <ExperienceCard {experience} />)}
+			</section>
+
+			<div class="divider"></div>
+
+			<section class="resume-section" id="education" data-description="SK - Education">
+				<h2 class="mb-5 text-3xl sm:text-pageSection">Education</h2>
+
+				{educations.map((education) => <EducationCard {education} />)}
+			</section>
+
+			<div class="divider"></div>
+
+			<section class="resume-section" id="skills" data-description="SK - Skills">
+				<div class="my-auto">
+					<h2 class="mb-5 text-3xl sm:text-pageSection">Skills</h2>
+
+					<div class="subheading mb-3">Programming Languages &amp; Tools</div>
+					<LanguagesAndTools />
+
+					<div class="subheading mb-3">Github stats</div>
+					<GithubCard />
+				</div>
+			</section>
+
+			<section class="resume-section hidden" id="interests" data-description="SK - Interests">
+				<div class="my-auto">
+					<h2 class="mb-5 text-3xl sm:text-pageSection">Interests</h2>
+					<p></p>
+					<p class="mb-0"></p>
+				</div>
+			</section>
+
+			<div class="divider"></div>
+
+			<section class="resume-section" id="awards" data-description="SK - Awards">
+				<div class="my-auto">
+					<h2 class="mb-5 text-3xl sm:text-pageSection">Awards &amp; Certifications</h2>
+				</div>
+
+				<div class="subheading mb-3">Competitions</div>
+				<ul class="flex flex-col px-0 rounded-sm print:block">
+					{
+						competitionsGrouped.map((group, i) => (
+							<>
+								{group.competitions.map((competition) => (
+									<CompetitionCard {competition} />
+								))}
+								{i < competitionsGrouped.length - 1 ? (
+									<li>
+										<div class="w-full text-center text-secondary font-bold divider">
+											{group.name}
+										</div>
+									</li>
+								) : (
+									<> </>
+								)}
+							</>
+						))
+					}
+				</ul>
+
+				
+				<div class="subheading mb-3">Certificates</div>
+			</section>
+		</div>
+	</Navbar>
+</Layout>
+
+<style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	section ~ .divider {
+		@apply my-0;
+	}
+
+	.divider::before,
+	.divider::after {
+		@apply bg-primary opacity-50;
+	}
+
+	@layer components {
+		.resume-section {
+			@apply py-20 p-4 md:py-12 lg:p-12;
+			@apply sm:min-h-screen;
+			@apply print:py-4 print:border-b-0 print:first:pt-0 print:first:mt-0;
+			@apply flex flex-col;
+		}
+
+		.resume-section h1 {
+			@apply text-5xl leading-[3rem] md:text-pageTitle md:leading-pageTitle font-bold;
+		}
+
+		.resume-section h2 {
+			@apply text-3xl md:text-pageSection font-bold;
+			@apply print:text-center;
+		}
+
+		.resume-item {
+			@apply flex flex-col md:flex-row;
+			@apply mb-5;
+			@apply print:break-inside-avoid;
+			page-break-inside: avoid;
+		}
+
+		.icon {
+			@apply inline-block w-[32px] h-[32px];
+		}
+
+		.popup-modal {
+			@apply z-40;
+			@apply fixed top-0 bottom-0 right-0 left-0;
+			@apply flex justify-center items-center;
+			@apply pointer-events-none;
+		}
+	}
+
+	@layer utilities {
+		.subheading {
+			font-family: 'Saira Extra Condensed', serif;
+			@apply uppercase font-medium text-lg;
+		}
+		.resume-date {
+			@apply min-w-max md:min-w-[12rem];
+		}
+	}
+
+	@media print {
+		#name {
+			text-align: center;
+		}
+		#name div {
+			display: inline;
+		}
+
+		#awards.resume-section {
+			page-break-inside: unset;
+		}
+	}
+</style>

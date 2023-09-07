@@ -1,0 +1,21 @@
+{
+	"$schema": "../../../dist/schema/competition.schema.json",
+	"name": "Skills Junior 2022 - Web category",
+	"date": "2022-04-02",
+	"placement": "First place",
+	"icon": "emojione-monotone:1st-place-medal",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/Skills-Junior-Web-2022.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	],
+	"urls": [
+		{
+			"name": "Official website",
+			"href": "https://skillsit.hu/hirek/nagyszeru-eredmenyek-a-skills-junior-webfejleszto-kategoriajanak-dontojen/"
+		}
+	]
+}

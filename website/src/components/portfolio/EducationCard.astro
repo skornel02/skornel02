@@ -1,0 +1,33 @@
+---
+import type {CollectionEntry} from 'astro:content';
+
+interface Props {
+	education: CollectionEntry<'education'>;
+}
+
+const {education} = Astro.props;
+const {Content} = await education.render();
+---
+
+<div class="card w-full bg-base-100 dark:bg-gray-900 shadow-xl my-2">
+	<div class="card-body">
+		<div class="card-actions flex-wrap justify-between">
+			<h3 class="text-2xl font-bold uppercase">{education.data.school}</h3>
+			<span class="text-secondary flex-grow text-right">{education.data.duration}</span>
+		</div>
+		<h4>
+			<span class="text-primary font-semibold uppercase">{education.data.major}</span>
+            <br>
+			{
+				education.data.minor !== undefined ? (
+					<span class="text-secondary">{education.data.minor}</span>
+				) : (
+					<div />
+				)
+			}
+		</h4>
+		{}
+
+		<Content />
+	</div>
+</div>

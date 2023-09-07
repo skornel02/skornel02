@@ -1,0 +1,32 @@
+---
+import Navbar from '../components/navigation/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404 - SK">
+	<meta http-equiv="refresh" content="5; url=/" slot="head" />
+
+	<Navbar pageTitle="Page not found">
+		<div id="content" class="flex justify-center items-center flex-col">
+			<p>Redirecting to main page in <span></span>...</p>
+		</div>
+	</Navbar>
+</Layout>
+
+<script is:inline>
+	{
+		let countDown = 5;
+
+		const update = () => {
+			document.querySelector('#content span').innerHTML = countDown;
+		};
+
+		const interval = setInterval(() => {
+			countDown--;
+			if (countDown === 0) {
+				clearInterval(interval);
+			}
+			update();
+		}, 1000);
+	}
+</script>

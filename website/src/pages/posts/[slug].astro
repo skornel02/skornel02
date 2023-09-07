@@ -1,0 +1,27 @@
+---
+import type {GetStaticPaths} from 'astro';
+import {getCollection, getEntryBySlug} from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/navigation/Navbar.astro';
+import PostPage from '../../components/posts/PostPage.astro';
+
+export const getStaticPaths = (async () => {
+	const posts = await getCollection('blog');
+
+	return posts.map((post) => ({
+		params: {
+			slug: post.slug,
+		},
+	}));
+}) satisfies GetStaticPaths;
+
+const {slug} = Astro.params;
+
+const post = (await getEntryBySlug('blog', slug!))!;
+---
+
+<Layout title={`${post.data.title} - SK`}>
+	<Navbar pageTitle={post.data.title}>
+		{post && <PostPage {post} />}
+	</Navbar>
+</Layout>
