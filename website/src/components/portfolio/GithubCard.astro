@@ -1,0 +1,24 @@
+<img
+	id="github-stats-image"
+	class="block mx-auto"
+	src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact"
+	alt="skornel02's stats on github"
+	width="350"
+/>
+
+<script>
+	const githubStats = document.querySelector('#github-stats-image') as HTMLImageElement | undefined;
+	const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+	const updateTheme = (ev: MediaQueryListEvent | undefined = undefined) => {
+		const darkTheme = ev?.matches ?? darkMediaQuery.matches;
+
+		if (githubStats) {
+			githubStats.src =
+				githubStats.src.replace(/&theme=[a-z]{4,5}/, '') + `&theme=${darkTheme ? 'dark' : 'light'}`;
+		}
+	};
+
+	updateTheme();
+	darkMediaQuery.addEventListener('change', updateTheme);
+</script>

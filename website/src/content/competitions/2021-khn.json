@@ -1,0 +1,22 @@
+{
+	"$schema": "../../../dist/schema/competition.schema.json",
+	"name": "Kódolj Határok Nélkül! - 2021",
+	"date": "2021-06-01",
+	"placement": "Finalist",
+	"icon": "emojione-monotone:1st-place-medal",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/Kodolj-Hatarok-Nelkul-2021.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	],
+	"urls": [
+		{
+			"name": "Repository",
+			"href": "https://github.com/skornel02/khn2021"
+		}
+	],
+	"team": ["ruzsa", "sk", "avar"]
+}

@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "Website",
+			"path": "website"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.css": "tailwindcss"
+		},
+		"prettier.documentSelectors": [
+			"**/*.astro"
+		],
+		"cSpell.words": [
+			"astro",
+			"tailwindcss",
+			"emojione",
+			"pdfs",
+			"partfo",
+		],
+	}
+}

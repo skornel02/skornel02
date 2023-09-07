@@ -1,0 +1,22 @@
+{
+	"$schema": "../../../dist/schema/competition.schema.json",
+	"name": "Dusza Árpád Országos Programozói Emlékverseny - 2021 - Mobile category",
+	"date": "2021-12-04",
+	"placement": "First place",
+	"icon": "emojione-monotone:1st-place-medal",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/Dusza-mobil-2021.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	],
+	"urls": [
+		{
+			"name": "Repository",
+			"href": "https://github.com/skornel02/duszamobile2021"
+		}
+	],
+	"team": ["partfo", "erik", "sk"]
+}

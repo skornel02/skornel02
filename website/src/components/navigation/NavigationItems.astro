@@ -1,0 +1,48 @@
+---
+import {Icon} from 'astro-icon';
+
+const currentPath = Astro.url.pathname;
+
+const isMainPage = currentPath == '/' || currentPath == '/index.html' || currentPath == '/index';
+const mainPageHref = isMainPage ? '#' : '/';
+
+const isPostsPage = currentPath.match(/\/posts\/[0-9]+/);
+const isPostPage = currentPath.startsWith("/posts/");
+const postsPageHref = isPostsPage ? '#' : '/posts/1';
+---
+
+<!-- Inside DaisyUI menu -->
+<li>
+	<a href={mainPageHref} class:list={{active: isMainPage}} class="">
+		<div class="tooltip tooltip-bottom" data-tip="Home">
+			<Icon height="100%" name="mdi:home" />
+		</div>
+		<span class="hidden sm:inline">Home</span>
+	</a>
+</li>
+<li class="disabled">
+	<a class:list={{active: currentPath == '/projects'}}>
+		<div class="tooltip tooltip-bottom" data-tip="Projects">
+			<Icon height="100%" name="mdi:hammer-screwdriver" />
+		</div>
+		<span class="hidden sm:inline">Projects</span>
+	</a>
+</li>
+<li>
+	<a href={postsPageHref} class:list={{active: isPostsPage || isPostPage}}>
+		<div class="tooltip tooltip-bottom" data-tip="Posts">
+			<Icon height="100%" name="mdi:notebook-outline" />
+		</div>
+		<span class="hidden sm:inline">Posts</span>
+	</a>
+</li>
+
+<style>
+	li:not(.disabled) > a:not(.active) {
+		@apply text-slate-300 hover:text-slate-100;
+	}
+
+	[astro-icon] {
+		min-height: 20px;
+	}
+</style>

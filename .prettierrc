@@ -6,6 +6,22 @@
 	"printWidth": 100,
 	"quoteProps": "consistent",
 	"bracketSpacing": false,
+	"bracketSameLine": true,
 	"arrowParens": "always",
-	"svelteStrictMode": true
+	"plugins": ["prettier-plugin-astro", "prettier-plugin-svelte"],
+	"overrides": [
+		{
+			"files": "*.astro",
+			"options": {
+				"parser": "astro"
+			}
+		},
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte",
+				"tabWidth": 2
+			}
+		}
+	]
 }

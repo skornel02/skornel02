@@ -1,0 +1,22 @@
+{
+	"$schema": "../../../dist/schema/competition.schema.json",
+	"name": "Bakonyi Bitfaragó Bajnokság - 2020",
+	"date": "2021-04-17",
+	"placement": "I. place",
+	"icon": "emojione-monotone:1st-place-medal",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/Bakonyi-Bitfarago-Bajnoksag-2020.jpeg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
+		}
+	],
+	"urls": [
+		{
+			"name": "Competition website",
+			"href": "https://mik.uni-pannon.hu/szervezet/hirek/kar-tovabbi-hirei/osszefoglalo-a-8-bakonyi-bitfarago-bajnoksagrol"
+		}
+	],
+	"team": ["partfo", "sk", "avar"]
+}

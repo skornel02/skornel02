@@ -4,7 +4,7 @@
 name: Node.js CI
 
 env:
-  NODE_VERSION: '16.15.0'
+  NODE_VERSION: '18.17.1'
 
 on:
   push:
@@ -16,17 +16,34 @@ jobs:
     environment: Build
     steps:
       - uses: actions/checkout@v1
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 7.0.0
+
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'pnpm'
+      
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+        
       - name: npm install and build
         run: |
-          pnpm install
+          pnpm install --frozen-lockfile
           pnpm run build
         env:
           SHLINK_KEY: ${{ secrets.SHLINK_KEY }}
@@ -36,4 +53,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: build
+          FOLDER: dist

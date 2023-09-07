@@ -1,0 +1,61 @@
+---
+import {Image} from 'astro:assets';
+import {CollectionEntry} from 'astro:content';
+import unknownHe from '../../images/people/unknownhe.jpeg';
+
+interface Props {
+	person: CollectionEntry<'people'>;
+	width: number;
+	height: number;
+	class: string;
+}
+
+const {person, ...props} = Astro.props;
+
+const isLocalImage = person.data.image !== undefined;
+const localImage = person.data.image!;
+
+const isRemoteImage = person.data.externalImage !== undefined;
+const remoteImage = person.data.externalImage!;
+
+const isFallback = !isLocalImage && !isRemoteImage;
+const fallbackImage = unknownHe;
+---
+
+<a href={person.data.refer}>
+	{
+		isLocalImage && (
+			<Image {...props} src={localImage} alt={person.data.name} title={person.data.name} />
+		)
+	}
+	{
+		isRemoteImage && (
+			<Image {...props} src={remoteImage} alt={person.data.name} title={person.data.name} />
+		)
+	}
+	{
+		isFallback && (
+			<Image
+				class={props.class}
+				width={props.width}
+				height={props.height}
+				src={fallbackImage}
+				alt={person.data.name}
+				title={person.data.name}
+			/>
+		)
+	}
+</a>
+
+<style
+	define:vars={{
+		teamMemberImageWidth: `${props.width}px`,
+		teamMemberImageHeight: `${props.height}px`,
+	}}
+>
+	img {
+		width: var(--teamMemberImageWidth);
+		height: var(--teamMemberImageHeight);
+		object-fit: cover;
+	}
+</style>
