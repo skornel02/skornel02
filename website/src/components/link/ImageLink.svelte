@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type {ImageLink} from '../../schemas/competition';
+	import type {ImageLink} from '../../schemas/achievements';
 	import {openModal} from './modal-helper';
 
 	export let slug: string;

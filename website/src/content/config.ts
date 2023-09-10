@@ -1,18 +1,18 @@
 import {defineCollection} from 'astro:content';
-import {blogSchema} from '../schemas/blog';
-import {competitionSchema, competitionSchemaFactory} from '../schemas/competition';
+import {postSchema} from '../schemas/posts';
+import {achievementSchema, achievementSchemaFactory} from '../schemas/achievements';
 import {experienceSchema} from '../schemas/experience';
 import {educationSchema} from '../schemas/education';
 import {peopleSchemaFactory} from '../schemas/people';
 
-const blog = defineCollection({
+const posts = defineCollection({
 	type: 'content',
-	schema: blogSchema,
+	schema: postSchema,
 });
 
-const competitions = defineCollection({
+const achievements = defineCollection({
 	type: 'data',
-	schema: competitionSchemaFactory,
+	schema: achievementSchemaFactory,
 });
 
 const experience = defineCollection({
@@ -31,8 +31,8 @@ const people = defineCollection({
 });
 
 export const collections = {
-	blog,
-	competitions,
+	posts,
+	achievements,
 	experience,
 	education,
 	people,

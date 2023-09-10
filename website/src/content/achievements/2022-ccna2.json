@@ -1,0 +1,12 @@
+{
+	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"name": "CCNA Routing and Switching: Routing and Switching Essentials",
+	"date": "2022-06-14",
+	"placement": "Certificate",
+	"icon": "mdi:certificate",
+	"highlighted": false,
+    "pdfs": [{
+        "name": "Certificate",
+        "src": "/certificates/CCNA-2-certificate.pdf"
+    }]
+}

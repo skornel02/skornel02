@@ -1,6 +1,6 @@
 import {z} from 'astro/zod';
 
-export const blogSchema = z.object({
+export const postSchema = z.object({
 	title: z.string(),
 	description: z.string(),
 	date: z.date(),
@@ -10,4 +10,4 @@ export const blogSchema = z.object({
 	hidden: z.boolean().optional().default(false),
 });
 
-export type BlogMetadata = z.infer<typeof blogSchema>;
+export type PostMetadata = z.infer<typeof postSchema>;

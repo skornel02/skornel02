@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type {PdfLink} from '../../schemas/competition';
+	import type {PdfLink} from '../../schemas/achievements';
 	import {openModal} from './modal-helper';
 
 	export let slug: string;

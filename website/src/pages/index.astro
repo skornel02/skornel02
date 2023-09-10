@@ -7,26 +7,26 @@ import ExperienceCard from '../components/portfolio/ExperienceCard.astro';
 import EducationCard from '../components/portfolio/EducationCard.astro';
 import GithubCard from '../components/portfolio/GithubCard.astro';
 import LanguagesAndTools from '../components/portfolio/LanguagesAndTools.astro';
-import CompetitionCard from '../components/portfolio/CompetitionCard.astro';
+import AchievementCard from '../components/portfolio/AchievementCard.astro';
 
-interface CompetitionGroup {
+interface AchievementGroup {
 	name: string;
-	competitions: CollectionEntry<'competitions'>[];
+	achievements: CollectionEntry<'achievements'>[];
 }
 
-const competitionsGrouped: CompetitionGroup[] = [];
+const achievementsGrouped: AchievementGroup[] = [];
 
-(await getCollection('competitions'))
+(await getCollection('achievements'))
 	.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
-	.forEach((competition) => {
-		const compYear = competition.data.date.getFullYear().toString();
-		const group = competitionsGrouped.find((group) => group.name === compYear);
+	.forEach((achievement) => {
+		const compYear = achievement.data.date.getFullYear().toString();
+		const group = achievementsGrouped.find((group) => group.name === compYear);
 		if (group) {
-			group.competitions.push(competition);
+			group.achievements.push(achievement);
 		} else {
-			competitionsGrouped.push({
+			achievementsGrouped.push({
 				name: compYear,
-				competitions: [competition],
+				achievements: [achievement],
 			});
 		}
 	});
@@ -129,15 +129,11 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 					<h2 class="mb-5 text-3xl sm:text-pageSection">Awards &amp; Certifications</h2>
 				</div>
 
-				<div class="subheading mb-3">Competitions</div>
 				<ul class="flex flex-col px-0 rounded-sm print:block">
 					{
-						competitionsGrouped.map((group, i) => (
+						achievementsGrouped.map((group, i) => (
 							<>
-								{group.competitions.map((competition) => (
-									<CompetitionCard {competition} />
-								))}
-								{i < competitionsGrouped.length - 1 ? (
+								{i > 0 ? (
 									<li>
 										<div class="w-full text-center text-secondary font-bold divider">
 											{group.name}
@@ -146,13 +142,13 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 								) : (
 									<> </>
 								)}
+								{group.achievements.map((achievement) => (
+									<AchievementCard {achievement} />
+								))}
 							</>
 						))
 					}
 				</ul>
-
-				
-				<div class="subheading mb-3">Certificates</div>
 			</section>
 		</div>
 	</Navbar>

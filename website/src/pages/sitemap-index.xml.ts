@@ -26,7 +26,7 @@ export const GET: APIRoute = async ({request}) => {
 		ignoreAttributes: false,
 	});
 
-	const posts = (await getCollection('blog', (post) => !post.data.hidden)).sort(
+	const posts = (await getCollection('posts', (post) => !post.data.hidden)).sort(
 		(a, b) => b.data.date.getTime() - a.data.date.getTime()
 	);
 

@@ -1,0 +1,12 @@
+{
+	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"name": "CCNA Routing and Switching: Introduction to Networking",
+	"date": "2021-06-03",
+	"placement": "Certificate",
+	"icon": "mdi:certificate",
+	"highlighted": false,
+    "pdfs": [{
+        "name": "Certificate",
+        "src": "/certificates/CCNA-1-certificate.pdf"
+    }]
+}

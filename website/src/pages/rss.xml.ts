@@ -39,7 +39,7 @@ export const GET: APIRoute = async ({request}) => {
         ignoreAttributes: false,
     });
 
-    const posts = (await getCollection('blog', (post) => !post.data.hidden)).sort(
+    const posts = (await getCollection('posts', (post) => !post.data.hidden)).sort(
         (a, b) => b.data.date.getTime() - a.data.date.getTime()
     );
 
@@ -55,7 +55,7 @@ export const GET: APIRoute = async ({request}) => {
                 },
                 'title': 'SK',
                 'link': baseUrl,
-                'description': "SK's blog's feed's cat",
+                'description': "SK's posts' feed's cat",
                 'item': posts.map((post) => ({
                     guid: `${baseUrl}/posts/${post.slug}`,
                     title: post.data.title,

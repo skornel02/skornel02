@@ -7,7 +7,7 @@ export const educationSchema = z.object({
 	minor: z.string().optional(),
 	duration: z.string(),
 	order: z.number().int().positive(),
-	blogPost: reference('blog').optional(),
+	blogPost: reference('posts').optional(),
 });
 
 export type EducationMetadata = z.infer<typeof educationSchema>;
