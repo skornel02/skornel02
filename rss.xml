@@ -3,7 +3,7 @@
     <atom:link href="https://skornel02.hu/rss.xml" rel="self" type="application/rss+xml"></atom:link>
     <title>SK</title>
     <link>https://skornel02.hu</link>
-    <description>SK&apos;s blog&apos;s feed&apos;s cat</description>
+    <description>SK&apos;s posts&apos; feed&apos;s cat</description>
     <item>
       <guid>https://skornel02.hu/posts/emojik-es-a-windows</guid>
       <title>Emojik és a Windows</title>
