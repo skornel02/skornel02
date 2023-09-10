@@ -3,7 +3,7 @@
 	import Fuse from 'fuse.js';
 	import FuseAutocomplete from '../search/FuseAutocomplete.svelte';
 
-	export let posts: CollectionEntry<'blog'>[];
+	export let posts: CollectionEntry<'posts'>[];
 
 	const fuse = new Fuse(posts, {
 		keys: ['slig', 'data.title', 'data.description', 'data.tags', 'body'],

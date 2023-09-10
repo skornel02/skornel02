@@ -6,7 +6,7 @@ import Navbar from '../../components/navigation/Navbar.astro';
 import PostPage from '../../components/posts/PostPage.astro';
 
 export const getStaticPaths = (async () => {
-	const posts = await getCollection('blog');
+	const posts = await getCollection('posts');
 
 	return posts.map((post) => ({
 		params: {
@@ -17,7 +17,7 @@ export const getStaticPaths = (async () => {
 
 const {slug} = Astro.params;
 
-const post = (await getEntryBySlug('blog', slug!))!;
+const post = (await getEntryBySlug('posts', slug!))!;
 ---
 
 <Layout title={`${post.data.title} - SK`}>

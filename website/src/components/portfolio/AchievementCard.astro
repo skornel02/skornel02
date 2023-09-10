@@ -9,11 +9,11 @@ import UrlLink from '../link/UrlLink.astro';
 import PdfLink from '../link/PdfLink.svelte';
 
 interface Props {
-	competition: CollectionEntry<'competitions'>;
+	achievement: CollectionEntry<'achievements'>;
 }
 
-const {competition} = Astro.props;
-const team = competition.data.team ? await getEntries(competition.data.team) : [];
+const {achievement} = Astro.props;
+const team = achievement.data.team ? await getEntries(achievement.data.team) : [];
 ---
 
 <li
@@ -23,28 +23,28 @@ const team = competition.data.team ? await getEntries(competition.data.team) : [
 			<div class="flex-grow-0 sm:flex-grow mr-auto basis-0"></div>
 			<div class="flex justify-center">
 				<Icon
-					class:list={{highlight: competition.data.highlighted}}
-					name={competition.data.icon}
-					color={competition.data.iconColor}
+					class:list={{highlight: achievement.data.highlighted}}
+					name={achievement.data.icon}
+					color={achievement.data.iconColor}
 				/>
 				<div>
-					<span class="badge bg-primary rounded text-white">{competition.data.placement}</span>
+					<span class="badge bg-primary rounded text-white">{achievement.data.placement}</span>
 				</div>
 			</div>
 			<div class="flex-grow basis-0 ml-auto">
 				<p class="text-end text-title">
-					<small>{competition.data.date.toISOString().substring(0, 10)}</small>
+					<small>{achievement.data.date.toISOString().substring(0, 10)}</small>
 				</p>
 			</div>
 		</div>
 		<div class="w-full my-1 order-2 sm:order-1">
-			<div class="font-bold text-title text-center">{competition.data.name}</div>
+			<div class="font-bold text-title text-center">{achievement.data.name}</div>
 		</div>
 	</div>
 	<div class="flex flex-wrap">
 		<div class="w-full sm:w-1/2 flex justify-center sm:justify-start teams">
 			{
-				competition.data.team && (
+				achievement.data.team && (
 					<dir class="avatar-group -space-x-2 my-0 px-2 py-[0.2rem]">
 						{team.map((people) => (
 							<TeamMemberPicture
@@ -60,22 +60,22 @@ const team = competition.data.team ? await getEntries(competition.data.team) : [
 		</div>
 		<div class="w-full sm:w-1/2 flex print:hidden justify-center items-center sm:justify-end mt-1 join">
 			{
-				competition.data.urls.map((url) => (
+				achievement.data.urls.map((url) => (
 					<UrlLink {url}>
 						<AstroIcon name={url.icon} slot="icon" />
 					</UrlLink>
 				))
 			}
 			{
-				competition.data.pdfs.map((pdf, index) => (
-					<PdfLink client:visible pdf={pdf} slug={competition.id} index={index}>
+				achievement.data.pdfs.map((pdf, index) => (
+					<PdfLink client:idle pdf={pdf} slug={achievement.id} index={index}>
 						<AstroIcon name={pdf.icon} slot="icon" />
 					</PdfLink>
 				))
 			}
 			{
-				competition.data.images.map((image, index) => (
-					<ImageLink client:visible image={image} slug={competition.id} index={index}>
+				achievement.data.images.map((image, index) => (
+					<ImageLink client:idle image={image} slug={achievement.id} index={index}>
 						<AstroIcon name={image.icon} slot="icon" />
 						<Image src={image.src} alt={image.alt} />
 					</ImageLink>

@@ -6,7 +6,7 @@ export const experienceSchema = z.object({
 	role: z.string(),
 	duration: z.string(),
 	order: z.number().int().positive(),
-	blogPost: reference('blog').optional(),
+	blogPost: reference('posts').optional(),
 });
 
 export type ExperienceMetadata = z.infer<typeof experienceSchema>;

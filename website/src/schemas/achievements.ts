@@ -1,5 +1,5 @@
-import {z} from 'astro/zod';
-import {reference, type ImageFunction, type SchemaContext} from 'astro:content';
+import { z } from 'astro/zod';
+import { reference, type ImageFunction, type SchemaContext } from 'astro:content';
 
 const imageLinkSchemaFactory = (context: SchemaContext | undefined = undefined) =>
 	z.object({
@@ -24,7 +24,7 @@ const pdfLinkScbema = z.object({
 	buttonClass: z.string().default('btn btn-sm btn-primary text-white'),
 });
 
-export const competitionSchemaFactory = (context: SchemaContext | undefined = undefined) =>
+export const achievementSchemaFactory = (context: SchemaContext | undefined = undefined) =>
 	z
 		.object({
 			name: z.string(),
@@ -37,14 +37,14 @@ export const competitionSchemaFactory = (context: SchemaContext | undefined = un
 			pdfs: z.array(pdfLinkScbema).optional().default([]),
 			urls: z.array(urlLinkSchema).optional().default([]),
 			team: z.array(reference('people')).optional(),
-			blogPost: reference('blog').optional(),
+			blogPost: reference('posts').optional(),
 		})
-		.describe('Competition schema');
+		.describe('Achievements schema');
 
 const imageLinkSchema = imageLinkSchemaFactory();
-export const competitionSchema = competitionSchemaFactory();
+export const achievementSchema = achievementSchemaFactory();
 
 export type ImageLink = z.infer<typeof imageLinkSchema>;
 export type UrlLink = z.infer<typeof urlLinkSchema>;
 export type PdfLink = z.infer<typeof pdfLinkScbema>;
-export type CompetitionMetadata = z.infer<typeof competitionSchema>;
+export type AchievementMetadata = z.infer<typeof achievementSchema>;

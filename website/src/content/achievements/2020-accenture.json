@@ -5,6 +5,6 @@
 	"placement": "Finalist",
 	"icon": "mdi:star",
 	"highlighted": false,
-	"pdfs": [{"name": "Reference", "src": "/assets/competitions/Accenture Java 2020.pdf"}],
+	"pdfs": [{"name": "Reference", "src": "/competitions/Accenture Java 2020.pdf"}],
 	"team": ["fmate", "sk", "vtibor"]
 }

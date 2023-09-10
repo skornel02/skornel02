@@ -9,18 +9,18 @@ import PostCard from '../../components/posts/PostCard.astro';
 import { PageSize } from '../../components/posts/PostPagination';
 
 interface Props {
-	page: Page<CollectionEntry<'blog'>>;
+	page: Page<CollectionEntry<'posts'>>;
 }
 
 export const getStaticPaths = (async ({paginate}) => {
-	const posts = (await getCollection('blog', (post) => !post.data.hidden)).sort(
+	const posts = (await getCollection('posts', (post) => !post.data.hidden)).sort(
 		(a, b) => b.data.date.getTime() - a.data.date.getTime()
 	);
 
 	return paginate(posts, {pageSize: PageSize});
 }) satisfies GetStaticPaths;
 
-const posts = (await getCollection('blog', (post) => !post.data.hidden)).sort(
+const posts = (await getCollection('posts', (post) => !post.data.hidden)).sort(
 	(a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
 
