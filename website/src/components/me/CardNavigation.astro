@@ -1,0 +1,32 @@
+---
+    import Icon from 'astro-icon';
+
+    interface Props {
+        home?: boolean,
+        details?: boolean,
+        card?: Boolean,
+    }
+
+    const {home = false, details = false, card = false} = Astro.props;
+---
+
+<div class="flex justify-center">
+	<div class="btn-group">
+        {card && (
+			<a id="home" href="/card" class="btn btn-outline btn-secondary hover:bg-primary">
+                <Icon name="mdi:qrcode" height="32px"/>
+			</a>
+        )}
+        {details && (
+            <a id="details" href="/me" class="btn btn-outline btn-secondary hover:bg-primary">
+                <!-- <List size="{32}" /> -->
+            </a>
+        )}
+        {home && (
+            <a id="home" href="/" class="btn btn-outline btn-primary hover:bg-primary" data-sveltekit-reload>
+                <Icon name="mdi:home" height="32px" />
+                <!-- <Home size="{32}" /> -->
+            </a>
+        )}
+	</div>
+</div>

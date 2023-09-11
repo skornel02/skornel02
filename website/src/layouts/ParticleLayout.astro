@@ -1,0 +1,54 @@
+---
+import {options} from '../particle.config';
+import HeadContent from '../components/common/HeadContent.astro';
+import Particles from 'astro-particles';
+
+interface Props {
+	title: string;
+}
+
+const {title} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<HeadContent />
+
+		<title>{title}</title>
+		<slot name="head" />
+	</head>
+	<body>
+		<slot />
+
+		<Particles id="meCardBackground" {options} init="particlesInit" />
+		<script>
+			import {type Container, type Engine, tsParticles} from 'tsparticles-engine';
+			import {loadFull} from 'tsparticles';
+
+			window.particlesInit = async function (engine: Engine) {
+				await loadFull(engine);
+			};
+		</script>
+
+		<style is:global>
+			:root {
+				--color-background: #ffffff;
+				--color-primary: #2e74b5;
+				--color-secondary: #1f3864;
+				--color-title: #3b3838;
+				--color-text: #868e96;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--color-background: #000000;
+					--color-primary: #690092;
+					--color-secondary: #c123ff;
+					--color-title: #ffffff;
+					--color-text: #c1bdc2;
+				}
+			}
+		</style>
+	</body>
+</html>
