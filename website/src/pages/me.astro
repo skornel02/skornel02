@@ -1,8 +1,33 @@
 ---
-import BasicLayout from "../layouts/BasicLayout.astro";
-
+import ParticleLayout from '../layouts/ParticleLayout.astro';
+import MeCard from '../components/me/MeCard.svelte';
+import CardContacts from '../components/me/CardContacts.astro';
+import CardNavigation from '../components/me/CardNavigation.astro';
+import {Image} from 'astro:assets';
+import sk from '../images/people/sk.jpeg';
 ---
 
-<BasicLayout title="Me - SK">
-    <p>WIP</p>
-</BasicLayout>
+<ParticleLayout title="Stefán Kornél">
+	<meta name="description" content="Digital personal information card" slot="head" />
+
+	<main class="container mx-auto pt-4">
+		<MeCard client:load>
+			<Image
+				src={sk}
+				alt="Kornél portray"
+				width={160}
+				height={160}
+				slot="face"
+			/>
+			<CardContacts slot="contacts" />
+			<CardNavigation home={true} card={false} slot="navigation" />
+		</MeCard>
+	</main>
+</ParticleLayout>
+
+
+<style>
+    .container {
+        min-height: 540px;
+    }
+</style>

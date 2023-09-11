@@ -9,17 +9,9 @@
 	};
 </script>
 
-<Typewriter mode="cascade" interval="{100}" on:done="{onDone}">
-	<h1>
+<Typewriter mode="cascade" interval={100} on:done={onDone}>
+	<h1 class="text-4xl whitespace-nowrap">
 		<span class="text-secondary">Stefán</span>
 		<span class="text-primary">Kornél</span>
 	</h1>
 </Typewriter>
-
-<style>
-	h1 {
-		font-size: 1.9em;
-		text-align: center;
-		white-space: nowrap;
-	}
-</style>
