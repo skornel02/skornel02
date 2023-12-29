@@ -45,8 +45,8 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm start
         env:
-          EMAIL: ${{ env.EMAIL }}
-          WEBSITE: ${{ env.WEBSITE }}
+          EMAIL: ${{ vars.EMAIL }}
+          WEBSITE: ${{ vars.WEBSITE }}
 
       - name: Install and build website 🌐
         working-directory: 'website'
