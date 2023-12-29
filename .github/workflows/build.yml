@@ -1,7 +1,4 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Node.js CI
+name: Build and deploy website
 
 env:
   NODE_VERSION: '18.17.1'
@@ -9,6 +6,7 @@ env:
 on:
   push:
     branches: [master]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -25,7 +23,7 @@ jobs:
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
-          version: 7
+          version: 8
           run_install: false
 
       - name: Get pnpm store directory
@@ -41,7 +39,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
         
-      - name: npm install and build
+      - name: Install and build card 🃏
+        working-directory: 'card'
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm start
+
+      - name: Install and build website 🌐
         working-directory: 'website'
         run: |
           pnpm install --frozen-lockfile

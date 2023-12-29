@@ -3,6 +3,14 @@
 		{
 			"name": "Website",
 			"path": "website"
+		},
+		{
+			"name": "Card",
+			"path": "card"
+		},
+		{
+			"name": "Github Workflow",
+			"path": ".github"
 		}
 	],
 	"settings": {
