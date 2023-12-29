@@ -1,8 +1,8 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type {CollectionEntry} from 'astro:content';
 
 interface Props {
-    experience: CollectionEntry<'experience'>;
+	experience: CollectionEntry<'experience'>;
 }
 
 const {experience} = Astro.props;
@@ -10,14 +10,14 @@ const {Content} = await experience.render();
 ---
 
 <div class="card w-full bg-base-100 dark:bg-gray-900 shadow-xl my-2">
-    <div class="card-body">
-        <div class="card-actions flex-wrap justify-between">
-            <h3 class="text-2xl font-bold uppercase">{experience.data.name}</h3>
-            <span class="text-secondary flex-grow text-right">{experience.data.duration}</span>
-        </div>
-        <h4>
-            <span class="text-primary font-semibold uppercase">{experience.data.role}</span>
-        </h4>
-        <Content />
-    </div>
+	<div class="card-body">
+		<div class="card-actions flex-wrap justify-between">
+			<h3 class="text-2xl font-bold uppercase">{experience.data.name}</h3>
+			<span class="text-secondary flex-grow text-right">{experience.data.duration}</span>
+		</div>
+		<h4>
+			<span class="text-primary font-semibold uppercase">{experience.data.role}</span>
+		</h4>
+		<Content />
+	</div>
 </div>

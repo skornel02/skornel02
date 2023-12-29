@@ -1,5 +1,5 @@
-import { z } from 'astro/zod';
-import { reference, type ImageFunction, type SchemaContext } from 'astro:content';
+import {z} from 'astro/zod';
+import {reference, type ImageFunction, type SchemaContext} from 'astro:content';
 
 const imageLinkSchemaFactory = (context: SchemaContext | undefined = undefined) =>
 	z.object({

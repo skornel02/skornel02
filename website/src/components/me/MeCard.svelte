@@ -19,7 +19,10 @@
 	<meta name="description" content="Digital personal information card" />
 </svelte:head>
 
-<div class="card w-80 sm:w-96 bg-base-100 m-auto z-10" in:fade={{delay: 200}} out:fade={{duration: 150}}>
+<div
+	class="card w-80 sm:w-96 bg-base-100 m-auto z-10"
+	in:fade={{delay: 200}}
+	out:fade={{duration: 150}}>
 	<div class="card-body" class:card-loaded={loaded}>
 		<div id="nameSlot" class="sm:card-title justify-center">
 			<CardTitle on:load={onLoad} />

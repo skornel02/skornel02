@@ -58,7 +58,8 @@ const team = achievement.data.team ? await getEntries(achievement.data.team) : [
 				)
 			}
 		</div>
-		<div class="w-full sm:w-1/2 flex print:hidden justify-center items-center sm:justify-end mt-1 join">
+		<div
+			class="w-full sm:w-1/2 flex print:hidden justify-center items-center sm:justify-end mt-1 join">
 			{
 				achievement.data.urls.map((url) => (
 					<UrlLink {url}>

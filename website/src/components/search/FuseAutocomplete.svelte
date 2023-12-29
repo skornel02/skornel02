@@ -4,7 +4,7 @@
 	export let fuse: Fuse<T>;
 	export let handleSearchResults: undefined | ((results: Fuse.FuseResult<T>[]) => void) = undefined;
 	export let dialogNamePicker: undefined | ((result: Fuse.FuseResult<T>) => string) = undefined;
-	export let dialogLinkPicker: ((result: Fuse.FuseResult<T>) => string | undefined) = () => undefined;
+	export let dialogLinkPicker: (result: Fuse.FuseResult<T>) => string | undefined = () => undefined;
 
 	const searchEnabled = dialogNamePicker !== undefined;
 
@@ -44,9 +44,13 @@
 			{/if}
 
 			{#each searchResults as result}
-				<li class:disabled={dialogLinkPicker && dialogLinkPicker(result) === undefined} class="text-white">
+				<li
+					class:disabled={dialogLinkPicker && dialogLinkPicker(result) === undefined}
+					class="text-white">
 					<a href={dialogLinkPicker && dialogLinkPicker(result)}>
-						{dialogNamePicker && dialogNamePicker(result)} ({((result.score ?? 0) * 100).toFixed(0)}%)
+						{dialogNamePicker && dialogNamePicker(result)} ({((result.score ?? 0) * 100).toFixed(
+							0
+						)}%)
 					</a>
 				</li>
 			{/each}

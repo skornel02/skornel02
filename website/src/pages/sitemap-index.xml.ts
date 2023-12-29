@@ -3,7 +3,7 @@ import {getCollection} from 'astro:content';
 import {PageSize} from '../components/posts/PostPagination';
 import {XMLBuilder} from 'fast-xml-parser';
 
-const siteUrl = "https://skornel02.hu";
+const siteUrl = 'https://skornel02.hu';
 
 type SiteMap = {
 	urlset: {
@@ -16,9 +16,9 @@ type SiteMap = {
 };
 
 export const GET: APIRoute = async ({request}) => {
-    const { url } = request;
-    const { hostname, port, protocol } = new URL(url);
-    const baseUrl = import.meta.env.PROD ? siteUrl : `${protocol}//${hostname}:${port}`;
+	const {url} = request;
+	const {hostname, port, protocol} = new URL(url);
+	const baseUrl = import.meta.env.PROD ? siteUrl : `${protocol}//${hostname}:${port}`;
 
 	const builder = new XMLBuilder({
 		format: true,
@@ -65,8 +65,8 @@ export const GET: APIRoute = async ({request}) => {
 	const xmlString = builder.build(sitemap);
 
 	return new Response(xmlString, {
-        headers: {
-            'content-type': 'application/xml;charset=UTF-8',
-        },
-    });
+		headers: {
+			'content-type': 'application/xml;charset=UTF-8',
+		},
+	});
 };

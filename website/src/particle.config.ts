@@ -1,4 +1,4 @@
-import type { IDivEvent, ISourceOptions } from 'tsparticles-engine';
+import type {IDivEvent, ISourceOptions} from 'tsparticles-engine';
 
 export const options: ISourceOptions = {
 	fpsLimit: 30,
@@ -18,7 +18,7 @@ export const options: ISourceOptions = {
 		links: {
 			enable: true,
 			color: {
-				value: "#2e74b5",
+				value: '#2e74b5',
 			},
 			distance: 75,
 			opacity: 0.4,

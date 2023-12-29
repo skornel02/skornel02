@@ -7,7 +7,7 @@ const isMainPage = currentPath == '/' || currentPath == '/index.html' || current
 const mainPageHref = isMainPage ? '#' : '/';
 
 const isPostsPage = currentPath.match(/\/posts\/[0-9]+/);
-const isPostPage = currentPath.startsWith("/posts/");
+const isPostPage = currentPath.startsWith('/posts/');
 const postsPageHref = isPostsPage ? '#' : '/posts/1';
 ---
 

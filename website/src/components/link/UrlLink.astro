@@ -2,16 +2,16 @@
 import type {UrlLink} from '../../schemas/achievements';
 
 interface Props {
-    url: UrlLink;
+	url: UrlLink;
 }
 
 const {url} = Astro.props;
 
-url.buttonClass += " join-item";
+url.buttonClass += ' join-item';
 ---
 
 <div class="tooltip" data-tip={url.name}>
-    <a href={url.href} class={url.buttonClass} target="_blank">
-        <slot name="icon" />
-    </a>
+	<a href={url.href} class={url.buttonClass} target="_blank">
+		<slot name="icon" />
+	</a>
 </div>
