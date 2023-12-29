@@ -1,1 +1,0 @@
-const e="sk",t="people",o={name:"Stefán Kornél",image:{src:"/_astro/sk.c01ce8fa.jpeg",width:805,height:805,format:"jpg",orientation:1}},n={type:"data",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/people/sk.json",rawData:""};export{n as _internal,t as collection,o as data,e as id};
