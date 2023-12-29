@@ -12,22 +12,15 @@ import sk from '../images/people/sk.jpeg';
 
 	<main class="container mx-auto pt-4">
 		<MeCard client:load>
-			<Image
-				src={sk}
-				alt="Kornél portray"
-				width={160}
-				height={160}
-				slot="face"
-			/>
+			<Image src={sk} alt="Kornél portray" width={160} height={160} slot="face" />
 			<CardContacts slot="contacts" />
-			<CardNavigation home={true} card={false} slot="navigation" />
+			<CardNavigation home={true} card={true} slot="navigation" />
 		</MeCard>
 	</main>
 </ParticleLayout>
 
-
 <style>
-    .container {
-        min-height: 540px;
-    }
+	.container {
+		min-height: 540px;
+	}
 </style>

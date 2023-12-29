@@ -1,7 +1,10 @@
-<script>
-	import BusinessCardBack from './BusinessCardBack.svelte';
-	import BusinessCardFront from './BusinessCardFront.svelte';
-</script>
+---
+import businessCardFront from 'card/dist/business-card-front.svg';
+import businessCardBack from 'card/dist/business-card-back.svg';
+
+const businessCardFrontSrc = businessCardFront.src;
+const businessCardBackSrc = businessCardBack.src;
+---
 
 <div class="card-container">
 	<div class="row">
@@ -9,10 +12,10 @@
 			<div class="flip-container">
 				<div class="flipper">
 					<div class="front">
-						<BusinessCardFront />
+                        <img src={businessCardFrontSrc} alt="Frontside of business card" />
 					</div>
 					<div class="back">
-						<BusinessCardBack />
+                        <img src={businessCardBackSrc} alt="Backside of business card" />
 					</div>
 				</div>
 			</div>
@@ -21,6 +24,12 @@
 </div>
 
 <style>
+	img {
+		width: auto;
+		height: 100%;
+		max-width: unset;
+	}
+
 	/** https://stackoverflow.com/a/43541472 */
 
 	.card-container {
