@@ -11,17 +11,20 @@ const {home = false, details = false, card = false} = Astro.props;
 ---
 
 <div class="flex justify-center">
-	<div class="btn-group">
+	<div class="join">
 		{
 			card && (
-				<a id="home" href="/business-card" class="btn btn-outline btn-secondary hover:bg-primary">
+				<a
+					id="home"
+					href="/business-card"
+					class="btn btn-outline btn-secondary hover:bg-primary join-item">
 					<Icon name="mdi:qrcode" height="32px" />
 				</a>
 			)
 		}
 		{
 			details && (
-				<a id="details" href="/me" class="btn btn-outline btn-secondary hover:bg-primary">
+				<a id="details" href="/me" class="btn btn-outline btn-secondary hover:bg-primary join-item">
 					<Icon name="mdi:account-details" height="32px" />
 				</a>
 			)
@@ -31,7 +34,7 @@ const {home = false, details = false, card = false} = Astro.props;
 				<a
 					id="home"
 					href="/"
-					class="btn btn-outline btn-primary hover:bg-primary"
+					class="btn btn-outline btn-primary hover:bg-primary join-item"
 					data-sveltekit-reload>
 					<Icon name="mdi:home" height="32px" />
 				</a>

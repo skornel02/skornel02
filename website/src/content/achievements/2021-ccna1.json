@@ -5,8 +5,10 @@
 	"placement": "Certificate",
 	"icon": "mdi:certificate",
 	"highlighted": false,
-    "pdfs": [{
-        "name": "Certificate",
-        "src": "/certificates/CCNA-1-certificate.pdf"
-    }]
+	"pdfs": [
+		{
+			"name": "Certificate",
+			"src": "/certificates/CCNA-1-certificate.pdf"
+		}
+	]
 }
