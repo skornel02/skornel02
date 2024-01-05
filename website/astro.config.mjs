@@ -6,6 +6,6 @@ import svelte from '@astrojs/svelte';
 export default defineConfig({
 	integrations: [tailwind(), svelte()],
 	redirects: {
-		'/posts/': "/posts/1",
+		'/posts/1': "/posts/",
 	}
 });
