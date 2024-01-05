@@ -17,6 +17,11 @@ export const getStaticPaths = (async ({paginate}) => {
 		(a, b) => b.data.date.getTime() - a.data.date.getTime()
 	);
 
+	posts.push(...posts);
+	posts.push(...posts);
+	posts.push(...posts);
+	posts.push(...posts);
+
 	return paginate(posts, {pageSize: PageSize});
 }) satisfies GetStaticPaths;
 
@@ -53,7 +58,7 @@ const postsToShow = page.data;
 				<div class="join mx-auto">
 					{
 						page.currentPage > 2 && (
-							<a class="join-item btn btn-primary px-0" href="1">
+							<a class="join-item btn btn-primary px-0" href="/posts/">
 								<Icon name="mdi:chevron-double-left" height="80%" />
 							</a>
 						)
@@ -70,7 +75,7 @@ const postsToShow = page.data;
 							<a
 								class="join-item btn"
 								class:list={{'btn-disabled': p === page.currentPage}}
-								href={`${p}`}>
+								href={`/posts/${p}`}>
 								{p}
 							</a>
 						))
@@ -85,7 +90,7 @@ const postsToShow = page.data;
 
 					{
 						page.currentPage < page.lastPage - 1 && (
-							<a class="join-item btn btn-primary px-0" href={`${page.lastPage}`}>
+							<a class="join-item btn btn-primary px-0" href={`/posts/${page.lastPage}`}>
 								<Icon name="mdi:chevron-double-right" height="80%" />
 							</a>
 						)
