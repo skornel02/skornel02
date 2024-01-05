@@ -1,5 +1,6 @@
 ---
 import {Icon} from 'astro-icon';
+import Shlink from '../common/Shlink.astro';
 ---
 
 <footer
@@ -9,6 +10,7 @@ import {Icon} from 'astro-icon';
 	<a href="/rss.xml" data-astro-reload>
 		<Icon name="mdi:rss-box" />
 	</a>
+	<Shlink path={Astro.url.pathname}/>
 </footer>
 
 <style>

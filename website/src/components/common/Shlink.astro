@@ -1,0 +1,52 @@
+---
+const shlinkKey: string | undefined = import.meta.env.SHLINK_KEY;
+const path = Astro.url.pathname;
+
+async function createShlinkUrl() {
+	if (!shlinkKey) {
+		return undefined;
+	}
+
+	console.log('Creating shlink url for', path);
+
+	try {
+		const headers: HeadersInit = {
+			'X-Api-Key': shlinkKey,
+			'Content-Type': 'application/json',
+			'Accept': 'application/json',
+		};
+		const data = {
+			longUrl: `https://skornel02.hu${path}`,
+			tags: ['skornel02'],
+			findIfExists: true,
+			validateUrl: true,
+			title: 'skornel02.hu - ' + path,
+		};
+		const res = await fetch('https://link.skornel02.hu/rest/v2/short-urls', {
+			method: 'POST',
+			headers,
+			body: JSON.stringify(data),
+			mode: 'no-cors',
+		});
+		return (await res.json()).shortUrl;
+	} catch (e) {
+		console.error('Failed to create shlink url for', path, e);
+		return undefined;
+	}
+}
+
+const shlinkUrl = await createShlinkUrl();
+---
+
+{shlinkUrl && <img src={shlinkUrl} alt="" />}
+
+<style>
+	img {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 1px;
+		height: 1px;
+	}
+</style>
