@@ -7,7 +7,7 @@ interface Props {
 const {post} = Astro.props;
 ---
 
-<a href={post.slug}>
+<a href={`/posts/${post.slug}`}>
 	<div class="w-100 block bg-base-100 dark:bg-gray-900 shadow-xl my-2">
 		<div class="card-body">
 			<div class="card-actions flex-wrap justify-between">
