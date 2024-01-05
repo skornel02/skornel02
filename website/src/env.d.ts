@@ -6,6 +6,7 @@ import {Engine} from 'tsparticles-engine';
 interface ImportMetaEnv {
 	readonly PROD: boolean;
 	readonly DEV: boolean;
+	readonly SHLINK_KEY?: string;
 }
 
 interface ImportMeta {

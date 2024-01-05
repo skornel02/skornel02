@@ -5,12 +5,14 @@ import CardContacts from '../components/me/CardContacts.astro';
 import CardNavigation from '../components/me/CardNavigation.astro';
 import {Image} from 'astro:assets';
 import sk from '../images/people/sk.jpeg';
+import Shlink from '../components/common/Shlink.astro';
 ---
 
 <ParticleLayout title="Stefán Kornél">
 	<meta name="description" content="Digital personal information card" slot="head" />
 
 	<main class="container mx-auto pt-4">
+		<Shlink />
 		<MeCard client:load>
 			<Image src={sk} alt="Kornél portray" width={160} height={160} slot="face" />
 			<CardContacts slot="contacts" />
