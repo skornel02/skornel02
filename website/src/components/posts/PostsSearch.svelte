@@ -2,6 +2,7 @@
 	import {type CollectionEntry} from 'astro:content';
 	import Fuse from 'fuse.js';
 	import FuseAutocomplete from '../search/FuseAutocomplete.svelte';
+	import {createPostHref} from '../../hrefs';
 
 	export let posts: CollectionEntry<'posts'>[];
 
@@ -14,4 +15,4 @@
 <FuseAutocomplete
 	{fuse}
 	dialogNamePicker={(item) => item.item.data.title}
-	dialogLinkPicker={(item) => `/posts/${item.item.slug}`} />
+	dialogLinkPicker={(item) => createPostHref(item.item)} />

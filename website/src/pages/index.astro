@@ -103,15 +103,13 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 			<div class="divider"></div>
 
 			<section class="resume-section" id="skills" data-description="SK - Skills">
-				<div class="my-auto">
-					<h2 class="mb-5 text-3xl sm:text-pageSection">Skills</h2>
+				<h2 class="mb-5 text-3xl sm:text-pageSection">Skills</h2>
 
-					<div class="subheading mb-3">Programming Languages &amp; Tools</div>
-					<LanguagesAndTools />
+				<LanguagesAndTools />
 
-					<div class="subheading mb-3">Github stats</div>
-					<GithubCard />
-				</div>
+				<div class="subheading my-3">Github stats</div>
+
+				<GithubCard />
 			</section>
 
 			<section class="resume-section hidden" id="interests" data-description="SK - Interests">

@@ -4,6 +4,7 @@ import {achievementSchema, achievementSchemaFactory} from '../schemas/achievemen
 import {experienceSchema} from '../schemas/experience';
 import {educationSchema} from '../schemas/education';
 import {peopleSchemaFactory} from '../schemas/people';
+import { skillsSchema } from '../schemas/skills';
 
 const posts = defineCollection({
 	type: 'content',
@@ -30,10 +31,16 @@ const people = defineCollection({
 	schema: peopleSchemaFactory,
 });
 
+const skills = defineCollection({
+	type: 'content',
+	schema: skillsSchema,
+});
+
 export const collections = {
 	posts,
 	achievements,
 	experience,
 	education,
 	people,
+	skills,
 };

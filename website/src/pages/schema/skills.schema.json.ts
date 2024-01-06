@@ -1,9 +1,9 @@
 import { APIRoute } from 'astro';
 import {zodToJsonSchema} from 'zod-to-json-schema';
-import {PeopleSchema} from '../../schemas/people';
+import { skillsSchema } from '../../schemas/skills';
 
 export const GET: APIRoute = async ({}) => {
-	const schema = zodToJsonSchema(PeopleSchema, 'peopleSchema');
+	const schema = zodToJsonSchema(skillsSchema, 'skillsSchema');
 
 	return new Response(JSON.stringify(schema), {
 		headers: {

@@ -13,6 +13,20 @@ const {post} = Astro.props;
 const {Content} = await post.render();
 ---
 
+<script>
+	import {createPostNavigationHref} from '../../hrefs';
+
+	// if params contain page set #posts-go-back href to /posts?page={page}
+	const params = new URLSearchParams(window.location.search);
+	const page = params.get('page');
+	if (page && page !== '1') {
+		const postsGoBack = document.getElementById('posts-go-back');
+		if (postsGoBack && 'href' in postsGoBack) {
+			postsGoBack.href = createPostNavigationHref(Number(page));
+		}
+	}
+</script>
+
 <div class="container">
 	<nav class="flex flex-wrap justify-between items-center my-2">
 		<span>
@@ -26,7 +40,7 @@ const {Content} = await post.render();
 				))
 			}
 		</div>
-		<a href="/posts" class="btn btn-sm btn-outline btn-secondary">
+		<a id="posts-go-back" href="/posts" class="btn btn-sm btn-outline btn-secondary">
 			<Icon name="mdi:step-backward" height="80%" />
 		</a>
 	</nav>

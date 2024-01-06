@@ -1,63 +1,90 @@
 ---
 import {Icon} from 'astro-icon';
+import {AstroComponentFactory} from 'astro/runtime/server/index.js';
+import {CollectionEntry, getCollection} from 'astro:content';
+
+interface SkillToRender {
+	skill: CollectionEntry<'skills'>;
+	Content: AstroComponentFactory;
+}
+
+const skills = await getCollection('skills');
+skills.sort((a, b) => a.data.order - b.data.order);
+
+const skillsToRender: SkillToRender[] = [];
+
+for (const skill of skills) {
+	skillsToRender.push({
+		skill,
+		Content: (await skill.render()).Content,
+	});
+}
 ---
 
-<ul class="flex flex-wrap gap-4">
-	<li>
-		<Icon name="logos:arduino" />
-	</li>
-	<li>
-		<Icon name="logos:bootstrap" />
-	</li>
-	<li>
-		<Icon name="logos:c-sharp" />
-	</li>
-	<li>
-		<Icon name="logos:html-5" />
-	</li>
-	<li>
-		<Icon name="logos:css-3" />
-	</li>
-	<li>
-		<Icon name="logos:javascript" />
-	</li>
-	<li>
-		<Icon name="logos:typescript-icon" />
-	</li>
-	<li>
-		<Icon name="logos:figma" />
-	</li>
-	<li>
-		<Icon name="logos:tailwindcss-icon" />
-	</li>
-	<li>
-		<Icon name="logos:flutter" />
-	</li>
-	<li>
-		<Icon name="logos:git-icon" />
-	</li>
-	<li>
-		<Icon name="logos:java" />
-	</li>
-	<li>
-		<Icon name="logos:postman-icon" />
-	</li>
-	<li>
-		<Icon name="logos:react" />
-	</li>
-	<li>
-		<Icon name="logos:svelte-icon" />
-	</li>
-	<li>
-		<Icon name="logos:rust" />
-	</li>
-	<li>
-		<Icon name="logos:spring-icon" />
-	</li>
-	<li>
-		<Icon name="logos:dotnet" />
-	</li>
-</ul>
+<script>
+	function renderSkill(skillSlug: string) {
+		const template = document.getElementById(`skill-template-${skillSlug}`);
+		if (!template || !(template instanceof HTMLTemplateElement)) {
+			console.error(`Could not find template for skill ${skillSlug}`);
+			return;
+		}
+
+		const skillContainer = document.getElementById('skill-container');
+		if (!skillContainer) {
+			console.error('Could not find skill container');
+			return;
+		}
+
+		const skillData = document.getElementById('skill-data');
+		if (!skillData) {
+			console.error('Could not find skill container');
+			return;
+		}
+
+		const content = template.content.cloneNode(true);
+		skillData.innerHTML = '';
+		skillData.appendChild(content);
+
+		skillContainer.classList.remove('hidden');
+	}
+
+	document.querySelectorAll('[data-skill-slug]').forEach((button) => {
+		button.addEventListener('click', () => {
+			const skillSlug = button.getAttribute('data-skill-slug');
+			if (!skillSlug) {
+				console.error('Could not find skill slug');
+				return;
+			}
+
+			renderSkill(skillSlug);
+		});
+	});
+</script>
+
+<article class="flex">
+	<ul class="min-w-[40px] flex flex-wrap gap-4">
+		{
+			skillsToRender.map(({skill, Content}) => {
+				return (
+					<li>
+						<button data-skill-slug={skill.slug} disabled={!skill.data.detailed}>
+							<Icon name={skill.data.icon} />
+						</button>
+						{skill.data.detailed && (
+							<template id={`skill-template-${skill.slug}`}>
+								<h1 class="text-xl text-center">{skill.data.name}</h1>
+								<Content />
+							</template>
+						)}
+					</li>
+				);
+			})
+		}
+	</ul>
+	<div id="skill-container" class="min-w-[80%] mockup-window border bg-base-300 hidden">
+		<div id="skill-data" class="px-4 py-2 bg-base-200 h-full"></div>
+	</div>
+</article>
 
 <style>
 	[astro-icon] {

@@ -1,5 +1,6 @@
 ---
 import {type CollectionEntry} from 'astro:content';
+import { createPostHref } from '../../hrefs';
 interface Props {
 	post: CollectionEntry<'posts'>;
 	page?: number;
@@ -7,11 +8,7 @@ interface Props {
 
 const {post, page} = Astro.props;
 
-let href = `/posts/${post.slug}`;
-
-if (page) {
-	href += `?page=${page}`;
-}
+let href = createPostHref(post, page);
 ---
 
 <a {href}>
