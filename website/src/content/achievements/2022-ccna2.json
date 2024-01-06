@@ -1,5 +1,5 @@
 {
-	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
 	"name": "CCNA Routing and Switching: Routing and Switching Essentials",
 	"date": "2022-06-14",
 	"placement": "Certificate",

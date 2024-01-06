@@ -1,5 +1,5 @@
 {
-	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
 	"name": "Kódolj Határok Nélkül! - 2021",
 	"date": "2021-06-01",
 	"placement": "Finalist",

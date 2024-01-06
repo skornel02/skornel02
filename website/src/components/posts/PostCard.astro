@@ -2,12 +2,19 @@
 import {type CollectionEntry} from 'astro:content';
 interface Props {
 	post: CollectionEntry<'posts'>;
+	page?: number;
 }
 
-const {post} = Astro.props;
+const {post, page} = Astro.props;
+
+let href = `/posts/${post.slug}`;
+
+if (page) {
+	href += `?page=${page}`;
+}
 ---
 
-<a href={`/posts/${post.slug}`}>
+<a {href}>
 	<div class="w-100 block bg-base-100 dark:bg-gray-900 shadow-xl my-2">
 		<div class="card-body">
 			<div class="card-actions flex-wrap justify-between">

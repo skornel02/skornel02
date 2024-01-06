@@ -1,5 +1,5 @@
 {
-	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
 	"name": "Bakonyi Bitfaragó Bajnokság - 2021",
 	"date": "2021-11-20",
 	"placement": "I. place",

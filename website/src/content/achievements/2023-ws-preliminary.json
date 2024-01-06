@@ -1,13 +1,13 @@
 {
 	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
-	"name": "Skills Junior 2022 - Web category",
-	"date": "2022-04-02",
+	"name": "WorldSkills 2024 qualifier - IT Software Solutions for Business",
+	"date": "2023-04-26",
 	"placement": "I. place",
 	"icon": "mdi:trophy-award",
 	"highlighted": false,
 	"images": [
 		{
-			"src": "/src/images/competitions/Skills-Junior-Web-2022.jpeg",
+			"src": "/src/images/competitions/WorldSkills-Qualifier-2023.jpg",
 			"alt": "Competition certificate",
 			"name": "Certificate"
 		}
@@ -15,7 +15,7 @@
 	"urls": [
 		{
 			"name": "Official website",
-			"href": "https://skillsit.hu/hirek/nagyszeru-eredmenyek-a-skills-junior-webfejleszto-kategoriajanak-dontojen/"
+			"href": "https://www.worldskillshungary.hu/versenyek/worldskills-lyon-2024"
 		}
 	]
 }
