@@ -1,6 +1,7 @@
 import {APIRoute} from 'astro';
 import {getCollection} from 'astro:content';
 import {XMLBuilder} from 'fast-xml-parser';
+import { createPostHref } from '../hrefs';
 
 const siteUrl = 'https://skornel02.hu';
 
@@ -57,9 +58,9 @@ export const GET: APIRoute = async ({request}) => {
 				'link': baseUrl,
 				'description': "SK's posts' feed's cat",
 				'item': posts.map((post) => ({
-					guid: `${baseUrl}/posts/${post.slug}`,
+					guid: `posts/${post.slug}`,
 					title: post.data.title,
-					link: `${baseUrl}/posts/${post.slug}`,
+					link: `${baseUrl}${createPostHref(post)}`,
 					description: post.data.description ?? 'No description',
 					pubDate: post.data.date.toUTCString(),
 				})),

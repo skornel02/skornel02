@@ -2,6 +2,7 @@ import {APIRoute} from 'astro';
 import {getCollection} from 'astro:content';
 import {PageSize} from '../components/posts/PostPagination';
 import {XMLBuilder} from 'fast-xml-parser';
+import { createPostHref, createPostNavigationHref } from '../hrefs';
 
 const siteUrl = 'https://skornel02.hu';
 
@@ -51,11 +52,11 @@ export const GET: APIRoute = async ({request}) => {
 					lastmod: new Date().toISOString().slice(0, 10),
 				},
 				...pageNumbers.map((pageNumber) => ({
-					loc: `${baseUrl}/posts/${pageNumber}`,
+					loc: `${baseUrl}${createPostNavigationHref(pageNumber)}`,
 					lastmod: lastModifiedDate.toISOString().slice(0, 10),
 				})),
 				...posts.map((post) => ({
-					loc: `${baseUrl}/posts/${post.slug}`,
+					loc: `${baseUrl}${createPostHref(post)}`,
 					lastmod: post.data.date.toISOString().slice(0, 10),
 				})),
 			],

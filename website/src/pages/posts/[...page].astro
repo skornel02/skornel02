@@ -7,6 +7,7 @@ import PostsSearch from '../../components/posts/PostsSearch.svelte';
 import {Icon} from 'astro-icon';
 import PostCard from '../../components/posts/PostCard.astro';
 import {PageSize} from '../../components/posts/PostPagination';
+import { createPostNavigationHref } from '../../hrefs';
 
 interface Props {
 	page: Page<CollectionEntry<'posts'>>;
@@ -43,7 +44,7 @@ const showingPageEnd = Math.min(page.lastPage, page.currentPage + showingPageEnd
 const pagesToShow: PageData[] = [];
 for (let i = showingPageStart; i <= showingPageEnd; i++) {
 	pagesToShow.push({
-		href: i !== 1 ? '/posts/' + i : '/posts',
+		href: createPostNavigationHref(i),
 		text: i.toString(),
 		active: i === page.currentPage,
 	});
@@ -71,7 +72,7 @@ const lastPageActive = page.currentPage < page.lastPage - 1;
 					<a
 						class="join-item btn btn-primary px-0"
 						class:list={{'btn-disabled': !firstPageActive}}
-						href="/posts/">
+						href={createPostNavigationHref()}>
 						<Icon name="mdi:chevron-double-left" height="80%" />
 					</a>
 					<a
@@ -97,7 +98,7 @@ const lastPageActive = page.currentPage < page.lastPage - 1;
 					<a
 						class="join-item btn btn-primary px-0"
 						class:list={{'btn-disabled': !lastPageActive}}
-						href={`/posts/${page.lastPage}`}>
+						href={createPostNavigationHref(page.lastPage)}>
 						<Icon name="mdi:chevron-double-right" height="80%" />
 					</a>
 				</div>
