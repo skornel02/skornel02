@@ -1,5 +1,0 @@
-import{c as t,r as o,m as r}from"./render-template.debd9204.js";import{u as a}from"./PostsSearch.e69099f6.js";import"./index.27b8d4e5.js";import"./preload-helper.cf010ec4.js";const e=`<p>After an intense English year I have learned the fundemantals of the IT industry for 4 years.
-While studying i also took part in a variety of IT competitions.</p>`,s={school:"BMSZC Neumann János Informatikai Technikum",major:"Vocational secondary school",minor:"Programming and computer networks",duration:"2017 - 2022",order:2},i="/home/runner/work/skornel02/skornel02/website/src/content/education/neumann.md",m=void 0;function g(){return`
-After an intense English year I have learned the fundemantals of the IT industry for 4 years.
-While studying i also took part in a variety of IT competitions.
-`}function k(){return e}function I(){return[]}const T=t((u,l,c)=>{const{layout:d,...n}=s;return n.file=i,n.url=m,o`${r()}${a(e)}`});export{T as Content,k as compiledContent,T as default,i as file,s as frontmatter,I as getHeadings,g as rawContent,m as url};
