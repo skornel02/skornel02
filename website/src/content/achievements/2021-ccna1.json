@@ -1,5 +1,5 @@
 {
-	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
 	"name": "CCNA Routing and Switching: Introduction to Networking",
 	"date": "2021-06-03",
 	"placement": "Certificate",

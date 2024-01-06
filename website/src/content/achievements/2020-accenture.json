@@ -1,5 +1,5 @@
 {
-	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
 	"name": "Accenture Java competition - 2020",
 	"date": "2020-07-06",
 	"placement": "Finalist",

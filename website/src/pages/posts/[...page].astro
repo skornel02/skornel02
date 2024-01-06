@@ -12,15 +12,16 @@ interface Props {
 	page: Page<CollectionEntry<'posts'>>;
 }
 
+interface PageData {
+	href: string;
+	text: string;
+	active: boolean;
+}
+
 export const getStaticPaths = (async ({paginate}) => {
 	const posts = (await getCollection('posts', (post) => !post.data.hidden)).sort(
 		(a, b) => b.data.date.getTime() - a.data.date.getTime()
 	);
-
-	posts.push(...posts);
-	posts.push(...posts);
-	posts.push(...posts);
-	posts.push(...posts);
 
 	return paginate(posts, {pageSize: PageSize});
 }) satisfies GetStaticPaths;
@@ -39,12 +40,23 @@ const showingPageEndAmount = 2 + Math.max(0, 2 - distanceToStart);
 
 const showingPageStart = Math.max(1, page.currentPage - showingPageStartAmount);
 const showingPageEnd = Math.min(page.lastPage, page.currentPage + showingPageEndAmount);
-const pagesToShow = [];
+const pagesToShow: PageData[] = [];
 for (let i = showingPageStart; i <= showingPageEnd; i++) {
-	pagesToShow.push(i);
+	pagesToShow.push({
+		href: i !== 1 ? '/posts/' + i : '/posts',
+		text: i.toString(),
+		active: i === page.currentPage,
+	});
 }
 
 const postsToShow = page.data;
+
+console.log(page.currentPage);
+
+const firstPageActive = page.currentPage > 2;
+const previousPageActive = page.url.prev !== undefined;
+const nextPageActive = page.url.next !== undefined;
+const lastPageActive = page.currentPage < page.lastPage - 1;
 ---
 
 <Layout title="Posts - SK">
@@ -52,49 +64,42 @@ const postsToShow = page.data;
 		<div class="container">
 			<PostsSearch client:visible posts={posts} />
 
-			{postsToShow.map((post) => <PostCard {post} />)}
+			{postsToShow.map((post) => <PostCard {post} page={page.currentPage} />)}
 
 			<nav class="flex justify-center">
 				<div class="join mx-auto">
+					<a
+						class="join-item btn btn-primary px-0"
+						class:list={{'btn-disabled': !firstPageActive}}
+						href="/posts/">
+						<Icon name="mdi:chevron-double-left" height="80%" />
+					</a>
+					<a
+						class="join-item btn btn-primary px-0"
+						class:list={{'btn-disabled': !previousPageActive}}
+						href={page.url.prev}>
+						<Icon name="mdi:chevron-left" height="80%" />
+					</a>
 					{
-						page.currentPage > 2 && (
-							<a class="join-item btn btn-primary px-0" href="/posts/">
-								<Icon name="mdi:chevron-double-left" height="80%" />
-							</a>
-						)
-					}
-					{
-						page.url.prev && (
-							<a class="join-item btn btn-primary px-0" href={page.url.prev}>
-								<Icon name="mdi:chevron-left" height="80%" />
-							</a>
-						)
-					}
-					{
-						pagesToShow.map((p) => (
-							<a
-								class="join-item btn"
-								class:list={{'btn-disabled': p === page.currentPage}}
-								href={`/posts/${p}`}>
-								{p}
+						pagesToShow.map(({href, text, active}) => (
+							<a class="join-item btn" class:list={{'btn-disabled': active}} {href}>
+								{text}
 							</a>
 						))
 					}
-					{
-						page.url.next && (
-							<a class="join-item btn btn-primary px-0" href={page.url.next}>
-								<Icon name="mdi:chevron-right" height="80%" />
-							</a>
-						)
-					}
+					<a
+						class="join-item btn btn-primary px-0"
+						class:list={{'btn-disabled': !nextPageActive}}
+						href={page.url.next}>
+						<Icon name="mdi:chevron-right" height="80%" />
+					</a>
 
-					{
-						page.currentPage < page.lastPage - 1 && (
-							<a class="join-item btn btn-primary px-0" href={`/posts/${page.lastPage}`}>
-								<Icon name="mdi:chevron-double-right" height="80%" />
-							</a>
-						)
-					}
+					<a
+						class="join-item btn btn-primary px-0"
+						class:list={{'btn-disabled': !lastPageActive}}
+						href={`/posts/${page.lastPage}`}>
+						<Icon name="mdi:chevron-double-right" height="80%" />
+					</a>
 				</div>
 			</nav>
 		</div>

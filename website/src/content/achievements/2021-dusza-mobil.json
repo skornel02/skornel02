@@ -1,5 +1,5 @@
 {
-	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
 	"name": "Dusza Árpád Országos Programozói Emlékverseny - 2021 - Mobile category",
 	"date": "2021-12-04",
 	"placement": "I. place",

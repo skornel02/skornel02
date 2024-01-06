@@ -1,5 +1,5 @@
 {
-	"$schema": "https://skornel02.hu/schema/competition.schema.json",
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
 	"name": "Szegedi Innovatív Informatika Verseny - 2020 - Software category",
 	"date": "2020-11-07",
 	"placement": "I. place",
