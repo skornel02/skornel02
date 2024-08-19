@@ -24,7 +24,7 @@ const {title} = Astro.props;
 		<Particles id="meCardBackground" {options} init="particlesInit" />
 		<script>
 			import {loadFull} from 'tsparticles';
-			import {Engine} from '@tsparticles/engine';
+			import type { Engine } from "@tsparticles/engine";
 
 			window.particlesInit = async function (engine: Engine) {
 				await loadFull(engine);
