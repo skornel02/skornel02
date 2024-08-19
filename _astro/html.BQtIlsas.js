@@ -1,0 +1,1 @@
+const e="html.md",t="skills",n="html",o="",s={name:"HTML",icon:"logos:html-5",order:4,detailed:!1,achievements:[],experience:[],educations:[],posts:[]},l={type:"content",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/skills/html.md",rawData:void 0};export{l as _internal,o as body,t as collection,s as data,e as id,n as slug};

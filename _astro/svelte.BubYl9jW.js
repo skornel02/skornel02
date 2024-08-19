@@ -1,0 +1,1 @@
+const e="svelte.md",t="skills",n="svelte",s="",o={name:"Svelte",icon:"logos:svelte-icon",order:15,detailed:!1,achievements:[],experience:[],educations:[],posts:[]},l={type:"content",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/skills/svelte.md",rawData:void 0};export{l as _internal,s as body,t as collection,o as data,e as id,n as slug};

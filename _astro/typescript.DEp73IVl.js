@@ -1,0 +1,1 @@
+const e="typescript.md",t="skills",n="typescript",s="",o={name:"TypeScript",icon:"logos:typescript-icon",order:7,detailed:!1,achievements:[],experience:[],educations:[],posts:[]},c={type:"content",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/skills/typescript.md",rawData:void 0};export{c as _internal,s as body,t as collection,o as data,e as id,n as slug};

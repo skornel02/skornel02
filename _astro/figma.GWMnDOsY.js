@@ -1,0 +1,1 @@
+const e="figma.md",n="skills",o="figma",t="",s={name:"Figma",icon:"logos:figma",order:8,detailed:!1,achievements:[],experience:[],educations:[],posts:[]},i={type:"content",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/skills/figma.md",rawData:void 0};export{i as _internal,t as body,n as collection,s as data,e as id,o as slug};

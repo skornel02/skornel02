@@ -1,0 +1,1 @@
+const e="react.md",t="skills",n="react",o="",s={name:"React",icon:"logos:react",order:14,detailed:!1,achievements:[],experience:[],educations:[],posts:[]},c={type:"content",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/skills/react.md",rawData:void 0};export{c as _internal,o as body,t as collection,s as data,e as id,n as slug};

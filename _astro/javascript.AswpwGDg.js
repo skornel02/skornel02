@@ -1,0 +1,1 @@
+const e="javascript.md",t="skills",s="javascript",n="",a={name:"JavaScript",icon:"logos:javascript",order:6,detailed:!1,achievements:[],experience:[],educations:[],posts:[]},o={type:"content",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/skills/javascript.md",rawData:void 0};export{o as _internal,n as body,t as collection,a as data,e as id,s as slug};

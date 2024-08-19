@@ -1,0 +1,1 @@
+const e="git.md",t="skills",n="git",o="",s={name:"GIT",icon:"logos:git-icon",order:11,detailed:!1,achievements:[],experience:[],educations:[],posts:[]},i={type:"content",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/skills/git.md",rawData:void 0};export{i as _internal,o as body,t as collection,s as data,e as id,n as slug};

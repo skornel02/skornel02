@@ -1,0 +1,1 @@
+const n="postman.md",e="skills",o="postman",t="",s={name:"Postman",icon:"logos:postman-icon",order:13,detailed:!1,achievements:[],experience:[],educations:[],posts:[]},a={type:"content",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/skills/postman.md",rawData:void 0};export{a as _internal,t as body,e as collection,s as data,n as id,o as slug};

@@ -1,0 +1,1 @@
+const e="rust.md",t="skills",s="rust",n="",o={name:"Rust",icon:"logos:rust",order:16,detailed:!1,achievements:[],experience:[],educations:[],posts:[]},r={type:"content",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/skills/rust.md",rawData:void 0};export{r as _internal,n as body,t as collection,o as data,e as id,s as slug};
