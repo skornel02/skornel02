@@ -38,6 +38,7 @@ export const achievementSchemaFactory = (context: SchemaContext | undefined = un
 			urls: z.array(urlLinkSchema).optional().default([]),
 			team: z.array(reference('people')).optional(),
 			blogPost: reference('posts').optional(),
+			coverImage: imageLinkSchemaFactory(context).optional()
 		})
 		.describe('Achievements schema');
 

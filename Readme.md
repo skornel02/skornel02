@@ -1,7 +1,8 @@
 <h1 align="center">Hi 👋, I'm Kornél</h1>
 <h3 align="center">A tinkerer from Hungary</h3>
+<h5 align="center">World #3 in IT Software Solutions 🥉 | 47th WorldSkills </h5>
 
-- 🛠 I'm currently practicing for WorldSkills2024 and EuroSkills2025!
+- 🛠 I'm currently practicing for EuroSkills 2025!
 
 - 👨‍🎓 I'm currently studying Computer Engineering BSc at University of Szeged till I collapse.
 
@@ -22,12 +23,17 @@ Way too many I used along the way, but these are mainly the ones I use every (ot
     
 </p>
 
-- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/>, Dotnet, Dotnet Core -- What can I say, I'm addicted to good things.
+- C#, .Net, .Net Core -- What can I say, I'm addicted to good things.
 
-- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> -- I'm a sucker for the olden ways.
+- React, Svelte, Astro -- Shiny and DX oriented tools are my jam.
 
-- Matplotplib -- Gotta survive university
+- Python, Matplotlib -- Gotta survive university
 
-<p>
-<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact" alt="skornel02" />
+<p align="center">
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact" alt="skornel02" />
+</p>
+
+
+<p align="center" style="font-size: 80%">
+<i>Someday I'll find out why PHP is my #1</i>
 </p>

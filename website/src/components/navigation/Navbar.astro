@@ -15,7 +15,7 @@ const {pageTitle, useFace = false, footer = true} = Astro.props;
 
 <div id="navbar" class="drawer lg:drawer-open min-h-screen">
 	<input id="navbar-drawer" type="checkbox" class="drawer-toggle" />
-	<div class="drawer-content flex flex-col">
+	<div class="drawer-content flex flex-col min-h-screen">
 		<!-- Top navigation bar -->
 		<div class="w-full navbar bg-primary flex lg:hidden">
 			<div class="flex-1 ml-2 normal-case text-background text-2xl">{pageTitle}</div>
