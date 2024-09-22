@@ -1,0 +1,26 @@
+{
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
+	"name": "WorldSkills 2024 - IT Software Solutions for Business",
+	"date": "2024-09-15",
+	"placement": "III. place",
+	"icon": "mdi:medal",
+	"highlighted": true,
+	"images": [
+		{
+			"src": "/src/images/competitions/WorldSkills-2024-Bronze.jpg",
+			"alt": "Competition medal",
+			"name": "Medal"
+		}
+	],
+	"urls": [
+		{
+			"name": "Official results",
+			"href": "https://results.worldskills.org/results?base_skill=221&offset=0&event=579"
+		}
+	],
+	"coverImage": {
+		"src": "/src/images/competitions/WorldSkills-2024-Cover.jpg",
+		"alt": "Podium image",
+		"name": "Podium image"
+	}
+}

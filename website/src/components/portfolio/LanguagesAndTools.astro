@@ -2,6 +2,7 @@
 import {Icon} from 'astro-icon';
 import {AstroComponentFactory} from 'astro/runtime/server/index.js';
 import {CollectionEntry, getCollection} from 'astro:content';
+import 'github-markdown-css/github-markdown.css';
 
 interface SkillToRender {
 	skill: CollectionEntry<'skills'>;
@@ -46,6 +47,7 @@ for (const skill of skills) {
 		skillData.appendChild(content);
 
 		skillContainer.classList.remove('hidden');
+		skillContainer.classList.add('markdown-body');
 	}
 
 	document.querySelectorAll('[data-skill-slug]').forEach((button) => {
@@ -61,13 +63,13 @@ for (const skill of skills) {
 	});
 </script>
 
-<article class="flex">
+<article class="flex flex-col">
 	<ul class="min-w-[40px] flex flex-wrap gap-4">
 		{
 			skillsToRender.map(({skill, Content}) => {
 				return (
 					<li>
-						<button data-skill-slug={skill.slug} disabled={!skill.data.detailed}>
+						<button class="btn btn-square" data-skill-slug={skill.slug} disabled={!skill.data.detailed}>
 							<Icon name={skill.data.icon} />
 						</button>
 						{skill.data.detailed && (
@@ -81,7 +83,7 @@ for (const skill of skills) {
 			})
 		}
 	</ul>
-	<div id="skill-container" class="min-w-[80%] mockup-window border bg-base-300 hidden">
+	<div id="skill-container" class="w-full mockup-window border bg-base-300 my-2 hidden">
 		<div id="skill-data" class="px-4 py-2 bg-base-200 h-full"></div>
 	</div>
 </article>

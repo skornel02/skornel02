@@ -18,5 +18,10 @@
 			"href": "https://www.inf.u-szeged.hu/sziiv2020/eredmenyek#:~:text=hazizz%20velunk%3A%20parkmyst"
 		}
 	],
-	"team": ["partfo", "sk", "avar"]
+	"team": ["partfo", "sk", "avar"],
+	"coverImage": {
+		"src": "/src/images/competitions/SZIIV-2020-Cover.jpg",
+		"alt": "Podium image",
+		"name": "Podium image"
+	}
 }

@@ -1,0 +1,21 @@
+{
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
+	"name": "WorldSkills 2024 - Skill 09 Speed Competition",
+	"date": "2024-09-14",
+	"placement": "I. place",
+	"icon": "mdi:medal",
+	"highlighted": true,
+	"images": [
+		{
+			"src": "/src/images/competitions/WorldSkills-2024-Speed-Gold.jpg",
+			"alt": "Competition medal",
+			"name": "Medal"
+		}
+	],
+	"urls": [],
+	"coverImage": {
+		"src": "/src/images/competitions/WorldSkills-2024-Speed-Cover.jpg",
+		"alt": "Podium image",
+		"name": "Podium image"
+	}
+}

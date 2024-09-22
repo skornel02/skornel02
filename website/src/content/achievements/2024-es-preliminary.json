@@ -17,5 +17,10 @@
 			"name": "Official website",
 			"href": "https://worldskillshungary.hu/versenyek/euroskills-herning-2025"
 		}
-	]
+	],
+	"coverImage": {
+		"src": "/src/images/competitions/EuroSkills-Qualifier-2024-Cover.jpg",
+		"alt": "Podium image",
+		"name": "Podium image"
+	}
 }

@@ -12,5 +12,10 @@
 			"name": "Certificate"
 		}
 	],
-	"urls": []
+	"urls": [],
+	"coverImage": {
+		"src": "/src/images/competitions/ASZEV2022-Cover.jpg",
+		"alt": "Podium image",
+		"name": "Podium image"
+	}
 }

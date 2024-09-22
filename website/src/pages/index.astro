@@ -40,13 +40,16 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 	<meta slot="head" name="description" content="Personal site of SK" />
 
 	<Navbar pageTitle="Portfolio" useFace={true}>
-		<div class="container">
+		<div class="container h-[500px] md:h-[unset]">
 			<section class="resume-section" id="about" data-description="SK - Home">
 				<div class="my-auto">
 					<h1 id="name" class="mb-0">
 						<div class="text-secondary">Stefán</div>
 						<span class="text-primary">Kornél</span>
 					</h1>
+					<p class="italic">
+						World #3 in IT Software Solutions 🥉 | 47th WorldSkills
+					</p>
 					<p class="mb-5">
 						I am a young tinkerer that loves programming. My current goal is to start working in the
 						field. Learning to bake is in progress!
@@ -92,8 +95,6 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 				{experiences.map((experience) => <ExperienceCard {experience} />)}
 			</section>
 
-			<div class="divider"></div>
-
 			<section class="resume-section" id="education" data-description="SK - Education">
 				<h2 class="mb-5 text-3xl sm:text-pageSection">Education</h2>
 
@@ -110,7 +111,13 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 				<div class="subheading my-3">Github stats</div>
 
 				<GithubCard />
+
+				<p class="italic text-center">
+					Somedays I'll find out why PHP is my #1.
+				</p>
 			</section>
+
+			<div class="divider"></div>
 
 			<section class="resume-section hidden" id="interests" data-description="SK - Interests">
 				<div class="my-auto">
@@ -120,23 +127,21 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 				</div>
 			</section>
 
-			<div class="divider"></div>
+			<!-- <div class="divider"></div> -->
 
 			<section class="resume-section" id="awards" data-description="SK - Awards">
 				<div class="my-auto">
 					<h2 class="mb-5 text-3xl sm:text-pageSection">Awards &amp; Certifications</h2>
 				</div>
 
-				<ul class="flex flex-col px-0 rounded-sm print:block">
+				<div class="flex flex-col px-0 rounded-sm print:block">
 					{
 						achievementsGrouped.map((group, i) => (
 							<>
 								{i > 0 ? (
-									<li>
-										<div class="w-full text-center text-secondary font-bold divider">
-											{group.name}
-										</div>
-									</li>
+									<div class="w-full text-center text-secondary font-bold divider">
+										{group.name}
+									</div>
 								) : (
 									<> </>
 								)}
@@ -146,7 +151,7 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 							</>
 						))
 					}
-				</ul>
+				</di>
 			</section>
 		</div>
 	</Navbar>
@@ -223,5 +228,15 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 		#awards.resume-section {
 			page-break-inside: unset;
 		}
+	}
+
+	.container {
+		flex-grow: 1;
+		overflow-y: scroll;
+		scroll-snap-type: y mandatory;
+	}
+
+	.container section {
+		scroll-snap-align: start;
 	}
 </style>
