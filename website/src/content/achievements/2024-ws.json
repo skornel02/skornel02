@@ -14,6 +14,11 @@
 	],
 	"urls": [
 		{
+			"name": "Digital badge",
+			"href": "https://www.credly.com/badges/00bffdd3-be0a-4942-ac5a-b6eacc735efa",
+			"icon": "mdi:certificate"
+		},
+		{
 			"name": "Official results",
 			"href": "https://results.worldskills.org/results?base_skill=221&offset=0&event=579"
 		}
