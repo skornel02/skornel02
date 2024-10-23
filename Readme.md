@@ -32,8 +32,3 @@ Way too many I used along the way, but these are mainly the ones I use every (ot
 <p align="center">
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact" alt="skornel02" />
 </p>
-
-
-<p align="center" style="font-size: 80%">
-<i>Someday I'll find out why PHP is my #1</i>
-</p>
