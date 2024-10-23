@@ -8,6 +8,7 @@ import {Icon} from 'astro-icon';
 import PostCard from '../../components/posts/PostCard.astro';
 import {PageSize} from '../../components/posts/PostPagination';
 import { createPostNavigationHref } from '../../hrefs';
+import { AstroSeo } from '@astrolib/seo';
 
 interface Props {
 	page: Page<CollectionEntry<'posts'>>;
@@ -61,6 +62,20 @@ const lastPageActive = page.currentPage < page.lastPage - 1;
 ---
 
 <Layout title="Posts - SK">
+	<AstroSeo
+		slot="head"
+		title={`Posts - Page ${page.currentPage}`}
+		description="Posts of SK"
+		twitter={{
+			cardType: 'summary',
+		}}
+		openGraph={{
+			type: 'website',
+			locale: 'en',
+			site_name: 'skornel02',
+		}}
+	/>
+
 	<Navbar pageTitle={`Posts`}>
 		<div class="container">
 			<PostsSearch client:visible posts={posts} />

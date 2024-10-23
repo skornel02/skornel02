@@ -8,6 +8,7 @@ import EducationCard from '../components/portfolio/EducationCard.astro';
 import GithubCard from '../components/portfolio/GithubCard.astro';
 import LanguagesAndTools from '../components/portfolio/LanguagesAndTools.astro';
 import AchievementCard from '../components/portfolio/AchievementCard.astro';
+import { AstroSeo } from '@astrolib/seo';
 
 interface AchievementGroup {
 	name: string;
@@ -37,7 +38,17 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 ---
 
 <Layout title="SK">
-	<meta slot="head" name="description" content="Personal site of SK" />
+	<AstroSeo slot="head"
+		title="Portfolio"
+		description='Portfolio of SK'
+		twitter={{
+			cardType: 'summary',
+		}}
+		openGraph={{
+			type: 'website',
+			locale: 'en',
+			site_name: 'skornel02',
+		}}/>
 
 	<Navbar pageTitle="Portfolio" useFace={true}>
 		<div class="container h-[500px] md:h-[unset]">

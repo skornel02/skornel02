@@ -9,6 +9,10 @@ const siteUrl = 'https://skornel02.hu';
 type SiteMap = {
 	urlset: {
 		'@_xmlns': string;
+		'@_xmlns:news'?: string;
+		'@_xmlns:xhtml'?: string;
+		'@_xmlns:image'?: string;
+		'@_xmlns:video'?: string;
 		'url': {
 			loc: string;
 			lastmod: string;
@@ -42,6 +46,10 @@ export const GET: APIRoute = async ({request}) => {
 	const sitemap: SiteMap = {
 		urlset: {
 			'@_xmlns': 'https://www.sitemaps.org/schemas/sitemap/0.9',
+			'@_xmlns:news': 'http://www.google.com/schemas/sitemap-news/0.9',
+			'@_xmlns:xhtml': 'http://www.w3.org/1999/xhtml',
+			'@_xmlns:image': 'http://www.google.com/schemas/sitemap-image/1.1',
+			'@_xmlns:video': 'http://www.google.com/schemas/sitemap-video/1.1',
 			'url': [
 				{
 					loc: `${baseUrl}`,

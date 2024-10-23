@@ -6,10 +6,23 @@ import CardNavigation from '../components/me/CardNavigation.astro';
 import {Image} from 'astro:assets';
 import sk from '../images/people/sk.jpeg';
 import Shlink from '../components/common/Shlink.astro';
+import { AstroSeo } from '@astrolib/seo';
 ---
 
 <ParticleLayout title="Stefán Kornél">
-	<meta name="description" content="Digital personal information card" slot="head" />
+	<AstroSeo
+		slot="head"
+		title="Contact"
+		description="Contact details of SK"
+		twitter={{
+			cardType: 'summary',
+		}}
+		openGraph={{
+			type: 'website',
+			locale: 'en',
+			site_name: 'skornel02',
+		}}
+	/>
 
 	<main class="container mx-auto pt-4">
 		<Shlink />

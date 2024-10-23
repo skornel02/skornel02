@@ -1,26 +1,25 @@
-import { CollectionEntry } from "astro:content";
+import {CollectionEntry} from 'astro:content';
+import {getRelativeLocaleUrl} from 'astro:i18n';
 
 export function createPostHref(
-    post: CollectionEntry<'posts'>,
-    pageReference: number | undefined = undefined
+	post: CollectionEntry<'posts'>,
+	pageReference: number | undefined = undefined
 ): string {
-    let href = `${import.meta.env.BASE_URL}posts/${post.slug}`;
+	let href = getRelativeLocaleUrl('en', `/posts/${post.slug}`);
 
-    if (pageReference !== undefined) {
-	    href += `?page=${pageReference}`;        
-    }
+	if (pageReference !== undefined) {
+		href += `?page=${pageReference}`;
+	}
 
-    return href;
+	return href;
 }
 
-export function createPostNavigationHref(
-    page: number | undefined = undefined
-): string {
-    let href = `${import.meta.env.BASE_URL}posts`;
+export function createPostNavigationHref(page: number | undefined = undefined): string {
+	let href = getRelativeLocaleUrl('en', '/posts');
 
-    if (page !== undefined && page !== 1) {
-        href += `/${page}`;
-    }
+	if (page !== undefined && page !== 1) {
+		href += `/${page}`;
+	}
 
-    return href;
+	return href;
 }
