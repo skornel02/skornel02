@@ -2,10 +2,23 @@
 import ParticleLayout from '../layouts/ParticleLayout.astro';
 import BusinessCard from '../components/me/BusinessCard.astro';
 import CardNavigation from '../components/me/CardNavigation.astro';
+import {AstroSeo} from '@astrolib/seo';
 ---
 
 <ParticleLayout title="Stefán Kornél">
-	<meta name="description" content="Digital personal information card" slot="head" />
+	<AstroSeo
+		slot="head"
+		title="Portfolio"
+		description="Digital personal contact card of SK"
+		twitter={{
+			cardType: 'summary',
+		}}
+		openGraph={{
+			type: 'website',
+			locale: 'en',
+			site_name: 'skornel02',
+		}}
+	/>
 
 	<main class="container mx-auto pt-4">
 		<div class="card w-80 sm:w-96 bg-base-100 m-auto z-10 py-4">

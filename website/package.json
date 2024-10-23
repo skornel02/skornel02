@@ -13,6 +13,7 @@
 	"dependencies": {
 		"@astrojs/svelte": "^5.7.1",
 		"@astrojs/tailwind": "^5.1.1",
+		"@astrolib/seo": "1.0.0-beta.8",
 		"@iconify-json/mdi": "^1.1.68",
 		"astro": "^4.15.8",
 		"astro-icon": "^0.8.1",

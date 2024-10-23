@@ -4,6 +4,7 @@ import {getCollection, getEntryBySlug} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/navigation/Navbar.astro';
 import PostPage from '../../components/posts/PostPage.astro';
+import {AstroSeo} from '@astrolib/seo';
 
 export const getStaticPaths = (async () => {
 	const posts = await getCollection('posts');
@@ -21,6 +22,20 @@ const post = (await getEntryBySlug('posts', slug!))!;
 ---
 
 <Layout title={`${post.data.title} - SK`}>
+	<AstroSeo
+		slot="head"
+		title={post.data.title}
+		description={post.data.description}
+		twitter={{
+			cardType: 'summary',
+		}}
+		openGraph={{
+			type: 'post',
+			locale: post.data.language,
+			site_name: 'skornel02',
+		}}
+	/>
+
 	<Navbar pageTitle={post.data.title}>
 		{post && <PostPage {post} />}
 	</Navbar>
