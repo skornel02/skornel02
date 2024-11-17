@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/navigation/Navbar.astro';
+import {AstroSeo} from '@astrolib/seo';
+---
+
+<Layout title="SK">
+	<AstroSeo
+		slot="head"
+		title="Projects"
+		description="Projects of SK"
+		twitter={{
+			cardType: 'summary',
+		}}
+		openGraph={{
+			type: 'website',
+			locale: 'en',
+			site_name: 'skornel02',
+		}}
+	/>
+
+	<Navbar pageTitle="Projects">
+		<article class="flex flex-wrap justify-center align-middle p-4">
+			<div class="mockup-browser border-base-300 border">
+				<div class="mockup-browser-toolbar">
+					<div class="input border-base-300 border">
+						<a href="https://metro.skornel02.hu" target="_blank">https://metro.skornel02.hu</a>
+					</div>
+				</div>
+				<div class="border-base-300 flex justify-center border-t p-4 max-w-[500px]">
+					<div class="flex flex-col items-center">
+						<h1 class="text-2xl font-bold">Metro door helper</h1>
+						<p class="text-lg">
+                            A simple application that helps you pick which door you 
+                            should board the Budapest Metro to get off at the right exit.
+                        </p>
+						<div class="flex space-x-4 mt-4">
+							<a href="https://metro.skornel02.hu" target="_blank" class="btn btn-primary">Visit</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</Navbar>
+
+	<style></style>
+</Layout>

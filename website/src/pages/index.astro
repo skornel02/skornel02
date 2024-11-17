@@ -8,7 +8,7 @@ import EducationCard from '../components/portfolio/EducationCard.astro';
 import GithubCard from '../components/portfolio/GithubCard.astro';
 import LanguagesAndTools from '../components/portfolio/LanguagesAndTools.astro';
 import AchievementCard from '../components/portfolio/AchievementCard.astro';
-import { AstroSeo } from '@astrolib/seo';
+import {AstroSeo} from '@astrolib/seo';
 
 interface AchievementGroup {
 	name: string;
@@ -38,9 +38,10 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 ---
 
 <Layout title="SK">
-	<AstroSeo slot="head"
+	<AstroSeo
+		slot="head"
 		title="Portfolio"
-		description='Portfolio of SK'
+		description="Portfolio of SK"
 		twitter={{
 			cardType: 'summary',
 		}}
@@ -48,7 +49,8 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 			type: 'website',
 			locale: 'en',
 			site_name: 'skornel02',
-		}}/>
+		}}
+	/>
 
 	<Navbar pageTitle="Portfolio" useFace={true}>
 		<div class="container h-[500px] md:h-[unset]">
@@ -58,43 +60,48 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 						<div class="text-secondary">Stefán</div>
 						<span class="text-primary">Kornél</span>
 					</h1>
-					<p class="italic">
-						World #3 in IT Software Solutions 🥉 | 47th WorldSkills
-					</p>
+					<p class="italic">World #3 in IT Software Solutions 🥉 | 47th WorldSkills</p>
 					<p class="mb-5">
 						I am a young tinkerer that loves programming. My current goal is to start working in the
 						field. Learning to bake is in progress!
 					</p>
-					<d class="mx-0 join">
-						<a
-							id="social-card"
-							class="btn btn-sm md:btn-md btn-outline btn-secondary join-item"
-							href="/me"
-							data-astro-reload>
-							<Icon height="100%" name="mdi:format-list-bulleted" />
-						</a>
-						<a
-							id="social-gh"
-							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
-							href="https://github.com/skornel02">
-							<Icon height="100%" name="mdi:github" />
-						</a>
-						<a
-							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
-							href="https://www.facebook.com/stefankornel02">
-							<Icon height="100%" name="mdi:facebook-box" />
-						</a>
-						<a
-							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
-							href="https://linkedin.com/in/skornel02">
-							<Icon height="100%" name="mdi:linkedin" />
-						</a>
-						<a
-							class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
-							href="https://aemail.com/Elgl">
-							<Icon height="100%" name="mdi:email-fast" />
-						</a>
-					</d>
+					<div class="flex flex-wrap">
+						<div class="flex-grow">
+							<a class="btn btn-sm md:btn-md btn-ghost" href="/simple">
+								Simplified website
+							</a>
+						</div>
+						<div class="mx-0 join">
+							<a
+								id="social-card"
+								class="btn btn-sm md:btn-md btn-outline btn-secondary join-item"
+								href="/me"
+								data-astro-reload>
+								<Icon height="100%" name="mdi:format-list-bulleted" />
+							</a>
+							<a
+								id="social-gh"
+								class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+								href="https://github.com/skornel02">
+								<Icon height="100%" name="mdi:github" />
+							</a>
+							<a
+								class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+								href="https://www.facebook.com/stefankornel02">
+								<Icon height="100%" name="mdi:facebook-box" />
+							</a>
+							<a
+								class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+								href="https://linkedin.com/in/skornel02">
+								<Icon height="100%" name="mdi:linkedin" />
+							</a>
+							<a
+								class="btn btn-sm md:btn-md btn-outline btn-primary join-item"
+								href="https://aemail.com/Elgl">
+								<Icon height="100%" name="mdi:email-fast" />
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -158,7 +165,7 @@ const educations = (await getCollection('education')).sort((a, b) => b.data.orde
 							</>
 						))
 					}
-				</di>
+				</div>
 			</section>
 		</div>
 	</Navbar>

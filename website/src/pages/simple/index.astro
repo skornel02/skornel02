@@ -1,0 +1,211 @@
+---
+import {CollectionEntry, getCollection} from 'astro:content';
+import {AstroSeo} from '@astrolib/seo';
+import SimpleLayout from '../../layouts/SimpleLayout.astro';
+import {RenderResult} from 'astro:content';
+import Icon from 'astro-icon';
+import {Image} from 'astro:assets';
+
+const experiences = (await getCollection('experience')).sort((a, b) => b.data.order - a.data.order);
+const renderedExperiences: [CollectionEntry<'experience'>, RenderResult][] = [];
+for (const experience of experiences) {
+	renderedExperiences.push([experience, await experience.render()]);
+}
+
+const educations = (await getCollection('education')).sort((a, b) => b.data.order - a.data.order);
+const renderedEducations: [CollectionEntry<'education'>, RenderResult][] = [];
+for (const education of educations) {
+	renderedEducations.push([education, await education.render()]);
+}
+
+const achievements = (await getCollection('achievements')).sort(
+	(a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<SimpleLayout title="SK">
+	<AstroSeo
+		slot="head"
+		title="Portfolio"
+		description="Portfolio of SK"
+		twitter={{
+			cardType: 'summary',
+		}}
+		openGraph={{
+			type: 'website',
+			locale: 'en',
+			site_name: 'skornel02',
+		}}
+	/>
+
+	<section>
+		<div class="terminal-nav">
+			<div class="terminal-logo">
+				<div class="logo terminal-prompt">Stefán Kornél</div>
+			</div>
+			<nav class="terminal-menu">
+				<ul>
+					<li><a class="menu-item active" href="#">Simple portfolio</a></li>
+					<li><a class="menu-item" href="/">Back to the future</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<article>
+		<header><h2 id="Timeline">Experiences</h2></header>
+		<section>
+			<div class="terminal-timeline">
+				{
+					renderedExperiences.map(([experience, {Content}]) => (
+						<div class="terminal-card">
+							<header>
+								{experience.data.name} ({experience.data.duration})
+							</header>
+							<header>
+								<small>{experience.data.role}</small>
+							</header>
+							<div>
+								<Content />
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</section>
+	</article>
+
+	<article>
+		<header><h2 id="Timeline">Educations</h2></header>
+		<section>
+			<div class="terminal-timeline">
+				{
+					renderedEducations.map(([education, {Content}]) => (
+						<div class="terminal-card">
+							<header>
+								{education.data.school} ({education.data.duration})
+							</header>
+							<header>
+								<small>
+									{education.data.major} {education.data.minor !== undefined && ' / '}{' '}
+									{education.data.minor}
+								</small>
+							</header>
+							<div>
+								<Content />
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</section>
+	</article>
+
+	<article>
+		<header><h2 id="Timeline">Achievements</h2></header>
+		<section>
+			<div class="terminal-timeline">
+				{
+					achievements.map((achievement) => (
+						<div class="terminal-card">
+							<header>{achievement.data.name}</header>
+							<div>
+								<div class="center-center">
+									{achievement.data.placement}
+									<Icon
+										class:list={{highlight: achievement.data.highlighted}}
+										name={achievement.data.icon}
+										color={achievement.data.iconColor}
+									/>
+								</div>
+								<div class="actions">
+									{achievement.data.pdfs.map((pdf) => (
+										<a href={pdf.src} target="_blank" class="btn btn-primary">
+											{pdf.name}											
+											<Icon
+												name={pdf.icon}
+											/>
+										</a>	
+									))}
+									{achievement.data.images.map((image) => (
+										<a href={image.src.src} target="_blank" class="btn btn-primary">
+											{image.name}											
+											<Icon
+												name={image.icon}
+											/>
+										</a>	
+									))}
+									{achievement.data.urls.map((url) => (
+										<a href={url.href} target="_blank" class="btn btn-primary">
+											{url.name}											
+											<Icon
+												name={url.icon}
+											/>
+										</a>	
+									))}
+								</div>
+							</div>
+							{achievement.data.coverImage !== undefined && (
+								<div class="cover-image">
+									<Image
+										src={achievement.data.coverImage.src}
+										alt={achievement.data.coverImage.alt}
+										class="object-cover object-center"
+										loading="lazy"
+									/>
+								</div>
+							)}
+						</div>
+					))
+				}
+			</div>
+		</section>
+	</article>
+</SimpleLayout>
+
+<style>
+	article {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.center-center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1rem;
+	}
+
+	svg {
+		height: 32px;
+	}
+
+	.actions {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: end;
+		gap: 8px;
+	}
+
+	.actions svg {
+		margin-left: 8px;
+		height: 16px;
+	}
+
+	a.btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.5rem 1rem;
+		font-size: 85%;
+	}
+
+	.cover-image {
+		overflow: hidden;
+	}
+
+	.cover-image img {
+		max-height: 350px;
+		object-fit: cover;
+		object-position: center;
+	}
+</style>

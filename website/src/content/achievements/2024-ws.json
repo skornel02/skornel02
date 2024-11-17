@@ -10,6 +10,11 @@
 			"src": "/src/images/competitions/WorldSkills-2024-Bronze.jpg",
 			"alt": "Competition medal",
 			"name": "Medal"
+		},
+		{
+			"src": "/src/images/competitions/WorldSkills-2024-Certificate.jpg",
+			"alt": "Competition certificate",
+			"name": "Certificate"
 		}
 	],
 	"urls": [
