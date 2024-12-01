@@ -17,7 +17,7 @@ const {achievement} = Astro.props;
 const team = achievement.data.team ? await getEntries(achievement.data.team) : [];
 ---
 
-<div class="card bg-base-100 shadow-xl my-2">
+<div class="card bg-base-100 dark:bg-gray-900 shadow-xl my-2">
 	<div class="card-body">
 		<h3 class="card-title justify-center text-center text-lg order-2 sm:order-1">
 			{achievement.data.name}
