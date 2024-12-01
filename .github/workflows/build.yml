@@ -1,7 +1,7 @@
 name: Build and deploy website
 
 env:
-  NODE_VERSION: '18.17.1'
+  NODE_VERSION: '18.20.5'
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
-          version: 8
+          version: 9
           run_install: false
 
       - name: Get pnpm store directory
