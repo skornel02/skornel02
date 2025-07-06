@@ -1,0 +1,21 @@
+{
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
+	"name": "WorldSkills China International Exchange Competition 2025 - PO6 Software Testing",
+	"date": "2025-06-06",
+	"placement": "I. place",
+	"icon": "mdi:trophy",
+	"highlighted": false,
+	"images": [
+		{
+			"src": "/src/images/competitions/WorldSkills-China-2025-Results.jpg",
+			"alt": "Competition results",
+			"name": "Results"
+		}
+	],
+	"urls": [],
+	"coverImage": {
+		"src": "/src/images/competitions/WorldSkills-China-2025-Competitor.jpg",
+		"alt": "Competitor image",
+		"name": "Competitor image"
+	}
+}
