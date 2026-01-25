@@ -1,0 +1,26 @@
+{
+	"$schema": "https://skornel02.hu/schema/achievements.schema.json",
+	"name": "EuroSkills 2025 - Software Application Development - Best of Nation",
+	"date": "2025-09-12",
+	"placement": "I. place",
+	"icon": "mdi:medal",
+	"highlighted": true,
+	"images": [
+		{
+			"src": "/src/images/competitions/EuroSkills-2025-Medals.jpg",
+			"alt": "Competition medals",
+			"name": "Medals"
+		}
+	],
+	"urls": [
+		{
+			"name": "Official results",
+			"href": "https://worldskillseurope.org/application/files/9217/6365/6201/ES2025_OR_all_skills.pdf"
+		}
+	],
+	"coverImage": {
+		"src": "/src/images/competitions/EuroSkills-2025-Cover.jpg",
+		"alt": "Podium image",
+		"name": "Podium image"
+	}
+}
