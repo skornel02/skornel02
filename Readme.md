@@ -1,10 +1,9 @@
 <h1 align="center">Hi 👋, I'm Kornél</h1>
 <h3 align="center">A tinkerer from Hungary</h3>
 <h5 align="center">World #3 in IT Software Solutions 🥉 | 47th WorldSkills </h5>
+<h5 align="center">Europe #1 in Software Application Development 🥇 | EuroSkills Herning 2025 </h5>
 
-- 🛠 I'm currently practicing for EuroSkills 2025!
-
-- 👨‍🎓 I'm currently studying Computer Engineering BSc at University of Szeged till I collapse.
+- 👨‍🎓 I'm currently studying Cyber Security Engineer MSc at Obuda University till it is done.
 
 - 🌐 Check out my website [skornel02.hu](https://skornel02.hu)
 
@@ -25,9 +24,9 @@ Way too many I used along the way, but these are mainly the ones I use every (ot
 
 - C#, .Net, .Net Core -- What can I say, I'm addicted to good things.
 
-- React, Svelte, Astro -- Shiny and DX oriented tools are my jam.
+- React, NextJS, Typescript, Bun -- Shiny and DX oriented tools are my jam.
 
-- Python, Matplotlib -- Gotta survive university
+- Ansible, Docker -- I like to containerize and automate everything, why not?
 
 <p align="center">
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=skornel02&show_icons=true&locale=en&layout=compact" alt="skornel02" />
