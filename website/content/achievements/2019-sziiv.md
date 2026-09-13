@@ -1,0 +1,21 @@
+---
+name: 'Szegedi Innovatív Informatika Verseny - 2019 - Software category'
+date: '2019-04-06'
+placement: 'I. place'
+icon: 'mdi:trophy-award'
+highlighted: true
+images:
+  -
+    src: '/src/images/competitions/SZIIV-2019.jpeg'
+    alt: 'Competition certificate'
+    name: 'Certificate'
+urls:
+  -
+    name: 'website'
+    href: 'https://www.inf.u-szeged.hu/sziiv2019/eredmenyek#:~:text=hazizz%20velunk'
+team:
+  - 'erik'
+  - 'sk'
+  - 'avar'
+---
+

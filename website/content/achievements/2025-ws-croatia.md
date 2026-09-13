@@ -1,0 +1,13 @@
+---
+name: 'WorldSkills Croatia 2025 - IT Software Solutions for Business'
+date: '2025-04-11'
+placement: 'I. place'
+icon: 'mdi:trophy'
+highlighted: false
+images:
+  -
+    src: '/src/images/competitions/WorldSkills-Croatia-2025-Results.jpg'
+    alt: 'Competition results'
+    name: 'Results'
+---
+

@@ -1,0 +1,12 @@
+---
+name: 'Nemes Tihamér Nemzetközi Informatikai Tanulmányi Verseny - 2020 - Programming category'
+date: '2020-04-15'
+placement: '39. place'
+icon: 'mdi:star'
+highlighted: false
+pdfs:
+  -
+    name: 'Reference'
+    src: '/competitions/Nemes-Tihamer-2020.pdf'
+---
+

@@ -1,0 +1,16 @@
+---
+name: '29. Ifjúsági Tudományos és Innovációs Tehetségkutató Verseny'
+date: '2020-05-28'
+placement: 'Finalist'
+icon: 'mdi:star'
+highlighted: false
+images:
+  -
+    src: '/src/images/competitions/Innovacios-tehetsegkutato-2020.jpeg'
+    alt: 'Competition certificate'
+    name: 'Certificate'
+team:
+  - 'sk'
+  - 'avar'
+---
+

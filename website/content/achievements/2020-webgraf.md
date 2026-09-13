@@ -1,0 +1,16 @@
+---
+name: 'WebGraf - 2020'
+date: '2021-01-05'
+placement: 'II. place'
+icon: 'mdi:medal-outline'
+highlighted: false
+team:
+  - 'partfo'
+  - 'sk'
+  - 'avar'
+coverImage:
+  src: '/src/images/competitions/Webgraf-2020-Cover.jpg'
+  alt: 'Podium image'
+  name: 'Podium image'
+---
+

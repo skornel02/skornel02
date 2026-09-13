@@ -1,0 +1,17 @@
+---
+name: 'WorldSkills 2024 qualifier - IT Software Solutions for Business'
+date: '2023-04-26'
+placement: 'I. place'
+icon: 'mdi:trophy-award'
+highlighted: false
+images:
+  -
+    src: '/src/images/competitions/WorldSkills-Qualifier-2023.jpg'
+    alt: 'Competition certificate'
+    name: 'Certificate'
+urls:
+  -
+    name: 'Official website'
+    href: 'https://www.worldskillshungary.hu/versenyek/worldskills-lyon-2024'
+---
+

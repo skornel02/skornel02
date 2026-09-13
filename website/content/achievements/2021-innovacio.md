@@ -1,0 +1,16 @@
+---
+name: '30. Ifjúsági Tudományos és Innovációs Tehetségkutató Verseny'
+date: '2021-06-22'
+placement: 'Finalist'
+icon: 'mdi:star'
+highlighted: false
+images:
+  -
+    src: '/src/images/competitions/Innovacios-tehetsegkutato-2021.jpeg'
+    alt: 'Competition certificate'
+    name: 'Certificate'
+team:
+  - 'sk'
+  - 'avar'
+---
+

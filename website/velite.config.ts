@@ -31,6 +31,7 @@ export default defineConfig({
           description: s.string(),
           date: s.isodate(),
           tags: s.array(s.string()).default([]),
+          skills: s.array(s.string()).default([]),
           language: s.string().default('hu'),
           proofReader: s.string().optional(),
           hidden: s.boolean().default(false),
@@ -44,16 +45,16 @@ export default defineConfig({
     },
     achievements: {
       name: 'Achievement',
-      pattern: 'achievements/**/*.json',
+      pattern: 'achievements/**/*.md',
       schema: s
         .object({
-          $schema: s.string().optional(),
           name: s.string(),
           date: s.isodate(),
           placement: s.string(),
           icon: s.string(),
           iconColor: s.string().default('orange'),
           highlighted: s.boolean().default(false),
+          skills: s.array(s.string()).default([]),
           images: s
             .array(
               s.object({
@@ -94,6 +95,7 @@ export default defineConfig({
               name: s.string().optional(),
             })
             .optional(),
+          content: s.markdown(),
         })
         .transform((data, { meta }) => ({
           ...data,
@@ -110,6 +112,25 @@ export default defineConfig({
           duration: s.string(),
           order: s.number(),
           blogPost: s.string().optional(),
+          skills: s.array(s.string()).default([]),
+          content: s.markdown(),
+        })
+        .transform((data, { meta }) => ({
+          ...data,
+          slug: getSlug(meta.path),
+        })),
+    },
+    projects: {
+      name: 'Project',
+      pattern: 'projects/**/*.md',
+      schema: s
+        .object({
+          name: s.string(),
+          role: s.string(),
+          duration: s.string(),
+          order: s.number(),
+          blogPost: s.string().optional(),
+          skills: s.array(s.string()).default([]),
           content: s.markdown(),
         })
         .transform((data, { meta }) => ({
@@ -128,6 +149,7 @@ export default defineConfig({
           duration: s.string(),
           order: s.number(),
           blogPost: s.string().optional(),
+          skills: s.array(s.string()).default([]),
           content: s.markdown(),
         })
         .transform((data, { meta }) => ({
@@ -160,10 +182,6 @@ export default defineConfig({
           icon: s.string(),
           order: s.number(),
           detailed: s.boolean().default(false),
-          achievements: s.array(s.string()).default([]),
-          experience: s.array(s.string()).default([]),
-          educations: s.array(s.string()).default([]),
-          posts: s.array(s.string()).default([]),
           content: s.markdown(),
         })
         .transform((data, { meta }) => ({

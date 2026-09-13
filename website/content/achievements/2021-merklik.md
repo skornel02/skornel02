@@ -1,0 +1,17 @@
+---
+name: 'II. Merklik László problémamegoldó verseny'
+date: '2021-04-15'
+placement: 'Finalist'
+icon: 'mdi:star'
+highlighted: false
+images:
+  -
+    src: '/src/images/competitions/Merklik-2021.jpeg'
+    alt: 'Competition certificate'
+    name: 'Certificate'
+team:
+  - 'partfo'
+  - 'sk'
+  - 'avar'
+---
+
