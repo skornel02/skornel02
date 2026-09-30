@@ -1,8 +1,16 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Fuse, { type FuseResult } from 'fuse.js';
+import {
+  Command,
+  CommandInput,
+  CommandList,
+  CommandEmpty,
+  CommandGroup,
+  CommandItem,
+} from '@/components/ui/command';
 
 interface FuseAutocompleteProps<T> {
   fuse: Fuse<T>;
@@ -15,68 +23,68 @@ export function FuseAutocomplete<T>({
   dialogNamePicker,
   dialogLinkPicker,
 }: FuseAutocompleteProps<T>) {
+  const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
   const [results, setResults] = useState<FuseResult<T>[]>([]);
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const query = e.target.value;
+  const handleSearch = (query: string) => {
     setSearchQuery(query);
     if (query.trim().length > 0) {
-      setResults(fuse.search(query));
+      setResults(fuse.search(query).slice(0, 5));
     } else {
       setResults([]);
     }
   };
 
+  const handleSelect = (href?: string) => {
+    setSearchQuery('');
+    setResults([]);
+    if (href) {
+      router.push(href);
+    }
+  };
+
   return (
-    <div className={`dropdown w-full ${results.length > 0 ? 'dropdown-open' : ''}`}>
-      <div className="form-control w-full">
-        <label className="label" htmlFor="postsSearchBox">
-          <span className="label-text">Find what you are looking for!</span>
-        </label>
-        <input
-          id="postsSearchBox"
-          type="text"
-          placeholder="Search..."
-          className="input input-bordered w-full"
+    <div className="relative w-full z-50">
+      {/* shouldFilter={false} ensures cmdk doesn't override your fuse.js results */}
+      <Command 
+        shouldFilter={false} 
+        className="overflow-visible rounded-md border border-input bg-transparent"
+      >
+        <CommandInput 
+          placeholder="Search..." 
           value={searchQuery}
-          onChange={handleSearch}
+          onValueChange={handleSearch}
+          className="h-10"
         />
-      </div>
 
-      {searchQuery.trim().length > 0 && (
-        <ul className="dropdown-content menu bg-primary text-white rounded-box z-50 w-full p-2 shadow-xl mt-1">
-          {results.length === 0 ? (
-            <li className="p-2 text-white/80">No results found</li>
-          ) : (
-            results.map((result, idx) => {
-              const name = dialogNamePicker ? dialogNamePicker(result) : '';
-              const href = dialogLinkPicker ? dialogLinkPicker(result) : undefined;
-              const matchScore = ((1 - (result.score ?? 0)) * 100).toFixed(0);
+        {searchQuery.trim().length > 0 && (
+          <div className="absolute top-full left-0 right-0 mt-1 overflow-hidden rounded-md border border-border bg-popover text-popover-foreground shadow-md">
+            <CommandList>
+              {results.length === 0 ? (
+                <CommandEmpty>No results found.</CommandEmpty>
+              ) : (
+                <CommandGroup>
+                  {results.map((result, idx) => {
+                    const name = dialogNamePicker ? dialogNamePicker(result) : '';
+                    const href = dialogLinkPicker ? dialogLinkPicker(result) : undefined;
 
-              return (
-                <li key={idx}>
-                  {href ? (
-                    <Link
-                      href={href}
-                      className="hover:bg-primary-focus text-white flex justify-between"
-                      onClick={() => {
-                        setSearchQuery('');
-                        setResults([]);
-                      }}
-                    >
-                      <span>{name}</span>
-                      <span className="text-xs opacity-75">{matchScore}%</span>
-                    </Link>
-                  ) : (
-                    <span>{name}</span>
-                  )}
-                </li>
-              );
-            })
-          )}
-        </ul>
-      )}
+                    return (
+                      <CommandItem
+                        key={idx}
+                        onSelect={() => handleSelect(href)}
+                        className="cursor-pointer"
+                      >
+                        {name}
+                      </CommandItem>
+                    );
+                  })}
+                </CommandGroup>
+              )}
+            </CommandList>
+          </div>
+        )}
+      </Command>
     </div>
   );
 }

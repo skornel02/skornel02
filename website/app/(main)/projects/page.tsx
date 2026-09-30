@@ -1,49 +1,50 @@
 import React from 'react';
-import type { Metadata } from 'next';
+import type {Metadata} from 'next';
+import {
+	SimpleWindow,
+	SimpleWindowContent,
+	SimpleWindowFooter,
+	SimpleWindowHeader,
+} from '@/components/ui/simple-window';
+import {
+	BrowserWindow,
+	BrowserWindowContent,
+	BrowserWindowHeader,
+} from '@/components/ui/browser-window';
 
 export const metadata: Metadata = {
-  title: 'Projects',
-  description: 'Projects of SK',
+	title: 'Projects',
+	description: 'Projects of SK',
 };
 
 export default function ProjectsPage() {
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <article className="flex flex-wrap justify-center align-middle p-4">
-        <div className="mockup-browser border border-base-300 bg-base-100 dark:bg-gray-900 shadow-xl max-w-[550px] w-full">
-          <div className="mockup-browser-toolbar">
-            <div className="input border border-base-300">
-              <a
-                href="https://metro.skornel02.hu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm opacity-80 hover:opacity-100"
-              >
-                https://metro.skornel02.hu
-              </a>
-            </div>
-          </div>
-          <div className="border-t border-base-300 flex justify-center p-6">
-            <div className="flex flex-col items-center text-center">
-              <h1 className="text-2xl font-bold mb-2">Metro door helper</h1>
-              <p className="text-base text-text mb-4">
-                A simple application that helps you pick which door you should board the Budapest
-                Metro to get off at the right exit.
-              </p>
-              <div className="flex space-x-4">
-                <a
-                  href="https://metro.skornel02.hu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary"
-                >
-                  Visit
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  );
+	return (
+		<SimpleWindow className="mx-auto w-full max-w-5xl mt-unit-xl">
+			<SimpleWindowHeader />
+
+			<SimpleWindowContent className="flex flex-wrap items-center justify-center p-unit-xl">
+				<BrowserWindow className="max-w-[550px]">
+					<BrowserWindowHeader url="https://metro.skornel02.hu" />
+
+					<BrowserWindowContent className="flex flex-col items-center text-center">
+						<h1 className="headline-sm mb-unit-xs text-on-surface">Metro Door Helper</h1>
+						<p className="body-md mb-unit-lg text-on-surface-variant">
+							A simple application that helps you pick which door you should board the Budapest
+							Metro to get off at the right exit.
+						</p>
+
+						<a
+							href="https://metro.skornel02.hu"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 font-mono text-xs font-bold text-primary-foreground shadow-layer-1 transition-all duration-135 hover:-translate-y-0.5 hover:shadow-layer-2">
+							Visit App
+						</a>
+					</BrowserWindowContent>
+				</BrowserWindow>
+			</SimpleWindowContent>
+
+			<SimpleWindowFooter />
+		</SimpleWindow>
+	);
 }

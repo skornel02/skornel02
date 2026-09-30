@@ -1,57 +1,94 @@
 'use client';
 
-import React, { useRef } from 'react';
-import { Icon } from '@/components/common/Icon';
+import React from 'react';
+import {Icon} from '@/components/common/Icon';
+import {Button} from '@/components/ui/button';
+import {
+	Dialog,
+	DialogContent,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+	DialogFooter,
+	DialogClose,
+} from '@/components/ui/dialog';
+import {Tooltip, TooltipContent, TooltipTrigger} from '@/components/ui/tooltip';
 
 interface ImageLinkModalProps {
-  image: {
-    src: string;
-    alt: string;
-    name: string;
-    icon?: string;
-    buttonClass?: string;
-  };
+	image: {
+		src: string;
+		alt: string;
+		name: string;
+		icon?: string;
+		buttonClass?: string;
+	};
 }
 
-export function ImageLinkModal({ image }: ImageLinkModalProps) {
-  const dialogRef = useRef<HTMLDialogElement>(null);
+export function ImageLinkModal({image}: ImageLinkModalProps) {
+	return (
+		<Dialog>
+			<Tooltip>
+				<TooltipTrigger
+					render={
+						<DialogTrigger
+							render={
+								<Button
+									type="button"
+									variant="default"
+									size="icon"
+									className={
+										image.buttonClass ||
+										'h-8 w-8 border-primary/50 text-primary transition-colors hover:bg-primary hover:text-primary-foreground'
+									}>
+									{image.icon && <Icon name={image.icon} width={16} height={16} />}
+									<span className="sr-only">{image.name}</span>
+								</Button>
+							}
+						/>
+					}
+				/>
 
-  return (
-    <>
-      <div className="tooltip" data-tip={image.name}>
-        <button
-          type="button"
-          className={`${image.buttonClass ?? 'btn btn-sm btn-primary text-white'} join-item`}
-          onClick={() => dialogRef.current?.showModal()}
-        >
-          {image.icon && <Icon name={image.icon} width={16} height={16} />}
-        </button>
-      </div>
+				<TooltipContent side="top" className="font-mono text-xs">
+					{image.name}
+				</TooltipContent>
+			</Tooltip>
 
-      <dialog ref={dialogRef} className="modal">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">{image.name}</h3>
-          <div className="py-4">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image.src} alt={image.alt} className="w-full h-auto rounded" />
-          </div>
-          <div className="modal-action">
-            <a
-              className="btn btn-primary"
-              href={image.src}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open
-            </a>
-            <form method="dialog">
-              <button className="btn">Close</button>
-            </form>
-          </div>
-        </div>
-      </dialog>
-    </>
-  );
+			<DialogContent className="w-[95vw] sm:max-w-5xl border-border bg-surface-container-lowest/95 backdrop-blur-md dark:bg-surface-container-low/95">
+				<DialogHeader>
+					<DialogTitle className="font-display text-xl text-on-surface">{image.name}</DialogTitle>
+				</DialogHeader>
+
+				<div className="py-2">
+					<img
+						src={image.src}
+						alt={image.alt}
+						className="h-auto max-h-[60vh] w-full rounded-md border border-border/50 object-contain shadow-layer-1"
+					/>
+				</div>
+
+				<DialogFooter className="flex flex-row justify-end gap-2 sm:gap-0">
+					<DialogClose
+						render={
+							<Button
+								variant="outline"
+								className="border-border text-on-surface-variant hover:text-on-surface">
+								Close
+							</Button>
+						}
+					/>
+					<Button
+						className="bg-primary text-primary-foreground hover:opacity-90"
+						nativeButton={false}
+						render={
+							<a href={image.src} target="_blank" rel="noopener noreferrer">
+								Open Original
+							</a>
+						}
+					/>
+				</DialogFooter>
+			</DialogContent>
+		</Dialog>
+	);
 }
 
 export default ImageLinkModal;

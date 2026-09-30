@@ -2,6 +2,8 @@
 .next/
 out/
 dist/
+**/nextImageExportOptimizer/
+next-image-export-optimizer-hashes.json
 
 # Velite output
 .velite

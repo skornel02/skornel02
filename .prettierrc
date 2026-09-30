@@ -7,21 +7,5 @@
 	"quoteProps": "consistent",
 	"bracketSpacing": false,
 	"bracketSameLine": true,
-	"arrowParens": "always",
-	"plugins": ["prettier-plugin-astro", "prettier-plugin-svelte"],
-	"overrides": [
-		{
-			"files": "*.astro",
-			"options": {
-				"parser": "astro"
-			}
-		},
-		{
-			"files": "*.svelte",
-			"options": {
-				"parser": "svelte",
-				"tabWidth": 2
-			}
-		}
-	]
+	"arrowParens": "always"
 }

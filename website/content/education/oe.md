@@ -1,5 +1,5 @@
 ---
-school: Obuda University
+school: Óbuda University
 major: John Von Neumann Faculty of Informatics
 minor: Cyber Security Engineering
 duration: 2025 - present 

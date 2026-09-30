@@ -1,14 +1,13 @@
 import React from 'react';
-import 'terminal.css';
+import MainBackground from '@/components/common/MainBackground';
 
-export default function SimpleLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="terminal-container p-4 md:p-8 max-w-4xl mx-auto">
-      {children}
-    </div>
-  );
+export default function SimpleLayout({children}: {children: React.ReactNode}) {
+	return (
+		<>
+			<div className="relative min-h-screen flex flex-col justify-center items-center overflow-x-hidden">
+				<MainBackground />
+        <div className="relative z-10 w-full">{children}</div>
+			</div>
+		</>
+	);
 }

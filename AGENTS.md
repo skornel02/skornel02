@@ -10,7 +10,7 @@ trigger: always_on
 - **Framework**: Next.js 15 (App Router, Static Export)
 - **Package Manager**: Bun (Use `bun install`, `bun run`)
 - **Language**: TypeScript, React 19
-- **Styling**: Tailwind CSS v4 + DaisyUI v5
+- **Styling**: Tailwind CSS v4 + ShadCN
 - **Content**: Velite (with Zod schemas)
 
 ## Architecture & Monorepo Structure

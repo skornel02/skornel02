@@ -34,7 +34,7 @@ export function CardTitle({ onDone }: CardTitleProps) {
 
   return (
     <h1 className="text-4xl whitespace-nowrap">
-      <span className="text-secondary">{currentFirst}</span>
+      <span className="">{currentFirst}</span>
       {displayedLength > firstName.length && <span> </span>}
       <span className="text-primary">{currentLast}</span>
     </h1>

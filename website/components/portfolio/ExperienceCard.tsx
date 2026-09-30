@@ -1,30 +1,33 @@
 import React from 'react';
-import type { Experience } from '#content';
+import type {Experience} from '#content';
+import {Card, CardHeader, CardTitle, CardDescription, CardContent} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
 
 interface ExperienceCardProps {
-  experience: Experience;
+	experience: Experience;
 }
 
-export function ExperienceCard({ experience }: ExperienceCardProps) {
-  return (
-    <div className="card w-full bg-base-100 dark:bg-gray-900 shadow-xl my-3 border border-base-200 dark:border-gray-800">
-      <div className="card-body">
-        <div className="card-actions flex-wrap justify-between items-baseline">
-          <h3 className="text-2xl font-bold uppercase text-title">{experience.name}</h3>
-          <span className="text-secondary font-medium">{experience.duration}</span>
-        </div>
-        <h4 className="text-lg">
-          <span className="text-primary font-semibold uppercase">{experience.role}</span>
-        </h4>
-        {experience.content && (
-          <div
-            className="prose dark:prose-invert max-w-none text-text mt-2"
-            dangerouslySetInnerHTML={{ __html: experience.content }}
-          />
-        )}
-      </div>
-    </div>
-  );
+export function ExperienceCard({experience}: ExperienceCardProps) {
+	return (
+		<Card className="mb-6 border-[#38bdf8] shadow-[0_6px_0_#0284c7]">
+			<CardHeader className="flex flex-row flex-wrap items-center justify-between gap-2 pb-2">
+				<div className="flex items-center gap-2">
+					<span className="text-xl">💳</span>
+					<CardTitle>{experience.name}</CardTitle>
+				</div>
+				<Badge variant="ghost">{experience.duration}</Badge>
+			</CardHeader>
+			<CardContent>
+				<CardDescription className="mb-3 text-primary">{experience.role}</CardDescription>
+				{experience.content && (
+					<div
+						className="prose prose-sm max-w-none font-body leading-relaxed"
+						dangerouslySetInnerHTML={{__html: experience.content}}
+					/>
+				)}
+			</CardContent>
+		</Card>
+	);
 }
 
 export default ExperienceCard;

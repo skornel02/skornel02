@@ -1,6 +1,6 @@
 ---
-name: TRANS HUNGÁRIA SZÁLLÍTMÁNYOZÁSI ÉS LOGISZTIKAI KFT.
-role: FULL STACK DEVELOPER
+name: Trans Hungária Kft.
+role: Full Stack Developer
 duration: '2019'
 order: 2
 ---

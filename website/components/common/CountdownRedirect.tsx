@@ -20,7 +20,7 @@ export function CountdownRedirect() {
     return () => clearInterval(interval);
   }, [countdown, router]);
 
-  return <span className="font-bold text-secondary text-2xl">{countdown}</span>;
+  return <span className="font-bold text-primary text-2xl">{countdown}</span>;
 }
 
 export default CountdownRedirect;
