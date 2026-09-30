@@ -1,13 +1,22 @@
-# build output
+# Next.js build output
+.next/
+out/
 dist/
+**/nextImageExportOptimizer/
+next-image-export-optimizer-hashes.json
 
-# generated types
-.astro/
+# Velite output
+.velite
+public/static
+
+# Backup directory
+_backup/
 
 # dependencies
 node_modules/
 
 # logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -15,7 +24,8 @@ pnpm-debug.log*
 
 # environment variables
 .env
+.env*.local
 .env.production
 
-# macOS-specific files
+# macOS
 .DS_Store

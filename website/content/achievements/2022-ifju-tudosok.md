@@ -1,0 +1,13 @@
+---
+name: 'Ifjútudosok tudományos vetélkedő - 2022 - Traditional category'
+date: '2022-03-08'
+placement: 'Finalist'
+icon: 'mdi:television-classic'
+highlighted: false
+images:
+  -
+    src: '/src/images/competitions/Ifju-Tudosok-2022.jpeg'
+    alt: 'Competition certificate'
+    name: 'Certificate'
+---
+

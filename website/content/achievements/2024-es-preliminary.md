@@ -1,0 +1,21 @@
+---
+name: 'EuroSkills 2025 qualifier - IT Software Solutions for Business'
+date: '2024-04-26'
+placement: 'I. place'
+icon: 'mdi:trophy-award'
+highlighted: false
+images:
+  -
+    src: '/src/images/competitions/EuroSkills-Qualifier-2024.jpeg'
+    alt: 'Competition certificate'
+    name: 'Certificate'
+urls:
+  -
+    name: 'Official website'
+    href: 'https://worldskillshungary.hu/versenyek/euroskills-herning-2025'
+coverImage:
+  src: '/src/images/competitions/EuroSkills-Qualifier-2024-Cover.jpg'
+  alt: 'Podium image'
+  name: 'Podium image'
+---
+

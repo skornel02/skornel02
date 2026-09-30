@@ -1,0 +1,17 @@
+---
+name: 'Albert Einstein Cup 2024 - Speed programming'
+date: '2024-05-30'
+placement: 'I. place'
+icon: 'mdi:medal-outline'
+highlighted: false
+images:
+  -
+    src: '/src/images/competitions/AEC-2024-Speed-Programming.jpeg'
+    alt: 'Competition certificate'
+    name: 'Certificate'
+coverImage:
+  src: '/src/images/competitions/AEC-2024-Speed-Programming-Cover.jpg'
+  alt: 'Podium image'
+  name: 'Podium image'
+---
+

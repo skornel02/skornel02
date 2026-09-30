@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&family=Silkscreen:wght@400;700&display=swap');
+
+.retro {
+  font-family: 'Silkscreen', monospace;
+  letter-spacing: -0.02em;
+}
+
+.retro-body {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

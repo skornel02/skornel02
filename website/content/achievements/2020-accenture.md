@@ -1,0 +1,16 @@
+---
+name: 'Accenture Java competition - 2020'
+date: '2020-07-06'
+placement: 'Finalist'
+icon: 'mdi:star'
+highlighted: false
+pdfs:
+  -
+    name: 'Reference'
+    src: '/competitions/Accenture Java 2020.pdf'
+team:
+  - 'fmate'
+  - 'sk'
+  - 'vtibor'
+---
+

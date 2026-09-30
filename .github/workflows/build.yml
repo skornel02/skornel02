@@ -1,8 +1,5 @@
 name: Build and deploy website
 
-env:
-  NODE_VERSION: '18.20.5'
-
 on:
   push:
     branches: [master]
@@ -12,38 +9,31 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     environment: Build
-    steps:
-      - uses: actions/checkout@v1
-
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ env.NODE_VERSION }}
+    
+    permissions:
+      contents: write 
       
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        with:
-          version: 9
-          run_install: false
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
 
-      - name: Get pnpm store directory
-        shell: bash
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: ".bun-version"
+
+      - name: Install all dependencies
         run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+          bun install --frozen-lockfile
 
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-        
+      - name: Install Playwright Chromium
+        run: bunx playwright install chromium --with-deps
+
       - name: Install and build card 🃏
         working-directory: 'card'
         run: |
-          pnpm install --frozen-lockfile
-          pnpm start
+          bun install --frozen-lockfile
+          bun server.ts
         env:
           EMAIL: ${{ vars.EMAIL }}
           WEBSITE: ${{ vars.WEBSITE }}
@@ -51,14 +41,13 @@ jobs:
       - name: Install and build website 🌐
         working-directory: 'website'
         run: |
-          pnpm install --frozen-lockfile
-          pnpm run build
+          bun install --frozen-lockfile
+          bun run build
         env:
           SHLINK_KEY: ${{ secrets.SHLINK_KEY }}
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: website/dist
+          folder: website/dist
+          branch: gh-pages

@@ -1,0 +1,17 @@
+---
+name: 'Ágazati és ágazaton belüli specializáció szakmai érettségi vizsgatárgyak versenye - 2022'
+date: '2022-04-13'
+placement: 'I. place'
+icon: 'mdi:trophy-award'
+highlighted: true
+images:
+  -
+    src: '/src/images/competitions/ASZEV2022.jpeg'
+    alt: 'Competition certificate'
+    name: 'Certificate'
+coverImage:
+  src: '/src/images/competitions/ASZEV2022-Cover.jpg'
+  alt: 'Podium image'
+  name: 'Podium image'
+---
+
