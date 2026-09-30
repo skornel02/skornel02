@@ -1,21 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <atom:link href="https://skornel02.hu/rss.xml" rel="self" type="application/rss+xml"></atom:link>
-    <title>SK</title>
+    <title>Stefán Kornél's Blog</title>
+    <description>Personal blog and portfolio of Stefán Kornél</description>
     <link>https://skornel02.hu</link>
-    <description>SK&apos;s posts&apos; feed&apos;s cat</description>
+    <atom:link href="https://skornel02.hu/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>hu</language>
     <item>
-      <guid>posts/emojik-es-a-windows</guid>
-      <title>Emojik és a Windows</title>
+      <title><![CDATA[Emojik és a Windows]]></title>
+      <description><![CDATA[Minimális történelem, közepesen érdekes információk és a Windows emoji verziójának frissítése]]></description>
       <link>https://skornel02.hu/posts/emojik-es-a-windows/</link>
-      <description>Minimális történelem, közepesen érdekes információk és a Windows emoji verziójának frissítése</description>
+      <guid>https://skornel02.hu/posts/emojik-es-a-windows/</guid>
       <pubDate>Sat, 21 May 2022 19:00:00 GMT</pubDate>
     </item>
     <item>
-      <guid>posts/welcome</guid>
-      <title>Welcome</title>
+      <title><![CDATA[Welcome]]></title>
+      <description><![CDATA[Welcome to my personal site!]]></description>
       <link>https://skornel02.hu/posts/welcome/</link>
-      <description>Welcome to my personal site!</description>
+      <guid>https://skornel02.hu/posts/welcome/</guid>
       <pubDate>Wed, 30 Mar 2022 17:40:00 GMT</pubDate>
     </item>
   </channel>

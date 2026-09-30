@@ -1,1 +1,0 @@
-const e="partfo",t="people",o={name:"Horváth Gergely",refer:"https://gergelyhorvath.com"},r={type:"data",filePath:"/home/runner/work/skornel02/skornel02/website/src/content/people/partfo.json",rawData:""};export{r as _internal,t as collection,o as data,e as id};

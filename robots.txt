@@ -1,6 +1,4 @@
-
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: .nojekyll
-Allow: /
-
 Sitemap: https://skornel02.hu/sitemap-index.xml
+Disallow: .nojekyll
