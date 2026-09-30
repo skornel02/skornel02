@@ -37,8 +37,6 @@ export function useRootTheme() {
 	}, []);
 
 	const toggleTheme = useCallback(() => {
-		console.log('Toggling theme...');
-
 		if (typeof window === 'undefined') return;
 		document.documentElement.classList.toggle('dark');
 

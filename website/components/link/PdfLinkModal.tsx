@@ -62,7 +62,7 @@ export function PdfLinkModal({pdf}: PdfLinkModalProps) {
 						title={pdf.name}
 						data={pdf.src}
 						type="application/pdf"
-						className="w-full h-96 my-4">
+						className="w-full h-[60vh] my-4">
 						<p>
 							It appears you don&apos;t have a PDF plugin for this browser.{' '}
 							<a href={pdf.src} target="_blank" rel="noopener noreferrer" className="link">

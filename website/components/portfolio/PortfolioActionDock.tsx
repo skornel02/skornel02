@@ -3,7 +3,6 @@ import FacebookIcon from '../ui/icons/FacebookIcon';
 import GithubIcon from '../ui/icons/GithubIcon';
 import {DossierActionDock, DossierActionItem} from './Dossier';
 import LinkedInIcon from '../ui/icons/LinkedInIcon';
-import {NAV_ITEMS} from './PortfolioNavbar';
 
 const ACTIONS: DossierActionItem[] = [
 	{

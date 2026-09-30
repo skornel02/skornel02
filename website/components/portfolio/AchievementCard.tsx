@@ -9,6 +9,7 @@ import {PdfLinkModal} from '@/components/link/PdfLinkModal';
 import {Card, CardHeader, CardTitle, CardDescription, CardContent} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
 import type {Achievement, Person} from '#content';
+import ExportedImage from 'next-image-export-optimizer';
 
 interface AchievementCardProps {
 	achievement: Achievement;
@@ -19,8 +20,6 @@ export function AchievementCard({achievement, peopleMap = {}}: AchievementCardPr
 	const teamMembers = (achievement.team || []).map((slug) => peopleMap[slug]).filter(Boolean);
 
 	const dateStr = achievement.date ? new Date(achievement.date).toISOString().substring(0, 10) : '';
-
-	console.log('Achievemnt', achievement);
 
 	return (
 		<Card className="mb-6 border-[#f59e0b] shadow-[0_8px_0_#b45309,0_16px_25px_rgba(0,0,0,0.25)] relative group">
@@ -55,10 +54,12 @@ export function AchievementCard({achievement, peopleMap = {}}: AchievementCardPr
 					<figure className="group relative max-h-[200px] overflow-hidden rounded-xl border-2 border-amber-200/50 shadow-inner mb-4 bg-code-surface">
 						{/* 1. Base Image: 100% in focus, forced crisp edges */}
 						{/* eslint-disable-next-line @next/next/no-img-element */}
-						<img
+						<ExportedImage
 							src={achievement.coverImage.src}
 							alt={achievement.coverImage.alt || achievement.name}
 							className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105 [image-rendering:pixelated]"
+              width='512'
+              height='512'
 							loading="lazy"
 						/>
 
