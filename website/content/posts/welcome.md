@@ -15,7 +15,7 @@ Until then I hope you enjoy this void of mine.
 ## Goals
 
 - To make this website awesome
-- ~~Use cool tech~~ (Svelte got that covered)
+- ~~Use cool tech~~ (NextJS got that covered)
 - Make content
 
 > "A stílus mögött egy ember van, az ember mögött egy élet van." - Kosztolányi Dezső
@@ -25,7 +25,7 @@ Until then I hope you enjoy this void of mine.
 This post also functions as a test markdown file for most of the **formatting**[^guarantee].
 Here is the _Open Graph_ image of the site:
 
-![Cover](/assets/og-banner.jpg)
+![Cover](/og-banner.jpg)
 
 ---
 
